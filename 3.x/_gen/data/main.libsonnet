@@ -24,6 +24,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   application_gateway: (import 'application_gateway.libsonnet'),
   application_insights: (import 'application_insights.libsonnet'),
   application_security_group: (import 'application_security_group.libsonnet'),
+  arc_machine: (import 'arc_machine.libsonnet'),
   attestation_provider: (import 'attestation_provider.libsonnet'),
   automation_account: (import 'automation_account.libsonnet'),
   automation_variable_bool: (import 'automation_variable_bool.libsonnet'),

@@ -2,13 +2,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
 {
   '#':: d.pkg(name='spring_cloud_certificate', url='', help='`spring_cloud_certificate` represents the `azurerm_spring_cloud_certificate` Terraform resource.\n\n\n\nThis package contains functions and utilities for setting up the resource using Jsonnet code.\n'),
-  '#new':: d.fn(help="\n`azurerm.spring_cloud_certificate.new` injects a new `azurerm_spring_cloud_certificate` Terraform `resource`\nblock into the root module document.\n\nAdditionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the\nresource. For example, if you added a new instance to the root using:\n\n    # arguments omitted for brevity\n    azurerm.spring_cloud_certificate.new('some_id')\n\nYou can get the reference to the `id` field of the created `azurerm.spring_cloud_certificate` using the reference:\n\n    $._ref.azurerm_spring_cloud_certificate.some_id.get('id')\n\nThis is the same as directly entering `\"${ azurerm_spring_cloud_certificate.some_id.id }\"` as the value.\n\nNOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,\nor `$` to refer to the root object. Instead, make an explicit outer object using `local`.\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block.\n  - `certificate_content` (`string`): Set the `certificate_content` field on the resulting resource block. When `null`, the `certificate_content` field will be omitted from the resulting object.\n  - `key_vault_certificate_id` (`string`): Set the `key_vault_certificate_id` field on the resulting resource block. When `null`, the `key_vault_certificate_id` field will be omitted from the resulting object.\n  - `name` (`string`): Set the `name` field on the resulting resource block.\n  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.\n  - `service_name` (`string`): Set the `service_name` field on the resulting resource block.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_certificate.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n- A mixin object that injects the new resource into the root Terraform configuration.\n", args=[]),
+  '#new':: d.fn(help="\n`azurerm.spring_cloud_certificate.new` injects a new `azurerm_spring_cloud_certificate` Terraform `resource`\nblock into the root module document.\n\nAdditionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the\nresource. For example, if you added a new instance to the root using:\n\n    # arguments omitted for brevity\n    azurerm.spring_cloud_certificate.new('some_id')\n\nYou can get the reference to the `id` field of the created `azurerm.spring_cloud_certificate` using the reference:\n\n    $._ref.azurerm_spring_cloud_certificate.some_id.get('id')\n\nThis is the same as directly entering `\"${ azurerm_spring_cloud_certificate.some_id.id }\"` as the value.\n\nNOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,\nor `$` to refer to the root object. Instead, make an explicit outer object using `local`.\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block.\n  - `certificate_content` (`string`): Set the `certificate_content` field on the resulting resource block. When `null`, the `certificate_content` field will be omitted from the resulting object.\n  - `exclude_private_key` (`bool`): Set the `exclude_private_key` field on the resulting resource block. When `null`, the `exclude_private_key` field will be omitted from the resulting object.\n  - `key_vault_certificate_id` (`string`): Set the `key_vault_certificate_id` field on the resulting resource block. When `null`, the `key_vault_certificate_id` field will be omitted from the resulting object.\n  - `name` (`string`): Set the `name` field on the resulting resource block.\n  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.\n  - `service_name` (`string`): Set the `service_name` field on the resulting resource block.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_certificate.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n- A mixin object that injects the new resource into the root Terraform configuration.\n", args=[]),
   new(
     resourceLabel,
     name,
     resource_group_name,
     service_name,
     certificate_content=null,
+    exclude_private_key=null,
     key_vault_certificate_id=null,
     timeouts=null,
     _meta={}
@@ -17,6 +18,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     label=resourceLabel,
     attrs=self.newAttrs(
       certificate_content=certificate_content,
+      exclude_private_key=exclude_private_key,
       key_vault_certificate_id=key_vault_certificate_id,
       name=name,
       resource_group_name=resource_group_name,
@@ -25,16 +27,18 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     ),
     _meta=_meta
   ),
-  '#newAttrs':: d.fn(help='\n`azurerm.spring_cloud_certificate.newAttrs` constructs a new object with attributes and blocks configured for the `spring_cloud_certificate`\nTerraform resource.\n\nUnlike [azurerm.spring_cloud_certificate.new](#fn-new), this function will not inject the `resource`\nblock into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the\n[tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.\n\nThis is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to\ninjecting into a complete block.\n\n**Args**:\n  - `certificate_content` (`string`): Set the `certificate_content` field on the resulting object. When `null`, the `certificate_content` field will be omitted from the resulting object.\n  - `key_vault_certificate_id` (`string`): Set the `key_vault_certificate_id` field on the resulting object. When `null`, the `key_vault_certificate_id` field will be omitted from the resulting object.\n  - `name` (`string`): Set the `name` field on the resulting object.\n  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.\n  - `service_name` (`string`): Set the `service_name` field on the resulting object.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_certificate.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `spring_cloud_certificate` resource into the root Terraform configuration.\n', args=[]),
+  '#newAttrs':: d.fn(help='\n`azurerm.spring_cloud_certificate.newAttrs` constructs a new object with attributes and blocks configured for the `spring_cloud_certificate`\nTerraform resource.\n\nUnlike [azurerm.spring_cloud_certificate.new](#fn-new), this function will not inject the `resource`\nblock into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the\n[tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.\n\nThis is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to\ninjecting into a complete block.\n\n**Args**:\n  - `certificate_content` (`string`): Set the `certificate_content` field on the resulting object. When `null`, the `certificate_content` field will be omitted from the resulting object.\n  - `exclude_private_key` (`bool`): Set the `exclude_private_key` field on the resulting object. When `null`, the `exclude_private_key` field will be omitted from the resulting object.\n  - `key_vault_certificate_id` (`string`): Set the `key_vault_certificate_id` field on the resulting object. When `null`, the `key_vault_certificate_id` field will be omitted from the resulting object.\n  - `name` (`string`): Set the `name` field on the resulting object.\n  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.\n  - `service_name` (`string`): Set the `service_name` field on the resulting object.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_certificate.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `spring_cloud_certificate` resource into the root Terraform configuration.\n', args=[]),
   newAttrs(
     name,
     resource_group_name,
     service_name,
     certificate_content=null,
+    exclude_private_key=null,
     key_vault_certificate_id=null,
     timeouts=null
   ):: std.prune(a={
     certificate_content: certificate_content,
+    exclude_private_key: exclude_private_key,
     key_vault_certificate_id: key_vault_certificate_id,
     name: name,
     resource_group_name: resource_group_name,
@@ -59,6 +63,16 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       azurerm_spring_cloud_certificate+: {
         [resourceLabel]+: {
           certificate_content: value,
+        },
+      },
+    },
+  },
+  '#withExcludePrivateKey':: d.fn(help='`azurerm.bool.withExcludePrivateKey` constructs a mixin object that can be merged into the `bool`\nTerraform resource block to set or update the exclude_private_key field.\n\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`bool`): The value to set for the `exclude_private_key` field.\n', args=[]),
+  withExcludePrivateKey(resourceLabel, value): {
+    resource+: {
+      azurerm_spring_cloud_certificate+: {
+        [resourceLabel]+: {
+          exclude_private_key: value,
         },
       },
     },

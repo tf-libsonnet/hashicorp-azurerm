@@ -29,6 +29,7 @@ permalink: /data/
 * [application_gateway](application_gateway.md)
 * [application_insights](application_insights.md)
 * [application_security_group](application_security_group.md)
+* [arc_machine](arc_machine.md)
 * [attestation_provider](attestation_provider.md)
 * [automation_account](automation_account.md)
 * [automation_variable_bool](automation_variable_bool.md)

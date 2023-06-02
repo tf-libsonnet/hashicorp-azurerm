@@ -294,6 +294,7 @@ Terraform sub block.
 
 **Args**:
   - `branch` (`string`): Set the `branch` field on the resulting object. When `null`, the `branch` field will be omitted from the resulting object.
+  - `ca_certificate_id` (`string`): Set the `ca_certificate_id` field on the resulting object. When `null`, the `ca_certificate_id` field will be omitted from the resulting object.
   - `commit` (`string`): Set the `commit` field on the resulting object. When `null`, the `commit` field will be omitted from the resulting object.
   - `git_tag` (`string`): Set the `git_tag` field on the resulting object. When `null`, the `git_tag` field will be omitted from the resulting object.
   - `interval_in_seconds` (`number`): Set the `interval_in_seconds` field on the resulting object. When `null`, the `interval_in_seconds` field will be omitted from the resulting object.

@@ -100,6 +100,7 @@ project.
 * [arc_kubernetes_cluster](arc_kubernetes_cluster.md)
 * [arc_kubernetes_cluster_extension](arc_kubernetes_cluster_extension.md)
 * [attestation_provider](attestation_provider.md)
+* [automanage_configuration](automanage_configuration.md)
 * [automation_account](automation_account.md)
 * [automation_certificate](automation_certificate.md)
 * [automation_connection](automation_connection.md)

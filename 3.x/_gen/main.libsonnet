@@ -91,6 +91,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   arc_kubernetes_cluster: (import 'resources/arc_kubernetes_cluster.libsonnet'),
   arc_kubernetes_cluster_extension: (import 'resources/arc_kubernetes_cluster_extension.libsonnet'),
   attestation_provider: (import 'resources/attestation_provider.libsonnet'),
+  automanage_configuration: (import 'resources/automanage_configuration.libsonnet'),
   automation_account: (import 'resources/automation_account.libsonnet'),
   automation_certificate: (import 'resources/automation_certificate.libsonnet'),
   automation_connection: (import 'resources/automation_connection.libsonnet'),

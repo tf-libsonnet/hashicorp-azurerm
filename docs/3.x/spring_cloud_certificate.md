@@ -16,6 +16,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
 * [`fn withCertificateContent()`](#fn-withcertificatecontent)
+* [`fn withExcludePrivateKey()`](#fn-withexcludeprivatekey)
 * [`fn withKeyVaultCertificateId()`](#fn-withkeyvaultcertificateid)
 * [`fn withName()`](#fn-withname)
 * [`fn withResourceGroupName()`](#fn-withresourcegroupname)
@@ -55,6 +56,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
   - `certificate_content` (`string`): Set the `certificate_content` field on the resulting resource block. When `null`, the `certificate_content` field will be omitted from the resulting object.
+  - `exclude_private_key` (`bool`): Set the `exclude_private_key` field on the resulting resource block. When `null`, the `exclude_private_key` field will be omitted from the resulting object.
   - `key_vault_certificate_id` (`string`): Set the `key_vault_certificate_id` field on the resulting resource block. When `null`, the `key_vault_certificate_id` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting resource block.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
@@ -84,6 +86,7 @@ injecting into a complete block.
 
 **Args**:
   - `certificate_content` (`string`): Set the `certificate_content` field on the resulting object. When `null`, the `certificate_content` field will be omitted from the resulting object.
+  - `exclude_private_key` (`bool`): Set the `exclude_private_key` field on the resulting object. When `null`, the `exclude_private_key` field will be omitted from the resulting object.
   - `key_vault_certificate_id` (`string`): Set the `key_vault_certificate_id` field on the resulting object. When `null`, the `key_vault_certificate_id` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
@@ -108,6 +111,22 @@ Terraform resource block to set or update the certificate_content field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `certificate_content` field.
+
+
+### fn withExcludePrivateKey
+
+```ts
+withExcludePrivateKey()
+```
+
+`azurerm.bool.withExcludePrivateKey` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the exclude_private_key field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `exclude_private_key` field.
 
 
 ### fn withKeyVaultCertificateId
