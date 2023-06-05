@@ -13,11 +13,12 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
         username: username,
       }),
     },
-    '#new':: d.fn(help='\n`azurerm.spring_cloud_customized_accelerator.git_repository.new` constructs a new object with attributes and blocks configured for the `git_repository`\nTerraform sub block.\n\n\n\n**Args**:\n  - `branch` (`string`): Set the `branch` field on the resulting object. When `null`, the `branch` field will be omitted from the resulting object.\n  - `commit` (`string`): Set the `commit` field on the resulting object. When `null`, the `commit` field will be omitted from the resulting object.\n  - `git_tag` (`string`): Set the `git_tag` field on the resulting object. When `null`, the `git_tag` field will be omitted from the resulting object.\n  - `interval_in_seconds` (`number`): Set the `interval_in_seconds` field on the resulting object. When `null`, the `interval_in_seconds` field will be omitted from the resulting object.\n  - `url` (`string`): Set the `url` field on the resulting object.\n  - `basic_auth` (`list[obj]`): Set the `basic_auth` field on the resulting object. When `null`, the `basic_auth` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_customized_accelerator.git_repository.basic_auth.new](#fn-git_repositorybasic_authnew) constructor.\n  - `ssh_auth` (`list[obj]`): Set the `ssh_auth` field on the resulting object. When `null`, the `ssh_auth` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_customized_accelerator.git_repository.ssh_auth.new](#fn-git_repositoryssh_authnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `git_repository` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`azurerm.spring_cloud_customized_accelerator.git_repository.new` constructs a new object with attributes and blocks configured for the `git_repository`\nTerraform sub block.\n\n\n\n**Args**:\n  - `branch` (`string`): Set the `branch` field on the resulting object. When `null`, the `branch` field will be omitted from the resulting object.\n  - `ca_certificate_id` (`string`): Set the `ca_certificate_id` field on the resulting object. When `null`, the `ca_certificate_id` field will be omitted from the resulting object.\n  - `commit` (`string`): Set the `commit` field on the resulting object. When `null`, the `commit` field will be omitted from the resulting object.\n  - `git_tag` (`string`): Set the `git_tag` field on the resulting object. When `null`, the `git_tag` field will be omitted from the resulting object.\n  - `interval_in_seconds` (`number`): Set the `interval_in_seconds` field on the resulting object. When `null`, the `interval_in_seconds` field will be omitted from the resulting object.\n  - `url` (`string`): Set the `url` field on the resulting object.\n  - `basic_auth` (`list[obj]`): Set the `basic_auth` field on the resulting object. When `null`, the `basic_auth` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_customized_accelerator.git_repository.basic_auth.new](#fn-git_repositorybasic_authnew) constructor.\n  - `ssh_auth` (`list[obj]`): Set the `ssh_auth` field on the resulting object. When `null`, the `ssh_auth` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_customized_accelerator.git_repository.ssh_auth.new](#fn-git_repositoryssh_authnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `git_repository` sub block.\n', args=[]),
     new(
       url,
       basic_auth=null,
       branch=null,
+      ca_certificate_id=null,
       commit=null,
       git_tag=null,
       interval_in_seconds=null,
@@ -25,6 +26,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     ):: std.prune(a={
       basic_auth: basic_auth,
       branch: branch,
+      ca_certificate_id: ca_certificate_id,
       commit: commit,
       git_tag: git_tag,
       interval_in_seconds: interval_in_seconds,

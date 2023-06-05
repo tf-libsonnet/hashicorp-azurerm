@@ -154,17 +154,19 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     }),
   },
   upstream_endpoint:: {
-    '#new':: d.fn(help='\n`azurerm.signalr_service.upstream_endpoint.new` constructs a new object with attributes and blocks configured for the `upstream_endpoint`\nTerraform sub block.\n\n\n\n**Args**:\n  - `category_pattern` (`list`): Set the `category_pattern` field on the resulting object.\n  - `event_pattern` (`list`): Set the `event_pattern` field on the resulting object.\n  - `hub_pattern` (`list`): Set the `hub_pattern` field on the resulting object.\n  - `url_template` (`string`): Set the `url_template` field on the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `upstream_endpoint` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`azurerm.signalr_service.upstream_endpoint.new` constructs a new object with attributes and blocks configured for the `upstream_endpoint`\nTerraform sub block.\n\n\n\n**Args**:\n  - `category_pattern` (`list`): Set the `category_pattern` field on the resulting object.\n  - `event_pattern` (`list`): Set the `event_pattern` field on the resulting object.\n  - `hub_pattern` (`list`): Set the `hub_pattern` field on the resulting object.\n  - `url_template` (`string`): Set the `url_template` field on the resulting object.\n  - `user_assigned_identity_id` (`string`): Set the `user_assigned_identity_id` field on the resulting object. When `null`, the `user_assigned_identity_id` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `upstream_endpoint` sub block.\n', args=[]),
     new(
       category_pattern,
       event_pattern,
       hub_pattern,
-      url_template
+      url_template,
+      user_assigned_identity_id=null
     ):: std.prune(a={
       category_pattern: category_pattern,
       event_pattern: event_pattern,
       hub_pattern: hub_pattern,
       url_template: url_template,
+      user_assigned_identity_id: user_assigned_identity_id,
     }),
   },
   '#withAadAuthEnabled':: d.fn(help='`azurerm.bool.withAadAuthEnabled` constructs a mixin object that can be merged into the `bool`\nTerraform resource block to set or update the aad_auth_enabled field.\n\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`bool`): The value to set for the `aad_auth_enabled` field.\n', args=[]),

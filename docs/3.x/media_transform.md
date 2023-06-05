@@ -51,6 +51,14 @@ This package contains functions and utilities for setting up the resource using 
         * [`fn new()`](#fn-outputcustom_presetcodech265_videonew)
         * [`obj output.custom_preset.codec.h265_video.layer`](#obj-outputcustom_presetcodech265_videolayer)
           * [`fn new()`](#fn-outputcustom_presetcodech265_videolayernew)
+      * [`obj output.custom_preset.codec.jpg_image`](#obj-outputcustom_presetcodecjpg_image)
+        * [`fn new()`](#fn-outputcustom_presetcodecjpg_imagenew)
+        * [`obj output.custom_preset.codec.jpg_image.layer`](#obj-outputcustom_presetcodecjpg_imagelayer)
+          * [`fn new()`](#fn-outputcustom_presetcodecjpg_imagelayernew)
+      * [`obj output.custom_preset.codec.png_image`](#obj-outputcustom_presetcodecpng_image)
+        * [`fn new()`](#fn-outputcustom_presetcodecpng_imagenew)
+        * [`obj output.custom_preset.codec.png_image.layer`](#obj-outputcustom_presetcodecpng_imagelayer)
+          * [`fn new()`](#fn-outputcustom_presetcodecpng_imagelayernew)
     * [`obj output.custom_preset.filter`](#obj-outputcustom_presetfilter)
       * [`fn new()`](#fn-outputcustom_presetfilternew)
       * [`obj output.custom_preset.filter.crop_rectangle`](#obj-outputcustom_presetfiltercrop_rectangle)
@@ -73,10 +81,14 @@ This package contains functions and utilities for setting up the resource using 
             * [`fn new()`](#fn-outputcustom_presetfilteroverlayvideopositionnew)
     * [`obj output.custom_preset.format`](#obj-outputcustom_presetformat)
       * [`fn new()`](#fn-outputcustom_presetformatnew)
+      * [`obj output.custom_preset.format.jpg`](#obj-outputcustom_presetformatjpg)
+        * [`fn new()`](#fn-outputcustom_presetformatjpgnew)
       * [`obj output.custom_preset.format.mp4`](#obj-outputcustom_presetformatmp4)
         * [`fn new()`](#fn-outputcustom_presetformatmp4new)
         * [`obj output.custom_preset.format.mp4.output_file`](#obj-outputcustom_presetformatmp4output_file)
           * [`fn new()`](#fn-outputcustom_presetformatmp4output_filenew)
+      * [`obj output.custom_preset.format.png`](#obj-outputcustom_presetformatpng)
+        * [`fn new()`](#fn-outputcustom_presetformatpngnew)
       * [`obj output.custom_preset.format.transport_stream`](#obj-outputcustom_presetformattransport_stream)
         * [`fn new()`](#fn-outputcustom_presetformattransport_streamnew)
         * [`obj output.custom_preset.format.transport_stream.output_file`](#obj-outputcustom_presetformattransport_streamoutput_file)
@@ -419,6 +431,7 @@ Terraform sub block.
 
 
 **Args**:
+  - `experimental_options` (`obj`): Set the `experimental_options` field on the resulting object. When `null`, the `experimental_options` field will be omitted from the resulting object.
   - `codec` (`list[obj]`): Set the `codec` field on the resulting object. When `null`, the `codec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.custom_preset.codec.new](#fn-outputoutputcodecnew) constructor.
   - `filter` (`list[obj]`): Set the `filter` field on the resulting object. When `null`, the `filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.custom_preset.filter.new](#fn-outputoutputfilternew) constructor.
   - `format` (`list[obj]`): Set the `format` field on the resulting object. When `null`, the `format` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.custom_preset.format.new](#fn-outputoutputformatnew) constructor.
@@ -450,6 +463,8 @@ Terraform sub block.
   - `dd_audio` (`list[obj]`): Set the `dd_audio` field on the resulting object. When `null`, the `dd_audio` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.custom_preset.codec.dd_audio.new](#fn-outputoutputcustom_presetdd_audionew) constructor.
   - `h264_video` (`list[obj]`): Set the `h264_video` field on the resulting object. When `null`, the `h264_video` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.custom_preset.codec.h264_video.new](#fn-outputoutputcustom_preseth264_videonew) constructor.
   - `h265_video` (`list[obj]`): Set the `h265_video` field on the resulting object. When `null`, the `h265_video` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.custom_preset.codec.h265_video.new](#fn-outputoutputcustom_preseth265_videonew) constructor.
+  - `jpg_image` (`list[obj]`): Set the `jpg_image` field on the resulting object. When `null`, the `jpg_image` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.custom_preset.codec.jpg_image.new](#fn-outputoutputcustom_presetjpg_imagenew) constructor.
+  - `png_image` (`list[obj]`): Set the `png_image` field on the resulting object. When `null`, the `png_image` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.custom_preset.codec.png_image.new](#fn-outputoutputcustom_presetpng_imagenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `codec` sub block.
@@ -680,6 +695,118 @@ Terraform sub block.
   - `profile` (`string`): Set the `profile` field on the resulting object. When `null`, the `profile` field will be omitted from the resulting object.
   - `reference_frames` (`number`): Set the `reference_frames` field on the resulting object. When `null`, the `reference_frames` field will be omitted from the resulting object.
   - `slices` (`number`): Set the `slices` field on the resulting object. When `null`, the `slices` field will be omitted from the resulting object.
+  - `width` (`string`): Set the `width` field on the resulting object. When `null`, the `width` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `layer` sub block.
+
+
+## obj output.custom_preset.codec.jpg_image
+
+
+
+### fn output.custom_preset.codec.jpg_image.new
+
+```ts
+new()
+```
+
+
+`azurerm.media_transform.output.custom_preset.codec.jpg_image.new` constructs a new object with attributes and blocks configured for the `jpg_image`
+Terraform sub block.
+
+
+
+**Args**:
+  - `key_frame_interval` (`string`): Set the `key_frame_interval` field on the resulting object. When `null`, the `key_frame_interval` field will be omitted from the resulting object.
+  - `label` (`string`): Set the `label` field on the resulting object. When `null`, the `label` field will be omitted from the resulting object.
+  - `range` (`string`): Set the `range` field on the resulting object. When `null`, the `range` field will be omitted from the resulting object.
+  - `sprite_column` (`number`): Set the `sprite_column` field on the resulting object. When `null`, the `sprite_column` field will be omitted from the resulting object.
+  - `start` (`string`): Set the `start` field on the resulting object.
+  - `step` (`string`): Set the `step` field on the resulting object. When `null`, the `step` field will be omitted from the resulting object.
+  - `stretch_mode` (`string`): Set the `stretch_mode` field on the resulting object. When `null`, the `stretch_mode` field will be omitted from the resulting object.
+  - `sync_mode` (`string`): Set the `sync_mode` field on the resulting object. When `null`, the `sync_mode` field will be omitted from the resulting object.
+  - `layer` (`list[obj]`): Set the `layer` field on the resulting object. When `null`, the `layer` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.custom_preset.codec.jpg_image.layer.new](#fn-outputoutputcustom_presetcodeclayernew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `jpg_image` sub block.
+
+
+## obj output.custom_preset.codec.jpg_image.layer
+
+
+
+### fn output.custom_preset.codec.jpg_image.layer.new
+
+```ts
+new()
+```
+
+
+`azurerm.media_transform.output.custom_preset.codec.jpg_image.layer.new` constructs a new object with attributes and blocks configured for the `layer`
+Terraform sub block.
+
+
+
+**Args**:
+  - `height` (`string`): Set the `height` field on the resulting object. When `null`, the `height` field will be omitted from the resulting object.
+  - `label` (`string`): Set the `label` field on the resulting object. When `null`, the `label` field will be omitted from the resulting object.
+  - `quality` (`number`): Set the `quality` field on the resulting object. When `null`, the `quality` field will be omitted from the resulting object.
+  - `width` (`string`): Set the `width` field on the resulting object. When `null`, the `width` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `layer` sub block.
+
+
+## obj output.custom_preset.codec.png_image
+
+
+
+### fn output.custom_preset.codec.png_image.new
+
+```ts
+new()
+```
+
+
+`azurerm.media_transform.output.custom_preset.codec.png_image.new` constructs a new object with attributes and blocks configured for the `png_image`
+Terraform sub block.
+
+
+
+**Args**:
+  - `key_frame_interval` (`string`): Set the `key_frame_interval` field on the resulting object. When `null`, the `key_frame_interval` field will be omitted from the resulting object.
+  - `label` (`string`): Set the `label` field on the resulting object. When `null`, the `label` field will be omitted from the resulting object.
+  - `range` (`string`): Set the `range` field on the resulting object. When `null`, the `range` field will be omitted from the resulting object.
+  - `start` (`string`): Set the `start` field on the resulting object.
+  - `step` (`string`): Set the `step` field on the resulting object. When `null`, the `step` field will be omitted from the resulting object.
+  - `stretch_mode` (`string`): Set the `stretch_mode` field on the resulting object. When `null`, the `stretch_mode` field will be omitted from the resulting object.
+  - `sync_mode` (`string`): Set the `sync_mode` field on the resulting object. When `null`, the `sync_mode` field will be omitted from the resulting object.
+  - `layer` (`list[obj]`): Set the `layer` field on the resulting object. When `null`, the `layer` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.custom_preset.codec.png_image.layer.new](#fn-outputoutputcustom_presetcodeclayernew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `png_image` sub block.
+
+
+## obj output.custom_preset.codec.png_image.layer
+
+
+
+### fn output.custom_preset.codec.png_image.layer.new
+
+```ts
+new()
+```
+
+
+`azurerm.media_transform.output.custom_preset.codec.png_image.layer.new` constructs a new object with attributes and blocks configured for the `layer`
+Terraform sub block.
+
+
+
+**Args**:
+  - `height` (`string`): Set the `height` field on the resulting object. When `null`, the `height` field will be omitted from the resulting object.
+  - `label` (`string`): Set the `label` field on the resulting object. When `null`, the `label` field will be omitted from the resulting object.
   - `width` (`string`): Set the `width` field on the resulting object. When `null`, the `width` field will be omitted from the resulting object.
 
 **Returns**:
@@ -966,11 +1093,36 @@ Terraform sub block.
 
 
 **Args**:
+  - `jpg` (`list[obj]`): Set the `jpg` field on the resulting object. When `null`, the `jpg` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.custom_preset.format.jpg.new](#fn-outputoutputcustom_presetjpgnew) constructor.
   - `mp4` (`list[obj]`): Set the `mp4` field on the resulting object. When `null`, the `mp4` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.custom_preset.format.mp4.new](#fn-outputoutputcustom_presetmp4new) constructor.
+  - `png` (`list[obj]`): Set the `png` field on the resulting object. When `null`, the `png` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.custom_preset.format.png.new](#fn-outputoutputcustom_presetpngnew) constructor.
   - `transport_stream` (`list[obj]`): Set the `transport_stream` field on the resulting object. When `null`, the `transport_stream` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.custom_preset.format.transport_stream.new](#fn-outputoutputcustom_presettransport_streamnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `format` sub block.
+
+
+## obj output.custom_preset.format.jpg
+
+
+
+### fn output.custom_preset.format.jpg.new
+
+```ts
+new()
+```
+
+
+`azurerm.media_transform.output.custom_preset.format.jpg.new` constructs a new object with attributes and blocks configured for the `jpg`
+Terraform sub block.
+
+
+
+**Args**:
+  - `filename_pattern` (`string`): Set the `filename_pattern` field on the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `jpg` sub block.
 
 
 ## obj output.custom_preset.format.mp4
@@ -1018,6 +1170,29 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `output_file` sub block.
+
+
+## obj output.custom_preset.format.png
+
+
+
+### fn output.custom_preset.format.png.new
+
+```ts
+new()
+```
+
+
+`azurerm.media_transform.output.custom_preset.format.png.new` constructs a new object with attributes and blocks configured for the `png`
+Terraform sub block.
+
+
+
+**Args**:
+  - `filename_pattern` (`string`): Set the `filename_pattern` field on the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `png` sub block.
 
 
 ## obj output.custom_preset.format.transport_stream

@@ -246,14 +246,54 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
             sync_mode: sync_mode,
           }),
         },
-        '#new':: d.fn(help='\n`azurerm.media_transform.output.custom_preset.codec.new` constructs a new object with attributes and blocks configured for the `codec`\nTerraform sub block.\n\n\n\n**Args**:\n  - `aac_audio` (`list[obj]`): Set the `aac_audio` field on the resulting object. When `null`, the `aac_audio` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.custom_preset.codec.aac_audio.new](#fn-outputoutputcustom_presetaac_audionew) constructor.\n  - `copy_audio` (`list[obj]`): Set the `copy_audio` field on the resulting object. When `null`, the `copy_audio` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.custom_preset.codec.copy_audio.new](#fn-outputoutputcustom_presetcopy_audionew) constructor.\n  - `copy_video` (`list[obj]`): Set the `copy_video` field on the resulting object. When `null`, the `copy_video` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.custom_preset.codec.copy_video.new](#fn-outputoutputcustom_presetcopy_videonew) constructor.\n  - `dd_audio` (`list[obj]`): Set the `dd_audio` field on the resulting object. When `null`, the `dd_audio` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.custom_preset.codec.dd_audio.new](#fn-outputoutputcustom_presetdd_audionew) constructor.\n  - `h264_video` (`list[obj]`): Set the `h264_video` field on the resulting object. When `null`, the `h264_video` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.custom_preset.codec.h264_video.new](#fn-outputoutputcustom_preseth264_videonew) constructor.\n  - `h265_video` (`list[obj]`): Set the `h265_video` field on the resulting object. When `null`, the `h265_video` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.custom_preset.codec.h265_video.new](#fn-outputoutputcustom_preseth265_videonew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `codec` sub block.\n', args=[]),
+        jpg_image:: {
+          layer:: {
+            '#new':: d.fn(help='\n`azurerm.media_transform.output.custom_preset.codec.jpg_image.layer.new` constructs a new object with attributes and blocks configured for the `layer`\nTerraform sub block.\n\n\n\n**Args**:\n  - `height` (`string`): Set the `height` field on the resulting object. When `null`, the `height` field will be omitted from the resulting object.\n  - `label` (`string`): Set the `label` field on the resulting object. When `null`, the `label` field will be omitted from the resulting object.\n  - `quality` (`number`): Set the `quality` field on the resulting object. When `null`, the `quality` field will be omitted from the resulting object.\n  - `width` (`string`): Set the `width` field on the resulting object. When `null`, the `width` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `layer` sub block.\n', args=[]),
+            new(
+              height=null,
+              label=null,
+              quality=null,
+              width=null
+            ):: std.prune(a={
+              height: height,
+              label: label,
+              quality: quality,
+              width: width,
+            }),
+          },
+          '#new':: d.fn(help='\n`azurerm.media_transform.output.custom_preset.codec.jpg_image.new` constructs a new object with attributes and blocks configured for the `jpg_image`\nTerraform sub block.\n\n\n\n**Args**:\n  - `key_frame_interval` (`string`): Set the `key_frame_interval` field on the resulting object. When `null`, the `key_frame_interval` field will be omitted from the resulting object.\n  - `label` (`string`): Set the `label` field on the resulting object. When `null`, the `label` field will be omitted from the resulting object.\n  - `range` (`string`): Set the `range` field on the resulting object. When `null`, the `range` field will be omitted from the resulting object.\n  - `sprite_column` (`number`): Set the `sprite_column` field on the resulting object. When `null`, the `sprite_column` field will be omitted from the resulting object.\n  - `start` (`string`): Set the `start` field on the resulting object.\n  - `step` (`string`): Set the `step` field on the resulting object. When `null`, the `step` field will be omitted from the resulting object.\n  - `stretch_mode` (`string`): Set the `stretch_mode` field on the resulting object. When `null`, the `stretch_mode` field will be omitted from the resulting object.\n  - `sync_mode` (`string`): Set the `sync_mode` field on the resulting object. When `null`, the `sync_mode` field will be omitted from the resulting object.\n  - `layer` (`list[obj]`): Set the `layer` field on the resulting object. When `null`, the `layer` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.custom_preset.codec.jpg_image.layer.new](#fn-outputoutputcustom_presetcodeclayernew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `jpg_image` sub block.\n', args=[]),
+          new(
+            start,
+            key_frame_interval=null,
+            label=null,
+            layer=null,
+            range=null,
+            sprite_column=null,
+            step=null,
+            stretch_mode=null,
+            sync_mode=null
+          ):: std.prune(a={
+            key_frame_interval: key_frame_interval,
+            label: label,
+            layer: layer,
+            range: range,
+            sprite_column: sprite_column,
+            start: start,
+            step: step,
+            stretch_mode: stretch_mode,
+            sync_mode: sync_mode,
+          }),
+        },
+        '#new':: d.fn(help='\n`azurerm.media_transform.output.custom_preset.codec.new` constructs a new object with attributes and blocks configured for the `codec`\nTerraform sub block.\n\n\n\n**Args**:\n  - `aac_audio` (`list[obj]`): Set the `aac_audio` field on the resulting object. When `null`, the `aac_audio` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.custom_preset.codec.aac_audio.new](#fn-outputoutputcustom_presetaac_audionew) constructor.\n  - `copy_audio` (`list[obj]`): Set the `copy_audio` field on the resulting object. When `null`, the `copy_audio` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.custom_preset.codec.copy_audio.new](#fn-outputoutputcustom_presetcopy_audionew) constructor.\n  - `copy_video` (`list[obj]`): Set the `copy_video` field on the resulting object. When `null`, the `copy_video` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.custom_preset.codec.copy_video.new](#fn-outputoutputcustom_presetcopy_videonew) constructor.\n  - `dd_audio` (`list[obj]`): Set the `dd_audio` field on the resulting object. When `null`, the `dd_audio` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.custom_preset.codec.dd_audio.new](#fn-outputoutputcustom_presetdd_audionew) constructor.\n  - `h264_video` (`list[obj]`): Set the `h264_video` field on the resulting object. When `null`, the `h264_video` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.custom_preset.codec.h264_video.new](#fn-outputoutputcustom_preseth264_videonew) constructor.\n  - `h265_video` (`list[obj]`): Set the `h265_video` field on the resulting object. When `null`, the `h265_video` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.custom_preset.codec.h265_video.new](#fn-outputoutputcustom_preseth265_videonew) constructor.\n  - `jpg_image` (`list[obj]`): Set the `jpg_image` field on the resulting object. When `null`, the `jpg_image` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.custom_preset.codec.jpg_image.new](#fn-outputoutputcustom_presetjpg_imagenew) constructor.\n  - `png_image` (`list[obj]`): Set the `png_image` field on the resulting object. When `null`, the `png_image` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.custom_preset.codec.png_image.new](#fn-outputoutputcustom_presetpng_imagenew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `codec` sub block.\n', args=[]),
         new(
           aac_audio=null,
           copy_audio=null,
           copy_video=null,
           dd_audio=null,
           h264_video=null,
-          h265_video=null
+          h265_video=null,
+          jpg_image=null,
+          png_image=null
         ):: std.prune(a={
           aac_audio: aac_audio,
           copy_audio: copy_audio,
@@ -261,7 +301,43 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
           dd_audio: dd_audio,
           h264_video: h264_video,
           h265_video: h265_video,
+          jpg_image: jpg_image,
+          png_image: png_image,
         }),
+        png_image:: {
+          layer:: {
+            '#new':: d.fn(help='\n`azurerm.media_transform.output.custom_preset.codec.png_image.layer.new` constructs a new object with attributes and blocks configured for the `layer`\nTerraform sub block.\n\n\n\n**Args**:\n  - `height` (`string`): Set the `height` field on the resulting object. When `null`, the `height` field will be omitted from the resulting object.\n  - `label` (`string`): Set the `label` field on the resulting object. When `null`, the `label` field will be omitted from the resulting object.\n  - `width` (`string`): Set the `width` field on the resulting object. When `null`, the `width` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `layer` sub block.\n', args=[]),
+            new(
+              height=null,
+              label=null,
+              width=null
+            ):: std.prune(a={
+              height: height,
+              label: label,
+              width: width,
+            }),
+          },
+          '#new':: d.fn(help='\n`azurerm.media_transform.output.custom_preset.codec.png_image.new` constructs a new object with attributes and blocks configured for the `png_image`\nTerraform sub block.\n\n\n\n**Args**:\n  - `key_frame_interval` (`string`): Set the `key_frame_interval` field on the resulting object. When `null`, the `key_frame_interval` field will be omitted from the resulting object.\n  - `label` (`string`): Set the `label` field on the resulting object. When `null`, the `label` field will be omitted from the resulting object.\n  - `range` (`string`): Set the `range` field on the resulting object. When `null`, the `range` field will be omitted from the resulting object.\n  - `start` (`string`): Set the `start` field on the resulting object.\n  - `step` (`string`): Set the `step` field on the resulting object. When `null`, the `step` field will be omitted from the resulting object.\n  - `stretch_mode` (`string`): Set the `stretch_mode` field on the resulting object. When `null`, the `stretch_mode` field will be omitted from the resulting object.\n  - `sync_mode` (`string`): Set the `sync_mode` field on the resulting object. When `null`, the `sync_mode` field will be omitted from the resulting object.\n  - `layer` (`list[obj]`): Set the `layer` field on the resulting object. When `null`, the `layer` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.custom_preset.codec.png_image.layer.new](#fn-outputoutputcustom_presetcodeclayernew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `png_image` sub block.\n', args=[]),
+          new(
+            start,
+            key_frame_interval=null,
+            label=null,
+            layer=null,
+            range=null,
+            step=null,
+            stretch_mode=null,
+            sync_mode=null
+          ):: std.prune(a={
+            key_frame_interval: key_frame_interval,
+            label: label,
+            layer: layer,
+            range: range,
+            start: start,
+            step: step,
+            stretch_mode: stretch_mode,
+            sync_mode: sync_mode,
+          }),
+        },
       },
       filter:: {
         crop_rectangle:: {
@@ -410,6 +486,14 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
         },
       },
       format:: {
+        jpg:: {
+          '#new':: d.fn(help='\n`azurerm.media_transform.output.custom_preset.format.jpg.new` constructs a new object with attributes and blocks configured for the `jpg`\nTerraform sub block.\n\n\n\n**Args**:\n  - `filename_pattern` (`string`): Set the `filename_pattern` field on the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `jpg` sub block.\n', args=[]),
+          new(
+            filename_pattern
+          ):: std.prune(a={
+            filename_pattern: filename_pattern,
+          }),
+        },
         mp4:: {
           '#new':: d.fn(help='\n`azurerm.media_transform.output.custom_preset.format.mp4.new` constructs a new object with attributes and blocks configured for the `mp4`\nTerraform sub block.\n\n\n\n**Args**:\n  - `filename_pattern` (`string`): Set the `filename_pattern` field on the resulting object.\n  - `output_file` (`list[obj]`): Set the `output_file` field on the resulting object. When `null`, the `output_file` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.custom_preset.format.mp4.output_file.new](#fn-outputoutputcustom_presetformatoutput_filenew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `mp4` sub block.\n', args=[]),
           new(
@@ -428,14 +512,26 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
             }),
           },
         },
-        '#new':: d.fn(help='\n`azurerm.media_transform.output.custom_preset.format.new` constructs a new object with attributes and blocks configured for the `format`\nTerraform sub block.\n\n\n\n**Args**:\n  - `mp4` (`list[obj]`): Set the `mp4` field on the resulting object. When `null`, the `mp4` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.custom_preset.format.mp4.new](#fn-outputoutputcustom_presetmp4new) constructor.\n  - `transport_stream` (`list[obj]`): Set the `transport_stream` field on the resulting object. When `null`, the `transport_stream` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.custom_preset.format.transport_stream.new](#fn-outputoutputcustom_presettransport_streamnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `format` sub block.\n', args=[]),
+        '#new':: d.fn(help='\n`azurerm.media_transform.output.custom_preset.format.new` constructs a new object with attributes and blocks configured for the `format`\nTerraform sub block.\n\n\n\n**Args**:\n  - `jpg` (`list[obj]`): Set the `jpg` field on the resulting object. When `null`, the `jpg` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.custom_preset.format.jpg.new](#fn-outputoutputcustom_presetjpgnew) constructor.\n  - `mp4` (`list[obj]`): Set the `mp4` field on the resulting object. When `null`, the `mp4` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.custom_preset.format.mp4.new](#fn-outputoutputcustom_presetmp4new) constructor.\n  - `png` (`list[obj]`): Set the `png` field on the resulting object. When `null`, the `png` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.custom_preset.format.png.new](#fn-outputoutputcustom_presetpngnew) constructor.\n  - `transport_stream` (`list[obj]`): Set the `transport_stream` field on the resulting object. When `null`, the `transport_stream` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.custom_preset.format.transport_stream.new](#fn-outputoutputcustom_presettransport_streamnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `format` sub block.\n', args=[]),
         new(
+          jpg=null,
           mp4=null,
+          png=null,
           transport_stream=null
         ):: std.prune(a={
+          jpg: jpg,
           mp4: mp4,
+          png: png,
           transport_stream: transport_stream,
         }),
+        png:: {
+          '#new':: d.fn(help='\n`azurerm.media_transform.output.custom_preset.format.png.new` constructs a new object with attributes and blocks configured for the `png`\nTerraform sub block.\n\n\n\n**Args**:\n  - `filename_pattern` (`string`): Set the `filename_pattern` field on the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `png` sub block.\n', args=[]),
+          new(
+            filename_pattern
+          ):: std.prune(a={
+            filename_pattern: filename_pattern,
+          }),
+        },
         transport_stream:: {
           '#new':: d.fn(help='\n`azurerm.media_transform.output.custom_preset.format.transport_stream.new` constructs a new object with attributes and blocks configured for the `transport_stream`\nTerraform sub block.\n\n\n\n**Args**:\n  - `filename_pattern` (`string`): Set the `filename_pattern` field on the resulting object.\n  - `output_file` (`list[obj]`): Set the `output_file` field on the resulting object. When `null`, the `output_file` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.custom_preset.format.transport_stream.output_file.new](#fn-outputoutputcustom_presetformatoutput_filenew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `transport_stream` sub block.\n', args=[]),
           new(
@@ -455,13 +551,15 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
           },
         },
       },
-      '#new':: d.fn(help='\n`azurerm.media_transform.output.custom_preset.new` constructs a new object with attributes and blocks configured for the `custom_preset`\nTerraform sub block.\n\n\n\n**Args**:\n  - `codec` (`list[obj]`): Set the `codec` field on the resulting object. When `null`, the `codec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.custom_preset.codec.new](#fn-outputoutputcodecnew) constructor.\n  - `filter` (`list[obj]`): Set the `filter` field on the resulting object. When `null`, the `filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.custom_preset.filter.new](#fn-outputoutputfilternew) constructor.\n  - `format` (`list[obj]`): Set the `format` field on the resulting object. When `null`, the `format` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.custom_preset.format.new](#fn-outputoutputformatnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `custom_preset` sub block.\n', args=[]),
+      '#new':: d.fn(help='\n`azurerm.media_transform.output.custom_preset.new` constructs a new object with attributes and blocks configured for the `custom_preset`\nTerraform sub block.\n\n\n\n**Args**:\n  - `experimental_options` (`obj`): Set the `experimental_options` field on the resulting object. When `null`, the `experimental_options` field will be omitted from the resulting object.\n  - `codec` (`list[obj]`): Set the `codec` field on the resulting object. When `null`, the `codec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.custom_preset.codec.new](#fn-outputoutputcodecnew) constructor.\n  - `filter` (`list[obj]`): Set the `filter` field on the resulting object. When `null`, the `filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.custom_preset.filter.new](#fn-outputoutputfilternew) constructor.\n  - `format` (`list[obj]`): Set the `format` field on the resulting object. When `null`, the `format` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.media_transform.output.custom_preset.format.new](#fn-outputoutputformatnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `custom_preset` sub block.\n', args=[]),
       new(
         codec=null,
+        experimental_options=null,
         filter=null,
         format=null
       ):: std.prune(a={
         codec: codec,
+        experimental_options: experimental_options,
         filter: filter,
         format: format,
       }),

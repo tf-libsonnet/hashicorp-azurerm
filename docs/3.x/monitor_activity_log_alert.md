@@ -363,16 +363,23 @@ Terraform sub block.
   - `caller` (`string`): Set the `caller` field on the resulting object. When `null`, the `caller` field will be omitted from the resulting object.
   - `category` (`string`): Set the `category` field on the resulting object.
   - `level` (`string`): Set the `level` field on the resulting object. When `null`, the `level` field will be omitted from the resulting object.
+  - `levels` (`list`): Set the `levels` field on the resulting object. When `null`, the `levels` field will be omitted from the resulting object.
   - `operation_name` (`string`): Set the `operation_name` field on the resulting object. When `null`, the `operation_name` field will be omitted from the resulting object.
   - `recommendation_category` (`string`): Set the `recommendation_category` field on the resulting object. When `null`, the `recommendation_category` field will be omitted from the resulting object.
   - `recommendation_impact` (`string`): Set the `recommendation_impact` field on the resulting object. When `null`, the `recommendation_impact` field will be omitted from the resulting object.
   - `recommendation_type` (`string`): Set the `recommendation_type` field on the resulting object. When `null`, the `recommendation_type` field will be omitted from the resulting object.
   - `resource_group` (`string`): Set the `resource_group` field on the resulting object. When `null`, the `resource_group` field will be omitted from the resulting object.
+  - `resource_groups` (`list`): Set the `resource_groups` field on the resulting object. When `null`, the `resource_groups` field will be omitted from the resulting object.
   - `resource_id` (`string`): Set the `resource_id` field on the resulting object. When `null`, the `resource_id` field will be omitted from the resulting object.
+  - `resource_ids` (`list`): Set the `resource_ids` field on the resulting object. When `null`, the `resource_ids` field will be omitted from the resulting object.
   - `resource_provider` (`string`): Set the `resource_provider` field on the resulting object. When `null`, the `resource_provider` field will be omitted from the resulting object.
+  - `resource_providers` (`list`): Set the `resource_providers` field on the resulting object. When `null`, the `resource_providers` field will be omitted from the resulting object.
   - `resource_type` (`string`): Set the `resource_type` field on the resulting object. When `null`, the `resource_type` field will be omitted from the resulting object.
+  - `resource_types` (`list`): Set the `resource_types` field on the resulting object. When `null`, the `resource_types` field will be omitted from the resulting object.
   - `status` (`string`): Set the `status` field on the resulting object. When `null`, the `status` field will be omitted from the resulting object.
+  - `statuses` (`list`): Set the `statuses` field on the resulting object. When `null`, the `statuses` field will be omitted from the resulting object.
   - `sub_status` (`string`): Set the `sub_status` field on the resulting object. When `null`, the `sub_status` field will be omitted from the resulting object.
+  - `sub_statuses` (`list`): Set the `sub_statuses` field on the resulting object. When `null`, the `sub_statuses` field will be omitted from the resulting object.
   - `resource_health` (`list[obj]`): Set the `resource_health` field on the resulting object. When `null`, the `resource_health` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_activity_log_alert.criteria.resource_health.new](#fn-criteriaresource_healthnew) constructor.
   - `service_health` (`list[obj]`): Set the `service_health` field on the resulting object. When `null`, the `service_health` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_activity_log_alert.criteria.service_health.new](#fn-criteriaservice_healthnew) constructor.
 

@@ -579,8 +579,10 @@ Terraform sub block.
 
 **Args**:
   - `count` (`number`): Set the `count` field on the resulting object.
-  - `weekdays` (`list`): Set the `weekdays` field on the resulting object.
-  - `weeks` (`list`): Set the `weeks` field on the resulting object.
+  - `days` (`list`): Set the `days` field on the resulting object. When `null`, the `days` field will be omitted from the resulting object.
+  - `include_last_days` (`bool`): Set the `include_last_days` field on the resulting object. When `null`, the `include_last_days` field will be omitted from the resulting object.
+  - `weekdays` (`list`): Set the `weekdays` field on the resulting object. When `null`, the `weekdays` field will be omitted from the resulting object.
+  - `weeks` (`list`): Set the `weeks` field on the resulting object. When `null`, the `weeks` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `retention_monthly` sub block.
@@ -628,9 +630,11 @@ Terraform sub block.
 
 **Args**:
   - `count` (`number`): Set the `count` field on the resulting object.
+  - `days` (`list`): Set the `days` field on the resulting object. When `null`, the `days` field will be omitted from the resulting object.
+  - `include_last_days` (`bool`): Set the `include_last_days` field on the resulting object. When `null`, the `include_last_days` field will be omitted from the resulting object.
   - `months` (`list`): Set the `months` field on the resulting object.
-  - `weekdays` (`list`): Set the `weekdays` field on the resulting object.
-  - `weeks` (`list`): Set the `weeks` field on the resulting object.
+  - `weekdays` (`list`): Set the `weekdays` field on the resulting object. When `null`, the `weekdays` field will be omitted from the resulting object.
+  - `weeks` (`list`): Set the `weeks` field on the resulting object. When `null`, the `weeks` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `retention_yearly` sub block.
