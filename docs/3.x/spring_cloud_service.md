@@ -18,6 +18,10 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withBuildAgentPoolSize()`](#fn-withbuildagentpoolsize)
 * [`fn withConfigServerGitSetting()`](#fn-withconfigservergitsetting)
 * [`fn withConfigServerGitSettingMixin()`](#fn-withconfigservergitsettingmixin)
+* [`fn withContainerRegistry()`](#fn-withcontainerregistry)
+* [`fn withContainerRegistryMixin()`](#fn-withcontainerregistrymixin)
+* [`fn withDefaultBuildService()`](#fn-withdefaultbuildservice)
+* [`fn withDefaultBuildServiceMixin()`](#fn-withdefaultbuildservicemixin)
 * [`fn withLocation()`](#fn-withlocation)
 * [`fn withLogStreamPublicEndpointEnabled()`](#fn-withlogstreampublicendpointenabled)
 * [`fn withName()`](#fn-withname)
@@ -44,6 +48,10 @@ This package contains functions and utilities for setting up the resource using 
       * [`fn new()`](#fn-config_server_git_settingrepositoryssh_authnew)
   * [`obj config_server_git_setting.ssh_auth`](#obj-config_server_git_settingssh_auth)
     * [`fn new()`](#fn-config_server_git_settingssh_authnew)
+* [`obj container_registry`](#obj-container_registry)
+  * [`fn new()`](#fn-container_registrynew)
+* [`obj default_build_service`](#obj-default_build_service)
+  * [`fn new()`](#fn-default_build_servicenew)
 * [`obj network`](#obj-network)
   * [`fn new()`](#fn-networknew)
 * [`obj timeouts`](#obj-timeouts)
@@ -90,6 +98,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
   - `zone_redundant` (`bool`): Set the `zone_redundant` field on the resulting resource block. When `null`, the `zone_redundant` field will be omitted from the resulting object.
   - `config_server_git_setting` (`list[obj]`): Set the `config_server_git_setting` field on the resulting resource block. When `null`, the `config_server_git_setting` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.config_server_git_setting.new](#fn-config_server_git_settingnew) constructor.
+  - `container_registry` (`list[obj]`): Set the `container_registry` field on the resulting resource block. When `null`, the `container_registry` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.container_registry.new](#fn-container_registrynew) constructor.
+  - `default_build_service` (`list[obj]`): Set the `default_build_service` field on the resulting resource block. When `null`, the `default_build_service` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.default_build_service.new](#fn-default_build_servicenew) constructor.
   - `network` (`list[obj]`): Set the `network` field on the resulting resource block. When `null`, the `network` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.network.new](#fn-networknew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.timeouts.new](#fn-timeoutsnew) constructor.
   - `trace` (`list[obj]`): Set the `trace` field on the resulting resource block. When `null`, the `trace` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.trace.new](#fn-tracenew) constructor.
@@ -126,6 +136,8 @@ injecting into a complete block.
   - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
   - `zone_redundant` (`bool`): Set the `zone_redundant` field on the resulting object. When `null`, the `zone_redundant` field will be omitted from the resulting object.
   - `config_server_git_setting` (`list[obj]`): Set the `config_server_git_setting` field on the resulting object. When `null`, the `config_server_git_setting` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.config_server_git_setting.new](#fn-config_server_git_settingnew) constructor.
+  - `container_registry` (`list[obj]`): Set the `container_registry` field on the resulting object. When `null`, the `container_registry` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.container_registry.new](#fn-container_registrynew) constructor.
+  - `default_build_service` (`list[obj]`): Set the `default_build_service` field on the resulting object. When `null`, the `default_build_service` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.default_build_service.new](#fn-default_build_servicenew) constructor.
   - `network` (`list[obj]`): Set the `network` field on the resulting object. When `null`, the `network` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.network.new](#fn-networknew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.timeouts.new](#fn-timeoutsnew) constructor.
   - `trace` (`list[obj]`): Set the `trace` field on the resulting object. When `null`, the `trace` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.trace.new](#fn-tracenew) constructor.
@@ -185,6 +197,80 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `config_server_git_setting` field.
+
+
+### fn withContainerRegistry
+
+```ts
+withContainerRegistry()
+```
+
+`azurerm.list[obj].withContainerRegistry` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the container_registry field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [azurerm.list[obj].withContainerRegistryMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `container_registry` field.
+
+
+### fn withContainerRegistryMixin
+
+```ts
+withContainerRegistryMixin()
+```
+
+`azurerm.list[obj].withContainerRegistryMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the container_registry field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.list[obj].withContainerRegistry](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `container_registry` field.
+
+
+### fn withDefaultBuildService
+
+```ts
+withDefaultBuildService()
+```
+
+`azurerm.list[obj].withDefaultBuildService` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the default_build_service field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [azurerm.list[obj].withDefaultBuildServiceMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `default_build_service` field.
+
+
+### fn withDefaultBuildServiceMixin
+
+```ts
+withDefaultBuildServiceMixin()
+```
+
+`azurerm.list[obj].withDefaultBuildServiceMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the default_build_service field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.list[obj].withDefaultBuildService](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `default_build_service` field.
 
 
 ### fn withLocation
@@ -580,6 +666,55 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `ssh_auth` sub block.
+
+
+## obj container_registry
+
+
+
+### fn container_registry.new
+
+```ts
+new()
+```
+
+
+`azurerm.spring_cloud_service.container_registry.new` constructs a new object with attributes and blocks configured for the `container_registry`
+Terraform sub block.
+
+
+
+**Args**:
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `password` (`string`): Set the `password` field on the resulting object.
+  - `server` (`string`): Set the `server` field on the resulting object.
+  - `username` (`string`): Set the `username` field on the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `container_registry` sub block.
+
+
+## obj default_build_service
+
+
+
+### fn default_build_service.new
+
+```ts
+new()
+```
+
+
+`azurerm.spring_cloud_service.default_build_service.new` constructs a new object with attributes and blocks configured for the `default_build_service`
+Terraform sub block.
+
+
+
+**Args**:
+  - `container_registry_name` (`string`): Set the `container_registry_name` field on the resulting object. When `null`, the `container_registry_name` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `default_build_service` sub block.
 
 
 ## obj network

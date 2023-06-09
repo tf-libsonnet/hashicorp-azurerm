@@ -88,6 +88,28 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       }),
     },
   },
+  container_registry:: {
+    '#new':: d.fn(help='\n`azurerm.spring_cloud_service.container_registry.new` constructs a new object with attributes and blocks configured for the `container_registry`\nTerraform sub block.\n\n\n\n**Args**:\n  - `name` (`string`): Set the `name` field on the resulting object.\n  - `password` (`string`): Set the `password` field on the resulting object.\n  - `server` (`string`): Set the `server` field on the resulting object.\n  - `username` (`string`): Set the `username` field on the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `container_registry` sub block.\n', args=[]),
+    new(
+      name,
+      password,
+      server,
+      username
+    ):: std.prune(a={
+      name: name,
+      password: password,
+      server: server,
+      username: username,
+    }),
+  },
+  default_build_service:: {
+    '#new':: d.fn(help='\n`azurerm.spring_cloud_service.default_build_service.new` constructs a new object with attributes and blocks configured for the `default_build_service`\nTerraform sub block.\n\n\n\n**Args**:\n  - `container_registry_name` (`string`): Set the `container_registry_name` field on the resulting object. When `null`, the `container_registry_name` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `default_build_service` sub block.\n', args=[]),
+    new(
+      container_registry_name=null
+    ):: std.prune(a={
+      container_registry_name: container_registry_name,
+    }),
+  },
   network:: {
     '#new':: d.fn(help='\n`azurerm.spring_cloud_service.network.new` constructs a new object with attributes and blocks configured for the `network`\nTerraform sub block.\n\n\n\n**Args**:\n  - `app_network_resource_group` (`string`): Set the `app_network_resource_group` field on the resulting object. When `null`, the `app_network_resource_group` field will be omitted from the resulting object.\n  - `app_subnet_id` (`string`): Set the `app_subnet_id` field on the resulting object.\n  - `cidr_ranges` (`list`): Set the `cidr_ranges` field on the resulting object.\n  - `read_timeout_seconds` (`number`): Set the `read_timeout_seconds` field on the resulting object. When `null`, the `read_timeout_seconds` field will be omitted from the resulting object.\n  - `service_runtime_network_resource_group` (`string`): Set the `service_runtime_network_resource_group` field on the resulting object. When `null`, the `service_runtime_network_resource_group` field will be omitted from the resulting object.\n  - `service_runtime_subnet_id` (`string`): Set the `service_runtime_subnet_id` field on the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `network` sub block.\n', args=[]),
     new(
@@ -106,7 +128,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       service_runtime_subnet_id: service_runtime_subnet_id,
     }),
   },
-  '#new':: d.fn(help="\n`azurerm.spring_cloud_service.new` injects a new `azurerm_spring_cloud_service` Terraform `resource`\nblock into the root module document.\n\nAdditionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the\nresource. For example, if you added a new instance to the root using:\n\n    # arguments omitted for brevity\n    azurerm.spring_cloud_service.new('some_id')\n\nYou can get the reference to the `id` field of the created `azurerm.spring_cloud_service` using the reference:\n\n    $._ref.azurerm_spring_cloud_service.some_id.get('id')\n\nThis is the same as directly entering `\"${ azurerm_spring_cloud_service.some_id.id }\"` as the value.\n\nNOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,\nor `$` to refer to the root object. Instead, make an explicit outer object using `local`.\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block.\n  - `build_agent_pool_size` (`string`): Set the `build_agent_pool_size` field on the resulting resource block. When `null`, the `build_agent_pool_size` field will be omitted from the resulting object.\n  - `location` (`string`): Set the `location` field on the resulting resource block.\n  - `log_stream_public_endpoint_enabled` (`bool`): Set the `log_stream_public_endpoint_enabled` field on the resulting resource block. When `null`, the `log_stream_public_endpoint_enabled` field will be omitted from the resulting object.\n  - `name` (`string`): Set the `name` field on the resulting resource block.\n  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.\n  - `service_registry_enabled` (`bool`): Set the `service_registry_enabled` field on the resulting resource block. When `null`, the `service_registry_enabled` field will be omitted from the resulting object.\n  - `sku_name` (`string`): Set the `sku_name` field on the resulting resource block. When `null`, the `sku_name` field will be omitted from the resulting object.\n  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.\n  - `zone_redundant` (`bool`): Set the `zone_redundant` field on the resulting resource block. When `null`, the `zone_redundant` field will be omitted from the resulting object.\n  - `config_server_git_setting` (`list[obj]`): Set the `config_server_git_setting` field on the resulting resource block. When `null`, the `config_server_git_setting` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.config_server_git_setting.new](#fn-config_server_git_settingnew) constructor.\n  - `network` (`list[obj]`): Set the `network` field on the resulting resource block. When `null`, the `network` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.network.new](#fn-networknew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.timeouts.new](#fn-timeoutsnew) constructor.\n  - `trace` (`list[obj]`): Set the `trace` field on the resulting resource block. When `null`, the `trace` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.trace.new](#fn-tracenew) constructor.\n\n**Returns**:\n- A mixin object that injects the new resource into the root Terraform configuration.\n", args=[]),
+  '#new':: d.fn(help="\n`azurerm.spring_cloud_service.new` injects a new `azurerm_spring_cloud_service` Terraform `resource`\nblock into the root module document.\n\nAdditionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the\nresource. For example, if you added a new instance to the root using:\n\n    # arguments omitted for brevity\n    azurerm.spring_cloud_service.new('some_id')\n\nYou can get the reference to the `id` field of the created `azurerm.spring_cloud_service` using the reference:\n\n    $._ref.azurerm_spring_cloud_service.some_id.get('id')\n\nThis is the same as directly entering `\"${ azurerm_spring_cloud_service.some_id.id }\"` as the value.\n\nNOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,\nor `$` to refer to the root object. Instead, make an explicit outer object using `local`.\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block.\n  - `build_agent_pool_size` (`string`): Set the `build_agent_pool_size` field on the resulting resource block. When `null`, the `build_agent_pool_size` field will be omitted from the resulting object.\n  - `location` (`string`): Set the `location` field on the resulting resource block.\n  - `log_stream_public_endpoint_enabled` (`bool`): Set the `log_stream_public_endpoint_enabled` field on the resulting resource block. When `null`, the `log_stream_public_endpoint_enabled` field will be omitted from the resulting object.\n  - `name` (`string`): Set the `name` field on the resulting resource block.\n  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.\n  - `service_registry_enabled` (`bool`): Set the `service_registry_enabled` field on the resulting resource block. When `null`, the `service_registry_enabled` field will be omitted from the resulting object.\n  - `sku_name` (`string`): Set the `sku_name` field on the resulting resource block. When `null`, the `sku_name` field will be omitted from the resulting object.\n  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.\n  - `zone_redundant` (`bool`): Set the `zone_redundant` field on the resulting resource block. When `null`, the `zone_redundant` field will be omitted from the resulting object.\n  - `config_server_git_setting` (`list[obj]`): Set the `config_server_git_setting` field on the resulting resource block. When `null`, the `config_server_git_setting` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.config_server_git_setting.new](#fn-config_server_git_settingnew) constructor.\n  - `container_registry` (`list[obj]`): Set the `container_registry` field on the resulting resource block. When `null`, the `container_registry` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.container_registry.new](#fn-container_registrynew) constructor.\n  - `default_build_service` (`list[obj]`): Set the `default_build_service` field on the resulting resource block. When `null`, the `default_build_service` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.default_build_service.new](#fn-default_build_servicenew) constructor.\n  - `network` (`list[obj]`): Set the `network` field on the resulting resource block. When `null`, the `network` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.network.new](#fn-networknew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.timeouts.new](#fn-timeoutsnew) constructor.\n  - `trace` (`list[obj]`): Set the `trace` field on the resulting resource block. When `null`, the `trace` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.trace.new](#fn-tracenew) constructor.\n\n**Returns**:\n- A mixin object that injects the new resource into the root Terraform configuration.\n", args=[]),
   new(
     resourceLabel,
     location,
@@ -114,6 +136,8 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     resource_group_name,
     build_agent_pool_size=null,
     config_server_git_setting=null,
+    container_registry=null,
+    default_build_service=null,
     log_stream_public_endpoint_enabled=null,
     network=null,
     service_registry_enabled=null,
@@ -129,6 +153,8 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     attrs=self.newAttrs(
       build_agent_pool_size=build_agent_pool_size,
       config_server_git_setting=config_server_git_setting,
+      container_registry=container_registry,
+      default_build_service=default_build_service,
       location=location,
       log_stream_public_endpoint_enabled=log_stream_public_endpoint_enabled,
       name=name,
@@ -143,13 +169,15 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     ),
     _meta=_meta
   ),
-  '#newAttrs':: d.fn(help='\n`azurerm.spring_cloud_service.newAttrs` constructs a new object with attributes and blocks configured for the `spring_cloud_service`\nTerraform resource.\n\nUnlike [azurerm.spring_cloud_service.new](#fn-new), this function will not inject the `resource`\nblock into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the\n[tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.\n\nThis is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to\ninjecting into a complete block.\n\n**Args**:\n  - `build_agent_pool_size` (`string`): Set the `build_agent_pool_size` field on the resulting object. When `null`, the `build_agent_pool_size` field will be omitted from the resulting object.\n  - `location` (`string`): Set the `location` field on the resulting object.\n  - `log_stream_public_endpoint_enabled` (`bool`): Set the `log_stream_public_endpoint_enabled` field on the resulting object. When `null`, the `log_stream_public_endpoint_enabled` field will be omitted from the resulting object.\n  - `name` (`string`): Set the `name` field on the resulting object.\n  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.\n  - `service_registry_enabled` (`bool`): Set the `service_registry_enabled` field on the resulting object. When `null`, the `service_registry_enabled` field will be omitted from the resulting object.\n  - `sku_name` (`string`): Set the `sku_name` field on the resulting object. When `null`, the `sku_name` field will be omitted from the resulting object.\n  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.\n  - `zone_redundant` (`bool`): Set the `zone_redundant` field on the resulting object. When `null`, the `zone_redundant` field will be omitted from the resulting object.\n  - `config_server_git_setting` (`list[obj]`): Set the `config_server_git_setting` field on the resulting object. When `null`, the `config_server_git_setting` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.config_server_git_setting.new](#fn-config_server_git_settingnew) constructor.\n  - `network` (`list[obj]`): Set the `network` field on the resulting object. When `null`, the `network` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.network.new](#fn-networknew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.timeouts.new](#fn-timeoutsnew) constructor.\n  - `trace` (`list[obj]`): Set the `trace` field on the resulting object. When `null`, the `trace` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.trace.new](#fn-tracenew) constructor.\n\n**Returns**:\n  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `spring_cloud_service` resource into the root Terraform configuration.\n', args=[]),
+  '#newAttrs':: d.fn(help='\n`azurerm.spring_cloud_service.newAttrs` constructs a new object with attributes and blocks configured for the `spring_cloud_service`\nTerraform resource.\n\nUnlike [azurerm.spring_cloud_service.new](#fn-new), this function will not inject the `resource`\nblock into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the\n[tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.\n\nThis is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to\ninjecting into a complete block.\n\n**Args**:\n  - `build_agent_pool_size` (`string`): Set the `build_agent_pool_size` field on the resulting object. When `null`, the `build_agent_pool_size` field will be omitted from the resulting object.\n  - `location` (`string`): Set the `location` field on the resulting object.\n  - `log_stream_public_endpoint_enabled` (`bool`): Set the `log_stream_public_endpoint_enabled` field on the resulting object. When `null`, the `log_stream_public_endpoint_enabled` field will be omitted from the resulting object.\n  - `name` (`string`): Set the `name` field on the resulting object.\n  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.\n  - `service_registry_enabled` (`bool`): Set the `service_registry_enabled` field on the resulting object. When `null`, the `service_registry_enabled` field will be omitted from the resulting object.\n  - `sku_name` (`string`): Set the `sku_name` field on the resulting object. When `null`, the `sku_name` field will be omitted from the resulting object.\n  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.\n  - `zone_redundant` (`bool`): Set the `zone_redundant` field on the resulting object. When `null`, the `zone_redundant` field will be omitted from the resulting object.\n  - `config_server_git_setting` (`list[obj]`): Set the `config_server_git_setting` field on the resulting object. When `null`, the `config_server_git_setting` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.config_server_git_setting.new](#fn-config_server_git_settingnew) constructor.\n  - `container_registry` (`list[obj]`): Set the `container_registry` field on the resulting object. When `null`, the `container_registry` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.container_registry.new](#fn-container_registrynew) constructor.\n  - `default_build_service` (`list[obj]`): Set the `default_build_service` field on the resulting object. When `null`, the `default_build_service` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.default_build_service.new](#fn-default_build_servicenew) constructor.\n  - `network` (`list[obj]`): Set the `network` field on the resulting object. When `null`, the `network` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.network.new](#fn-networknew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.timeouts.new](#fn-timeoutsnew) constructor.\n  - `trace` (`list[obj]`): Set the `trace` field on the resulting object. When `null`, the `trace` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.trace.new](#fn-tracenew) constructor.\n\n**Returns**:\n  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `spring_cloud_service` resource into the root Terraform configuration.\n', args=[]),
   newAttrs(
     location,
     name,
     resource_group_name,
     build_agent_pool_size=null,
     config_server_git_setting=null,
+    container_registry=null,
+    default_build_service=null,
     log_stream_public_endpoint_enabled=null,
     network=null,
     service_registry_enabled=null,
@@ -161,6 +189,8 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   ):: std.prune(a={
     build_agent_pool_size: build_agent_pool_size,
     config_server_git_setting: config_server_git_setting,
+    container_registry: container_registry,
+    default_build_service: default_build_service,
     location: location,
     log_stream_public_endpoint_enabled: log_stream_public_endpoint_enabled,
     name: name,
@@ -223,6 +253,46 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       azurerm_spring_cloud_service+: {
         [resourceLabel]+: {
           config_server_git_setting+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  '#withContainerRegistry':: d.fn(help='`azurerm.list[obj].withContainerRegistry` constructs a mixin object that can be merged into the `list[obj]`\nTerraform resource block to set or update the container_registry field.\n\nThis function will replace the array with the passed in `value`. If you wish to instead append the\npassed in value to the existing array, use the [azurerm.list[obj].withContainerRegistryMixin](TODO) function.\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`list[obj]`): The value to set for the `container_registry` field.\n', args=[]),
+  withContainerRegistry(resourceLabel, value): {
+    resource+: {
+      azurerm_spring_cloud_service+: {
+        [resourceLabel]+: {
+          container_registry: value,
+        },
+      },
+    },
+  },
+  '#withContainerRegistryMixin':: d.fn(help='`azurerm.list[obj].withContainerRegistryMixin` constructs a mixin object that can be merged into the `list[obj]`\nTerraform resource block to set or update the container_registry field.\n\nThis function will append the passed in array or object to the existing array. If you wish\nto instead replace the array with the passed in `value`, use the [azurerm.list[obj].withContainerRegistry](TODO)\nfunction.\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`list[obj]`): The value to set for the `container_registry` field.\n', args=[]),
+  withContainerRegistryMixin(resourceLabel, value): {
+    resource+: {
+      azurerm_spring_cloud_service+: {
+        [resourceLabel]+: {
+          container_registry+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  '#withDefaultBuildService':: d.fn(help='`azurerm.list[obj].withDefaultBuildService` constructs a mixin object that can be merged into the `list[obj]`\nTerraform resource block to set or update the default_build_service field.\n\nThis function will replace the array with the passed in `value`. If you wish to instead append the\npassed in value to the existing array, use the [azurerm.list[obj].withDefaultBuildServiceMixin](TODO) function.\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`list[obj]`): The value to set for the `default_build_service` field.\n', args=[]),
+  withDefaultBuildService(resourceLabel, value): {
+    resource+: {
+      azurerm_spring_cloud_service+: {
+        [resourceLabel]+: {
+          default_build_service: value,
+        },
+      },
+    },
+  },
+  '#withDefaultBuildServiceMixin':: d.fn(help='`azurerm.list[obj].withDefaultBuildServiceMixin` constructs a mixin object that can be merged into the `list[obj]`\nTerraform resource block to set or update the default_build_service field.\n\nThis function will append the passed in array or object to the existing array. If you wish\nto instead replace the array with the passed in `value`, use the [azurerm.list[obj].withDefaultBuildService](TODO)\nfunction.\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`list[obj]`): The value to set for the `default_build_service` field.\n', args=[]),
+  withDefaultBuildServiceMixin(resourceLabel, value): {
+    resource+: {
+      azurerm_spring_cloud_service+: {
+        [resourceLabel]+: {
+          default_build_service+: if std.isArray(v=value) then value else [value],
         },
       },
     },

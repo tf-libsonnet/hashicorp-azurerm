@@ -33,6 +33,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withTimezone()`](#fn-withtimezone)
 * [`obj backup`](#obj-backup)
   * [`fn new()`](#fn-backupnew)
+  * [`obj backup.hourly`](#obj-backuphourly)
+    * [`fn new()`](#fn-backuphourlynew)
 * [`obj retention_daily`](#obj-retention_daily)
   * [`fn new()`](#fn-retention_dailynew)
 * [`obj retention_monthly`](#obj-retention_monthly)
@@ -424,10 +426,36 @@ Terraform sub block.
 
 **Args**:
   - `frequency` (`string`): Set the `frequency` field on the resulting object.
-  - `time` (`string`): Set the `time` field on the resulting object.
+  - `time` (`string`): Set the `time` field on the resulting object. When `null`, the `time` field will be omitted from the resulting object.
+  - `hourly` (`list[obj]`): Set the `hourly` field on the resulting object. When `null`, the `hourly` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_file_share.backup.hourly.new](#fn-backuphourlynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `backup` sub block.
+
+
+## obj backup.hourly
+
+
+
+### fn backup.hourly.new
+
+```ts
+new()
+```
+
+
+`azurerm.backup_policy_file_share.backup.hourly.new` constructs a new object with attributes and blocks configured for the `hourly`
+Terraform sub block.
+
+
+
+**Args**:
+  - `interval` (`number`): Set the `interval` field on the resulting object.
+  - `start_time` (`string`): Set the `start_time` field on the resulting object.
+  - `window_duration` (`number`): Set the `window_duration` field on the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `hourly` sub block.
 
 
 ## obj retention_daily
@@ -471,8 +499,10 @@ Terraform sub block.
 
 **Args**:
   - `count` (`number`): Set the `count` field on the resulting object.
-  - `weekdays` (`list`): Set the `weekdays` field on the resulting object.
-  - `weeks` (`list`): Set the `weeks` field on the resulting object.
+  - `days` (`list`): Set the `days` field on the resulting object. When `null`, the `days` field will be omitted from the resulting object.
+  - `include_last_days` (`bool`): Set the `include_last_days` field on the resulting object. When `null`, the `include_last_days` field will be omitted from the resulting object.
+  - `weekdays` (`list`): Set the `weekdays` field on the resulting object. When `null`, the `weekdays` field will be omitted from the resulting object.
+  - `weeks` (`list`): Set the `weeks` field on the resulting object. When `null`, the `weeks` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `retention_monthly` sub block.
@@ -520,9 +550,11 @@ Terraform sub block.
 
 **Args**:
   - `count` (`number`): Set the `count` field on the resulting object.
+  - `days` (`list`): Set the `days` field on the resulting object. When `null`, the `days` field will be omitted from the resulting object.
+  - `include_last_days` (`bool`): Set the `include_last_days` field on the resulting object. When `null`, the `include_last_days` field will be omitted from the resulting object.
   - `months` (`list`): Set the `months` field on the resulting object.
-  - `weekdays` (`list`): Set the `weekdays` field on the resulting object.
-  - `weeks` (`list`): Set the `weeks` field on the resulting object.
+  - `weekdays` (`list`): Set the `weekdays` field on the resulting object. When `null`, the `weekdays` field will be omitted from the resulting object.
+  - `weeks` (`list`): Set the `weeks` field on the resulting object. When `null`, the `weeks` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `retention_yearly` sub block.

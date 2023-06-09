@@ -20,6 +20,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withName()`](#fn-withname)
 * [`fn withNotification()`](#fn-withnotification)
 * [`fn withNotificationMixin()`](#fn-withnotificationmixin)
+* [`fn withPredictive()`](#fn-withpredictive)
+* [`fn withPredictiveMixin()`](#fn-withpredictivemixin)
 * [`fn withProfile()`](#fn-withprofile)
 * [`fn withProfileMixin()`](#fn-withprofilemixin)
 * [`fn withResourceGroupName()`](#fn-withresourcegroupname)
@@ -33,6 +35,8 @@ This package contains functions and utilities for setting up the resource using 
     * [`fn new()`](#fn-notificationemailnew)
   * [`obj notification.webhook`](#obj-notificationwebhook)
     * [`fn new()`](#fn-notificationwebhooknew)
+* [`obj predictive`](#obj-predictive)
+  * [`fn new()`](#fn-predictivenew)
 * [`obj profile`](#obj-profile)
   * [`fn new()`](#fn-profilenew)
   * [`obj profile.capacity`](#obj-profilecapacity)
@@ -88,6 +92,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
   - `target_resource_id` (`string`): Set the `target_resource_id` field on the resulting resource block.
   - `notification` (`list[obj]`): Set the `notification` field on the resulting resource block. When `null`, the `notification` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_autoscale_setting.notification.new](#fn-notificationnew) constructor.
+  - `predictive` (`list[obj]`): Set the `predictive` field on the resulting resource block. When `null`, the `predictive` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_autoscale_setting.predictive.new](#fn-predictivenew) constructor.
   - `profile` (`list[obj]`): Set the `profile` field on the resulting resource block. When `null`, the `profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_autoscale_setting.profile.new](#fn-profilenew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_autoscale_setting.timeouts.new](#fn-timeoutsnew) constructor.
 
@@ -120,6 +125,7 @@ injecting into a complete block.
   - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
   - `target_resource_id` (`string`): Set the `target_resource_id` field on the resulting object.
   - `notification` (`list[obj]`): Set the `notification` field on the resulting object. When `null`, the `notification` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_autoscale_setting.notification.new](#fn-notificationnew) constructor.
+  - `predictive` (`list[obj]`): Set the `predictive` field on the resulting object. When `null`, the `predictive` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_autoscale_setting.predictive.new](#fn-predictivenew) constructor.
   - `profile` (`list[obj]`): Set the `profile` field on the resulting object. When `null`, the `profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_autoscale_setting.profile.new](#fn-profilenew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.monitor_autoscale_setting.timeouts.new](#fn-timeoutsnew) constructor.
 
@@ -210,6 +216,43 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `notification` field.
+
+
+### fn withPredictive
+
+```ts
+withPredictive()
+```
+
+`azurerm.list[obj].withPredictive` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the predictive field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [azurerm.list[obj].withPredictiveMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `predictive` field.
+
+
+### fn withPredictiveMixin
+
+```ts
+withPredictiveMixin()
+```
+
+`azurerm.list[obj].withPredictiveMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the predictive field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.list[obj].withPredictive](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `predictive` field.
 
 
 ### fn withProfile
@@ -404,6 +447,30 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `webhook` sub block.
+
+
+## obj predictive
+
+
+
+### fn predictive.new
+
+```ts
+new()
+```
+
+
+`azurerm.monitor_autoscale_setting.predictive.new` constructs a new object with attributes and blocks configured for the `predictive`
+Terraform sub block.
+
+
+
+**Args**:
+  - `look_ahead_time` (`string`): Set the `look_ahead_time` field on the resulting object. When `null`, the `look_ahead_time` field will be omitted from the resulting object.
+  - `scale_mode` (`string`): Set the `scale_mode` field on the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `predictive` sub block.
 
 
 ## obj profile
