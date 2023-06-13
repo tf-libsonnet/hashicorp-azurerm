@@ -52,6 +52,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withStopPendingResizeOperation()`](#fn-withstoppendingresizeoperation)
 * [`fn withStorageImageReference()`](#fn-withstorageimagereference)
 * [`fn withStorageImageReferenceMixin()`](#fn-withstorageimagereferencemixin)
+* [`fn withTargetNodeCommunicationMode()`](#fn-withtargetnodecommunicationmode)
 * [`fn withTaskSchedulingPolicy()`](#fn-withtaskschedulingpolicy)
 * [`fn withTaskSchedulingPolicyMixin()`](#fn-withtaskschedulingpolicymixin)
 * [`fn withTimeouts()`](#fn-withtimeouts)
@@ -162,6 +163,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `os_disk_placement` (`string`): Set the `os_disk_placement` field on the resulting resource block. When `null`, the `os_disk_placement` field will be omitted from the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
   - `stop_pending_resize_operation` (`bool`): Set the `stop_pending_resize_operation` field on the resulting resource block. When `null`, the `stop_pending_resize_operation` field will be omitted from the resulting object.
+  - `target_node_communication_mode` (`string`): Set the `target_node_communication_mode` field on the resulting resource block. When `null`, the `target_node_communication_mode` field will be omitted from the resulting object.
   - `vm_size` (`string`): Set the `vm_size` field on the resulting resource block.
   - `auto_scale` (`list[obj]`): Set the `auto_scale` field on the resulting resource block. When `null`, the `auto_scale` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.auto_scale.new](#fn-auto_scalenew) constructor.
   - `certificate` (`list[obj]`): Set the `certificate` field on the resulting resource block. When `null`, the `certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.certificate.new](#fn-certificatenew) constructor.
@@ -214,6 +216,7 @@ injecting into a complete block.
   - `os_disk_placement` (`string`): Set the `os_disk_placement` field on the resulting object. When `null`, the `os_disk_placement` field will be omitted from the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
   - `stop_pending_resize_operation` (`bool`): Set the `stop_pending_resize_operation` field on the resulting object. When `null`, the `stop_pending_resize_operation` field will be omitted from the resulting object.
+  - `target_node_communication_mode` (`string`): Set the `target_node_communication_mode` field on the resulting object. When `null`, the `target_node_communication_mode` field will be omitted from the resulting object.
   - `vm_size` (`string`): Set the `vm_size` field on the resulting object.
   - `auto_scale` (`list[obj]`): Set the `auto_scale` field on the resulting object. When `null`, the `auto_scale` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.auto_scale.new](#fn-auto_scalenew) constructor.
   - `certificate` (`list[obj]`): Set the `certificate` field on the resulting object. When `null`, the `certificate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.certificate.new](#fn-certificatenew) constructor.
@@ -892,6 +895,22 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `storage_image_reference` field.
+
+
+### fn withTargetNodeCommunicationMode
+
+```ts
+withTargetNodeCommunicationMode()
+```
+
+`azurerm.string.withTargetNodeCommunicationMode` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the target_node_communication_mode field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `target_node_communication_mode` field.
 
 
 ### fn withTaskSchedulingPolicy

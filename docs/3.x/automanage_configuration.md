@@ -26,6 +26,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withDefenderForCloudEnabled()`](#fn-withdefenderforcloudenabled)
 * [`fn withGuestConfigurationEnabled()`](#fn-withguestconfigurationenabled)
 * [`fn withLocation()`](#fn-withlocation)
+* [`fn withLogAnalyticsEnabled()`](#fn-withloganalyticsenabled)
 * [`fn withName()`](#fn-withname)
 * [`fn withResourceGroupName()`](#fn-withresourcegroupname)
 * [`fn withStatusChangeAlertEnabled()`](#fn-withstatuschangealertenabled)
@@ -89,6 +90,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `defender_for_cloud_enabled` (`bool`): Set the `defender_for_cloud_enabled` field on the resulting resource block. When `null`, the `defender_for_cloud_enabled` field will be omitted from the resulting object.
   - `guest_configuration_enabled` (`bool`): Set the `guest_configuration_enabled` field on the resulting resource block. When `null`, the `guest_configuration_enabled` field will be omitted from the resulting object.
   - `location` (`string`): Set the `location` field on the resulting resource block.
+  - `log_analytics_enabled` (`bool`): Set the `log_analytics_enabled` field on the resulting resource block. When `null`, the `log_analytics_enabled` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting resource block.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
   - `status_change_alert_enabled` (`bool`): Set the `status_change_alert_enabled` field on the resulting resource block. When `null`, the `status_change_alert_enabled` field will be omitted from the resulting object.
@@ -125,6 +127,7 @@ injecting into a complete block.
   - `defender_for_cloud_enabled` (`bool`): Set the `defender_for_cloud_enabled` field on the resulting object. When `null`, the `defender_for_cloud_enabled` field will be omitted from the resulting object.
   - `guest_configuration_enabled` (`bool`): Set the `guest_configuration_enabled` field on the resulting object. When `null`, the `guest_configuration_enabled` field will be omitted from the resulting object.
   - `location` (`string`): Set the `location` field on the resulting object.
+  - `log_analytics_enabled` (`bool`): Set the `log_analytics_enabled` field on the resulting object. When `null`, the `log_analytics_enabled` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
   - `status_change_alert_enabled` (`bool`): Set the `status_change_alert_enabled` field on the resulting object. When `null`, the `status_change_alert_enabled` field will be omitted from the resulting object.
@@ -327,6 +330,22 @@ Terraform resource block to set or update the location field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `location` field.
+
+
+### fn withLogAnalyticsEnabled
+
+```ts
+withLogAnalyticsEnabled()
+```
+
+`azurerm.bool.withLogAnalyticsEnabled` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the log_analytics_enabled field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `log_analytics_enabled` field.
 
 
 ### fn withName
