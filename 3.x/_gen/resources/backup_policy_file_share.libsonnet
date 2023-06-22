@@ -3,12 +3,26 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
 {
   '#':: d.pkg(name='backup_policy_file_share', url='', help='`backup_policy_file_share` represents the `azurerm_backup_policy_file_share` Terraform resource.\n\n\n\nThis package contains functions and utilities for setting up the resource using Jsonnet code.\n'),
   backup:: {
-    '#new':: d.fn(help='\n`azurerm.backup_policy_file_share.backup.new` constructs a new object with attributes and blocks configured for the `backup`\nTerraform sub block.\n\n\n\n**Args**:\n  - `frequency` (`string`): Set the `frequency` field on the resulting object.\n  - `time` (`string`): Set the `time` field on the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `backup` sub block.\n', args=[]),
+    hourly:: {
+      '#new':: d.fn(help='\n`azurerm.backup_policy_file_share.backup.hourly.new` constructs a new object with attributes and blocks configured for the `hourly`\nTerraform sub block.\n\n\n\n**Args**:\n  - `interval` (`number`): Set the `interval` field on the resulting object.\n  - `start_time` (`string`): Set the `start_time` field on the resulting object.\n  - `window_duration` (`number`): Set the `window_duration` field on the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `hourly` sub block.\n', args=[]),
+      new(
+        interval,
+        start_time,
+        window_duration
+      ):: std.prune(a={
+        interval: interval,
+        start_time: start_time,
+        window_duration: window_duration,
+      }),
+    },
+    '#new':: d.fn(help='\n`azurerm.backup_policy_file_share.backup.new` constructs a new object with attributes and blocks configured for the `backup`\nTerraform sub block.\n\n\n\n**Args**:\n  - `frequency` (`string`): Set the `frequency` field on the resulting object.\n  - `time` (`string`): Set the `time` field on the resulting object. When `null`, the `time` field will be omitted from the resulting object.\n  - `hourly` (`list[obj]`): Set the `hourly` field on the resulting object. When `null`, the `hourly` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.backup_policy_file_share.backup.hourly.new](#fn-backuphourlynew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `backup` sub block.\n', args=[]),
     new(
       frequency,
-      time
+      hourly=null,
+      time=null
     ):: std.prune(a={
       frequency: frequency,
+      hourly: hourly,
       time: time,
     }),
   },
@@ -76,13 +90,17 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     }),
   },
   retention_monthly:: {
-    '#new':: d.fn(help='\n`azurerm.backup_policy_file_share.retention_monthly.new` constructs a new object with attributes and blocks configured for the `retention_monthly`\nTerraform sub block.\n\n\n\n**Args**:\n  - `count` (`number`): Set the `count` field on the resulting object.\n  - `weekdays` (`list`): Set the `weekdays` field on the resulting object.\n  - `weeks` (`list`): Set the `weeks` field on the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `retention_monthly` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`azurerm.backup_policy_file_share.retention_monthly.new` constructs a new object with attributes and blocks configured for the `retention_monthly`\nTerraform sub block.\n\n\n\n**Args**:\n  - `count` (`number`): Set the `count` field on the resulting object.\n  - `days` (`list`): Set the `days` field on the resulting object. When `null`, the `days` field will be omitted from the resulting object.\n  - `include_last_days` (`bool`): Set the `include_last_days` field on the resulting object. When `null`, the `include_last_days` field will be omitted from the resulting object.\n  - `weekdays` (`list`): Set the `weekdays` field on the resulting object. When `null`, the `weekdays` field will be omitted from the resulting object.\n  - `weeks` (`list`): Set the `weeks` field on the resulting object. When `null`, the `weeks` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `retention_monthly` sub block.\n', args=[]),
     new(
       count,
-      weekdays,
-      weeks
+      days=null,
+      include_last_days=null,
+      weekdays=null,
+      weeks=null
     ):: std.prune(a={
       count: count,
+      days: days,
+      include_last_days: include_last_days,
       weekdays: weekdays,
       weeks: weeks,
     }),
@@ -98,14 +116,18 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     }),
   },
   retention_yearly:: {
-    '#new':: d.fn(help='\n`azurerm.backup_policy_file_share.retention_yearly.new` constructs a new object with attributes and blocks configured for the `retention_yearly`\nTerraform sub block.\n\n\n\n**Args**:\n  - `count` (`number`): Set the `count` field on the resulting object.\n  - `months` (`list`): Set the `months` field on the resulting object.\n  - `weekdays` (`list`): Set the `weekdays` field on the resulting object.\n  - `weeks` (`list`): Set the `weeks` field on the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `retention_yearly` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`azurerm.backup_policy_file_share.retention_yearly.new` constructs a new object with attributes and blocks configured for the `retention_yearly`\nTerraform sub block.\n\n\n\n**Args**:\n  - `count` (`number`): Set the `count` field on the resulting object.\n  - `days` (`list`): Set the `days` field on the resulting object. When `null`, the `days` field will be omitted from the resulting object.\n  - `include_last_days` (`bool`): Set the `include_last_days` field on the resulting object. When `null`, the `include_last_days` field will be omitted from the resulting object.\n  - `months` (`list`): Set the `months` field on the resulting object.\n  - `weekdays` (`list`): Set the `weekdays` field on the resulting object. When `null`, the `weekdays` field will be omitted from the resulting object.\n  - `weeks` (`list`): Set the `weeks` field on the resulting object. When `null`, the `weeks` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `retention_yearly` sub block.\n', args=[]),
     new(
       count,
       months,
-      weekdays,
-      weeks
+      days=null,
+      include_last_days=null,
+      weekdays=null,
+      weeks=null
     ):: std.prune(a={
       count: count,
+      days: days,
+      include_last_days: include_last_days,
       months: months,
       weekdays: weekdays,
       weeks: weeks,

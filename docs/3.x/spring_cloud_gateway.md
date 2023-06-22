@@ -18,6 +18,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withApiMetadata()`](#fn-withapimetadata)
 * [`fn withApiMetadataMixin()`](#fn-withapimetadatamixin)
 * [`fn withApplicationPerformanceMonitoringTypes()`](#fn-withapplicationperformancemonitoringtypes)
+* [`fn withClientAuthorization()`](#fn-withclientauthorization)
+* [`fn withClientAuthorizationMixin()`](#fn-withclientauthorizationmixin)
 * [`fn withCors()`](#fn-withcors)
 * [`fn withCorsMixin()`](#fn-withcorsmixin)
 * [`fn withEnvironmentVariables()`](#fn-withenvironmentvariables)
@@ -35,6 +37,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
 * [`obj api_metadata`](#obj-api_metadata)
   * [`fn new()`](#fn-api_metadatanew)
+* [`obj client_authorization`](#obj-client_authorization)
+  * [`fn new()`](#fn-client_authorizationnew)
 * [`obj cors`](#obj-cors)
   * [`fn new()`](#fn-corsnew)
 * [`obj quota`](#obj-quota)
@@ -82,6 +86,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `sensitive_environment_variables` (`obj`): Set the `sensitive_environment_variables` field on the resulting resource block. When `null`, the `sensitive_environment_variables` field will be omitted from the resulting object.
   - `spring_cloud_service_id` (`string`): Set the `spring_cloud_service_id` field on the resulting resource block.
   - `api_metadata` (`list[obj]`): Set the `api_metadata` field on the resulting resource block. When `null`, the `api_metadata` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway.api_metadata.new](#fn-api_metadatanew) constructor.
+  - `client_authorization` (`list[obj]`): Set the `client_authorization` field on the resulting resource block. When `null`, the `client_authorization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway.client_authorization.new](#fn-client_authorizationnew) constructor.
   - `cors` (`list[obj]`): Set the `cors` field on the resulting resource block. When `null`, the `cors` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway.cors.new](#fn-corsnew) constructor.
   - `quota` (`list[obj]`): Set the `quota` field on the resulting resource block. When `null`, the `quota` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway.quota.new](#fn-quotanew) constructor.
   - `sso` (`list[obj]`): Set the `sso` field on the resulting resource block. When `null`, the `sso` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway.sso.new](#fn-ssonew) constructor.
@@ -118,6 +123,7 @@ injecting into a complete block.
   - `sensitive_environment_variables` (`obj`): Set the `sensitive_environment_variables` field on the resulting object. When `null`, the `sensitive_environment_variables` field will be omitted from the resulting object.
   - `spring_cloud_service_id` (`string`): Set the `spring_cloud_service_id` field on the resulting object.
   - `api_metadata` (`list[obj]`): Set the `api_metadata` field on the resulting object. When `null`, the `api_metadata` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway.api_metadata.new](#fn-api_metadatanew) constructor.
+  - `client_authorization` (`list[obj]`): Set the `client_authorization` field on the resulting object. When `null`, the `client_authorization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway.client_authorization.new](#fn-client_authorizationnew) constructor.
   - `cors` (`list[obj]`): Set the `cors` field on the resulting object. When `null`, the `cors` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway.cors.new](#fn-corsnew) constructor.
   - `quota` (`list[obj]`): Set the `quota` field on the resulting object. When `null`, the `quota` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway.quota.new](#fn-quotanew) constructor.
   - `sso` (`list[obj]`): Set the `sso` field on the resulting object. When `null`, the `sso` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway.sso.new](#fn-ssonew) constructor.
@@ -178,6 +184,43 @@ Terraform resource block to set or update the application_performance_monitoring
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list`): The value to set for the `application_performance_monitoring_types` field.
+
+
+### fn withClientAuthorization
+
+```ts
+withClientAuthorization()
+```
+
+`azurerm.list[obj].withClientAuthorization` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the client_authorization field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [azurerm.list[obj].withClientAuthorizationMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `client_authorization` field.
+
+
+### fn withClientAuthorizationMixin
+
+```ts
+withClientAuthorizationMixin()
+```
+
+`azurerm.list[obj].withClientAuthorizationMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the client_authorization field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.list[obj].withClientAuthorization](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `client_authorization` field.
 
 
 ### fn withCors
@@ -464,6 +507,30 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `api_metadata` sub block.
+
+
+## obj client_authorization
+
+
+
+### fn client_authorization.new
+
+```ts
+new()
+```
+
+
+`azurerm.spring_cloud_gateway.client_authorization.new` constructs a new object with attributes and blocks configured for the `client_authorization`
+Terraform sub block.
+
+
+
+**Args**:
+  - `certificate_ids` (`list`): Set the `certificate_ids` field on the resulting object. When `null`, the `certificate_ids` field will be omitted from the resulting object.
+  - `verification_enabled` (`bool`): Set the `verification_enabled` field on the resulting object. When `null`, the `verification_enabled` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `client_authorization` sub block.
 
 
 ## obj cors

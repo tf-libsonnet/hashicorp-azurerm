@@ -471,7 +471,7 @@ Terraform sub block.
 
 **Args**:
   - `name` (`string`): Set the `name` field on the resulting object.
-  - `public_ip_address_id` (`string`): Set the `public_ip_address_id` field on the resulting object.
+  - `public_ip_address_id` (`string`): Set the `public_ip_address_id` field on the resulting object. When `null`, the `public_ip_address_id` field will be omitted from the resulting object.
   - `subnet_id` (`string`): Set the `subnet_id` field on the resulting object. When `null`, the `subnet_id` field will be omitted from the resulting object.
 
 **Returns**:

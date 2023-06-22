@@ -18,6 +18,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withBackupPolicyId()`](#fn-withbackuppolicyid)
 * [`fn withExcludeDiskLuns()`](#fn-withexcludediskluns)
 * [`fn withIncludeDiskLuns()`](#fn-withincludediskluns)
+* [`fn withProtectionState()`](#fn-withprotectionstate)
 * [`fn withRecoveryVaultName()`](#fn-withrecoveryvaultname)
 * [`fn withResourceGroupName()`](#fn-withresourcegroupname)
 * [`fn withSourceVmId()`](#fn-withsourcevmid)
@@ -55,9 +56,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `backup_policy_id` (`string`): Set the `backup_policy_id` field on the resulting resource block.
+  - `backup_policy_id` (`string`): Set the `backup_policy_id` field on the resulting resource block. When `null`, the `backup_policy_id` field will be omitted from the resulting object.
   - `exclude_disk_luns` (`list`): Set the `exclude_disk_luns` field on the resulting resource block. When `null`, the `exclude_disk_luns` field will be omitted from the resulting object.
   - `include_disk_luns` (`list`): Set the `include_disk_luns` field on the resulting resource block. When `null`, the `include_disk_luns` field will be omitted from the resulting object.
+  - `protection_state` (`string`): Set the `protection_state` field on the resulting resource block. When `null`, the `protection_state` field will be omitted from the resulting object.
   - `recovery_vault_name` (`string`): Set the `recovery_vault_name` field on the resulting resource block.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
   - `source_vm_id` (`string`): Set the `source_vm_id` field on the resulting resource block. When `null`, the `source_vm_id` field will be omitted from the resulting object.
@@ -85,9 +87,10 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `backup_policy_id` (`string`): Set the `backup_policy_id` field on the resulting object.
+  - `backup_policy_id` (`string`): Set the `backup_policy_id` field on the resulting object. When `null`, the `backup_policy_id` field will be omitted from the resulting object.
   - `exclude_disk_luns` (`list`): Set the `exclude_disk_luns` field on the resulting object. When `null`, the `exclude_disk_luns` field will be omitted from the resulting object.
   - `include_disk_luns` (`list`): Set the `include_disk_luns` field on the resulting object. When `null`, the `include_disk_luns` field will be omitted from the resulting object.
+  - `protection_state` (`string`): Set the `protection_state` field on the resulting object. When `null`, the `protection_state` field will be omitted from the resulting object.
   - `recovery_vault_name` (`string`): Set the `recovery_vault_name` field on the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
   - `source_vm_id` (`string`): Set the `source_vm_id` field on the resulting object. When `null`, the `source_vm_id` field will be omitted from the resulting object.
@@ -143,6 +146,22 @@ Terraform resource block to set or update the include_disk_luns field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list`): The value to set for the `include_disk_luns` field.
+
+
+### fn withProtectionState
+
+```ts
+withProtectionState()
+```
+
+`azurerm.string.withProtectionState` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the protection_state field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `protection_state` field.
 
 
 ### fn withRecoveryVaultName

@@ -25,6 +25,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withLocation()`](#fn-withlocation)
 * [`fn withMachineLearningWorkspaceId()`](#fn-withmachinelearningworkspaceid)
 * [`fn withName()`](#fn-withname)
+* [`fn withNodePublicIpEnabled()`](#fn-withnodepublicipenabled)
 * [`fn withSsh()`](#fn-withssh)
 * [`fn withSshMixin()`](#fn-withsshmixin)
 * [`fn withSubnetResourceId()`](#fn-withsubnetresourceid)
@@ -76,6 +77,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `location` (`string`): Set the `location` field on the resulting resource block.
   - `machine_learning_workspace_id` (`string`): Set the `machine_learning_workspace_id` field on the resulting resource block.
   - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `node_public_ip_enabled` (`bool`): Set the `node_public_ip_enabled` field on the resulting resource block. When `null`, the `node_public_ip_enabled` field will be omitted from the resulting object.
   - `subnet_resource_id` (`string`): Set the `subnet_resource_id` field on the resulting resource block. When `null`, the `subnet_resource_id` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
   - `virtual_machine_size` (`string`): Set the `virtual_machine_size` field on the resulting resource block.
@@ -112,6 +114,7 @@ injecting into a complete block.
   - `location` (`string`): Set the `location` field on the resulting object.
   - `machine_learning_workspace_id` (`string`): Set the `machine_learning_workspace_id` field on the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
+  - `node_public_ip_enabled` (`bool`): Set the `node_public_ip_enabled` field on the resulting object. When `null`, the `node_public_ip_enabled` field will be omitted from the resulting object.
   - `subnet_resource_id` (`string`): Set the `subnet_resource_id` field on the resulting object. When `null`, the `subnet_resource_id` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
   - `virtual_machine_size` (`string`): Set the `virtual_machine_size` field on the resulting object.
@@ -292,6 +295,22 @@ Terraform resource block to set or update the name field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `name` field.
+
+
+### fn withNodePublicIpEnabled
+
+```ts
+withNodePublicIpEnabled()
+```
+
+`azurerm.bool.withNodePublicIpEnabled` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the node_public_ip_enabled field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `node_public_ip_enabled` field.
 
 
 ### fn withSsh
