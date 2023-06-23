@@ -640,6 +640,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   network_security_rule: (import 'resources/network_security_rule.libsonnet'),
   network_watcher: (import 'resources/network_watcher.libsonnet'),
   network_watcher_flow_log: (import 'resources/network_watcher_flow_log.libsonnet'),
+  new_relic_monitor: (import 'resources/new_relic_monitor.libsonnet'),
   nginx_certificate: (import 'resources/nginx_certificate.libsonnet'),
   nginx_configuration: (import 'resources/nginx_configuration.libsonnet'),
   nginx_deployment: (import 'resources/nginx_deployment.libsonnet'),

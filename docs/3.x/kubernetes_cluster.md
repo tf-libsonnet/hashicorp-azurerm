@@ -64,6 +64,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withName()`](#fn-withname)
 * [`fn withNetworkProfile()`](#fn-withnetworkprofile)
 * [`fn withNetworkProfileMixin()`](#fn-withnetworkprofilemixin)
+* [`fn withNodeOsChannelUpgrade()`](#fn-withnodeoschannelupgrade)
 * [`fn withNodeResourceGroup()`](#fn-withnoderesourcegroup)
 * [`fn withOidcIssuerEnabled()`](#fn-withoidcissuerenabled)
 * [`fn withOmsAgent()`](#fn-withomsagent)
@@ -210,6 +211,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `local_account_disabled` (`bool`): Set the `local_account_disabled` field on the resulting resource block. When `null`, the `local_account_disabled` field will be omitted from the resulting object.
   - `location` (`string`): Set the `location` field on the resulting resource block.
   - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `node_os_channel_upgrade` (`string`): Set the `node_os_channel_upgrade` field on the resulting resource block. When `null`, the `node_os_channel_upgrade` field will be omitted from the resulting object.
   - `node_resource_group` (`string`): Set the `node_resource_group` field on the resulting resource block. When `null`, the `node_resource_group` field will be omitted from the resulting object.
   - `oidc_issuer_enabled` (`bool`): Set the `oidc_issuer_enabled` field on the resulting resource block. When `null`, the `oidc_issuer_enabled` field will be omitted from the resulting object.
   - `open_service_mesh_enabled` (`bool`): Set the `open_service_mesh_enabled` field on the resulting resource block. When `null`, the `open_service_mesh_enabled` field will be omitted from the resulting object.
@@ -286,6 +288,7 @@ injecting into a complete block.
   - `local_account_disabled` (`bool`): Set the `local_account_disabled` field on the resulting object. When `null`, the `local_account_disabled` field will be omitted from the resulting object.
   - `location` (`string`): Set the `location` field on the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
+  - `node_os_channel_upgrade` (`string`): Set the `node_os_channel_upgrade` field on the resulting object. When `null`, the `node_os_channel_upgrade` field will be omitted from the resulting object.
   - `node_resource_group` (`string`): Set the `node_resource_group` field on the resulting object. When `null`, the `node_resource_group` field will be omitted from the resulting object.
   - `oidc_issuer_enabled` (`bool`): Set the `oidc_issuer_enabled` field on the resulting object. When `null`, the `oidc_issuer_enabled` field will be omitted from the resulting object.
   - `open_service_mesh_enabled` (`bool`): Set the `open_service_mesh_enabled` field on the resulting object. When `null`, the `open_service_mesh_enabled` field will be omitted from the resulting object.
@@ -1196,6 +1199,22 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `network_profile` field.
+
+
+### fn withNodeOsChannelUpgrade
+
+```ts
+withNodeOsChannelUpgrade()
+```
+
+`azurerm.string.withNodeOsChannelUpgrade` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the node_os_channel_upgrade field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `node_os_channel_upgrade` field.
 
 
 ### fn withNodeResourceGroup

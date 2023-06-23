@@ -650,6 +650,7 @@ project.
 * [network_security_rule](network_security_rule.md)
 * [network_watcher](network_watcher.md)
 * [network_watcher_flow_log](network_watcher_flow_log.md)
+* [new_relic_monitor](new_relic_monitor.md)
 * [nginx_certificate](nginx_certificate.md)
 * [nginx_configuration](nginx_configuration.md)
 * [nginx_deployment](nginx_deployment.md)

@@ -16,6 +16,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
 * [`fn withAccountName()`](#fn-withaccountname)
+* [`fn withAnalyticalStorageTtl()`](#fn-withanalyticalstoragettl)
 * [`fn withAutoscaleSettings()`](#fn-withautoscalesettings)
 * [`fn withAutoscaleSettingsMixin()`](#fn-withautoscalesettingsmixin)
 * [`fn withConflictResolutionPolicy()`](#fn-withconflictresolutionpolicy)
@@ -80,6 +81,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
   - `account_name` (`string`): Set the `account_name` field on the resulting resource block.
+  - `analytical_storage_ttl` (`number`): Set the `analytical_storage_ttl` field on the resulting resource block. When `null`, the `analytical_storage_ttl` field will be omitted from the resulting object.
   - `database_name` (`string`): Set the `database_name` field on the resulting resource block.
   - `default_ttl` (`number`): Set the `default_ttl` field on the resulting resource block. When `null`, the `default_ttl` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting resource block.
@@ -116,6 +118,7 @@ injecting into a complete block.
 
 **Args**:
   - `account_name` (`string`): Set the `account_name` field on the resulting object.
+  - `analytical_storage_ttl` (`number`): Set the `analytical_storage_ttl` field on the resulting object. When `null`, the `analytical_storage_ttl` field will be omitted from the resulting object.
   - `database_name` (`string`): Set the `database_name` field on the resulting object.
   - `default_ttl` (`number`): Set the `default_ttl` field on the resulting object. When `null`, the `default_ttl` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
@@ -147,6 +150,22 @@ Terraform resource block to set or update the account_name field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `account_name` field.
+
+
+### fn withAnalyticalStorageTtl
+
+```ts
+withAnalyticalStorageTtl()
+```
+
+`azurerm.number.withAnalyticalStorageTtl` constructs a mixin object that can be merged into the `number`
+Terraform resource block to set or update the analytical_storage_ttl field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`number`): The value to set for the `analytical_storage_ttl` field.
 
 
 ### fn withAutoscaleSettings
