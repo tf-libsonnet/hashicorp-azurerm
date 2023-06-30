@@ -23,6 +23,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withPublicNetworkAccessEnabled()`](#fn-withpublicnetworkaccessenabled)
 * [`fn withPurgeProtectionEnabled()`](#fn-withpurgeprotectionenabled)
 * [`fn withResourceGroupName()`](#fn-withresourcegroupname)
+* [`fn withSecurityDomainKeyVaultCertificateIds()`](#fn-withsecuritydomainkeyvaultcertificateids)
+* [`fn withSecurityDomainQuorum()`](#fn-withsecuritydomainquorum)
 * [`fn withSkuName()`](#fn-withskuname)
 * [`fn withSoftDeleteRetentionDays()`](#fn-withsoftdeleteretentiondays)
 * [`fn withTags()`](#fn-withtags)
@@ -69,6 +71,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting resource block. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
   - `purge_protection_enabled` (`bool`): Set the `purge_protection_enabled` field on the resulting resource block. When `null`, the `purge_protection_enabled` field will be omitted from the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `security_domain_key_vault_certificate_ids` (`list`): Set the `security_domain_key_vault_certificate_ids` field on the resulting resource block. When `null`, the `security_domain_key_vault_certificate_ids` field will be omitted from the resulting object.
+  - `security_domain_quorum` (`number`): Set the `security_domain_quorum` field on the resulting resource block. When `null`, the `security_domain_quorum` field will be omitted from the resulting object.
   - `sku_name` (`string`): Set the `sku_name` field on the resulting resource block.
   - `soft_delete_retention_days` (`number`): Set the `soft_delete_retention_days` field on the resulting resource block. When `null`, the `soft_delete_retention_days` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
@@ -104,6 +108,8 @@ injecting into a complete block.
   - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting object. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
   - `purge_protection_enabled` (`bool`): Set the `purge_protection_enabled` field on the resulting object. When `null`, the `purge_protection_enabled` field will be omitted from the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `security_domain_key_vault_certificate_ids` (`list`): Set the `security_domain_key_vault_certificate_ids` field on the resulting object. When `null`, the `security_domain_key_vault_certificate_ids` field will be omitted from the resulting object.
+  - `security_domain_quorum` (`number`): Set the `security_domain_quorum` field on the resulting object. When `null`, the `security_domain_quorum` field will be omitted from the resulting object.
   - `sku_name` (`string`): Set the `sku_name` field on the resulting object.
   - `soft_delete_retention_days` (`number`): Set the `soft_delete_retention_days` field on the resulting object. When `null`, the `soft_delete_retention_days` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
@@ -246,6 +252,38 @@ Terraform resource block to set or update the resource_group_name field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `resource_group_name` field.
+
+
+### fn withSecurityDomainKeyVaultCertificateIds
+
+```ts
+withSecurityDomainKeyVaultCertificateIds()
+```
+
+`azurerm.list.withSecurityDomainKeyVaultCertificateIds` constructs a mixin object that can be merged into the `list`
+Terraform resource block to set or update the security_domain_key_vault_certificate_ids field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list`): The value to set for the `security_domain_key_vault_certificate_ids` field.
+
+
+### fn withSecurityDomainQuorum
+
+```ts
+withSecurityDomainQuorum()
+```
+
+`azurerm.number.withSecurityDomainQuorum` constructs a mixin object that can be merged into the `number`
+Terraform resource block to set or update the security_domain_quorum field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`number`): The value to set for the `security_domain_quorum` field.
 
 
 ### fn withSkuName
@@ -392,6 +430,7 @@ Terraform sub block.
   - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
   - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
   - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

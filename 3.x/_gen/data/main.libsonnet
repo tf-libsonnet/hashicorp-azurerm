@@ -200,6 +200,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   netapp_volume_group_sap_hana: (import 'netapp_volume_group_sap_hana.libsonnet'),
   network_ddos_protection_plan: (import 'network_ddos_protection_plan.libsonnet'),
   network_interface: (import 'network_interface.libsonnet'),
+  network_manager_network_group: (import 'network_manager_network_group.libsonnet'),
   network_security_group: (import 'network_security_group.libsonnet'),
   network_service_tags: (import 'network_service_tags.libsonnet'),
   network_watcher: (import 'network_watcher.libsonnet'),

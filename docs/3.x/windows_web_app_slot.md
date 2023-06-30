@@ -1622,6 +1622,10 @@ Terraform sub block.
   - `docker_container_name` (`string`): Set the `docker_container_name` field on the resulting object. When `null`, the `docker_container_name` field will be omitted from the resulting object.
   - `docker_container_registry` (`string`): Set the `docker_container_registry` field on the resulting object. When `null`, the `docker_container_registry` field will be omitted from the resulting object.
   - `docker_container_tag` (`string`): Set the `docker_container_tag` field on the resulting object. When `null`, the `docker_container_tag` field will be omitted from the resulting object.
+  - `docker_image_name` (`string`): Set the `docker_image_name` field on the resulting object. When `null`, the `docker_image_name` field will be omitted from the resulting object.
+  - `docker_registry_password` (`string`): Set the `docker_registry_password` field on the resulting object. When `null`, the `docker_registry_password` field will be omitted from the resulting object.
+  - `docker_registry_url` (`string`): Set the `docker_registry_url` field on the resulting object. When `null`, the `docker_registry_url` field will be omitted from the resulting object.
+  - `docker_registry_username` (`string`): Set the `docker_registry_username` field on the resulting object. When `null`, the `docker_registry_username` field will be omitted from the resulting object.
   - `dotnet_core_version` (`string`): The version of DotNetCore to use. When `null`, the `dotnet_core_version` field will be omitted from the resulting object.
   - `dotnet_version` (`string`): Set the `dotnet_version` field on the resulting object. When `null`, the `dotnet_version` field will be omitted from the resulting object.
   - `java_container` (`string`): Set the `java_container` field on the resulting object. When `null`, the `java_container` field will be omitted from the resulting object.
@@ -1809,7 +1813,7 @@ Terraform sub block.
   - `path` (`string`): Set the `path` field on the resulting object. When `null`, the `path` field will be omitted from the resulting object.
   - `status_code_range` (`string`): Set the `status_code_range` field on the resulting object.
   - `sub_status` (`number`): Set the `sub_status` field on the resulting object. When `null`, the `sub_status` field will be omitted from the resulting object.
-  - `win32_status` (`string`): Set the `win32_status` field on the resulting object. When `null`, the `win32_status` field will be omitted from the resulting object.
+  - `win32_status` (`number`): Set the `win32_status` field on the resulting object. When `null`, the `win32_status` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `status_code` sub block.
