@@ -552,6 +552,7 @@ Terraform sub block.
 **Args**:
   - `allowed_headers` (`list`): Set the `allowed_headers` field on the resulting object. When `null`, the `allowed_headers` field will be omitted from the resulting object.
   - `allowed_methods` (`list`): Set the `allowed_methods` field on the resulting object. When `null`, the `allowed_methods` field will be omitted from the resulting object.
+  - `allowed_origin_patterns` (`list`): Set the `allowed_origin_patterns` field on the resulting object. When `null`, the `allowed_origin_patterns` field will be omitted from the resulting object.
   - `allowed_origins` (`list`): Set the `allowed_origins` field on the resulting object. When `null`, the `allowed_origins` field will be omitted from the resulting object.
   - `credentials_allowed` (`bool`): Set the `credentials_allowed` field on the resulting object. When `null`, the `credentials_allowed` field will be omitted from the resulting object.
   - `exposed_headers` (`list`): Set the `exposed_headers` field on the resulting object. When `null`, the `exposed_headers` field will be omitted from the resulting object.

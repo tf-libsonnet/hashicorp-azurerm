@@ -36,6 +36,7 @@ permalink: /data/
 * [automation_variable_datetime](automation_variable_datetime.md)
 * [automation_variable_int](automation_variable_int.md)
 * [automation_variable_string](automation_variable_string.md)
+* [automation_variables](automation_variables.md)
 * [availability_set](availability_set.md)
 * [backup_policy_file_share](backup_policy_file_share.md)
 * [backup_policy_vm](backup_policy_vm.md)

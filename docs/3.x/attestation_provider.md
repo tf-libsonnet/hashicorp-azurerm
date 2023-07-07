@@ -22,6 +22,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withPolicyMixin()`](#fn-withpolicymixin)
 * [`fn withPolicySigningCertificateData()`](#fn-withpolicysigningcertificatedata)
 * [`fn withResourceGroupName()`](#fn-withresourcegroupname)
+* [`fn withSevSnpPolicyBase64()`](#fn-withsevsnppolicybase64)
 * [`fn withSgxEnclavePolicyBase64()`](#fn-withsgxenclavepolicybase64)
 * [`fn withTags()`](#fn-withtags)
 * [`fn withTimeouts()`](#fn-withtimeouts)
@@ -66,6 +67,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `open_enclave_policy_base64` (`string`): Set the `open_enclave_policy_base64` field on the resulting resource block. When `null`, the `open_enclave_policy_base64` field will be omitted from the resulting object.
   - `policy_signing_certificate_data` (`string`): Set the `policy_signing_certificate_data` field on the resulting resource block. When `null`, the `policy_signing_certificate_data` field will be omitted from the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `sev_snp_policy_base64` (`string`): Set the `sev_snp_policy_base64` field on the resulting resource block. When `null`, the `sev_snp_policy_base64` field will be omitted from the resulting object.
   - `sgx_enclave_policy_base64` (`string`): Set the `sgx_enclave_policy_base64` field on the resulting resource block. When `null`, the `sgx_enclave_policy_base64` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
   - `tpm_policy_base64` (`string`): Set the `tpm_policy_base64` field on the resulting resource block. When `null`, the `tpm_policy_base64` field will be omitted from the resulting object.
@@ -99,6 +101,7 @@ injecting into a complete block.
   - `open_enclave_policy_base64` (`string`): Set the `open_enclave_policy_base64` field on the resulting object. When `null`, the `open_enclave_policy_base64` field will be omitted from the resulting object.
   - `policy_signing_certificate_data` (`string`): Set the `policy_signing_certificate_data` field on the resulting object. When `null`, the `policy_signing_certificate_data` field will be omitted from the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `sev_snp_policy_base64` (`string`): Set the `sev_snp_policy_base64` field on the resulting object. When `null`, the `sev_snp_policy_base64` field will be omitted from the resulting object.
   - `sgx_enclave_policy_base64` (`string`): Set the `sgx_enclave_policy_base64` field on the resulting object. When `null`, the `sgx_enclave_policy_base64` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
   - `tpm_policy_base64` (`string`): Set the `tpm_policy_base64` field on the resulting object. When `null`, the `tpm_policy_base64` field will be omitted from the resulting object.
@@ -224,6 +227,22 @@ Terraform resource block to set or update the resource_group_name field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `resource_group_name` field.
+
+
+### fn withSevSnpPolicyBase64
+
+```ts
+withSevSnpPolicyBase64()
+```
+
+`azurerm.string.withSevSnpPolicyBase64` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the sev_snp_policy_base64 field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `sev_snp_policy_base64` field.
 
 
 ### fn withSgxEnclavePolicyBase64

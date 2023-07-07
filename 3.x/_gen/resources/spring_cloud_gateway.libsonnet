@@ -29,10 +29,11 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     }),
   },
   cors:: {
-    '#new':: d.fn(help='\n`azurerm.spring_cloud_gateway.cors.new` constructs a new object with attributes and blocks configured for the `cors`\nTerraform sub block.\n\n\n\n**Args**:\n  - `allowed_headers` (`list`): Set the `allowed_headers` field on the resulting object. When `null`, the `allowed_headers` field will be omitted from the resulting object.\n  - `allowed_methods` (`list`): Set the `allowed_methods` field on the resulting object. When `null`, the `allowed_methods` field will be omitted from the resulting object.\n  - `allowed_origins` (`list`): Set the `allowed_origins` field on the resulting object. When `null`, the `allowed_origins` field will be omitted from the resulting object.\n  - `credentials_allowed` (`bool`): Set the `credentials_allowed` field on the resulting object. When `null`, the `credentials_allowed` field will be omitted from the resulting object.\n  - `exposed_headers` (`list`): Set the `exposed_headers` field on the resulting object. When `null`, the `exposed_headers` field will be omitted from the resulting object.\n  - `max_age_seconds` (`number`): Set the `max_age_seconds` field on the resulting object. When `null`, the `max_age_seconds` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `cors` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`azurerm.spring_cloud_gateway.cors.new` constructs a new object with attributes and blocks configured for the `cors`\nTerraform sub block.\n\n\n\n**Args**:\n  - `allowed_headers` (`list`): Set the `allowed_headers` field on the resulting object. When `null`, the `allowed_headers` field will be omitted from the resulting object.\n  - `allowed_methods` (`list`): Set the `allowed_methods` field on the resulting object. When `null`, the `allowed_methods` field will be omitted from the resulting object.\n  - `allowed_origin_patterns` (`list`): Set the `allowed_origin_patterns` field on the resulting object. When `null`, the `allowed_origin_patterns` field will be omitted from the resulting object.\n  - `allowed_origins` (`list`): Set the `allowed_origins` field on the resulting object. When `null`, the `allowed_origins` field will be omitted from the resulting object.\n  - `credentials_allowed` (`bool`): Set the `credentials_allowed` field on the resulting object. When `null`, the `credentials_allowed` field will be omitted from the resulting object.\n  - `exposed_headers` (`list`): Set the `exposed_headers` field on the resulting object. When `null`, the `exposed_headers` field will be omitted from the resulting object.\n  - `max_age_seconds` (`number`): Set the `max_age_seconds` field on the resulting object. When `null`, the `max_age_seconds` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `cors` sub block.\n', args=[]),
     new(
       allowed_headers=null,
       allowed_methods=null,
+      allowed_origin_patterns=null,
       allowed_origins=null,
       credentials_allowed=null,
       exposed_headers=null,
@@ -40,6 +41,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     ):: std.prune(a={
       allowed_headers: allowed_headers,
       allowed_methods: allowed_methods,
+      allowed_origin_patterns: allowed_origin_patterns,
       allowed_origins: allowed_origins,
       credentials_allowed: credentials_allowed,
       exposed_headers: exposed_headers,

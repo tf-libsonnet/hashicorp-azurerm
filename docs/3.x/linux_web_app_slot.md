@@ -37,6 +37,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withLogs()`](#fn-withlogs)
 * [`fn withLogsMixin()`](#fn-withlogsmixin)
 * [`fn withName()`](#fn-withname)
+* [`fn withPublicNetworkAccessEnabled()`](#fn-withpublicnetworkaccessenabled)
 * [`fn withServicePlanId()`](#fn-withserviceplanid)
 * [`fn withSiteConfig()`](#fn-withsiteconfig)
 * [`fn withSiteConfigMixin()`](#fn-withsiteconfigmixin)
@@ -169,6 +170,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `https_only` (`bool`): Set the `https_only` field on the resulting resource block. When `null`, the `https_only` field will be omitted from the resulting object.
   - `key_vault_reference_identity_id` (`string`): Set the `key_vault_reference_identity_id` field on the resulting resource block. When `null`, the `key_vault_reference_identity_id` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting resource block. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
   - `service_plan_id` (`string`): Set the `service_plan_id` field on the resulting resource block. When `null`, the `service_plan_id` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
   - `virtual_network_subnet_id` (`string`): Set the `virtual_network_subnet_id` field on the resulting resource block. When `null`, the `virtual_network_subnet_id` field will be omitted from the resulting object.
@@ -215,6 +217,7 @@ injecting into a complete block.
   - `https_only` (`bool`): Set the `https_only` field on the resulting object. When `null`, the `https_only` field will be omitted from the resulting object.
   - `key_vault_reference_identity_id` (`string`): Set the `key_vault_reference_identity_id` field on the resulting object. When `null`, the `key_vault_reference_identity_id` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
+  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting object. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
   - `service_plan_id` (`string`): Set the `service_plan_id` field on the resulting object. When `null`, the `service_plan_id` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
   - `virtual_network_subnet_id` (`string`): Set the `virtual_network_subnet_id` field on the resulting object. When `null`, the `virtual_network_subnet_id` field will be omitted from the resulting object.
@@ -613,6 +616,22 @@ Terraform resource block to set or update the name field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `name` field.
+
+
+### fn withPublicNetworkAccessEnabled
+
+```ts
+withPublicNetworkAccessEnabled()
+```
+
+`azurerm.bool.withPublicNetworkAccessEnabled` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the public_network_access_enabled field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `public_network_access_enabled` field.
 
 
 ### fn withServicePlanId

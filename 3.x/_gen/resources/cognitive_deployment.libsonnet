@@ -54,10 +54,18 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     timeouts: timeouts,
   }),
   scale:: {
-    '#new':: d.fn(help='\n`azurerm.cognitive_deployment.scale.new` constructs a new object with attributes and blocks configured for the `scale`\nTerraform sub block.\n\n\n\n**Args**:\n  - `type` (`string`): Set the `type` field on the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `scale` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`azurerm.cognitive_deployment.scale.new` constructs a new object with attributes and blocks configured for the `scale`\nTerraform sub block.\n\n\n\n**Args**:\n  - `capacity` (`number`): Set the `capacity` field on the resulting object. When `null`, the `capacity` field will be omitted from the resulting object.\n  - `family` (`string`): Set the `family` field on the resulting object. When `null`, the `family` field will be omitted from the resulting object.\n  - `size` (`string`): Set the `size` field on the resulting object. When `null`, the `size` field will be omitted from the resulting object.\n  - `tier` (`string`): Set the `tier` field on the resulting object. When `null`, the `tier` field will be omitted from the resulting object.\n  - `type` (`string`): Set the `type` field on the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `scale` sub block.\n', args=[]),
     new(
-      type
+      type,
+      capacity=null,
+      family=null,
+      size=null,
+      tier=null
     ):: std.prune(a={
+      capacity: capacity,
+      family: family,
+      size: size,
+      tier: tier,
       type: type,
     }),
   },

@@ -31,6 +31,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   automation_variable_datetime: (import 'automation_variable_datetime.libsonnet'),
   automation_variable_int: (import 'automation_variable_int.libsonnet'),
   automation_variable_string: (import 'automation_variable_string.libsonnet'),
+  automation_variables: (import 'automation_variables.libsonnet'),
   availability_set: (import 'availability_set.libsonnet'),
   backup_policy_file_share: (import 'backup_policy_file_share.libsonnet'),
   backup_policy_vm: (import 'backup_policy_vm.libsonnet'),
