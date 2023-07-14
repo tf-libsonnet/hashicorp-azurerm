@@ -818,10 +818,14 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     }),
   },
   service_mesh_profile:: {
-    '#new':: d.fn(help='\n`azurerm.kubernetes_cluster.service_mesh_profile.new` constructs a new object with attributes and blocks configured for the `service_mesh_profile`\nTerraform sub block.\n\n\n\n**Args**:\n  - `mode` (`string`): Set the `mode` field on the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `service_mesh_profile` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`azurerm.kubernetes_cluster.service_mesh_profile.new` constructs a new object with attributes and blocks configured for the `service_mesh_profile`\nTerraform sub block.\n\n\n\n**Args**:\n  - `external_ingress_gateway_enabled` (`bool`): Set the `external_ingress_gateway_enabled` field on the resulting object. When `null`, the `external_ingress_gateway_enabled` field will be omitted from the resulting object.\n  - `internal_ingress_gateway_enabled` (`bool`): Set the `internal_ingress_gateway_enabled` field on the resulting object. When `null`, the `internal_ingress_gateway_enabled` field will be omitted from the resulting object.\n  - `mode` (`string`): Set the `mode` field on the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `service_mesh_profile` sub block.\n', args=[]),
     new(
-      mode
+      mode,
+      external_ingress_gateway_enabled=null,
+      internal_ingress_gateway_enabled=null
     ):: std.prune(a={
+      external_ingress_gateway_enabled: external_ingress_gateway_enabled,
+      internal_ingress_gateway_enabled: internal_ingress_gateway_enabled,
       mode: mode,
     }),
   },

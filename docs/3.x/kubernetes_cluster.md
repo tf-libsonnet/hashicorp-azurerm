@@ -2740,6 +2740,8 @@ Terraform sub block.
 
 
 **Args**:
+  - `external_ingress_gateway_enabled` (`bool`): Set the `external_ingress_gateway_enabled` field on the resulting object. When `null`, the `external_ingress_gateway_enabled` field will be omitted from the resulting object.
+  - `internal_ingress_gateway_enabled` (`bool`): Set the `internal_ingress_gateway_enabled` field on the resulting object. When `null`, the `internal_ingress_gateway_enabled` field will be omitted from the resulting object.
   - `mode` (`string`): Set the `mode` field on the resulting object.
 
 **Returns**:

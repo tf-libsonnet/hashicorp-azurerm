@@ -234,7 +234,7 @@ Terraform sub block.
 **Args**:
   - `email` (`string`): Set the `email` field on the resulting object.
   - `expire_time` (`number`): Set the `expire_time` field on the resulting object. When `null`, the `expire_time` field will be omitted from the resulting object.
-  - `host_name` (`string`): Set the `host_name` field on the resulting object.
+  - `host_name` (`string`): Set the `host_name` field on the resulting object. When `null`, the `host_name` field will be omitted from the resulting object.
   - `minimum_ttl` (`number`): Set the `minimum_ttl` field on the resulting object. When `null`, the `minimum_ttl` field will be omitted from the resulting object.
   - `refresh_time` (`number`): Set the `refresh_time` field on the resulting object. When `null`, the `refresh_time` field will be omitted from the resulting object.
   - `retry_time` (`number`): Set the `retry_time` field on the resulting object. When `null`, the `retry_time` field will be omitted from the resulting object.

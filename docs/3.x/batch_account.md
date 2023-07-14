@@ -23,6 +23,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withKeyVaultReferenceMixin()`](#fn-withkeyvaultreferencemixin)
 * [`fn withLocation()`](#fn-withlocation)
 * [`fn withName()`](#fn-withname)
+* [`fn withNetworkProfile()`](#fn-withnetworkprofile)
+* [`fn withNetworkProfileMixin()`](#fn-withnetworkprofilemixin)
 * [`fn withPoolAllocationMode()`](#fn-withpoolallocationmode)
 * [`fn withPublicNetworkAccessEnabled()`](#fn-withpublicnetworkaccessenabled)
 * [`fn withResourceGroupName()`](#fn-withresourcegroupname)
@@ -36,6 +38,16 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-identitynew)
 * [`obj key_vault_reference`](#obj-key_vault_reference)
   * [`fn new()`](#fn-key_vault_referencenew)
+* [`obj network_profile`](#obj-network_profile)
+  * [`fn new()`](#fn-network_profilenew)
+  * [`obj network_profile.account_access`](#obj-network_profileaccount_access)
+    * [`fn new()`](#fn-network_profileaccount_accessnew)
+    * [`obj network_profile.account_access.ip_rule`](#obj-network_profileaccount_accessip_rule)
+      * [`fn new()`](#fn-network_profileaccount_accessip_rulenew)
+  * [`obj network_profile.node_management_access`](#obj-network_profilenode_management_access)
+    * [`fn new()`](#fn-network_profilenode_management_accessnew)
+    * [`obj network_profile.node_management_access.ip_rule`](#obj-network_profilenode_management_accessip_rule)
+      * [`fn new()`](#fn-network_profilenode_management_accessip_rulenew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 
@@ -81,6 +93,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
   - `identity` (`list[obj]`): Set the `identity` field on the resulting resource block. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_account.identity.new](#fn-identitynew) constructor.
   - `key_vault_reference` (`list[obj]`): Set the `key_vault_reference` field on the resulting resource block. When `null`, the `key_vault_reference` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_account.key_vault_reference.new](#fn-key_vault_referencenew) constructor.
+  - `network_profile` (`list[obj]`): Set the `network_profile` field on the resulting resource block. When `null`, the `network_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_account.network_profile.new](#fn-network_profilenew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_account.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -118,6 +131,7 @@ injecting into a complete block.
   - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
   - `identity` (`list[obj]`): Set the `identity` field on the resulting object. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_account.identity.new](#fn-identitynew) constructor.
   - `key_vault_reference` (`list[obj]`): Set the `key_vault_reference` field on the resulting object. When `null`, the `key_vault_reference` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_account.key_vault_reference.new](#fn-key_vault_referencenew) constructor.
+  - `network_profile` (`list[obj]`): Set the `network_profile` field on the resulting object. When `null`, the `network_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_account.network_profile.new](#fn-network_profilenew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_account.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -260,6 +274,43 @@ Terraform resource block to set or update the name field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `name` field.
+
+
+### fn withNetworkProfile
+
+```ts
+withNetworkProfile()
+```
+
+`azurerm.list[obj].withNetworkProfile` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the network_profile field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [azurerm.list[obj].withNetworkProfileMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `network_profile` field.
+
+
+### fn withNetworkProfileMixin
+
+```ts
+withNetworkProfileMixin()
+```
+
+`azurerm.list[obj].withNetworkProfileMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the network_profile field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.list[obj].withNetworkProfile](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `network_profile` field.
 
 
 ### fn withPoolAllocationMode
@@ -455,6 +506,126 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `key_vault_reference` sub block.
+
+
+## obj network_profile
+
+
+
+### fn network_profile.new
+
+```ts
+new()
+```
+
+
+`azurerm.batch_account.network_profile.new` constructs a new object with attributes and blocks configured for the `network_profile`
+Terraform sub block.
+
+
+
+**Args**:
+  - `account_access` (`list[obj]`): Set the `account_access` field on the resulting object. When `null`, the `account_access` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_account.network_profile.account_access.new](#fn-network_profileaccount_accessnew) constructor.
+  - `node_management_access` (`list[obj]`): Set the `node_management_access` field on the resulting object. When `null`, the `node_management_access` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_account.network_profile.node_management_access.new](#fn-network_profilenode_management_accessnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `network_profile` sub block.
+
+
+## obj network_profile.account_access
+
+
+
+### fn network_profile.account_access.new
+
+```ts
+new()
+```
+
+
+`azurerm.batch_account.network_profile.account_access.new` constructs a new object with attributes and blocks configured for the `account_access`
+Terraform sub block.
+
+
+
+**Args**:
+  - `default_action` (`string`): Set the `default_action` field on the resulting object. When `null`, the `default_action` field will be omitted from the resulting object.
+  - `ip_rule` (`list[obj]`): Set the `ip_rule` field on the resulting object. When `null`, the `ip_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_account.network_profile.account_access.ip_rule.new](#fn-network_profilenetwork_profileip_rulenew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `account_access` sub block.
+
+
+## obj network_profile.account_access.ip_rule
+
+
+
+### fn network_profile.account_access.ip_rule.new
+
+```ts
+new()
+```
+
+
+`azurerm.batch_account.network_profile.account_access.ip_rule.new` constructs a new object with attributes and blocks configured for the `ip_rule`
+Terraform sub block.
+
+
+
+**Args**:
+  - `action` (`string`): Set the `action` field on the resulting object. When `null`, the `action` field will be omitted from the resulting object.
+  - `ip_range` (`string`): Set the `ip_range` field on the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `ip_rule` sub block.
+
+
+## obj network_profile.node_management_access
+
+
+
+### fn network_profile.node_management_access.new
+
+```ts
+new()
+```
+
+
+`azurerm.batch_account.network_profile.node_management_access.new` constructs a new object with attributes and blocks configured for the `node_management_access`
+Terraform sub block.
+
+
+
+**Args**:
+  - `default_action` (`string`): Set the `default_action` field on the resulting object. When `null`, the `default_action` field will be omitted from the resulting object.
+  - `ip_rule` (`list[obj]`): Set the `ip_rule` field on the resulting object. When `null`, the `ip_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_account.network_profile.node_management_access.ip_rule.new](#fn-network_profilenetwork_profileip_rulenew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `node_management_access` sub block.
+
+
+## obj network_profile.node_management_access.ip_rule
+
+
+
+### fn network_profile.node_management_access.ip_rule.new
+
+```ts
+new()
+```
+
+
+`azurerm.batch_account.network_profile.node_management_access.ip_rule.new` constructs a new object with attributes and blocks configured for the `ip_rule`
+Terraform sub block.
+
+
+
+**Args**:
+  - `action` (`string`): Set the `action` field on the resulting object. When `null`, the `action` field will be omitted from the resulting object.
+  - `ip_range` (`string`): Set the `ip_range` field on the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `ip_rule` sub block.
 
 
 ## obj timeouts

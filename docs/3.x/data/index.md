@@ -60,6 +60,7 @@ permalink: /data/
 * [cdn_profile](cdn_profile.md)
 * [client_config](client_config.md)
 * [cognitive_account](cognitive_account.md)
+* [communication_service](communication_service.md)
 * [confidential_ledger](confidential_ledger.md)
 * [consumption_budget_resource_group](consumption_budget_resource_group.md)
 * [consumption_budget_subscription](consumption_budget_subscription.md)

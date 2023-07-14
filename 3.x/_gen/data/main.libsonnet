@@ -55,6 +55,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   cdn_profile: (import 'cdn_profile.libsonnet'),
   client_config: (import 'client_config.libsonnet'),
   cognitive_account: (import 'cognitive_account.libsonnet'),
+  communication_service: (import 'communication_service.libsonnet'),
   confidential_ledger: (import 'confidential_ledger.libsonnet'),
   consumption_budget_resource_group: (import 'consumption_budget_resource_group.libsonnet'),
   consumption_budget_subscription: (import 'consumption_budget_subscription.libsonnet'),
