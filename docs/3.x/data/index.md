@@ -177,6 +177,7 @@ permalink: /data/
 * [mariadb_server](mariadb_server.md)
 * [marketplace_agreement](marketplace_agreement.md)
 * [mobile_network](mobile_network.md)
+* [mobile_network_attached_data_network](mobile_network_attached_data_network.md)
 * [mobile_network_data_network](mobile_network_data_network.md)
 * [mobile_network_packet_core_control_plane](mobile_network_packet_core_control_plane.md)
 * [mobile_network_packet_core_data_plane](mobile_network_packet_core_data_plane.md)

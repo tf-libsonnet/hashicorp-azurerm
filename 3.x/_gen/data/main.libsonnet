@@ -172,6 +172,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   mariadb_server: (import 'mariadb_server.libsonnet'),
   marketplace_agreement: (import 'marketplace_agreement.libsonnet'),
   mobile_network: (import 'mobile_network.libsonnet'),
+  mobile_network_attached_data_network: (import 'mobile_network_attached_data_network.libsonnet'),
   mobile_network_data_network: (import 'mobile_network_data_network.libsonnet'),
   mobile_network_packet_core_control_plane: (import 'mobile_network_packet_core_control_plane.libsonnet'),
   mobile_network_packet_core_data_plane: (import 'mobile_network_packet_core_data_plane.libsonnet'),
