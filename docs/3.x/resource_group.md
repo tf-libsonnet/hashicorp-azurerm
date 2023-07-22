@@ -16,6 +16,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
 * [`fn withLocation()`](#fn-withlocation)
+* [`fn withManagedBy()`](#fn-withmanagedby)
 * [`fn withName()`](#fn-withname)
 * [`fn withTags()`](#fn-withtags)
 * [`fn withTimeouts()`](#fn-withtimeouts)
@@ -53,6 +54,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
   - `location` (`string`): Set the `location` field on the resulting resource block.
+  - `managed_by` (`string`): Set the `managed_by` field on the resulting resource block. When `null`, the `managed_by` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting resource block.
   - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.resource_group.timeouts.new](#fn-timeoutsnew) constructor.
@@ -80,6 +82,7 @@ injecting into a complete block.
 
 **Args**:
   - `location` (`string`): Set the `location` field on the resulting object.
+  - `managed_by` (`string`): Set the `managed_by` field on the resulting object. When `null`, the `managed_by` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.resource_group.timeouts.new](#fn-timeoutsnew) constructor.
@@ -102,6 +105,22 @@ Terraform resource block to set or update the location field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `location` field.
+
+
+### fn withManagedBy
+
+```ts
+withManagedBy()
+```
+
+`azurerm.string.withManagedBy` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the managed_by field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `managed_by` field.
 
 
 ### fn withName

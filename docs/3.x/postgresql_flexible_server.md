@@ -714,6 +714,8 @@ Terraform sub block.
 
 
 **Args**:
+  - `geo_backup_key_vault_key_id` (`string`): Set the `geo_backup_key_vault_key_id` field on the resulting object. When `null`, the `geo_backup_key_vault_key_id` field will be omitted from the resulting object.
+  - `geo_backup_user_assigned_identity_id` (`string`): Set the `geo_backup_user_assigned_identity_id` field on the resulting object. When `null`, the `geo_backup_user_assigned_identity_id` field will be omitted from the resulting object.
   - `key_vault_key_id` (`string`): Set the `key_vault_key_id` field on the resulting object. When `null`, the `key_vault_key_id` field will be omitted from the resulting object.
   - `primary_user_assigned_identity_id` (`string`): Set the `primary_user_assigned_identity_id` field on the resulting object. When `null`, the `primary_user_assigned_identity_id` field will be omitted from the resulting object.
 

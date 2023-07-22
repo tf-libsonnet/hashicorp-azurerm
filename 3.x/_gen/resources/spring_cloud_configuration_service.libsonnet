@@ -2,11 +2,12 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
 {
   '#':: d.pkg(name='spring_cloud_configuration_service', url='', help='`spring_cloud_configuration_service` represents the `azurerm_spring_cloud_configuration_service` Terraform resource.\n\n\n\nThis package contains functions and utilities for setting up the resource using Jsonnet code.\n'),
-  '#new':: d.fn(help="\n`azurerm.spring_cloud_configuration_service.new` injects a new `azurerm_spring_cloud_configuration_service` Terraform `resource`\nblock into the root module document.\n\nAdditionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the\nresource. For example, if you added a new instance to the root using:\n\n    # arguments omitted for brevity\n    azurerm.spring_cloud_configuration_service.new('some_id')\n\nYou can get the reference to the `id` field of the created `azurerm.spring_cloud_configuration_service` using the reference:\n\n    $._ref.azurerm_spring_cloud_configuration_service.some_id.get('id')\n\nThis is the same as directly entering `\"${ azurerm_spring_cloud_configuration_service.some_id.id }\"` as the value.\n\nNOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,\nor `$` to refer to the root object. Instead, make an explicit outer object using `local`.\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block.\n  - `name` (`string`): Set the `name` field on the resulting resource block.\n  - `spring_cloud_service_id` (`string`): Set the `spring_cloud_service_id` field on the resulting resource block.\n  - `repository` (`list[obj]`): Set the `repository` field on the resulting resource block. When `null`, the `repository` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_configuration_service.repository.new](#fn-repositorynew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_configuration_service.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n- A mixin object that injects the new resource into the root Terraform configuration.\n", args=[]),
+  '#new':: d.fn(help="\n`azurerm.spring_cloud_configuration_service.new` injects a new `azurerm_spring_cloud_configuration_service` Terraform `resource`\nblock into the root module document.\n\nAdditionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the\nresource. For example, if you added a new instance to the root using:\n\n    # arguments omitted for brevity\n    azurerm.spring_cloud_configuration_service.new('some_id')\n\nYou can get the reference to the `id` field of the created `azurerm.spring_cloud_configuration_service` using the reference:\n\n    $._ref.azurerm_spring_cloud_configuration_service.some_id.get('id')\n\nThis is the same as directly entering `\"${ azurerm_spring_cloud_configuration_service.some_id.id }\"` as the value.\n\nNOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,\nor `$` to refer to the root object. Instead, make an explicit outer object using `local`.\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block.\n  - `generation` (`string`): Set the `generation` field on the resulting resource block. When `null`, the `generation` field will be omitted from the resulting object.\n  - `name` (`string`): Set the `name` field on the resulting resource block.\n  - `spring_cloud_service_id` (`string`): Set the `spring_cloud_service_id` field on the resulting resource block.\n  - `repository` (`list[obj]`): Set the `repository` field on the resulting resource block. When `null`, the `repository` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_configuration_service.repository.new](#fn-repositorynew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_configuration_service.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n- A mixin object that injects the new resource into the root Terraform configuration.\n", args=[]),
   new(
     resourceLabel,
     name,
     spring_cloud_service_id,
+    generation=null,
     repository=null,
     timeouts=null,
     _meta={}
@@ -14,6 +15,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     type='azurerm_spring_cloud_configuration_service',
     label=resourceLabel,
     attrs=self.newAttrs(
+      generation=generation,
       name=name,
       repository=repository,
       spring_cloud_service_id=spring_cloud_service_id,
@@ -21,13 +23,15 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     ),
     _meta=_meta
   ),
-  '#newAttrs':: d.fn(help='\n`azurerm.spring_cloud_configuration_service.newAttrs` constructs a new object with attributes and blocks configured for the `spring_cloud_configuration_service`\nTerraform resource.\n\nUnlike [azurerm.spring_cloud_configuration_service.new](#fn-new), this function will not inject the `resource`\nblock into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the\n[tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.\n\nThis is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to\ninjecting into a complete block.\n\n**Args**:\n  - `name` (`string`): Set the `name` field on the resulting object.\n  - `spring_cloud_service_id` (`string`): Set the `spring_cloud_service_id` field on the resulting object.\n  - `repository` (`list[obj]`): Set the `repository` field on the resulting object. When `null`, the `repository` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_configuration_service.repository.new](#fn-repositorynew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_configuration_service.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `spring_cloud_configuration_service` resource into the root Terraform configuration.\n', args=[]),
+  '#newAttrs':: d.fn(help='\n`azurerm.spring_cloud_configuration_service.newAttrs` constructs a new object with attributes and blocks configured for the `spring_cloud_configuration_service`\nTerraform resource.\n\nUnlike [azurerm.spring_cloud_configuration_service.new](#fn-new), this function will not inject the `resource`\nblock into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the\n[tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.\n\nThis is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to\ninjecting into a complete block.\n\n**Args**:\n  - `generation` (`string`): Set the `generation` field on the resulting object. When `null`, the `generation` field will be omitted from the resulting object.\n  - `name` (`string`): Set the `name` field on the resulting object.\n  - `spring_cloud_service_id` (`string`): Set the `spring_cloud_service_id` field on the resulting object.\n  - `repository` (`list[obj]`): Set the `repository` field on the resulting object. When `null`, the `repository` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_configuration_service.repository.new](#fn-repositorynew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_configuration_service.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `spring_cloud_configuration_service` resource into the root Terraform configuration.\n', args=[]),
   newAttrs(
     name,
     spring_cloud_service_id,
+    generation=null,
     repository=null,
     timeouts=null
   ):: std.prune(a={
+    generation: generation,
     name: name,
     repository: repository,
     spring_cloud_service_id: spring_cloud_service_id,
@@ -74,6 +78,16 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       read: read,
       update: update,
     }),
+  },
+  '#withGeneration':: d.fn(help='`azurerm.string.withGeneration` constructs a mixin object that can be merged into the `string`\nTerraform resource block to set or update the generation field.\n\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`string`): The value to set for the `generation` field.\n', args=[]),
+  withGeneration(resourceLabel, value): {
+    resource+: {
+      azurerm_spring_cloud_configuration_service+: {
+        [resourceLabel]+: {
+          generation: value,
+        },
+      },
+    },
   },
   '#withName':: d.fn(help='`azurerm.string.withName` constructs a mixin object that can be merged into the `string`\nTerraform resource block to set or update the name field.\n\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`string`): The value to set for the `name` field.\n', args=[]),
   withName(resourceLabel, value): {

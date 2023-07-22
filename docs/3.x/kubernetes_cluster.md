@@ -28,6 +28,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withAzurePolicyEnabled()`](#fn-withazurepolicyenabled)
 * [`fn withConfidentialComputing()`](#fn-withconfidentialcomputing)
 * [`fn withConfidentialComputingMixin()`](#fn-withconfidentialcomputingmixin)
+* [`fn withCustomCaTrustCertificatesBase64()`](#fn-withcustomcatrustcertificatesbase64)
 * [`fn withDefaultNodePool()`](#fn-withdefaultnodepool)
 * [`fn withDefaultNodePoolMixin()`](#fn-withdefaultnodepoolmixin)
 * [`fn withDiskEncryptionSetId()`](#fn-withdiskencryptionsetid)
@@ -56,7 +57,11 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withLocalAccountDisabled()`](#fn-withlocalaccountdisabled)
 * [`fn withLocation()`](#fn-withlocation)
 * [`fn withMaintenanceWindow()`](#fn-withmaintenancewindow)
+* [`fn withMaintenanceWindowAutoUpgrade()`](#fn-withmaintenancewindowautoupgrade)
+* [`fn withMaintenanceWindowAutoUpgradeMixin()`](#fn-withmaintenancewindowautoupgrademixin)
 * [`fn withMaintenanceWindowMixin()`](#fn-withmaintenancewindowmixin)
+* [`fn withMaintenanceWindowNodeOs()`](#fn-withmaintenancewindownodeos)
+* [`fn withMaintenanceWindowNodeOsMixin()`](#fn-withmaintenancewindownodeosmixin)
 * [`fn withMicrosoftDefender()`](#fn-withmicrosoftdefender)
 * [`fn withMicrosoftDefenderMixin()`](#fn-withmicrosoftdefendermixin)
 * [`fn withMonitorMetrics()`](#fn-withmonitormetrics)
@@ -64,6 +69,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withName()`](#fn-withname)
 * [`fn withNetworkProfile()`](#fn-withnetworkprofile)
 * [`fn withNetworkProfileMixin()`](#fn-withnetworkprofilemixin)
+* [`fn withNodeOsChannelUpgrade()`](#fn-withnodeoschannelupgrade)
 * [`fn withNodeResourceGroup()`](#fn-withnoderesourcegroup)
 * [`fn withOidcIssuerEnabled()`](#fn-withoidcissuerenabled)
 * [`fn withOmsAgent()`](#fn-withomsagent)
@@ -137,6 +143,14 @@ This package contains functions and utilities for setting up the resource using 
     * [`fn new()`](#fn-maintenance_windowallowednew)
   * [`obj maintenance_window.not_allowed`](#obj-maintenance_windownot_allowed)
     * [`fn new()`](#fn-maintenance_windownot_allowednew)
+* [`obj maintenance_window_auto_upgrade`](#obj-maintenance_window_auto_upgrade)
+  * [`fn new()`](#fn-maintenance_window_auto_upgradenew)
+  * [`obj maintenance_window_auto_upgrade.not_allowed`](#obj-maintenance_window_auto_upgradenot_allowed)
+    * [`fn new()`](#fn-maintenance_window_auto_upgradenot_allowednew)
+* [`obj maintenance_window_node_os`](#obj-maintenance_window_node_os)
+  * [`fn new()`](#fn-maintenance_window_node_osnew)
+  * [`obj maintenance_window_node_os.not_allowed`](#obj-maintenance_window_node_osnot_allowed)
+    * [`fn new()`](#fn-maintenance_window_node_osnot_allowednew)
 * [`obj microsoft_defender`](#obj-microsoft_defender)
   * [`fn new()`](#fn-microsoft_defendernew)
 * [`obj monitor_metrics`](#obj-monitor_metrics)
@@ -198,6 +212,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `api_server_authorized_ip_ranges` (`list`): Set the `api_server_authorized_ip_ranges` field on the resulting resource block. When `null`, the `api_server_authorized_ip_ranges` field will be omitted from the resulting object.
   - `automatic_channel_upgrade` (`string`): Set the `automatic_channel_upgrade` field on the resulting resource block. When `null`, the `automatic_channel_upgrade` field will be omitted from the resulting object.
   - `azure_policy_enabled` (`bool`): Set the `azure_policy_enabled` field on the resulting resource block. When `null`, the `azure_policy_enabled` field will be omitted from the resulting object.
+  - `custom_ca_trust_certificates_base64` (`list`): Set the `custom_ca_trust_certificates_base64` field on the resulting resource block. When `null`, the `custom_ca_trust_certificates_base64` field will be omitted from the resulting object.
   - `disk_encryption_set_id` (`string`): Set the `disk_encryption_set_id` field on the resulting resource block. When `null`, the `disk_encryption_set_id` field will be omitted from the resulting object.
   - `dns_prefix` (`string`): Set the `dns_prefix` field on the resulting resource block. When `null`, the `dns_prefix` field will be omitted from the resulting object.
   - `dns_prefix_private_cluster` (`string`): Set the `dns_prefix_private_cluster` field on the resulting resource block. When `null`, the `dns_prefix_private_cluster` field will be omitted from the resulting object.
@@ -210,6 +225,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `local_account_disabled` (`bool`): Set the `local_account_disabled` field on the resulting resource block. When `null`, the `local_account_disabled` field will be omitted from the resulting object.
   - `location` (`string`): Set the `location` field on the resulting resource block.
   - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `node_os_channel_upgrade` (`string`): Set the `node_os_channel_upgrade` field on the resulting resource block. When `null`, the `node_os_channel_upgrade` field will be omitted from the resulting object.
   - `node_resource_group` (`string`): Set the `node_resource_group` field on the resulting resource block. When `null`, the `node_resource_group` field will be omitted from the resulting object.
   - `oidc_issuer_enabled` (`bool`): Set the `oidc_issuer_enabled` field on the resulting resource block. When `null`, the `oidc_issuer_enabled` field will be omitted from the resulting object.
   - `open_service_mesh_enabled` (`bool`): Set the `open_service_mesh_enabled` field on the resulting resource block. When `null`, the `open_service_mesh_enabled` field will be omitted from the resulting object.
@@ -237,6 +253,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `kubelet_identity` (`list[obj]`): Set the `kubelet_identity` field on the resulting resource block. When `null`, the `kubelet_identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.kubelet_identity.new](#fn-kubelet_identitynew) constructor.
   - `linux_profile` (`list[obj]`): Set the `linux_profile` field on the resulting resource block. When `null`, the `linux_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.linux_profile.new](#fn-linux_profilenew) constructor.
   - `maintenance_window` (`list[obj]`): Set the `maintenance_window` field on the resulting resource block. When `null`, the `maintenance_window` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.maintenance_window.new](#fn-maintenance_windownew) constructor.
+  - `maintenance_window_auto_upgrade` (`list[obj]`): Set the `maintenance_window_auto_upgrade` field on the resulting resource block. When `null`, the `maintenance_window_auto_upgrade` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.maintenance_window_auto_upgrade.new](#fn-maintenance_window_auto_upgradenew) constructor.
+  - `maintenance_window_node_os` (`list[obj]`): Set the `maintenance_window_node_os` field on the resulting resource block. When `null`, the `maintenance_window_node_os` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.maintenance_window_node_os.new](#fn-maintenance_window_node_osnew) constructor.
   - `microsoft_defender` (`list[obj]`): Set the `microsoft_defender` field on the resulting resource block. When `null`, the `microsoft_defender` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.microsoft_defender.new](#fn-microsoft_defendernew) constructor.
   - `monitor_metrics` (`list[obj]`): Set the `monitor_metrics` field on the resulting resource block. When `null`, the `monitor_metrics` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.monitor_metrics.new](#fn-monitor_metricsnew) constructor.
   - `network_profile` (`list[obj]`): Set the `network_profile` field on the resulting resource block. When `null`, the `network_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.network_profile.new](#fn-network_profilenew) constructor.
@@ -274,6 +292,7 @@ injecting into a complete block.
   - `api_server_authorized_ip_ranges` (`list`): Set the `api_server_authorized_ip_ranges` field on the resulting object. When `null`, the `api_server_authorized_ip_ranges` field will be omitted from the resulting object.
   - `automatic_channel_upgrade` (`string`): Set the `automatic_channel_upgrade` field on the resulting object. When `null`, the `automatic_channel_upgrade` field will be omitted from the resulting object.
   - `azure_policy_enabled` (`bool`): Set the `azure_policy_enabled` field on the resulting object. When `null`, the `azure_policy_enabled` field will be omitted from the resulting object.
+  - `custom_ca_trust_certificates_base64` (`list`): Set the `custom_ca_trust_certificates_base64` field on the resulting object. When `null`, the `custom_ca_trust_certificates_base64` field will be omitted from the resulting object.
   - `disk_encryption_set_id` (`string`): Set the `disk_encryption_set_id` field on the resulting object. When `null`, the `disk_encryption_set_id` field will be omitted from the resulting object.
   - `dns_prefix` (`string`): Set the `dns_prefix` field on the resulting object. When `null`, the `dns_prefix` field will be omitted from the resulting object.
   - `dns_prefix_private_cluster` (`string`): Set the `dns_prefix_private_cluster` field on the resulting object. When `null`, the `dns_prefix_private_cluster` field will be omitted from the resulting object.
@@ -286,6 +305,7 @@ injecting into a complete block.
   - `local_account_disabled` (`bool`): Set the `local_account_disabled` field on the resulting object. When `null`, the `local_account_disabled` field will be omitted from the resulting object.
   - `location` (`string`): Set the `location` field on the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
+  - `node_os_channel_upgrade` (`string`): Set the `node_os_channel_upgrade` field on the resulting object. When `null`, the `node_os_channel_upgrade` field will be omitted from the resulting object.
   - `node_resource_group` (`string`): Set the `node_resource_group` field on the resulting object. When `null`, the `node_resource_group` field will be omitted from the resulting object.
   - `oidc_issuer_enabled` (`bool`): Set the `oidc_issuer_enabled` field on the resulting object. When `null`, the `oidc_issuer_enabled` field will be omitted from the resulting object.
   - `open_service_mesh_enabled` (`bool`): Set the `open_service_mesh_enabled` field on the resulting object. When `null`, the `open_service_mesh_enabled` field will be omitted from the resulting object.
@@ -313,6 +333,8 @@ injecting into a complete block.
   - `kubelet_identity` (`list[obj]`): Set the `kubelet_identity` field on the resulting object. When `null`, the `kubelet_identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.kubelet_identity.new](#fn-kubelet_identitynew) constructor.
   - `linux_profile` (`list[obj]`): Set the `linux_profile` field on the resulting object. When `null`, the `linux_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.linux_profile.new](#fn-linux_profilenew) constructor.
   - `maintenance_window` (`list[obj]`): Set the `maintenance_window` field on the resulting object. When `null`, the `maintenance_window` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.maintenance_window.new](#fn-maintenance_windownew) constructor.
+  - `maintenance_window_auto_upgrade` (`list[obj]`): Set the `maintenance_window_auto_upgrade` field on the resulting object. When `null`, the `maintenance_window_auto_upgrade` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.maintenance_window_auto_upgrade.new](#fn-maintenance_window_auto_upgradenew) constructor.
+  - `maintenance_window_node_os` (`list[obj]`): Set the `maintenance_window_node_os` field on the resulting object. When `null`, the `maintenance_window_node_os` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.maintenance_window_node_os.new](#fn-maintenance_window_node_osnew) constructor.
   - `microsoft_defender` (`list[obj]`): Set the `microsoft_defender` field on the resulting object. When `null`, the `microsoft_defender` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.microsoft_defender.new](#fn-microsoft_defendernew) constructor.
   - `monitor_metrics` (`list[obj]`): Set the `monitor_metrics` field on the resulting object. When `null`, the `monitor_metrics` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.monitor_metrics.new](#fn-monitor_metricsnew) constructor.
   - `network_profile` (`list[obj]`): Set the `network_profile` field on the resulting object. When `null`, the `network_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.network_profile.new](#fn-network_profilenew) constructor.
@@ -560,6 +582,22 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `confidential_computing` field.
+
+
+### fn withCustomCaTrustCertificatesBase64
+
+```ts
+withCustomCaTrustCertificatesBase64()
+```
+
+`azurerm.list.withCustomCaTrustCertificatesBase64` constructs a mixin object that can be merged into the `list`
+Terraform resource block to set or update the custom_ca_trust_certificates_base64 field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list`): The value to set for the `custom_ca_trust_certificates_base64` field.
 
 
 ### fn withDefaultNodePool
@@ -1052,6 +1090,43 @@ passed in value to the existing array, use the [azurerm.list[obj].withMaintenanc
   - `value` (`list[obj]`): The value to set for the `maintenance_window` field.
 
 
+### fn withMaintenanceWindowAutoUpgrade
+
+```ts
+withMaintenanceWindowAutoUpgrade()
+```
+
+`azurerm.list[obj].withMaintenanceWindowAutoUpgrade` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the maintenance_window_auto_upgrade field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [azurerm.list[obj].withMaintenanceWindowAutoUpgradeMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `maintenance_window_auto_upgrade` field.
+
+
+### fn withMaintenanceWindowAutoUpgradeMixin
+
+```ts
+withMaintenanceWindowAutoUpgradeMixin()
+```
+
+`azurerm.list[obj].withMaintenanceWindowAutoUpgradeMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the maintenance_window_auto_upgrade field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.list[obj].withMaintenanceWindowAutoUpgrade](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `maintenance_window_auto_upgrade` field.
+
+
 ### fn withMaintenanceWindowMixin
 
 ```ts
@@ -1069,6 +1144,43 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `maintenance_window` field.
+
+
+### fn withMaintenanceWindowNodeOs
+
+```ts
+withMaintenanceWindowNodeOs()
+```
+
+`azurerm.list[obj].withMaintenanceWindowNodeOs` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the maintenance_window_node_os field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [azurerm.list[obj].withMaintenanceWindowNodeOsMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `maintenance_window_node_os` field.
+
+
+### fn withMaintenanceWindowNodeOsMixin
+
+```ts
+withMaintenanceWindowNodeOsMixin()
+```
+
+`azurerm.list[obj].withMaintenanceWindowNodeOsMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the maintenance_window_node_os field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.list[obj].withMaintenanceWindowNodeOs](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `maintenance_window_node_os` field.
 
 
 ### fn withMicrosoftDefender
@@ -1196,6 +1308,22 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `network_profile` field.
+
+
+### fn withNodeOsChannelUpgrade
+
+```ts
+withNodeOsChannelUpgrade()
+```
+
+`azurerm.string.withNodeOsChannelUpgrade` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the node_os_channel_upgrade field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `node_os_channel_upgrade` field.
 
 
 ### fn withNodeResourceGroup
@@ -2322,6 +2450,118 @@ Terraform sub block.
   - An attribute object that represents the `not_allowed` sub block.
 
 
+## obj maintenance_window_auto_upgrade
+
+
+
+### fn maintenance_window_auto_upgrade.new
+
+```ts
+new()
+```
+
+
+`azurerm.kubernetes_cluster.maintenance_window_auto_upgrade.new` constructs a new object with attributes and blocks configured for the `maintenance_window_auto_upgrade`
+Terraform sub block.
+
+
+
+**Args**:
+  - `day_of_month` (`number`): Set the `day_of_month` field on the resulting object. When `null`, the `day_of_month` field will be omitted from the resulting object.
+  - `day_of_week` (`string`): Set the `day_of_week` field on the resulting object. When `null`, the `day_of_week` field will be omitted from the resulting object.
+  - `duration` (`number`): Set the `duration` field on the resulting object.
+  - `frequency` (`string`): Set the `frequency` field on the resulting object.
+  - `interval` (`number`): Set the `interval` field on the resulting object.
+  - `start_date` (`string`): Set the `start_date` field on the resulting object. When `null`, the `start_date` field will be omitted from the resulting object.
+  - `start_time` (`string`): Set the `start_time` field on the resulting object. When `null`, the `start_time` field will be omitted from the resulting object.
+  - `utc_offset` (`string`): Set the `utc_offset` field on the resulting object. When `null`, the `utc_offset` field will be omitted from the resulting object.
+  - `week_index` (`string`): Set the `week_index` field on the resulting object. When `null`, the `week_index` field will be omitted from the resulting object.
+  - `not_allowed` (`list[obj]`): Set the `not_allowed` field on the resulting object. When `null`, the `not_allowed` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.maintenance_window_auto_upgrade.not_allowed.new](#fn-maintenance_window_auto_upgradenot_allowednew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `maintenance_window_auto_upgrade` sub block.
+
+
+## obj maintenance_window_auto_upgrade.not_allowed
+
+
+
+### fn maintenance_window_auto_upgrade.not_allowed.new
+
+```ts
+new()
+```
+
+
+`azurerm.kubernetes_cluster.maintenance_window_auto_upgrade.not_allowed.new` constructs a new object with attributes and blocks configured for the `not_allowed`
+Terraform sub block.
+
+
+
+**Args**:
+  - `end` (`string`): Set the `end` field on the resulting object.
+  - `start` (`string`): Set the `start` field on the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `not_allowed` sub block.
+
+
+## obj maintenance_window_node_os
+
+
+
+### fn maintenance_window_node_os.new
+
+```ts
+new()
+```
+
+
+`azurerm.kubernetes_cluster.maintenance_window_node_os.new` constructs a new object with attributes and blocks configured for the `maintenance_window_node_os`
+Terraform sub block.
+
+
+
+**Args**:
+  - `day_of_month` (`number`): Set the `day_of_month` field on the resulting object. When `null`, the `day_of_month` field will be omitted from the resulting object.
+  - `day_of_week` (`string`): Set the `day_of_week` field on the resulting object. When `null`, the `day_of_week` field will be omitted from the resulting object.
+  - `duration` (`number`): Set the `duration` field on the resulting object.
+  - `frequency` (`string`): Set the `frequency` field on the resulting object.
+  - `interval` (`number`): Set the `interval` field on the resulting object.
+  - `start_date` (`string`): Set the `start_date` field on the resulting object. When `null`, the `start_date` field will be omitted from the resulting object.
+  - `start_time` (`string`): Set the `start_time` field on the resulting object. When `null`, the `start_time` field will be omitted from the resulting object.
+  - `utc_offset` (`string`): Set the `utc_offset` field on the resulting object. When `null`, the `utc_offset` field will be omitted from the resulting object.
+  - `week_index` (`string`): Set the `week_index` field on the resulting object. When `null`, the `week_index` field will be omitted from the resulting object.
+  - `not_allowed` (`list[obj]`): Set the `not_allowed` field on the resulting object. When `null`, the `not_allowed` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.maintenance_window_node_os.not_allowed.new](#fn-maintenance_window_node_osnot_allowednew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `maintenance_window_node_os` sub block.
+
+
+## obj maintenance_window_node_os.not_allowed
+
+
+
+### fn maintenance_window_node_os.not_allowed.new
+
+```ts
+new()
+```
+
+
+`azurerm.kubernetes_cluster.maintenance_window_node_os.not_allowed.new` constructs a new object with attributes and blocks configured for the `not_allowed`
+Terraform sub block.
+
+
+
+**Args**:
+  - `end` (`string`): Set the `end` field on the resulting object.
+  - `start` (`string`): Set the `start` field on the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `not_allowed` sub block.
+
+
 ## obj microsoft_defender
 
 
@@ -2500,6 +2740,8 @@ Terraform sub block.
 
 
 **Args**:
+  - `external_ingress_gateway_enabled` (`bool`): Set the `external_ingress_gateway_enabled` field on the resulting object. When `null`, the `external_ingress_gateway_enabled` field will be omitted from the resulting object.
+  - `internal_ingress_gateway_enabled` (`bool`): Set the `internal_ingress_gateway_enabled` field on the resulting object. When `null`, the `internal_ingress_gateway_enabled` field will be omitted from the resulting object.
   - `mode` (`string`): Set the `mode` field on the resulting object.
 
 **Returns**:

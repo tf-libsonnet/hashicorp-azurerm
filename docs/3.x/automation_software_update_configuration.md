@@ -91,7 +91,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `duration` (`string`): Set the `duration` field on the resulting resource block. When `null`, the `duration` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting resource block.
   - `non_azure_computer_names` (`list`): Set the `non_azure_computer_names` field on the resulting resource block. When `null`, the `non_azure_computer_names` field will be omitted from the resulting object.
-  - `operating_system` (`string`): Set the `operating_system` field on the resulting resource block.
+  - `operating_system` (`string`): Set the `operating_system` field on the resulting resource block. When `null`, the `operating_system` field will be omitted from the resulting object.
   - `virtual_machine_ids` (`list`): Set the `virtual_machine_ids` field on the resulting resource block. When `null`, the `virtual_machine_ids` field will be omitted from the resulting object.
   - `linux` (`list[obj]`): Set the `linux` field on the resulting resource block. When `null`, the `linux` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_software_update_configuration.linux.new](#fn-linuxnew) constructor.
   - `post_task` (`list[obj]`): Set the `post_task` field on the resulting resource block. When `null`, the `post_task` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_software_update_configuration.post_task.new](#fn-post_tasknew) constructor.
@@ -127,7 +127,7 @@ injecting into a complete block.
   - `duration` (`string`): Set the `duration` field on the resulting object. When `null`, the `duration` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
   - `non_azure_computer_names` (`list`): Set the `non_azure_computer_names` field on the resulting object. When `null`, the `non_azure_computer_names` field will be omitted from the resulting object.
-  - `operating_system` (`string`): Set the `operating_system` field on the resulting object.
+  - `operating_system` (`string`): Set the `operating_system` field on the resulting object. When `null`, the `operating_system` field will be omitted from the resulting object.
   - `virtual_machine_ids` (`list`): Set the `virtual_machine_ids` field on the resulting object. When `null`, the `virtual_machine_ids` field will be omitted from the resulting object.
   - `linux` (`list[obj]`): Set the `linux` field on the resulting object. When `null`, the `linux` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_software_update_configuration.linux.new](#fn-linuxnew) constructor.
   - `post_task` (`list[obj]`): Set the `post_task` field on the resulting object. When `null`, the `post_task` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_software_update_configuration.post_task.new](#fn-post_tasknew) constructor.
@@ -513,6 +513,7 @@ Terraform sub block.
 
 **Args**:
   - `classification_included` (`string`): Set the `classification_included` field on the resulting object. When `null`, the `classification_included` field will be omitted from the resulting object.
+  - `classifications_included` (`list`): Set the `classifications_included` field on the resulting object. When `null`, the `classifications_included` field will be omitted from the resulting object.
   - `excluded_packages` (`list`): Set the `excluded_packages` field on the resulting object. When `null`, the `excluded_packages` field will be omitted from the resulting object.
   - `included_packages` (`list`): Set the `included_packages` field on the resulting object. When `null`, the `included_packages` field will be omitted from the resulting object.
   - `reboot` (`string`): Set the `reboot` field on the resulting object. When `null`, the `reboot` field will be omitted from the resulting object.
@@ -591,7 +592,7 @@ Terraform sub block.
   - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
   - `expiry_time` (`string`): Set the `expiry_time` field on the resulting object. When `null`, the `expiry_time` field will be omitted from the resulting object.
   - `expiry_time_offset_minutes` (`number`): Set the `expiry_time_offset_minutes` field on the resulting object. When `null`, the `expiry_time_offset_minutes` field will be omitted from the resulting object.
-  - `frequency` (`string`): Set the `frequency` field on the resulting object. When `null`, the `frequency` field will be omitted from the resulting object.
+  - `frequency` (`string`): Set the `frequency` field on the resulting object.
   - `interval` (`number`): Set the `interval` field on the resulting object. When `null`, the `interval` field will be omitted from the resulting object.
   - `is_enabled` (`bool`): Set the `is_enabled` field on the resulting object. When `null`, the `is_enabled` field will be omitted from the resulting object.
   - `next_run` (`string`): Set the `next_run` field on the resulting object. When `null`, the `next_run` field will be omitted from the resulting object.

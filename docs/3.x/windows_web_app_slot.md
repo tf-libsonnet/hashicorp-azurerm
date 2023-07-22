@@ -37,6 +37,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withLogs()`](#fn-withlogs)
 * [`fn withLogsMixin()`](#fn-withlogsmixin)
 * [`fn withName()`](#fn-withname)
+* [`fn withPublicNetworkAccessEnabled()`](#fn-withpublicnetworkaccessenabled)
 * [`fn withServicePlanId()`](#fn-withserviceplanid)
 * [`fn withSiteConfig()`](#fn-withsiteconfig)
 * [`fn withSiteConfigMixin()`](#fn-withsiteconfigmixin)
@@ -175,6 +176,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `https_only` (`bool`): Set the `https_only` field on the resulting resource block. When `null`, the `https_only` field will be omitted from the resulting object.
   - `key_vault_reference_identity_id` (`string`): Set the `key_vault_reference_identity_id` field on the resulting resource block. When `null`, the `key_vault_reference_identity_id` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting resource block. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
   - `service_plan_id` (`string`): Set the `service_plan_id` field on the resulting resource block. When `null`, the `service_plan_id` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
   - `virtual_network_subnet_id` (`string`): Set the `virtual_network_subnet_id` field on the resulting resource block. When `null`, the `virtual_network_subnet_id` field will be omitted from the resulting object.
@@ -221,6 +223,7 @@ injecting into a complete block.
   - `https_only` (`bool`): Set the `https_only` field on the resulting object. When `null`, the `https_only` field will be omitted from the resulting object.
   - `key_vault_reference_identity_id` (`string`): Set the `key_vault_reference_identity_id` field on the resulting object. When `null`, the `key_vault_reference_identity_id` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
+  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting object. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
   - `service_plan_id` (`string`): Set the `service_plan_id` field on the resulting object. When `null`, the `service_plan_id` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
   - `virtual_network_subnet_id` (`string`): Set the `virtual_network_subnet_id` field on the resulting object. When `null`, the `virtual_network_subnet_id` field will be omitted from the resulting object.
@@ -619,6 +622,22 @@ Terraform resource block to set or update the name field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `name` field.
+
+
+### fn withPublicNetworkAccessEnabled
+
+```ts
+withPublicNetworkAccessEnabled()
+```
+
+`azurerm.bool.withPublicNetworkAccessEnabled` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the public_network_access_enabled field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `public_network_access_enabled` field.
 
 
 ### fn withServicePlanId
@@ -1622,6 +1641,10 @@ Terraform sub block.
   - `docker_container_name` (`string`): Set the `docker_container_name` field on the resulting object. When `null`, the `docker_container_name` field will be omitted from the resulting object.
   - `docker_container_registry` (`string`): Set the `docker_container_registry` field on the resulting object. When `null`, the `docker_container_registry` field will be omitted from the resulting object.
   - `docker_container_tag` (`string`): Set the `docker_container_tag` field on the resulting object. When `null`, the `docker_container_tag` field will be omitted from the resulting object.
+  - `docker_image_name` (`string`): Set the `docker_image_name` field on the resulting object. When `null`, the `docker_image_name` field will be omitted from the resulting object.
+  - `docker_registry_password` (`string`): Set the `docker_registry_password` field on the resulting object. When `null`, the `docker_registry_password` field will be omitted from the resulting object.
+  - `docker_registry_url` (`string`): Set the `docker_registry_url` field on the resulting object. When `null`, the `docker_registry_url` field will be omitted from the resulting object.
+  - `docker_registry_username` (`string`): Set the `docker_registry_username` field on the resulting object. When `null`, the `docker_registry_username` field will be omitted from the resulting object.
   - `dotnet_core_version` (`string`): The version of DotNetCore to use. When `null`, the `dotnet_core_version` field will be omitted from the resulting object.
   - `dotnet_version` (`string`): Set the `dotnet_version` field on the resulting object. When `null`, the `dotnet_version` field will be omitted from the resulting object.
   - `java_container` (`string`): Set the `java_container` field on the resulting object. When `null`, the `java_container` field will be omitted from the resulting object.
@@ -1809,7 +1832,7 @@ Terraform sub block.
   - `path` (`string`): Set the `path` field on the resulting object. When `null`, the `path` field will be omitted from the resulting object.
   - `status_code_range` (`string`): Set the `status_code_range` field on the resulting object.
   - `sub_status` (`number`): Set the `sub_status` field on the resulting object. When `null`, the `sub_status` field will be omitted from the resulting object.
-  - `win32_status` (`string`): Set the `win32_status` field on the resulting object. When `null`, the `win32_status` field will be omitted from the resulting object.
+  - `win32_status` (`number`): Set the `win32_status` field on the resulting object. When `null`, the `win32_status` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `status_code` sub block.

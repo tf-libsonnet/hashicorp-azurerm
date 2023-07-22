@@ -300,6 +300,10 @@ Terraform sub block.
 
 
 **Args**:
+  - `capacity` (`number`): Set the `capacity` field on the resulting object. When `null`, the `capacity` field will be omitted from the resulting object.
+  - `family` (`string`): Set the `family` field on the resulting object. When `null`, the `family` field will be omitted from the resulting object.
+  - `size` (`string`): Set the `size` field on the resulting object. When `null`, the `size` field will be omitted from the resulting object.
+  - `tier` (`string`): Set the `tier` field on the resulting object. When `null`, the `tier` field will be omitted from the resulting object.
   - `type` (`string`): Set the `type` field on the resulting object.
 
 **Returns**:

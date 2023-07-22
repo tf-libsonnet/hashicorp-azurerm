@@ -15,6 +15,7 @@ This package contains functions and utilities for setting up the resource using 
 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
+* [`fn withGeneration()`](#fn-withgeneration)
 * [`fn withName()`](#fn-withname)
 * [`fn withRepository()`](#fn-withrepository)
 * [`fn withRepositoryMixin()`](#fn-withrepositorymixin)
@@ -55,6 +56,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
+  - `generation` (`string`): Set the `generation` field on the resulting resource block. When `null`, the `generation` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting resource block.
   - `spring_cloud_service_id` (`string`): Set the `spring_cloud_service_id` field on the resulting resource block.
   - `repository` (`list[obj]`): Set the `repository` field on the resulting resource block. When `null`, the `repository` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_configuration_service.repository.new](#fn-repositorynew) constructor.
@@ -82,6 +84,7 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
+  - `generation` (`string`): Set the `generation` field on the resulting object. When `null`, the `generation` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
   - `spring_cloud_service_id` (`string`): Set the `spring_cloud_service_id` field on the resulting object.
   - `repository` (`list[obj]`): Set the `repository` field on the resulting object. When `null`, the `repository` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_configuration_service.repository.new](#fn-repositorynew) constructor.
@@ -89,6 +92,22 @@ injecting into a complete block.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `spring_cloud_configuration_service` resource into the root Terraform configuration.
+
+
+### fn withGeneration
+
+```ts
+withGeneration()
+```
+
+`azurerm.string.withGeneration` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the generation field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `generation` field.
 
 
 ### fn withName

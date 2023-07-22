@@ -24,6 +24,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withDefaultBuildServiceMixin()`](#fn-withdefaultbuildservicemixin)
 * [`fn withLocation()`](#fn-withlocation)
 * [`fn withLogStreamPublicEndpointEnabled()`](#fn-withlogstreampublicendpointenabled)
+* [`fn withMarketplace()`](#fn-withmarketplace)
+* [`fn withMarketplaceMixin()`](#fn-withmarketplacemixin)
 * [`fn withName()`](#fn-withname)
 * [`fn withNetwork()`](#fn-withnetwork)
 * [`fn withNetworkMixin()`](#fn-withnetworkmixin)
@@ -52,6 +54,8 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-container_registrynew)
 * [`obj default_build_service`](#obj-default_build_service)
   * [`fn new()`](#fn-default_build_servicenew)
+* [`obj marketplace`](#obj-marketplace)
+  * [`fn new()`](#fn-marketplacenew)
 * [`obj network`](#obj-network)
   * [`fn new()`](#fn-networknew)
 * [`obj timeouts`](#obj-timeouts)
@@ -100,6 +104,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `config_server_git_setting` (`list[obj]`): Set the `config_server_git_setting` field on the resulting resource block. When `null`, the `config_server_git_setting` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.config_server_git_setting.new](#fn-config_server_git_settingnew) constructor.
   - `container_registry` (`list[obj]`): Set the `container_registry` field on the resulting resource block. When `null`, the `container_registry` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.container_registry.new](#fn-container_registrynew) constructor.
   - `default_build_service` (`list[obj]`): Set the `default_build_service` field on the resulting resource block. When `null`, the `default_build_service` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.default_build_service.new](#fn-default_build_servicenew) constructor.
+  - `marketplace` (`list[obj]`): Set the `marketplace` field on the resulting resource block. When `null`, the `marketplace` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.marketplace.new](#fn-marketplacenew) constructor.
   - `network` (`list[obj]`): Set the `network` field on the resulting resource block. When `null`, the `network` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.network.new](#fn-networknew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.timeouts.new](#fn-timeoutsnew) constructor.
   - `trace` (`list[obj]`): Set the `trace` field on the resulting resource block. When `null`, the `trace` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.trace.new](#fn-tracenew) constructor.
@@ -138,6 +143,7 @@ injecting into a complete block.
   - `config_server_git_setting` (`list[obj]`): Set the `config_server_git_setting` field on the resulting object. When `null`, the `config_server_git_setting` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.config_server_git_setting.new](#fn-config_server_git_settingnew) constructor.
   - `container_registry` (`list[obj]`): Set the `container_registry` field on the resulting object. When `null`, the `container_registry` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.container_registry.new](#fn-container_registrynew) constructor.
   - `default_build_service` (`list[obj]`): Set the `default_build_service` field on the resulting object. When `null`, the `default_build_service` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.default_build_service.new](#fn-default_build_servicenew) constructor.
+  - `marketplace` (`list[obj]`): Set the `marketplace` field on the resulting object. When `null`, the `marketplace` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.marketplace.new](#fn-marketplacenew) constructor.
   - `network` (`list[obj]`): Set the `network` field on the resulting object. When `null`, the `network` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.network.new](#fn-networknew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.timeouts.new](#fn-timeoutsnew) constructor.
   - `trace` (`list[obj]`): Set the `trace` field on the resulting object. When `null`, the `trace` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.trace.new](#fn-tracenew) constructor.
@@ -303,6 +309,43 @@ Terraform resource block to set or update the log_stream_public_endpoint_enabled
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`bool`): The value to set for the `log_stream_public_endpoint_enabled` field.
+
+
+### fn withMarketplace
+
+```ts
+withMarketplace()
+```
+
+`azurerm.list[obj].withMarketplace` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the marketplace field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [azurerm.list[obj].withMarketplaceMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `marketplace` field.
+
+
+### fn withMarketplaceMixin
+
+```ts
+withMarketplaceMixin()
+```
+
+`azurerm.list[obj].withMarketplaceMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the marketplace field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.list[obj].withMarketplace](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `marketplace` field.
 
 
 ### fn withName
@@ -717,6 +760,31 @@ Terraform sub block.
   - An attribute object that represents the `default_build_service` sub block.
 
 
+## obj marketplace
+
+
+
+### fn marketplace.new
+
+```ts
+new()
+```
+
+
+`azurerm.spring_cloud_service.marketplace.new` constructs a new object with attributes and blocks configured for the `marketplace`
+Terraform sub block.
+
+
+
+**Args**:
+  - `plan` (`string`): Set the `plan` field on the resulting object.
+  - `product` (`string`): Set the `product` field on the resulting object.
+  - `publisher` (`string`): Set the `publisher` field on the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `marketplace` sub block.
+
+
 ## obj network
 
 
@@ -737,6 +805,7 @@ Terraform sub block.
   - `app_network_resource_group` (`string`): Set the `app_network_resource_group` field on the resulting object. When `null`, the `app_network_resource_group` field will be omitted from the resulting object.
   - `app_subnet_id` (`string`): Set the `app_subnet_id` field on the resulting object.
   - `cidr_ranges` (`list`): Set the `cidr_ranges` field on the resulting object.
+  - `outbound_type` (`string`): Set the `outbound_type` field on the resulting object. When `null`, the `outbound_type` field will be omitted from the resulting object.
   - `read_timeout_seconds` (`number`): Set the `read_timeout_seconds` field on the resulting object. When `null`, the `read_timeout_seconds` field will be omitted from the resulting object.
   - `service_runtime_network_resource_group` (`string`): Set the `service_runtime_network_resource_group` field on the resulting object. When `null`, the `service_runtime_network_resource_group` field will be omitted from the resulting object.
   - `service_runtime_subnet_id` (`string`): Set the `service_runtime_subnet_id` field on the resulting object.

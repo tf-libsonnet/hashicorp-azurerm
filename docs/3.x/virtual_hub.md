@@ -26,6 +26,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withTags()`](#fn-withtags)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
+* [`fn withVirtualRouterAutoScaleMinCapacity()`](#fn-withvirtualrouterautoscalemincapacity)
 * [`fn withVirtualWanId()`](#fn-withvirtualwanid)
 * [`obj route`](#obj-route)
   * [`fn new()`](#fn-routenew)
@@ -68,6 +69,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
   - `sku` (`string`): Set the `sku` field on the resulting resource block. When `null`, the `sku` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `virtual_router_auto_scale_min_capacity` (`number`): Set the `virtual_router_auto_scale_min_capacity` field on the resulting resource block. When `null`, the `virtual_router_auto_scale_min_capacity` field will be omitted from the resulting object.
   - `virtual_wan_id` (`string`): Set the `virtual_wan_id` field on the resulting resource block. When `null`, the `virtual_wan_id` field will be omitted from the resulting object.
   - `route` (`list[obj]`): Set the `route` field on the resulting resource block. When `null`, the `route` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_hub.route.new](#fn-routenew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_hub.timeouts.new](#fn-timeoutsnew) constructor.
@@ -101,6 +103,7 @@ injecting into a complete block.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
   - `sku` (`string`): Set the `sku` field on the resulting object. When `null`, the `sku` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `virtual_router_auto_scale_min_capacity` (`number`): Set the `virtual_router_auto_scale_min_capacity` field on the resulting object. When `null`, the `virtual_router_auto_scale_min_capacity` field will be omitted from the resulting object.
   - `virtual_wan_id` (`string`): Set the `virtual_wan_id` field on the resulting object. When `null`, the `virtual_wan_id` field will be omitted from the resulting object.
   - `route` (`list[obj]`): Set the `route` field on the resulting object. When `null`, the `route` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_hub.route.new](#fn-routenew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_hub.timeouts.new](#fn-timeoutsnew) constructor.
@@ -292,6 +295,22 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`obj`): The value to set for the `timeouts` field.
+
+
+### fn withVirtualRouterAutoScaleMinCapacity
+
+```ts
+withVirtualRouterAutoScaleMinCapacity()
+```
+
+`azurerm.number.withVirtualRouterAutoScaleMinCapacity` constructs a mixin object that can be merged into the `number`
+Terraform resource block to set or update the virtual_router_auto_scale_min_capacity field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`number`): The value to set for the `virtual_router_auto_scale_min_capacity` field.
 
 
 ### fn withVirtualWanId
