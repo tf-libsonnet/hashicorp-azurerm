@@ -113,6 +113,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   eventhub_consumer_group: (import 'eventhub_consumer_group.libsonnet'),
   eventhub_namespace: (import 'eventhub_namespace.libsonnet'),
   eventhub_namespace_authorization_rule: (import 'eventhub_namespace_authorization_rule.libsonnet'),
+  eventhub_sas: (import 'eventhub_sas.libsonnet'),
   express_route_circuit: (import 'express_route_circuit.libsonnet'),
   extended_locations: (import 'extended_locations.libsonnet'),
   firewall: (import 'firewall.libsonnet'),

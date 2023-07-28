@@ -25,6 +25,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withAvailabilitySetId()`](#fn-withavailabilitysetid)
 * [`fn withBootDiagnostics()`](#fn-withbootdiagnostics)
 * [`fn withBootDiagnosticsMixin()`](#fn-withbootdiagnosticsmixin)
+* [`fn withBypassPlatformSafetyChecksOnUserScheduleEnabled()`](#fn-withbypassplatformsafetychecksonuserscheduleenabled)
 * [`fn withCapacityReservationGroupId()`](#fn-withcapacityreservationgroupid)
 * [`fn withComputerName()`](#fn-withcomputername)
 * [`fn withCustomData()`](#fn-withcustomdata)
@@ -55,6 +56,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withPriority()`](#fn-withpriority)
 * [`fn withProvisionVmAgent()`](#fn-withprovisionvmagent)
 * [`fn withProximityPlacementGroupId()`](#fn-withproximityplacementgroupid)
+* [`fn withRebootSetting()`](#fn-withrebootsetting)
 * [`fn withResourceGroupName()`](#fn-withresourcegroupname)
 * [`fn withSecret()`](#fn-withsecret)
 * [`fn withSecretMixin()`](#fn-withsecretmixin)
@@ -137,6 +139,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `admin_username` (`string`): Set the `admin_username` field on the resulting resource block.
   - `allow_extension_operations` (`bool`): Set the `allow_extension_operations` field on the resulting resource block. When `null`, the `allow_extension_operations` field will be omitted from the resulting object.
   - `availability_set_id` (`string`): Set the `availability_set_id` field on the resulting resource block. When `null`, the `availability_set_id` field will be omitted from the resulting object.
+  - `bypass_platform_safety_checks_on_user_schedule_enabled` (`bool`): Set the `bypass_platform_safety_checks_on_user_schedule_enabled` field on the resulting resource block. When `null`, the `bypass_platform_safety_checks_on_user_schedule_enabled` field will be omitted from the resulting object.
   - `capacity_reservation_group_id` (`string`): Set the `capacity_reservation_group_id` field on the resulting resource block. When `null`, the `capacity_reservation_group_id` field will be omitted from the resulting object.
   - `computer_name` (`string`): Set the `computer_name` field on the resulting resource block. When `null`, the `computer_name` field will be omitted from the resulting object.
   - `custom_data` (`string`): Set the `custom_data` field on the resulting resource block. When `null`, the `custom_data` field will be omitted from the resulting object.
@@ -159,6 +162,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `priority` (`string`): Set the `priority` field on the resulting resource block. When `null`, the `priority` field will be omitted from the resulting object.
   - `provision_vm_agent` (`bool`): Set the `provision_vm_agent` field on the resulting resource block. When `null`, the `provision_vm_agent` field will be omitted from the resulting object.
   - `proximity_placement_group_id` (`string`): Set the `proximity_placement_group_id` field on the resulting resource block. When `null`, the `proximity_placement_group_id` field will be omitted from the resulting object.
+  - `reboot_setting` (`string`): Set the `reboot_setting` field on the resulting resource block. When `null`, the `reboot_setting` field will be omitted from the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
   - `secure_boot_enabled` (`bool`): Set the `secure_boot_enabled` field on the resulting resource block. When `null`, the `secure_boot_enabled` field will be omitted from the resulting object.
   - `size` (`string`): Set the `size` field on the resulting resource block.
@@ -208,6 +212,7 @@ injecting into a complete block.
   - `admin_username` (`string`): Set the `admin_username` field on the resulting object.
   - `allow_extension_operations` (`bool`): Set the `allow_extension_operations` field on the resulting object. When `null`, the `allow_extension_operations` field will be omitted from the resulting object.
   - `availability_set_id` (`string`): Set the `availability_set_id` field on the resulting object. When `null`, the `availability_set_id` field will be omitted from the resulting object.
+  - `bypass_platform_safety_checks_on_user_schedule_enabled` (`bool`): Set the `bypass_platform_safety_checks_on_user_schedule_enabled` field on the resulting object. When `null`, the `bypass_platform_safety_checks_on_user_schedule_enabled` field will be omitted from the resulting object.
   - `capacity_reservation_group_id` (`string`): Set the `capacity_reservation_group_id` field on the resulting object. When `null`, the `capacity_reservation_group_id` field will be omitted from the resulting object.
   - `computer_name` (`string`): Set the `computer_name` field on the resulting object. When `null`, the `computer_name` field will be omitted from the resulting object.
   - `custom_data` (`string`): Set the `custom_data` field on the resulting object. When `null`, the `custom_data` field will be omitted from the resulting object.
@@ -230,6 +235,7 @@ injecting into a complete block.
   - `priority` (`string`): Set the `priority` field on the resulting object. When `null`, the `priority` field will be omitted from the resulting object.
   - `provision_vm_agent` (`bool`): Set the `provision_vm_agent` field on the resulting object. When `null`, the `provision_vm_agent` field will be omitted from the resulting object.
   - `proximity_placement_group_id` (`string`): Set the `proximity_placement_group_id` field on the resulting object. When `null`, the `proximity_placement_group_id` field will be omitted from the resulting object.
+  - `reboot_setting` (`string`): Set the `reboot_setting` field on the resulting object. When `null`, the `reboot_setting` field will be omitted from the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
   - `secure_boot_enabled` (`bool`): Set the `secure_boot_enabled` field on the resulting object. When `null`, the `secure_boot_enabled` field will be omitted from the resulting object.
   - `size` (`string`): Set the `size` field on the resulting object.
@@ -430,6 +436,22 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `boot_diagnostics` field.
+
+
+### fn withBypassPlatformSafetyChecksOnUserScheduleEnabled
+
+```ts
+withBypassPlatformSafetyChecksOnUserScheduleEnabled()
+```
+
+`azurerm.bool.withBypassPlatformSafetyChecksOnUserScheduleEnabled` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the bypass_platform_safety_checks_on_user_schedule_enabled field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `bypass_platform_safety_checks_on_user_schedule_enabled` field.
 
 
 ### fn withCapacityReservationGroupId
@@ -930,6 +952,22 @@ Terraform resource block to set or update the proximity_placement_group_id field
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `proximity_placement_group_id` field.
+
+
+### fn withRebootSetting
+
+```ts
+withRebootSetting()
+```
+
+`azurerm.string.withRebootSetting` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the reboot_setting field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `reboot_setting` field.
 
 
 ### fn withResourceGroupName

@@ -118,6 +118,7 @@ permalink: /data/
 * [eventhub_consumer_group](eventhub_consumer_group.md)
 * [eventhub_namespace](eventhub_namespace.md)
 * [eventhub_namespace_authorization_rule](eventhub_namespace_authorization_rule.md)
+* [eventhub_sas](eventhub_sas.md)
 * [express_route_circuit](express_route_circuit.md)
 * [extended_locations](extended_locations.md)
 * [firewall](firewall.md)

@@ -380,6 +380,7 @@ Terraform sub block.
 **Args**:
   - `blob_uri` (`string`): Set the `blob_uri` field on the resulting object. When `null`, the `blob_uri` field will be omitted from the resulting object.
   - `caching` (`string`): Set the `caching` field on the resulting object. When `null`, the `caching` field will be omitted from the resulting object.
+  - `disk_encryption_set_id` (`string`): Set the `disk_encryption_set_id` field on the resulting object. When `null`, the `disk_encryption_set_id` field will be omitted from the resulting object.
   - `managed_disk_id` (`string`): Set the `managed_disk_id` field on the resulting object. When `null`, the `managed_disk_id` field will be omitted from the resulting object.
   - `os_state` (`string`): Set the `os_state` field on the resulting object. When `null`, the `os_state` field will be omitted from the resulting object.
   - `os_type` (`string`): Set the `os_type` field on the resulting object. When `null`, the `os_type` field will be omitted from the resulting object.
