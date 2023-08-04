@@ -172,16 +172,42 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     timeouts: timeouts,
   }),
   policy_settings:: {
-    '#new':: d.fn(help='\n`azurerm.web_application_firewall_policy.policy_settings.new` constructs a new object with attributes and blocks configured for the `policy_settings`\nTerraform sub block.\n\n\n\n**Args**:\n  - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.\n  - `file_upload_limit_in_mb` (`number`): Set the `file_upload_limit_in_mb` field on the resulting object. When `null`, the `file_upload_limit_in_mb` field will be omitted from the resulting object.\n  - `max_request_body_size_in_kb` (`number`): Set the `max_request_body_size_in_kb` field on the resulting object. When `null`, the `max_request_body_size_in_kb` field will be omitted from the resulting object.\n  - `mode` (`string`): Set the `mode` field on the resulting object. When `null`, the `mode` field will be omitted from the resulting object.\n  - `request_body_check` (`bool`): Set the `request_body_check` field on the resulting object. When `null`, the `request_body_check` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `policy_settings` sub block.\n', args=[]),
+    log_scrubbing:: {
+      '#new':: d.fn(help='\n`azurerm.web_application_firewall_policy.policy_settings.log_scrubbing.new` constructs a new object with attributes and blocks configured for the `log_scrubbing`\nTerraform sub block.\n\n\n\n**Args**:\n  - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.\n  - `rule` (`list[obj]`): Set the `rule` field on the resulting object. When `null`, the `rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_application_firewall_policy.policy_settings.log_scrubbing.rule.new](#fn-policy_settingspolicy_settingsrulenew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `log_scrubbing` sub block.\n', args=[]),
+      new(
+        enabled=null,
+        rule=null
+      ):: std.prune(a={
+        enabled: enabled,
+        rule: rule,
+      }),
+      rule:: {
+        '#new':: d.fn(help='\n`azurerm.web_application_firewall_policy.policy_settings.log_scrubbing.rule.new` constructs a new object with attributes and blocks configured for the `rule`\nTerraform sub block.\n\n\n\n**Args**:\n  - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.\n  - `match_variable` (`string`): Set the `match_variable` field on the resulting object.\n  - `selector` (`string`): When matchVariable is a collection, operator used to specify which elements in the collection this rule applies to. When `null`, the `selector` field will be omitted from the resulting object.\n  - `selector_match_operator` (`string`): Set the `selector_match_operator` field on the resulting object. When `null`, the `selector_match_operator` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `rule` sub block.\n', args=[]),
+        new(
+          match_variable,
+          enabled=null,
+          selector=null,
+          selector_match_operator=null
+        ):: std.prune(a={
+          enabled: enabled,
+          match_variable: match_variable,
+          selector: selector,
+          selector_match_operator: selector_match_operator,
+        }),
+      },
+    },
+    '#new':: d.fn(help='\n`azurerm.web_application_firewall_policy.policy_settings.new` constructs a new object with attributes and blocks configured for the `policy_settings`\nTerraform sub block.\n\n\n\n**Args**:\n  - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.\n  - `file_upload_limit_in_mb` (`number`): Set the `file_upload_limit_in_mb` field on the resulting object. When `null`, the `file_upload_limit_in_mb` field will be omitted from the resulting object.\n  - `max_request_body_size_in_kb` (`number`): Set the `max_request_body_size_in_kb` field on the resulting object. When `null`, the `max_request_body_size_in_kb` field will be omitted from the resulting object.\n  - `mode` (`string`): Set the `mode` field on the resulting object. When `null`, the `mode` field will be omitted from the resulting object.\n  - `request_body_check` (`bool`): Set the `request_body_check` field on the resulting object. When `null`, the `request_body_check` field will be omitted from the resulting object.\n  - `log_scrubbing` (`list[obj]`): Set the `log_scrubbing` field on the resulting object. When `null`, the `log_scrubbing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_application_firewall_policy.policy_settings.log_scrubbing.new](#fn-policy_settingslog_scrubbingnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `policy_settings` sub block.\n', args=[]),
     new(
       enabled=null,
       file_upload_limit_in_mb=null,
+      log_scrubbing=null,
       max_request_body_size_in_kb=null,
       mode=null,
       request_body_check=null
     ):: std.prune(a={
       enabled: enabled,
       file_upload_limit_in_mb: file_upload_limit_in_mb,
+      log_scrubbing: log_scrubbing,
       max_request_body_size_in_kb: max_request_body_size_in_kb,
       mode: mode,
       request_body_check: request_body_check,

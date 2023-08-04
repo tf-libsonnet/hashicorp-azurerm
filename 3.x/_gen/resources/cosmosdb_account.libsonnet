@@ -53,13 +53,13 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     }),
   },
   cors_rule:: {
-    '#new':: d.fn(help='\n`azurerm.cosmosdb_account.cors_rule.new` constructs a new object with attributes and blocks configured for the `cors_rule`\nTerraform sub block.\n\n\n\n**Args**:\n  - `allowed_headers` (`list`): Set the `allowed_headers` field on the resulting object.\n  - `allowed_methods` (`list`): Set the `allowed_methods` field on the resulting object.\n  - `allowed_origins` (`list`): Set the `allowed_origins` field on the resulting object.\n  - `exposed_headers` (`list`): Set the `exposed_headers` field on the resulting object.\n  - `max_age_in_seconds` (`number`): Set the `max_age_in_seconds` field on the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `cors_rule` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`azurerm.cosmosdb_account.cors_rule.new` constructs a new object with attributes and blocks configured for the `cors_rule`\nTerraform sub block.\n\n\n\n**Args**:\n  - `allowed_headers` (`list`): Set the `allowed_headers` field on the resulting object.\n  - `allowed_methods` (`list`): Set the `allowed_methods` field on the resulting object.\n  - `allowed_origins` (`list`): Set the `allowed_origins` field on the resulting object.\n  - `exposed_headers` (`list`): Set the `exposed_headers` field on the resulting object.\n  - `max_age_in_seconds` (`number`): Set the `max_age_in_seconds` field on the resulting object. When `null`, the `max_age_in_seconds` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `cors_rule` sub block.\n', args=[]),
     new(
       allowed_headers,
       allowed_methods,
       allowed_origins,
       exposed_headers,
-      max_age_in_seconds
+      max_age_in_seconds=null
     ):: std.prune(a={
       allowed_headers: allowed_headers,
       allowed_methods: allowed_methods,

@@ -1087,7 +1087,7 @@ Terraform sub block.
   - `allowed_methods` (`list`): Set the `allowed_methods` field on the resulting object.
   - `allowed_origins` (`list`): Set the `allowed_origins` field on the resulting object.
   - `exposed_headers` (`list`): Set the `exposed_headers` field on the resulting object.
-  - `max_age_in_seconds` (`number`): Set the `max_age_in_seconds` field on the resulting object.
+  - `max_age_in_seconds` (`number`): Set the `max_age_in_seconds` field on the resulting object. When `null`, the `max_age_in_seconds` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `cors_rule` sub block.

@@ -74,10 +74,11 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     zone_resilient: zone_resilient,
   }),
   os_disk:: {
-    '#new':: d.fn(help='\n`azurerm.image.os_disk.new` constructs a new object with attributes and blocks configured for the `os_disk`\nTerraform sub block.\n\n\n\n**Args**:\n  - `blob_uri` (`string`): Set the `blob_uri` field on the resulting object. When `null`, the `blob_uri` field will be omitted from the resulting object.\n  - `caching` (`string`): Set the `caching` field on the resulting object. When `null`, the `caching` field will be omitted from the resulting object.\n  - `managed_disk_id` (`string`): Set the `managed_disk_id` field on the resulting object. When `null`, the `managed_disk_id` field will be omitted from the resulting object.\n  - `os_state` (`string`): Set the `os_state` field on the resulting object. When `null`, the `os_state` field will be omitted from the resulting object.\n  - `os_type` (`string`): Set the `os_type` field on the resulting object. When `null`, the `os_type` field will be omitted from the resulting object.\n  - `size_gb` (`number`): Set the `size_gb` field on the resulting object. When `null`, the `size_gb` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `os_disk` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`azurerm.image.os_disk.new` constructs a new object with attributes and blocks configured for the `os_disk`\nTerraform sub block.\n\n\n\n**Args**:\n  - `blob_uri` (`string`): Set the `blob_uri` field on the resulting object. When `null`, the `blob_uri` field will be omitted from the resulting object.\n  - `caching` (`string`): Set the `caching` field on the resulting object. When `null`, the `caching` field will be omitted from the resulting object.\n  - `disk_encryption_set_id` (`string`): Set the `disk_encryption_set_id` field on the resulting object. When `null`, the `disk_encryption_set_id` field will be omitted from the resulting object.\n  - `managed_disk_id` (`string`): Set the `managed_disk_id` field on the resulting object. When `null`, the `managed_disk_id` field will be omitted from the resulting object.\n  - `os_state` (`string`): Set the `os_state` field on the resulting object. When `null`, the `os_state` field will be omitted from the resulting object.\n  - `os_type` (`string`): Set the `os_type` field on the resulting object. When `null`, the `os_type` field will be omitted from the resulting object.\n  - `size_gb` (`number`): Set the `size_gb` field on the resulting object. When `null`, the `size_gb` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `os_disk` sub block.\n', args=[]),
     new(
       blob_uri=null,
       caching=null,
+      disk_encryption_set_id=null,
       managed_disk_id=null,
       os_state=null,
       os_type=null,
@@ -85,6 +86,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     ):: std.prune(a={
       blob_uri: blob_uri,
       caching: caching,
+      disk_encryption_set_id: disk_encryption_set_id,
       managed_disk_id: managed_disk_id,
       os_state: os_state,
       os_type: os_type,

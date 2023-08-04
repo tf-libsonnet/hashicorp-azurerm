@@ -19,9 +19,15 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withLocation()`](#fn-withlocation)
 * [`fn withName()`](#fn-withname)
 * [`fn withResourceGroupName()`](#fn-withresourcegroupname)
+* [`fn withSharing()`](#fn-withsharing)
+* [`fn withSharingMixin()`](#fn-withsharingmixin)
 * [`fn withTags()`](#fn-withtags)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
+* [`obj sharing`](#obj-sharing)
+  * [`fn new()`](#fn-sharingnew)
+  * [`obj sharing.community_gallery`](#obj-sharingcommunity_gallery)
+    * [`fn new()`](#fn-sharingcommunity_gallerynew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 
@@ -59,6 +65,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): Set the `name` field on the resulting resource block.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
   - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `sharing` (`list[obj]`): Set the `sharing` field on the resulting resource block. When `null`, the `sharing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.shared_image_gallery.sharing.new](#fn-sharingnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.shared_image_gallery.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -88,6 +95,7 @@ injecting into a complete block.
   - `name` (`string`): Set the `name` field on the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `sharing` (`list[obj]`): Set the `sharing` field on the resulting object. When `null`, the `sharing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.shared_image_gallery.sharing.new](#fn-sharingnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.shared_image_gallery.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -158,6 +166,43 @@ Terraform resource block to set or update the resource_group_name field.
   - `value` (`string`): The value to set for the `resource_group_name` field.
 
 
+### fn withSharing
+
+```ts
+withSharing()
+```
+
+`azurerm.list[obj].withSharing` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the sharing field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [azurerm.list[obj].withSharingMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `sharing` field.
+
+
+### fn withSharingMixin
+
+```ts
+withSharingMixin()
+```
+
+`azurerm.list[obj].withSharingMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the sharing field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.list[obj].withSharing](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `sharing` field.
+
+
 ### fn withTags
 
 ```ts
@@ -208,6 +253,56 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`obj`): The value to set for the `timeouts` field.
+
+
+## obj sharing
+
+
+
+### fn sharing.new
+
+```ts
+new()
+```
+
+
+`azurerm.shared_image_gallery.sharing.new` constructs a new object with attributes and blocks configured for the `sharing`
+Terraform sub block.
+
+
+
+**Args**:
+  - `permission` (`string`): Set the `permission` field on the resulting object.
+  - `community_gallery` (`list[obj]`): Set the `community_gallery` field on the resulting object. When `null`, the `community_gallery` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.shared_image_gallery.sharing.community_gallery.new](#fn-sharingcommunity_gallerynew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `sharing` sub block.
+
+
+## obj sharing.community_gallery
+
+
+
+### fn sharing.community_gallery.new
+
+```ts
+new()
+```
+
+
+`azurerm.shared_image_gallery.sharing.community_gallery.new` constructs a new object with attributes and blocks configured for the `community_gallery`
+Terraform sub block.
+
+
+
+**Args**:
+  - `eula` (`string`): Set the `eula` field on the resulting object.
+  - `prefix` (`string`): Set the `prefix` field on the resulting object.
+  - `publisher_email` (`string`): Set the `publisher_email` field on the resulting object.
+  - `publisher_uri` (`string`): Set the `publisher_uri` field on the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `community_gallery` sub block.
 
 
 ## obj timeouts

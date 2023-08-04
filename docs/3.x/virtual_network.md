@@ -21,6 +21,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withDdosProtectionPlanMixin()`](#fn-withddosprotectionplanmixin)
 * [`fn withDnsServers()`](#fn-withdnsservers)
 * [`fn withEdgeZone()`](#fn-withedgezone)
+* [`fn withEncryption()`](#fn-withencryption)
+* [`fn withEncryptionMixin()`](#fn-withencryptionmixin)
 * [`fn withFlowTimeoutInMinutes()`](#fn-withflowtimeoutinminutes)
 * [`fn withLocation()`](#fn-withlocation)
 * [`fn withName()`](#fn-withname)
@@ -31,6 +33,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
 * [`obj ddos_protection_plan`](#obj-ddos_protection_plan)
   * [`fn new()`](#fn-ddos_protection_plannew)
+* [`obj encryption`](#obj-encryption)
+  * [`fn new()`](#fn-encryptionnew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 
@@ -74,6 +78,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `subnet` (`list`): Set the `subnet` field on the resulting resource block. When `null`, the `subnet` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
   - `ddos_protection_plan` (`list[obj]`): Set the `ddos_protection_plan` field on the resulting resource block. When `null`, the `ddos_protection_plan` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network.ddos_protection_plan.new](#fn-ddos_protection_plannew) constructor.
+  - `encryption` (`list[obj]`): Set the `encryption` field on the resulting resource block. When `null`, the `encryption` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network.encryption.new](#fn-encryptionnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -109,6 +114,7 @@ injecting into a complete block.
   - `subnet` (`list`): Set the `subnet` field on the resulting object. When `null`, the `subnet` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
   - `ddos_protection_plan` (`list[obj]`): Set the `ddos_protection_plan` field on the resulting object. When `null`, the `ddos_protection_plan` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network.ddos_protection_plan.new](#fn-ddos_protection_plannew) constructor.
+  - `encryption` (`list[obj]`): Set the `encryption` field on the resulting object. When `null`, the `encryption` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network.encryption.new](#fn-encryptionnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -214,6 +220,43 @@ Terraform resource block to set or update the edge_zone field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `edge_zone` field.
+
+
+### fn withEncryption
+
+```ts
+withEncryption()
+```
+
+`azurerm.list[obj].withEncryption` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the encryption field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [azurerm.list[obj].withEncryptionMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `encryption` field.
+
+
+### fn withEncryptionMixin
+
+```ts
+withEncryptionMixin()
+```
+
+`azurerm.list[obj].withEncryptionMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the encryption field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.list[obj].withEncryption](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `encryption` field.
 
 
 ### fn withFlowTimeoutInMinutes
@@ -369,6 +412,29 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `ddos_protection_plan` sub block.
+
+
+## obj encryption
+
+
+
+### fn encryption.new
+
+```ts
+new()
+```
+
+
+`azurerm.virtual_network.encryption.new` constructs a new object with attributes and blocks configured for the `encryption`
+Terraform sub block.
+
+
+
+**Args**:
+  - `enforcement` (`string`): Set the `enforcement` field on the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `encryption` sub block.
 
 
 ## obj timeouts
