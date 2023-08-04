@@ -16,6 +16,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
 * [`fn withEventhubNamespaceId()`](#fn-witheventhubnamespaceid)
+* [`fn withInfrastructureEncryptionEnabled()`](#fn-withinfrastructureencryptionenabled)
 * [`fn withKeyVaultKeyIds()`](#fn-withkeyvaultkeyids)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
@@ -52,6 +53,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
   - `eventhub_namespace_id` (`string`): Set the `eventhub_namespace_id` field on the resulting resource block.
+  - `infrastructure_encryption_enabled` (`bool`): Set the `infrastructure_encryption_enabled` field on the resulting resource block. When `null`, the `infrastructure_encryption_enabled` field will be omitted from the resulting object.
   - `key_vault_key_ids` (`list`): Set the `key_vault_key_ids` field on the resulting resource block.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventhub_namespace_customer_managed_key.timeouts.new](#fn-timeoutsnew) constructor.
 
@@ -78,6 +80,7 @@ injecting into a complete block.
 
 **Args**:
   - `eventhub_namespace_id` (`string`): Set the `eventhub_namespace_id` field on the resulting object.
+  - `infrastructure_encryption_enabled` (`bool`): Set the `infrastructure_encryption_enabled` field on the resulting object. When `null`, the `infrastructure_encryption_enabled` field will be omitted from the resulting object.
   - `key_vault_key_ids` (`list`): Set the `key_vault_key_ids` field on the resulting object.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventhub_namespace_customer_managed_key.timeouts.new](#fn-timeoutsnew) constructor.
 
@@ -99,6 +102,22 @@ Terraform resource block to set or update the eventhub_namespace_id field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `eventhub_namespace_id` field.
+
+
+### fn withInfrastructureEncryptionEnabled
+
+```ts
+withInfrastructureEncryptionEnabled()
+```
+
+`azurerm.bool.withInfrastructureEncryptionEnabled` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the infrastructure_encryption_enabled field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `infrastructure_encryption_enabled` field.
 
 
 ### fn withKeyVaultKeyIds

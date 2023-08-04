@@ -49,6 +49,10 @@ This package contains functions and utilities for setting up the resource using 
         * [`fn new()`](#fn-managed_rulesmanaged_rule_setrule_group_overriderulenew)
 * [`obj policy_settings`](#obj-policy_settings)
   * [`fn new()`](#fn-policy_settingsnew)
+  * [`obj policy_settings.log_scrubbing`](#obj-policy_settingslog_scrubbing)
+    * [`fn new()`](#fn-policy_settingslog_scrubbingnew)
+    * [`obj policy_settings.log_scrubbing.rule`](#obj-policy_settingslog_scrubbingrule)
+      * [`fn new()`](#fn-policy_settingslog_scrubbingrulenew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 
@@ -609,9 +613,60 @@ Terraform sub block.
   - `max_request_body_size_in_kb` (`number`): Set the `max_request_body_size_in_kb` field on the resulting object. When `null`, the `max_request_body_size_in_kb` field will be omitted from the resulting object.
   - `mode` (`string`): Set the `mode` field on the resulting object. When `null`, the `mode` field will be omitted from the resulting object.
   - `request_body_check` (`bool`): Set the `request_body_check` field on the resulting object. When `null`, the `request_body_check` field will be omitted from the resulting object.
+  - `log_scrubbing` (`list[obj]`): Set the `log_scrubbing` field on the resulting object. When `null`, the `log_scrubbing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_application_firewall_policy.policy_settings.log_scrubbing.new](#fn-policy_settingslog_scrubbingnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `policy_settings` sub block.
+
+
+## obj policy_settings.log_scrubbing
+
+
+
+### fn policy_settings.log_scrubbing.new
+
+```ts
+new()
+```
+
+
+`azurerm.web_application_firewall_policy.policy_settings.log_scrubbing.new` constructs a new object with attributes and blocks configured for the `log_scrubbing`
+Terraform sub block.
+
+
+
+**Args**:
+  - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.
+  - `rule` (`list[obj]`): Set the `rule` field on the resulting object. When `null`, the `rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_application_firewall_policy.policy_settings.log_scrubbing.rule.new](#fn-policy_settingspolicy_settingsrulenew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `log_scrubbing` sub block.
+
+
+## obj policy_settings.log_scrubbing.rule
+
+
+
+### fn policy_settings.log_scrubbing.rule.new
+
+```ts
+new()
+```
+
+
+`azurerm.web_application_firewall_policy.policy_settings.log_scrubbing.rule.new` constructs a new object with attributes and blocks configured for the `rule`
+Terraform sub block.
+
+
+
+**Args**:
+  - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.
+  - `match_variable` (`string`): Set the `match_variable` field on the resulting object.
+  - `selector` (`string`): When matchVariable is a collection, operator used to specify which elements in the collection this rule applies to. When `null`, the `selector` field will be omitted from the resulting object.
+  - `selector_match_operator` (`string`): Set the `selector_match_operator` field on the resulting object. When `null`, the `selector_match_operator` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `rule` sub block.
 
 
 ## obj timeouts

@@ -10,7 +10,15 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       enable: enable,
     }),
   },
-  '#new':: d.fn(help="\n`azurerm.virtual_network.new` injects a new `azurerm_virtual_network` Terraform `resource`\nblock into the root module document.\n\nAdditionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the\nresource. For example, if you added a new instance to the root using:\n\n    # arguments omitted for brevity\n    azurerm.virtual_network.new('some_id')\n\nYou can get the reference to the `id` field of the created `azurerm.virtual_network` using the reference:\n\n    $._ref.azurerm_virtual_network.some_id.get('id')\n\nThis is the same as directly entering `\"${ azurerm_virtual_network.some_id.id }\"` as the value.\n\nNOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,\nor `$` to refer to the root object. Instead, make an explicit outer object using `local`.\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block.\n  - `address_space` (`list`): Set the `address_space` field on the resulting resource block.\n  - `bgp_community` (`string`): Set the `bgp_community` field on the resulting resource block. When `null`, the `bgp_community` field will be omitted from the resulting object.\n  - `dns_servers` (`list`): Set the `dns_servers` field on the resulting resource block. When `null`, the `dns_servers` field will be omitted from the resulting object.\n  - `edge_zone` (`string`): Set the `edge_zone` field on the resulting resource block. When `null`, the `edge_zone` field will be omitted from the resulting object.\n  - `flow_timeout_in_minutes` (`number`): Set the `flow_timeout_in_minutes` field on the resulting resource block. When `null`, the `flow_timeout_in_minutes` field will be omitted from the resulting object.\n  - `location` (`string`): Set the `location` field on the resulting resource block.\n  - `name` (`string`): Set the `name` field on the resulting resource block.\n  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.\n  - `subnet` (`list`): Set the `subnet` field on the resulting resource block. When `null`, the `subnet` field will be omitted from the resulting object.\n  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.\n  - `ddos_protection_plan` (`list[obj]`): Set the `ddos_protection_plan` field on the resulting resource block. When `null`, the `ddos_protection_plan` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network.ddos_protection_plan.new](#fn-ddos_protection_plannew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n- A mixin object that injects the new resource into the root Terraform configuration.\n", args=[]),
+  encryption:: {
+    '#new':: d.fn(help='\n`azurerm.virtual_network.encryption.new` constructs a new object with attributes and blocks configured for the `encryption`\nTerraform sub block.\n\n\n\n**Args**:\n  - `enforcement` (`string`): Set the `enforcement` field on the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `encryption` sub block.\n', args=[]),
+    new(
+      enforcement
+    ):: std.prune(a={
+      enforcement: enforcement,
+    }),
+  },
+  '#new':: d.fn(help="\n`azurerm.virtual_network.new` injects a new `azurerm_virtual_network` Terraform `resource`\nblock into the root module document.\n\nAdditionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the\nresource. For example, if you added a new instance to the root using:\n\n    # arguments omitted for brevity\n    azurerm.virtual_network.new('some_id')\n\nYou can get the reference to the `id` field of the created `azurerm.virtual_network` using the reference:\n\n    $._ref.azurerm_virtual_network.some_id.get('id')\n\nThis is the same as directly entering `\"${ azurerm_virtual_network.some_id.id }\"` as the value.\n\nNOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,\nor `$` to refer to the root object. Instead, make an explicit outer object using `local`.\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block.\n  - `address_space` (`list`): Set the `address_space` field on the resulting resource block.\n  - `bgp_community` (`string`): Set the `bgp_community` field on the resulting resource block. When `null`, the `bgp_community` field will be omitted from the resulting object.\n  - `dns_servers` (`list`): Set the `dns_servers` field on the resulting resource block. When `null`, the `dns_servers` field will be omitted from the resulting object.\n  - `edge_zone` (`string`): Set the `edge_zone` field on the resulting resource block. When `null`, the `edge_zone` field will be omitted from the resulting object.\n  - `flow_timeout_in_minutes` (`number`): Set the `flow_timeout_in_minutes` field on the resulting resource block. When `null`, the `flow_timeout_in_minutes` field will be omitted from the resulting object.\n  - `location` (`string`): Set the `location` field on the resulting resource block.\n  - `name` (`string`): Set the `name` field on the resulting resource block.\n  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.\n  - `subnet` (`list`): Set the `subnet` field on the resulting resource block. When `null`, the `subnet` field will be omitted from the resulting object.\n  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.\n  - `ddos_protection_plan` (`list[obj]`): Set the `ddos_protection_plan` field on the resulting resource block. When `null`, the `ddos_protection_plan` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network.ddos_protection_plan.new](#fn-ddos_protection_plannew) constructor.\n  - `encryption` (`list[obj]`): Set the `encryption` field on the resulting resource block. When `null`, the `encryption` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network.encryption.new](#fn-encryptionnew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n- A mixin object that injects the new resource into the root Terraform configuration.\n", args=[]),
   new(
     resourceLabel,
     address_space,
@@ -21,6 +29,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     ddos_protection_plan=null,
     dns_servers=null,
     edge_zone=null,
+    encryption=null,
     flow_timeout_in_minutes=null,
     subnet=null,
     tags=null,
@@ -35,6 +44,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       ddos_protection_plan=ddos_protection_plan,
       dns_servers=dns_servers,
       edge_zone=edge_zone,
+      encryption=encryption,
       flow_timeout_in_minutes=flow_timeout_in_minutes,
       location=location,
       name=name,
@@ -45,7 +55,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     ),
     _meta=_meta
   ),
-  '#newAttrs':: d.fn(help='\n`azurerm.virtual_network.newAttrs` constructs a new object with attributes and blocks configured for the `virtual_network`\nTerraform resource.\n\nUnlike [azurerm.virtual_network.new](#fn-new), this function will not inject the `resource`\nblock into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the\n[tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.\n\nThis is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to\ninjecting into a complete block.\n\n**Args**:\n  - `address_space` (`list`): Set the `address_space` field on the resulting object.\n  - `bgp_community` (`string`): Set the `bgp_community` field on the resulting object. When `null`, the `bgp_community` field will be omitted from the resulting object.\n  - `dns_servers` (`list`): Set the `dns_servers` field on the resulting object. When `null`, the `dns_servers` field will be omitted from the resulting object.\n  - `edge_zone` (`string`): Set the `edge_zone` field on the resulting object. When `null`, the `edge_zone` field will be omitted from the resulting object.\n  - `flow_timeout_in_minutes` (`number`): Set the `flow_timeout_in_minutes` field on the resulting object. When `null`, the `flow_timeout_in_minutes` field will be omitted from the resulting object.\n  - `location` (`string`): Set the `location` field on the resulting object.\n  - `name` (`string`): Set the `name` field on the resulting object.\n  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.\n  - `subnet` (`list`): Set the `subnet` field on the resulting object. When `null`, the `subnet` field will be omitted from the resulting object.\n  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.\n  - `ddos_protection_plan` (`list[obj]`): Set the `ddos_protection_plan` field on the resulting object. When `null`, the `ddos_protection_plan` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network.ddos_protection_plan.new](#fn-ddos_protection_plannew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `virtual_network` resource into the root Terraform configuration.\n', args=[]),
+  '#newAttrs':: d.fn(help='\n`azurerm.virtual_network.newAttrs` constructs a new object with attributes and blocks configured for the `virtual_network`\nTerraform resource.\n\nUnlike [azurerm.virtual_network.new](#fn-new), this function will not inject the `resource`\nblock into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the\n[tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.\n\nThis is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to\ninjecting into a complete block.\n\n**Args**:\n  - `address_space` (`list`): Set the `address_space` field on the resulting object.\n  - `bgp_community` (`string`): Set the `bgp_community` field on the resulting object. When `null`, the `bgp_community` field will be omitted from the resulting object.\n  - `dns_servers` (`list`): Set the `dns_servers` field on the resulting object. When `null`, the `dns_servers` field will be omitted from the resulting object.\n  - `edge_zone` (`string`): Set the `edge_zone` field on the resulting object. When `null`, the `edge_zone` field will be omitted from the resulting object.\n  - `flow_timeout_in_minutes` (`number`): Set the `flow_timeout_in_minutes` field on the resulting object. When `null`, the `flow_timeout_in_minutes` field will be omitted from the resulting object.\n  - `location` (`string`): Set the `location` field on the resulting object.\n  - `name` (`string`): Set the `name` field on the resulting object.\n  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.\n  - `subnet` (`list`): Set the `subnet` field on the resulting object. When `null`, the `subnet` field will be omitted from the resulting object.\n  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.\n  - `ddos_protection_plan` (`list[obj]`): Set the `ddos_protection_plan` field on the resulting object. When `null`, the `ddos_protection_plan` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network.ddos_protection_plan.new](#fn-ddos_protection_plannew) constructor.\n  - `encryption` (`list[obj]`): Set the `encryption` field on the resulting object. When `null`, the `encryption` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network.encryption.new](#fn-encryptionnew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_network.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `virtual_network` resource into the root Terraform configuration.\n', args=[]),
   newAttrs(
     address_space,
     location,
@@ -55,6 +65,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     ddos_protection_plan=null,
     dns_servers=null,
     edge_zone=null,
+    encryption=null,
     flow_timeout_in_minutes=null,
     subnet=null,
     tags=null,
@@ -65,6 +76,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     ddos_protection_plan: ddos_protection_plan,
     dns_servers: dns_servers,
     edge_zone: edge_zone,
+    encryption: encryption,
     flow_timeout_in_minutes: flow_timeout_in_minutes,
     location: location,
     name: name,
@@ -143,6 +155,26 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       azurerm_virtual_network+: {
         [resourceLabel]+: {
           edge_zone: value,
+        },
+      },
+    },
+  },
+  '#withEncryption':: d.fn(help='`azurerm.list[obj].withEncryption` constructs a mixin object that can be merged into the `list[obj]`\nTerraform resource block to set or update the encryption field.\n\nThis function will replace the array with the passed in `value`. If you wish to instead append the\npassed in value to the existing array, use the [azurerm.list[obj].withEncryptionMixin](TODO) function.\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`list[obj]`): The value to set for the `encryption` field.\n', args=[]),
+  withEncryption(resourceLabel, value): {
+    resource+: {
+      azurerm_virtual_network+: {
+        [resourceLabel]+: {
+          encryption: value,
+        },
+      },
+    },
+  },
+  '#withEncryptionMixin':: d.fn(help='`azurerm.list[obj].withEncryptionMixin` constructs a mixin object that can be merged into the `list[obj]`\nTerraform resource block to set or update the encryption field.\n\nThis function will append the passed in array or object to the existing array. If you wish\nto instead replace the array with the passed in `value`, use the [azurerm.list[obj].withEncryption](TODO)\nfunction.\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`list[obj]`): The value to set for the `encryption` field.\n', args=[]),
+  withEncryptionMixin(resourceLabel, value): {
+    resource+: {
+      azurerm_virtual_network+: {
+        [resourceLabel]+: {
+          encryption+: if std.isArray(v=value) then value else [value],
         },
       },
     },

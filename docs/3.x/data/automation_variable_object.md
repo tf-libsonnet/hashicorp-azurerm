@@ -1,10 +1,10 @@
 ---
-permalink: /data/eventgrid_domain/
+permalink: /data/automation_variable_object/
 ---
 
-# data.eventgrid_domain
+# data.automation_variable_object
 
-`eventgrid_domain` represents the `azurerm_eventgrid_domain` Terraform data source.
+`automation_variable_object` represents the `azurerm_automation_variable_object` Terraform data source.
 
 
 
@@ -15,6 +15,7 @@ This package contains functions and utilities for setting up the data source usi
 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
+* [`fn withAutomationAccountName()`](#fn-withautomationaccountname)
 * [`fn withName()`](#fn-withname)
 * [`fn withResourceGroupName()`](#fn-withresourcegroupname)
 * [`fn withTimeouts()`](#fn-withtimeouts)
@@ -31,29 +32,30 @@ new()
 ```
 
 
-`azurerm.data.eventgrid_domain.new` injects a new `data_azurerm_eventgrid_domain` Terraform `data source`
+`azurerm.data.automation_variable_object.new` injects a new `data_azurerm_automation_variable_object` Terraform `data source`
 block into the root module document.
 
 Additionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the
 resource. For example, if you added a new instance to the root using:
 
     # arguments omitted for brevity
-    azurerm.data.eventgrid_domain.new('some_id')
+    azurerm.data.automation_variable_object.new('some_id')
 
-You can get the reference to the `id` field of the created `azurerm.data.eventgrid_domain` using the reference:
+You can get the reference to the `id` field of the created `azurerm.data.automation_variable_object` using the reference:
 
-    $._ref.data_azurerm_eventgrid_domain.some_id.get('id')
+    $._ref.data_azurerm_automation_variable_object.some_id.get('id')
 
-This is the same as directly entering `"${ data_azurerm_eventgrid_domain.some_id.id }"` as the value.
+This is the same as directly entering `"${ data_azurerm_automation_variable_object.some_id.id }"` as the value.
 
 NOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,
 or `$` to refer to the root object. Instead, make an explicit outer object using `local`.
 
 **Args**:
   - `dataSrcLabel` (`string`): The name label of the block.
+  - `automation_account_name` (`string`): Set the `automation_account_name` field on the resulting data source block.
   - `name` (`string`): Set the `name` field on the resulting data source block.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting data source block.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting data source block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.eventgrid_domain.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting data source block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.automation_variable_object.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new data source into the root Terraform configuration.
@@ -66,10 +68,10 @@ newAttrs()
 ```
 
 
-`azurerm.data.eventgrid_domain.newAttrs` constructs a new object with attributes and blocks configured for the `eventgrid_domain`
+`azurerm.data.automation_variable_object.newAttrs` constructs a new object with attributes and blocks configured for the `automation_variable_object`
 Terraform data source.
 
-Unlike [azurerm.data.eventgrid_domain.new](#fn-new), this function will not inject the `data source`
+Unlike [azurerm.data.automation_variable_object.new](#fn-new), this function will not inject the `data source`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) function to build a complete block.
 
@@ -77,12 +79,29 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
+  - `automation_account_name` (`string`): Set the `automation_account_name` field on the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.eventgrid_domain.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.automation_variable_object.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
-  - An attribute object that can be used with [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) to construct a new `eventgrid_domain` data source into the root Terraform configuration.
+  - An attribute object that can be used with [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) to construct a new `automation_variable_object` data source into the root Terraform configuration.
+
+
+### fn withAutomationAccountName
+
+```ts
+withAutomationAccountName()
+```
+
+`azurerm.string.withAutomationAccountName` constructs a mixin object that can be merged into the `string`
+Terraform data source block to set or update the automation_account_name field.
+
+
+
+**Args**:
+  - `dataSrcLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `automation_account_name` field.
 
 
 ### fn withName
@@ -164,7 +183,7 @@ new()
 ```
 
 
-`azurerm.eventgrid_domain.timeouts.new` constructs a new object with attributes and blocks configured for the `timeouts`
+`azurerm.automation_variable_object.timeouts.new` constructs a new object with attributes and blocks configured for the `timeouts`
 Terraform sub block.
 
 
