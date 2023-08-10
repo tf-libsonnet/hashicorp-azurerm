@@ -59,7 +59,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `infrastructure_subnet_id` (`string`): The existing Subnet to use for the Container Apps Control Plane. **NOTE:** The Subnet must have a `/21` or larger address space. When `null`, the `infrastructure_subnet_id` field will be omitted from the resulting object.
   - `internal_load_balancer_enabled` (`bool`): Should the Container Environment operate in Internal Load Balancing Mode? Defaults to `false`. **Note:** can only be set to `true` if `infrastructure_subnet_id` is specified. When `null`, the `internal_load_balancer_enabled` field will be omitted from the resulting object.
   - `location` (`string`): Set the `location` field on the resulting resource block.
-  - `log_analytics_workspace_id` (`string`): The ID for the Log Analytics Workspace to link this Container Apps Managed Environment to.
+  - `log_analytics_workspace_id` (`string`): The ID for the Log Analytics Workspace to link this Container Apps Managed Environment to. When `null`, the `log_analytics_workspace_id` field will be omitted from the resulting object.
   - `name` (`string`): The name of the Container Apps Managed Environment.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
   - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
@@ -90,7 +90,7 @@ injecting into a complete block.
   - `infrastructure_subnet_id` (`string`): The existing Subnet to use for the Container Apps Control Plane. **NOTE:** The Subnet must have a `/21` or larger address space. When `null`, the `infrastructure_subnet_id` field will be omitted from the resulting object.
   - `internal_load_balancer_enabled` (`bool`): Should the Container Environment operate in Internal Load Balancing Mode? Defaults to `false`. **Note:** can only be set to `true` if `infrastructure_subnet_id` is specified. When `null`, the `internal_load_balancer_enabled` field will be omitted from the resulting object.
   - `location` (`string`): Set the `location` field on the resulting object.
-  - `log_analytics_workspace_id` (`string`): The ID for the Log Analytics Workspace to link this Container Apps Managed Environment to.
+  - `log_analytics_workspace_id` (`string`): The ID for the Log Analytics Workspace to link this Container Apps Managed Environment to. When `null`, the `log_analytics_workspace_id` field will be omitted from the resulting object.
   - `name` (`string`): The name of the Container Apps Managed Environment.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.

@@ -15,11 +15,15 @@ This package contains functions and utilities for setting up the resource using 
 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
+* [`fn withExtension()`](#fn-withextension)
+* [`fn withExtensionMixin()`](#fn-withextensionmixin)
 * [`fn withResourceType()`](#fn-withresourcetype)
 * [`fn withSubplan()`](#fn-withsubplan)
 * [`fn withTier()`](#fn-withtier)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
+* [`obj extension`](#obj-extension)
+  * [`fn new()`](#fn-extensionnew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 
@@ -55,6 +59,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resource_type` (`string`): Set the `resource_type` field on the resulting resource block. When `null`, the `resource_type` field will be omitted from the resulting object.
   - `subplan` (`string`): Set the `subplan` field on the resulting resource block. When `null`, the `subplan` field will be omitted from the resulting object.
   - `tier` (`string`): Set the `tier` field on the resulting resource block.
+  - `extension` (`list[obj]`): Set the `extension` field on the resulting resource block. When `null`, the `extension` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_subscription_pricing.extension.new](#fn-extensionnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_subscription_pricing.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -82,10 +87,48 @@ injecting into a complete block.
   - `resource_type` (`string`): Set the `resource_type` field on the resulting object. When `null`, the `resource_type` field will be omitted from the resulting object.
   - `subplan` (`string`): Set the `subplan` field on the resulting object. When `null`, the `subplan` field will be omitted from the resulting object.
   - `tier` (`string`): Set the `tier` field on the resulting object.
+  - `extension` (`list[obj]`): Set the `extension` field on the resulting object. When `null`, the `extension` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_subscription_pricing.extension.new](#fn-extensionnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.security_center_subscription_pricing.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `security_center_subscription_pricing` resource into the root Terraform configuration.
+
+
+### fn withExtension
+
+```ts
+withExtension()
+```
+
+`azurerm.list[obj].withExtension` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the extension field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [azurerm.list[obj].withExtensionMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `extension` field.
+
+
+### fn withExtensionMixin
+
+```ts
+withExtensionMixin()
+```
+
+`azurerm.list[obj].withExtensionMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the extension field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.list[obj].withExtension](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `extension` field.
 
 
 ### fn withResourceType
@@ -170,6 +213,30 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`obj`): The value to set for the `timeouts` field.
+
+
+## obj extension
+
+
+
+### fn extension.new
+
+```ts
+new()
+```
+
+
+`azurerm.security_center_subscription_pricing.extension.new` constructs a new object with attributes and blocks configured for the `extension`
+Terraform sub block.
+
+
+
+**Args**:
+  - `additional_extension_properties` (`obj`): Set the `additional_extension_properties` field on the resulting object. When `null`, the `additional_extension_properties` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `extension` sub block.
 
 
 ## obj timeouts

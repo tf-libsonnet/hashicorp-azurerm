@@ -38,12 +38,13 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     timeouts: timeouts,
   }),
   repository:: {
-    '#new':: d.fn(help='\n`azurerm.spring_cloud_configuration_service.repository.new` constructs a new object with attributes and blocks configured for the `repository`\nTerraform sub block.\n\n\n\n**Args**:\n  - `host_key` (`string`): Set the `host_key` field on the resulting object. When `null`, the `host_key` field will be omitted from the resulting object.\n  - `host_key_algorithm` (`string`): Set the `host_key_algorithm` field on the resulting object. When `null`, the `host_key_algorithm` field will be omitted from the resulting object.\n  - `label` (`string`): Set the `label` field on the resulting object.\n  - `name` (`string`): Set the `name` field on the resulting object.\n  - `password` (`string`): Set the `password` field on the resulting object. When `null`, the `password` field will be omitted from the resulting object.\n  - `patterns` (`list`): Set the `patterns` field on the resulting object.\n  - `private_key` (`string`): Set the `private_key` field on the resulting object. When `null`, the `private_key` field will be omitted from the resulting object.\n  - `search_paths` (`list`): Set the `search_paths` field on the resulting object. When `null`, the `search_paths` field will be omitted from the resulting object.\n  - `strict_host_key_checking` (`bool`): Set the `strict_host_key_checking` field on the resulting object. When `null`, the `strict_host_key_checking` field will be omitted from the resulting object.\n  - `uri` (`string`): Set the `uri` field on the resulting object.\n  - `username` (`string`): Set the `username` field on the resulting object. When `null`, the `username` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `repository` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`azurerm.spring_cloud_configuration_service.repository.new` constructs a new object with attributes and blocks configured for the `repository`\nTerraform sub block.\n\n\n\n**Args**:\n  - `ca_certificate_id` (`string`): Set the `ca_certificate_id` field on the resulting object. When `null`, the `ca_certificate_id` field will be omitted from the resulting object.\n  - `host_key` (`string`): Set the `host_key` field on the resulting object. When `null`, the `host_key` field will be omitted from the resulting object.\n  - `host_key_algorithm` (`string`): Set the `host_key_algorithm` field on the resulting object. When `null`, the `host_key_algorithm` field will be omitted from the resulting object.\n  - `label` (`string`): Set the `label` field on the resulting object.\n  - `name` (`string`): Set the `name` field on the resulting object.\n  - `password` (`string`): Set the `password` field on the resulting object. When `null`, the `password` field will be omitted from the resulting object.\n  - `patterns` (`list`): Set the `patterns` field on the resulting object.\n  - `private_key` (`string`): Set the `private_key` field on the resulting object. When `null`, the `private_key` field will be omitted from the resulting object.\n  - `search_paths` (`list`): Set the `search_paths` field on the resulting object. When `null`, the `search_paths` field will be omitted from the resulting object.\n  - `strict_host_key_checking` (`bool`): Set the `strict_host_key_checking` field on the resulting object. When `null`, the `strict_host_key_checking` field will be omitted from the resulting object.\n  - `uri` (`string`): Set the `uri` field on the resulting object.\n  - `username` (`string`): Set the `username` field on the resulting object. When `null`, the `username` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `repository` sub block.\n', args=[]),
     new(
       label,
       name,
       patterns,
       uri,
+      ca_certificate_id=null,
       host_key=null,
       host_key_algorithm=null,
       password=null,
@@ -52,6 +53,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       strict_host_key_checking=null,
       username=null
     ):: std.prune(a={
+      ca_certificate_id: ca_certificate_id,
       host_key: host_key,
       host_key_algorithm: host_key_algorithm,
       label: label,

@@ -213,6 +213,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   notification_hub: (import 'notification_hub.libsonnet'),
   notification_hub_namespace: (import 'notification_hub_namespace.libsonnet'),
   orchestrated_virtual_machine_scale_set: (import 'orchestrated_virtual_machine_scale_set.libsonnet'),
+  palo_alto_local_rulestack: (import 'palo_alto_local_rulestack.libsonnet'),
   platform_image: (import 'platform_image.libsonnet'),
   policy_assignment: (import 'policy_assignment.libsonnet'),
   policy_definition: (import 'policy_definition.libsonnet'),
