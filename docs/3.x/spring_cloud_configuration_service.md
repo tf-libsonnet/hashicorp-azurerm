@@ -232,6 +232,7 @@ Terraform sub block.
 
 
 **Args**:
+  - `ca_certificate_id` (`string`): Set the `ca_certificate_id` field on the resulting object. When `null`, the `ca_certificate_id` field will be omitted from the resulting object.
   - `host_key` (`string`): Set the `host_key` field on the resulting object. When `null`, the `host_key` field will be omitted from the resulting object.
   - `host_key_algorithm` (`string`): Set the `host_key_algorithm` field on the resulting object. When `null`, the `host_key_algorithm` field will be omitted from the resulting object.
   - `label` (`string`): Set the `label` field on the resulting object.

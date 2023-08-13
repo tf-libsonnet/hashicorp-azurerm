@@ -19,6 +19,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withFriendlyName()`](#fn-withfriendlyname)
 * [`fn withLocation()`](#fn-withlocation)
 * [`fn withName()`](#fn-withname)
+* [`fn withPublicNetworkAccessEnabled()`](#fn-withpublicnetworkaccessenabled)
 * [`fn withResourceGroupName()`](#fn-withresourcegroupname)
 * [`fn withTags()`](#fn-withtags)
 * [`fn withTimeouts()`](#fn-withtimeouts)
@@ -59,6 +60,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `friendly_name` (`string`): Set the `friendly_name` field on the resulting resource block. When `null`, the `friendly_name` field will be omitted from the resulting object.
   - `location` (`string`): Set the `location` field on the resulting resource block.
   - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting resource block. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
   - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_desktop_workspace.timeouts.new](#fn-timeoutsnew) constructor.
@@ -89,6 +91,7 @@ injecting into a complete block.
   - `friendly_name` (`string`): Set the `friendly_name` field on the resulting object. When `null`, the `friendly_name` field will be omitted from the resulting object.
   - `location` (`string`): Set the `location` field on the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
+  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting object. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_desktop_workspace.timeouts.new](#fn-timeoutsnew) constructor.
@@ -159,6 +162,22 @@ Terraform resource block to set or update the name field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `name` field.
+
+
+### fn withPublicNetworkAccessEnabled
+
+```ts
+withPublicNetworkAccessEnabled()
+```
+
+`azurerm.bool.withPublicNetworkAccessEnabled` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the public_network_access_enabled field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `public_network_access_enabled` field.
 
 
 ### fn withResourceGroupName

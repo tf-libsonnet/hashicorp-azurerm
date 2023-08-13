@@ -2010,6 +2010,7 @@ Terraform sub block.
   - `pod_subnet_id` (`string`): Set the `pod_subnet_id` field on the resulting object. When `null`, the `pod_subnet_id` field will be omitted from the resulting object.
   - `proximity_placement_group_id` (`string`): Set the `proximity_placement_group_id` field on the resulting object. When `null`, the `proximity_placement_group_id` field will be omitted from the resulting object.
   - `scale_down_mode` (`string`): Set the `scale_down_mode` field on the resulting object. When `null`, the `scale_down_mode` field will be omitted from the resulting object.
+  - `snapshot_id` (`string`): Set the `snapshot_id` field on the resulting object. When `null`, the `snapshot_id` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
   - `temporary_name_for_rotation` (`string`): Set the `temporary_name_for_rotation` field on the resulting object. When `null`, the `temporary_name_for_rotation` field will be omitted from the resulting object.
   - `type` (`string`): Set the `type` field on the resulting object. When `null`, the `type` field will be omitted from the resulting object.
