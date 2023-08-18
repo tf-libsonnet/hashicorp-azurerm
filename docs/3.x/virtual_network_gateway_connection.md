@@ -661,7 +661,7 @@ Terraform sub block.
 
 **Args**:
   - `primary` (`string`): Set the `primary` field on the resulting object.
-  - `secondary` (`string`): Set the `secondary` field on the resulting object.
+  - `secondary` (`string`): Set the `secondary` field on the resulting object. When `null`, the `secondary` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `custom_bgp_addresses` sub block.

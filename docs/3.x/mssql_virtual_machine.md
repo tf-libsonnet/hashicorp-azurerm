@@ -31,12 +31,15 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withSqlInstance()`](#fn-withsqlinstance)
 * [`fn withSqlInstanceMixin()`](#fn-withsqlinstancemixin)
 * [`fn withSqlLicenseType()`](#fn-withsqllicensetype)
+* [`fn withSqlVirtualMachineGroupId()`](#fn-withsqlvirtualmachinegroupid)
 * [`fn withStorageConfiguration()`](#fn-withstorageconfiguration)
 * [`fn withStorageConfigurationMixin()`](#fn-withstorageconfigurationmixin)
 * [`fn withTags()`](#fn-withtags)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
 * [`fn withVirtualMachineId()`](#fn-withvirtualmachineid)
+* [`fn withWsfcDomainCredential()`](#fn-withwsfcdomaincredential)
+* [`fn withWsfcDomainCredentialMixin()`](#fn-withwsfcdomaincredentialmixin)
 * [`obj assessment`](#obj-assessment)
   * [`fn new()`](#fn-assessmentnew)
   * [`obj assessment.schedule`](#obj-assessmentschedule)
@@ -61,6 +64,8 @@ This package contains functions and utilities for setting up the resource using 
     * [`fn new()`](#fn-storage_configurationtemp_db_settingsnew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
+* [`obj wsfc_domain_credential`](#obj-wsfc_domain_credential)
+  * [`fn new()`](#fn-wsfc_domain_credentialnew)
 
 ## Fields
 
@@ -97,6 +102,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `sql_connectivity_update_password` (`string`): Set the `sql_connectivity_update_password` field on the resulting resource block. When `null`, the `sql_connectivity_update_password` field will be omitted from the resulting object.
   - `sql_connectivity_update_username` (`string`): Set the `sql_connectivity_update_username` field on the resulting resource block. When `null`, the `sql_connectivity_update_username` field will be omitted from the resulting object.
   - `sql_license_type` (`string`): Set the `sql_license_type` field on the resulting resource block. When `null`, the `sql_license_type` field will be omitted from the resulting object.
+  - `sql_virtual_machine_group_id` (`string`): Set the `sql_virtual_machine_group_id` field on the resulting resource block. When `null`, the `sql_virtual_machine_group_id` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
   - `virtual_machine_id` (`string`): Set the `virtual_machine_id` field on the resulting resource block.
   - `assessment` (`list[obj]`): Set the `assessment` field on the resulting resource block. When `null`, the `assessment` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_virtual_machine.assessment.new](#fn-assessmentnew) constructor.
@@ -106,6 +112,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `sql_instance` (`list[obj]`): Set the `sql_instance` field on the resulting resource block. When `null`, the `sql_instance` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_virtual_machine.sql_instance.new](#fn-sql_instancenew) constructor.
   - `storage_configuration` (`list[obj]`): Set the `storage_configuration` field on the resulting resource block. When `null`, the `storage_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_virtual_machine.storage_configuration.new](#fn-storage_configurationnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_virtual_machine.timeouts.new](#fn-timeoutsnew) constructor.
+  - `wsfc_domain_credential` (`list[obj]`): Set the `wsfc_domain_credential` field on the resulting resource block. When `null`, the `wsfc_domain_credential` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_virtual_machine.wsfc_domain_credential.new](#fn-wsfc_domain_credentialnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -135,6 +142,7 @@ injecting into a complete block.
   - `sql_connectivity_update_password` (`string`): Set the `sql_connectivity_update_password` field on the resulting object. When `null`, the `sql_connectivity_update_password` field will be omitted from the resulting object.
   - `sql_connectivity_update_username` (`string`): Set the `sql_connectivity_update_username` field on the resulting object. When `null`, the `sql_connectivity_update_username` field will be omitted from the resulting object.
   - `sql_license_type` (`string`): Set the `sql_license_type` field on the resulting object. When `null`, the `sql_license_type` field will be omitted from the resulting object.
+  - `sql_virtual_machine_group_id` (`string`): Set the `sql_virtual_machine_group_id` field on the resulting object. When `null`, the `sql_virtual_machine_group_id` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
   - `virtual_machine_id` (`string`): Set the `virtual_machine_id` field on the resulting object.
   - `assessment` (`list[obj]`): Set the `assessment` field on the resulting object. When `null`, the `assessment` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_virtual_machine.assessment.new](#fn-assessmentnew) constructor.
@@ -144,6 +152,7 @@ injecting into a complete block.
   - `sql_instance` (`list[obj]`): Set the `sql_instance` field on the resulting object. When `null`, the `sql_instance` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_virtual_machine.sql_instance.new](#fn-sql_instancenew) constructor.
   - `storage_configuration` (`list[obj]`): Set the `storage_configuration` field on the resulting object. When `null`, the `storage_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_virtual_machine.storage_configuration.new](#fn-storage_configurationnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_virtual_machine.timeouts.new](#fn-timeoutsnew) constructor.
+  - `wsfc_domain_credential` (`list[obj]`): Set the `wsfc_domain_credential` field on the resulting object. When `null`, the `wsfc_domain_credential` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_virtual_machine.wsfc_domain_credential.new](#fn-wsfc_domain_credentialnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `mssql_virtual_machine` resource into the root Terraform configuration.
@@ -430,6 +439,22 @@ Terraform resource block to set or update the sql_license_type field.
   - `value` (`string`): The value to set for the `sql_license_type` field.
 
 
+### fn withSqlVirtualMachineGroupId
+
+```ts
+withSqlVirtualMachineGroupId()
+```
+
+`azurerm.string.withSqlVirtualMachineGroupId` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the sql_virtual_machine_group_id field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `sql_virtual_machine_group_id` field.
+
+
 ### fn withStorageConfiguration
 
 ```ts
@@ -533,6 +558,43 @@ Terraform resource block to set or update the virtual_machine_id field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `virtual_machine_id` field.
+
+
+### fn withWsfcDomainCredential
+
+```ts
+withWsfcDomainCredential()
+```
+
+`azurerm.list[obj].withWsfcDomainCredential` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the wsfc_domain_credential field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [azurerm.list[obj].withWsfcDomainCredentialMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `wsfc_domain_credential` field.
+
+
+### fn withWsfcDomainCredentialMixin
+
+```ts
+withWsfcDomainCredentialMixin()
+```
+
+`azurerm.list[obj].withWsfcDomainCredentialMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the wsfc_domain_credential field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.list[obj].withWsfcDomainCredential](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `wsfc_domain_credential` field.
 
 
 ## obj assessment
@@ -851,3 +913,28 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.
+
+
+## obj wsfc_domain_credential
+
+
+
+### fn wsfc_domain_credential.new
+
+```ts
+new()
+```
+
+
+`azurerm.mssql_virtual_machine.wsfc_domain_credential.new` constructs a new object with attributes and blocks configured for the `wsfc_domain_credential`
+Terraform sub block.
+
+
+
+**Args**:
+  - `cluster_bootstrap_account_password` (`string`): Set the `cluster_bootstrap_account_password` field on the resulting object.
+  - `cluster_operator_account_password` (`string`): Set the `cluster_operator_account_password` field on the resulting object.
+  - `sql_service_account_password` (`string`): Set the `sql_service_account_password` field on the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `wsfc_domain_credential` sub block.

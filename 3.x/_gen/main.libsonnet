@@ -604,6 +604,8 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   mssql_server_transparent_data_encryption: (import 'resources/mssql_server_transparent_data_encryption.libsonnet'),
   mssql_server_vulnerability_assessment: (import 'resources/mssql_server_vulnerability_assessment.libsonnet'),
   mssql_virtual_machine: (import 'resources/mssql_virtual_machine.libsonnet'),
+  mssql_virtual_machine_availability_group_listener: (import 'resources/mssql_virtual_machine_availability_group_listener.libsonnet'),
+  mssql_virtual_machine_group: (import 'resources/mssql_virtual_machine_group.libsonnet'),
   mssql_virtual_network_rule: (import 'resources/mssql_virtual_network_rule.libsonnet'),
   mysql_active_directory_administrator: (import 'resources/mysql_active_directory_administrator.libsonnet'),
   mysql_configuration: (import 'resources/mysql_configuration.libsonnet'),

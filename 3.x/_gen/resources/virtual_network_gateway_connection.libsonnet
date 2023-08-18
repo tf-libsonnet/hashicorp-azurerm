@@ -3,10 +3,10 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
 {
   '#':: d.pkg(name='virtual_network_gateway_connection', url='', help='`virtual_network_gateway_connection` represents the `azurerm_virtual_network_gateway_connection` Terraform resource.\n\n\n\nThis package contains functions and utilities for setting up the resource using Jsonnet code.\n'),
   custom_bgp_addresses:: {
-    '#new':: d.fn(help='\n`azurerm.virtual_network_gateway_connection.custom_bgp_addresses.new` constructs a new object with attributes and blocks configured for the `custom_bgp_addresses`\nTerraform sub block.\n\n\n\n**Args**:\n  - `primary` (`string`): Set the `primary` field on the resulting object.\n  - `secondary` (`string`): Set the `secondary` field on the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `custom_bgp_addresses` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`azurerm.virtual_network_gateway_connection.custom_bgp_addresses.new` constructs a new object with attributes and blocks configured for the `custom_bgp_addresses`\nTerraform sub block.\n\n\n\n**Args**:\n  - `primary` (`string`): Set the `primary` field on the resulting object.\n  - `secondary` (`string`): Set the `secondary` field on the resulting object. When `null`, the `secondary` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `custom_bgp_addresses` sub block.\n', args=[]),
     new(
       primary,
-      secondary
+      secondary=null
     ):: std.prune(a={
       primary: primary,
       secondary: secondary,

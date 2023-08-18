@@ -614,6 +614,8 @@ project.
 * [mssql_server_transparent_data_encryption](mssql_server_transparent_data_encryption.md)
 * [mssql_server_vulnerability_assessment](mssql_server_vulnerability_assessment.md)
 * [mssql_virtual_machine](mssql_virtual_machine.md)
+* [mssql_virtual_machine_availability_group_listener](mssql_virtual_machine_availability_group_listener.md)
+* [mssql_virtual_machine_group](mssql_virtual_machine_group.md)
 * [mssql_virtual_network_rule](mssql_virtual_network_rule.md)
 * [mysql_active_directory_administrator](mysql_active_directory_administrator.md)
 * [mysql_configuration](mysql_configuration.md)
