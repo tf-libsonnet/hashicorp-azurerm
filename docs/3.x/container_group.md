@@ -38,6 +38,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withOsType()`](#fn-withostype)
 * [`fn withResourceGroupName()`](#fn-withresourcegroupname)
 * [`fn withRestartPolicy()`](#fn-withrestartpolicy)
+* [`fn withSku()`](#fn-withsku)
 * [`fn withSubnetIds()`](#fn-withsubnetids)
 * [`fn withTags()`](#fn-withtags)
 * [`fn withTimeouts()`](#fn-withtimeouts)
@@ -59,6 +60,8 @@ This package contains functions and utilities for setting up the resource using 
     * [`fn new()`](#fn-containerreadiness_probenew)
     * [`obj container.readiness_probe.http_get`](#obj-containerreadiness_probehttp_get)
       * [`fn new()`](#fn-containerreadiness_probehttp_getnew)
+  * [`obj container.security`](#obj-containersecurity)
+    * [`fn new()`](#fn-containersecuritynew)
   * [`obj container.volume`](#obj-containervolume)
     * [`fn new()`](#fn-containervolumenew)
     * [`obj container.volume.git_repo`](#obj-containervolumegit_repo)
@@ -75,6 +78,8 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-image_registry_credentialnew)
 * [`obj init_container`](#obj-init_container)
   * [`fn new()`](#fn-init_containernew)
+  * [`obj init_container.security`](#obj-init_containersecurity)
+    * [`fn new()`](#fn-init_containersecuritynew)
   * [`obj init_container.volume`](#obj-init_containervolume)
     * [`fn new()`](#fn-init_containervolumenew)
     * [`obj init_container.volume.git_repo`](#obj-init_containervolumegit_repo)
@@ -122,6 +127,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `os_type` (`string`): Set the `os_type` field on the resulting resource block.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
   - `restart_policy` (`string`): Set the `restart_policy` field on the resulting resource block. When `null`, the `restart_policy` field will be omitted from the resulting object.
+  - `sku` (`string`): Set the `sku` field on the resulting resource block. When `null`, the `sku` field will be omitted from the resulting object.
   - `subnet_ids` (`list`): Set the `subnet_ids` field on the resulting resource block. When `null`, the `subnet_ids` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
   - `zones` (`list`): Set the `zones` field on the resulting resource block. When `null`, the `zones` field will be omitted from the resulting object.
@@ -166,6 +172,7 @@ injecting into a complete block.
   - `os_type` (`string`): Set the `os_type` field on the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
   - `restart_policy` (`string`): Set the `restart_policy` field on the resulting object. When `null`, the `restart_policy` field will be omitted from the resulting object.
+  - `sku` (`string`): Set the `sku` field on the resulting object. When `null`, the `sku` field will be omitted from the resulting object.
   - `subnet_ids` (`list`): Set the `subnet_ids` field on the resulting object. When `null`, the `subnet_ids` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
   - `zones` (`list`): Set the `zones` field on the resulting object. When `null`, the `zones` field will be omitted from the resulting object.
@@ -579,6 +586,22 @@ Terraform resource block to set or update the restart_policy field.
   - `value` (`string`): The value to set for the `restart_policy` field.
 
 
+### fn withSku
+
+```ts
+withSku()
+```
+
+`azurerm.string.withSku` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the sku field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `sku` field.
+
+
 ### fn withSubnetIds
 
 ```ts
@@ -694,6 +717,7 @@ Terraform sub block.
   - `liveness_probe` (`list[obj]`): Set the `liveness_probe` field on the resulting object. When `null`, the `liveness_probe` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.container.liveness_probe.new](#fn-containerliveness_probenew) constructor.
   - `ports` (`list[obj]`): Set the `ports` field on the resulting object. When `null`, the `ports` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.container.ports.new](#fn-containerportsnew) constructor.
   - `readiness_probe` (`list[obj]`): Set the `readiness_probe` field on the resulting object. When `null`, the `readiness_probe` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.container.readiness_probe.new](#fn-containerreadiness_probenew) constructor.
+  - `security` (`list[obj]`): Set the `security` field on the resulting object. When `null`, the `security` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.container.security.new](#fn-containersecuritynew) constructor.
   - `volume` (`list[obj]`): Set the `volume` field on the resulting object. When `null`, the `volume` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.container.volume.new](#fn-containervolumenew) constructor.
 
 **Returns**:
@@ -880,6 +904,29 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `http_get` sub block.
+
+
+## obj container.security
+
+
+
+### fn container.security.new
+
+```ts
+new()
+```
+
+
+`azurerm.container_group.container.security.new` constructs a new object with attributes and blocks configured for the `security`
+Terraform sub block.
+
+
+
+**Args**:
+  - `privilege_enabled` (`bool`): Set the `privilege_enabled` field on the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `security` sub block.
 
 
 ## obj container.volume
@@ -1084,10 +1131,34 @@ Terraform sub block.
   - `image` (`string`): Set the `image` field on the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
   - `secure_environment_variables` (`obj`): Set the `secure_environment_variables` field on the resulting object. When `null`, the `secure_environment_variables` field will be omitted from the resulting object.
+  - `security` (`list[obj]`): Set the `security` field on the resulting object. When `null`, the `security` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.init_container.security.new](#fn-init_containersecuritynew) constructor.
   - `volume` (`list[obj]`): Set the `volume` field on the resulting object. When `null`, the `volume` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_group.init_container.volume.new](#fn-init_containervolumenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `init_container` sub block.
+
+
+## obj init_container.security
+
+
+
+### fn init_container.security.new
+
+```ts
+new()
+```
+
+
+`azurerm.container_group.init_container.security.new` constructs a new object with attributes and blocks configured for the `security`
+Terraform sub block.
+
+
+
+**Args**:
+  - `privilege_enabled` (`bool`): Set the `privilege_enabled` field on the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `security` sub block.
 
 
 ## obj init_container.volume

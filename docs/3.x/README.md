@@ -301,6 +301,7 @@ project.
 * [databricks_virtual_network_peering](databricks_virtual_network_peering.md)
 * [databricks_workspace](databricks_workspace.md)
 * [databricks_workspace_customer_managed_key](databricks_workspace_customer_managed_key.md)
+* [databricks_workspace_root_dbfs_customer_managed_key](databricks_workspace_root_dbfs_customer_managed_key.md)
 * [datadog_monitor](datadog_monitor.md)
 * [datadog_monitor_sso_configuration](datadog_monitor_sso_configuration.md)
 * [datadog_monitor_tag_rule](datadog_monitor_tag_rule.md)

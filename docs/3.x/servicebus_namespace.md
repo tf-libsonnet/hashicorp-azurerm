@@ -24,6 +24,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withLocation()`](#fn-withlocation)
 * [`fn withMinimumTlsVersion()`](#fn-withminimumtlsversion)
 * [`fn withName()`](#fn-withname)
+* [`fn withNetworkRuleSet()`](#fn-withnetworkruleset)
+* [`fn withNetworkRuleSetMixin()`](#fn-withnetworkrulesetmixin)
 * [`fn withPublicNetworkAccessEnabled()`](#fn-withpublicnetworkaccessenabled)
 * [`fn withResourceGroupName()`](#fn-withresourcegroupname)
 * [`fn withSku()`](#fn-withsku)
@@ -35,6 +37,10 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-customer_managed_keynew)
 * [`obj identity`](#obj-identity)
   * [`fn new()`](#fn-identitynew)
+* [`obj network_rule_set`](#obj-network_rule_set)
+  * [`fn new()`](#fn-network_rule_setnew)
+  * [`obj network_rule_set.network_rules`](#obj-network_rule_setnetwork_rules)
+    * [`fn new()`](#fn-network_rule_setnetwork_rulesnew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 
@@ -79,6 +85,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `zone_redundant` (`bool`): Set the `zone_redundant` field on the resulting resource block. When `null`, the `zone_redundant` field will be omitted from the resulting object.
   - `customer_managed_key` (`list[obj]`): Set the `customer_managed_key` field on the resulting resource block. When `null`, the `customer_managed_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_namespace.customer_managed_key.new](#fn-customer_managed_keynew) constructor.
   - `identity` (`list[obj]`): Set the `identity` field on the resulting resource block. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_namespace.identity.new](#fn-identitynew) constructor.
+  - `network_rule_set` (`list[obj]`): Set the `network_rule_set` field on the resulting resource block. When `null`, the `network_rule_set` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_namespace.network_rule_set.new](#fn-network_rule_setnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_namespace.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -115,6 +122,7 @@ injecting into a complete block.
   - `zone_redundant` (`bool`): Set the `zone_redundant` field on the resulting object. When `null`, the `zone_redundant` field will be omitted from the resulting object.
   - `customer_managed_key` (`list[obj]`): Set the `customer_managed_key` field on the resulting object. When `null`, the `customer_managed_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_namespace.customer_managed_key.new](#fn-customer_managed_keynew) constructor.
   - `identity` (`list[obj]`): Set the `identity` field on the resulting object. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_namespace.identity.new](#fn-identitynew) constructor.
+  - `network_rule_set` (`list[obj]`): Set the `network_rule_set` field on the resulting object. When `null`, the `network_rule_set` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_namespace.network_rule_set.new](#fn-network_rule_setnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_namespace.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -273,6 +281,43 @@ Terraform resource block to set or update the name field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `name` field.
+
+
+### fn withNetworkRuleSet
+
+```ts
+withNetworkRuleSet()
+```
+
+`azurerm.list[obj].withNetworkRuleSet` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the network_rule_set field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [azurerm.list[obj].withNetworkRuleSetMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `network_rule_set` field.
+
+
+### fn withNetworkRuleSetMixin
+
+```ts
+withNetworkRuleSetMixin()
+```
+
+`azurerm.list[obj].withNetworkRuleSetMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the network_rule_set field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.list[obj].withNetworkRuleSet](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `network_rule_set` field.
 
 
 ### fn withPublicNetworkAccessEnabled
@@ -438,6 +483,57 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `identity` sub block.
+
+
+## obj network_rule_set
+
+
+
+### fn network_rule_set.new
+
+```ts
+new()
+```
+
+
+`azurerm.servicebus_namespace.network_rule_set.new` constructs a new object with attributes and blocks configured for the `network_rule_set`
+Terraform sub block.
+
+
+
+**Args**:
+  - `default_action` (`string`): Set the `default_action` field on the resulting object. When `null`, the `default_action` field will be omitted from the resulting object.
+  - `ip_rules` (`list`): Set the `ip_rules` field on the resulting object. When `null`, the `ip_rules` field will be omitted from the resulting object.
+  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting object. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
+  - `trusted_services_allowed` (`bool`): Set the `trusted_services_allowed` field on the resulting object. When `null`, the `trusted_services_allowed` field will be omitted from the resulting object.
+  - `network_rules` (`list[obj]`): Set the `network_rules` field on the resulting object. When `null`, the `network_rules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.servicebus_namespace.network_rule_set.network_rules.new](#fn-network_rule_setnetwork_rulesnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `network_rule_set` sub block.
+
+
+## obj network_rule_set.network_rules
+
+
+
+### fn network_rule_set.network_rules.new
+
+```ts
+new()
+```
+
+
+`azurerm.servicebus_namespace.network_rule_set.network_rules.new` constructs a new object with attributes and blocks configured for the `network_rules`
+Terraform sub block.
+
+
+
+**Args**:
+  - `ignore_missing_vnet_service_endpoint` (`bool`): Set the `ignore_missing_vnet_service_endpoint` field on the resulting object. When `null`, the `ignore_missing_vnet_service_endpoint` field will be omitted from the resulting object.
+  - `subnet_id` (`string`): Set the `subnet_id` field on the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `network_rules` sub block.
 
 
 ## obj timeouts

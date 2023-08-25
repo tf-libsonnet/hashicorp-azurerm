@@ -647,21 +647,21 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
           }),
         },
         status_code:: {
-          '#new':: d.fn(help='\n`azurerm.linux_web_app_slot.site_config.auto_heal_setting.trigger.status_code.new` constructs a new object with attributes and blocks configured for the `status_code`\nTerraform sub block.\n\n\n\n**Args**:\n  - `count` (`number`): Set the `count` field on the resulting object.\n  - `interval` (`string`): Set the `interval` field on the resulting object.\n  - `path` (`string`): Set the `path` field on the resulting object. When `null`, the `path` field will be omitted from the resulting object.\n  - `status_code_range` (`string`): Set the `status_code_range` field on the resulting object.\n  - `sub_status` (`number`): Set the `sub_status` field on the resulting object. When `null`, the `sub_status` field will be omitted from the resulting object.\n  - `win32_status` (`number`): Set the `win32_status` field on the resulting object. When `null`, the `win32_status` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `status_code` sub block.\n', args=[]),
+          '#new':: d.fn(help='\n`azurerm.linux_web_app_slot.site_config.auto_heal_setting.trigger.status_code.new` constructs a new object with attributes and blocks configured for the `status_code`\nTerraform sub block.\n\n\n\n**Args**:\n  - `count` (`number`): Set the `count` field on the resulting object.\n  - `interval` (`string`): Set the `interval` field on the resulting object.\n  - `path` (`string`): Set the `path` field on the resulting object. When `null`, the `path` field will be omitted from the resulting object.\n  - `status_code_range` (`string`): Set the `status_code_range` field on the resulting object.\n  - `sub_status` (`number`): Set the `sub_status` field on the resulting object. When `null`, the `sub_status` field will be omitted from the resulting object.\n  - `win32_status_code` (`number`): Set the `win32_status_code` field on the resulting object. When `null`, the `win32_status_code` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `status_code` sub block.\n', args=[]),
           new(
             count,
             interval,
             status_code_range,
             path=null,
             sub_status=null,
-            win32_status=null
+            win32_status_code=null
           ):: std.prune(a={
             count: count,
             interval: interval,
             path: path,
             status_code_range: status_code_range,
             sub_status: sub_status,
-            win32_status: win32_status,
+            win32_status_code: win32_status_code,
           }),
         },
       },

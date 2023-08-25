@@ -291,6 +291,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   databricks_virtual_network_peering: (import 'resources/databricks_virtual_network_peering.libsonnet'),
   databricks_workspace: (import 'resources/databricks_workspace.libsonnet'),
   databricks_workspace_customer_managed_key: (import 'resources/databricks_workspace_customer_managed_key.libsonnet'),
+  databricks_workspace_root_dbfs_customer_managed_key: (import 'resources/databricks_workspace_root_dbfs_customer_managed_key.libsonnet'),
   datadog_monitor: (import 'resources/datadog_monitor.libsonnet'),
   datadog_monitor_sso_configuration: (import 'resources/datadog_monitor_sso_configuration.libsonnet'),
   datadog_monitor_tag_rule: (import 'resources/datadog_monitor_tag_rule.libsonnet'),
