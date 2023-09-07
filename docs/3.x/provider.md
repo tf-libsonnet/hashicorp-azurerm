@@ -33,6 +33,8 @@ This package contains functions and utilities for setting up the provider using 
     * [`fn new()`](#fn-featuresmanaged_disknew)
   * [`obj features.resource_group`](#obj-featuresresource_group)
     * [`fn new()`](#fn-featuresresource_groupnew)
+  * [`obj features.subscription`](#obj-featuressubscription)
+    * [`fn new()`](#fn-featuressubscriptionnew)
   * [`obj features.template_deployment`](#obj-featurestemplate_deployment)
     * [`fn new()`](#fn-featurestemplate_deploymentnew)
   * [`obj features.virtual_machine`](#obj-featuresvirtual_machine)
@@ -171,6 +173,7 @@ Terraform sub block.
   - `log_analytics_workspace` (`list[obj]`): Set the `log_analytics_workspace` field on the resulting object. When `null`, the `log_analytics_workspace` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.features.log_analytics_workspace.new](#fn-log_analytics_workspacenew) constructor.
   - `managed_disk` (`list[obj]`): Set the `managed_disk` field on the resulting object. When `null`, the `managed_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.features.managed_disk.new](#fn-managed_disknew) constructor.
   - `resource_group` (`list[obj]`): Set the `resource_group` field on the resulting object. When `null`, the `resource_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.features.resource_group.new](#fn-resource_groupnew) constructor.
+  - `subscription` (`list[obj]`): Set the `subscription` field on the resulting object. When `null`, the `subscription` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.features.subscription.new](#fn-subscriptionnew) constructor.
   - `template_deployment` (`list[obj]`): Set the `template_deployment` field on the resulting object. When `null`, the `template_deployment` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.features.template_deployment.new](#fn-template_deploymentnew) constructor.
   - `virtual_machine` (`list[obj]`): Set the `virtual_machine` field on the resulting object. When `null`, the `virtual_machine` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.features.virtual_machine.new](#fn-virtual_machinenew) constructor.
   - `virtual_machine_scale_set` (`list[obj]`): Set the `virtual_machine_scale_set` field on the resulting object. When `null`, the `virtual_machine_scale_set` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.features.virtual_machine_scale_set.new](#fn-virtual_machine_scale_setnew) constructor.
@@ -371,6 +374,29 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `resource_group` sub block.
+
+
+## obj features.subscription
+
+
+
+### fn features.subscription.new
+
+```ts
+new()
+```
+
+
+`azurerm.features.subscription.new` constructs a new object with attributes and blocks configured for the `subscription`
+Terraform sub block.
+
+
+
+**Args**:
+  - `prevent_cancellation_on_destroy` (`bool`): Set the `prevent_cancellation_on_destroy` field on the resulting object. When `null`, the `prevent_cancellation_on_destroy` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `subscription` sub block.
 
 
 ## obj features.template_deployment

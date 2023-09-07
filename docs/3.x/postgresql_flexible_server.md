@@ -19,6 +19,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withAdministratorPassword()`](#fn-withadministratorpassword)
 * [`fn withAuthentication()`](#fn-withauthentication)
 * [`fn withAuthenticationMixin()`](#fn-withauthenticationmixin)
+* [`fn withAutoGrowEnabled()`](#fn-withautogrowenabled)
 * [`fn withBackupRetentionDays()`](#fn-withbackupretentiondays)
 * [`fn withCreateMode()`](#fn-withcreatemode)
 * [`fn withCustomerManagedKey()`](#fn-withcustomermanagedkey)
@@ -89,6 +90,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resourceLabel` (`string`): The name label of the block.
   - `administrator_login` (`string`): Set the `administrator_login` field on the resulting resource block. When `null`, the `administrator_login` field will be omitted from the resulting object.
   - `administrator_password` (`string`): Set the `administrator_password` field on the resulting resource block. When `null`, the `administrator_password` field will be omitted from the resulting object.
+  - `auto_grow_enabled` (`bool`): Set the `auto_grow_enabled` field on the resulting resource block. When `null`, the `auto_grow_enabled` field will be omitted from the resulting object.
   - `backup_retention_days` (`number`): Set the `backup_retention_days` field on the resulting resource block. When `null`, the `backup_retention_days` field will be omitted from the resulting object.
   - `create_mode` (`string`): Set the `create_mode` field on the resulting resource block. When `null`, the `create_mode` field will be omitted from the resulting object.
   - `delegated_subnet_id` (`string`): Set the `delegated_subnet_id` field on the resulting resource block. When `null`, the `delegated_subnet_id` field will be omitted from the resulting object.
@@ -136,6 +138,7 @@ injecting into a complete block.
 **Args**:
   - `administrator_login` (`string`): Set the `administrator_login` field on the resulting object. When `null`, the `administrator_login` field will be omitted from the resulting object.
   - `administrator_password` (`string`): Set the `administrator_password` field on the resulting object. When `null`, the `administrator_password` field will be omitted from the resulting object.
+  - `auto_grow_enabled` (`bool`): Set the `auto_grow_enabled` field on the resulting object. When `null`, the `auto_grow_enabled` field will be omitted from the resulting object.
   - `backup_retention_days` (`number`): Set the `backup_retention_days` field on the resulting object. When `null`, the `backup_retention_days` field will be omitted from the resulting object.
   - `create_mode` (`string`): Set the `create_mode` field on the resulting object. When `null`, the `create_mode` field will be omitted from the resulting object.
   - `delegated_subnet_id` (`string`): Set the `delegated_subnet_id` field on the resulting object. When `null`, the `delegated_subnet_id` field will be omitted from the resulting object.
@@ -230,6 +233,22 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `authentication` field.
+
+
+### fn withAutoGrowEnabled
+
+```ts
+withAutoGrowEnabled()
+```
+
+`azurerm.bool.withAutoGrowEnabled` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the auto_grow_enabled field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `auto_grow_enabled` field.
 
 
 ### fn withBackupRetentionDays

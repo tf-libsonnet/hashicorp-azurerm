@@ -256,6 +256,9 @@ Terraform sub block.
 
 **Args**:
   - `associated_route_table_id` (`string`): Set the `associated_route_table_id` field on the resulting object. When `null`, the `associated_route_table_id` field will be omitted from the resulting object.
+  - `inbound_route_map_id` (`string`): Set the `inbound_route_map_id` field on the resulting object. When `null`, the `inbound_route_map_id` field will be omitted from the resulting object.
+  - `outbound_route_map_id` (`string`): Set the `outbound_route_map_id` field on the resulting object. When `null`, the `outbound_route_map_id` field will be omitted from the resulting object.
+  - `static_vnet_local_route_override_criteria` (`string`): Set the `static_vnet_local_route_override_criteria` field on the resulting object. When `null`, the `static_vnet_local_route_override_criteria` field will be omitted from the resulting object.
   - `propagated_route_table` (`list[obj]`): Set the `propagated_route_table` field on the resulting object. When `null`, the `propagated_route_table` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_hub_connection.routing.propagated_route_table.new](#fn-routingpropagated_route_tablenew) constructor.
   - `static_vnet_route` (`list[obj]`): Set the `static_vnet_route` field on the resulting object. When `null`, the `static_vnet_route` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.virtual_hub_connection.routing.static_vnet_route.new](#fn-routingstatic_vnet_routenew) constructor.
 

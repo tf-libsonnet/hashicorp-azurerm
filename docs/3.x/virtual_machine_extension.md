@@ -22,6 +22,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withProtectedSettings()`](#fn-withprotectedsettings)
 * [`fn withProtectedSettingsFromKeyVault()`](#fn-withprotectedsettingsfromkeyvault)
 * [`fn withProtectedSettingsFromKeyVaultMixin()`](#fn-withprotectedsettingsfromkeyvaultmixin)
+* [`fn withProvisionAfterExtensions()`](#fn-withprovisionafterextensions)
 * [`fn withPublisher()`](#fn-withpublisher)
 * [`fn withSettings()`](#fn-withsettings)
 * [`fn withTags()`](#fn-withtags)
@@ -69,6 +70,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `failure_suppression_enabled` (`bool`): Set the `failure_suppression_enabled` field on the resulting resource block. When `null`, the `failure_suppression_enabled` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting resource block.
   - `protected_settings` (`string`): Set the `protected_settings` field on the resulting resource block. When `null`, the `protected_settings` field will be omitted from the resulting object.
+  - `provision_after_extensions` (`list`): Set the `provision_after_extensions` field on the resulting resource block. When `null`, the `provision_after_extensions` field will be omitted from the resulting object.
   - `publisher` (`string`): Set the `publisher` field on the resulting resource block.
   - `settings` (`string`): Set the `settings` field on the resulting resource block. When `null`, the `settings` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
@@ -105,6 +107,7 @@ injecting into a complete block.
   - `failure_suppression_enabled` (`bool`): Set the `failure_suppression_enabled` field on the resulting object. When `null`, the `failure_suppression_enabled` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
   - `protected_settings` (`string`): Set the `protected_settings` field on the resulting object. When `null`, the `protected_settings` field will be omitted from the resulting object.
+  - `provision_after_extensions` (`list`): Set the `provision_after_extensions` field on the resulting object. When `null`, the `provision_after_extensions` field will be omitted from the resulting object.
   - `publisher` (`string`): Set the `publisher` field on the resulting object.
   - `settings` (`string`): Set the `settings` field on the resulting object. When `null`, the `settings` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
@@ -233,6 +236,22 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `protected_settings_from_key_vault` field.
+
+
+### fn withProvisionAfterExtensions
+
+```ts
+withProvisionAfterExtensions()
+```
+
+`azurerm.list.withProvisionAfterExtensions` constructs a mixin object that can be merged into the `list`
+Terraform resource block to set or update the provision_after_extensions field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list`): The value to set for the `provision_after_extensions` field.
 
 
 ### fn withPublisher
