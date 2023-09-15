@@ -17,6 +17,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn newAttrs()`](#fn-newattrs)
 * [`fn withBotName()`](#fn-withbotname)
 * [`fn withCallingWebHook()`](#fn-withcallingwebhook)
+* [`fn withDeploymentEnvironment()`](#fn-withdeploymentenvironment)
 * [`fn withEnableCalling()`](#fn-withenablecalling)
 * [`fn withLocation()`](#fn-withlocation)
 * [`fn withResourceGroupName()`](#fn-withresourcegroupname)
@@ -56,6 +57,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resourceLabel` (`string`): The name label of the block.
   - `bot_name` (`string`): Set the `bot_name` field on the resulting resource block.
   - `calling_web_hook` (`string`): Set the `calling_web_hook` field on the resulting resource block. When `null`, the `calling_web_hook` field will be omitted from the resulting object.
+  - `deployment_environment` (`string`): Set the `deployment_environment` field on the resulting resource block. When `null`, the `deployment_environment` field will be omitted from the resulting object.
   - `enable_calling` (`bool`): Set the `enable_calling` field on the resulting resource block. When `null`, the `enable_calling` field will be omitted from the resulting object.
   - `location` (`string`): Set the `location` field on the resulting resource block.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
@@ -85,6 +87,7 @@ injecting into a complete block.
 **Args**:
   - `bot_name` (`string`): Set the `bot_name` field on the resulting object.
   - `calling_web_hook` (`string`): Set the `calling_web_hook` field on the resulting object. When `null`, the `calling_web_hook` field will be omitted from the resulting object.
+  - `deployment_environment` (`string`): Set the `deployment_environment` field on the resulting object. When `null`, the `deployment_environment` field will be omitted from the resulting object.
   - `enable_calling` (`bool`): Set the `enable_calling` field on the resulting object. When `null`, the `enable_calling` field will be omitted from the resulting object.
   - `location` (`string`): Set the `location` field on the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
@@ -124,6 +127,22 @@ Terraform resource block to set or update the calling_web_hook field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `calling_web_hook` field.
+
+
+### fn withDeploymentEnvironment
+
+```ts
+withDeploymentEnvironment()
+```
+
+`azurerm.string.withDeploymentEnvironment` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the deployment_environment field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `deployment_environment` field.
 
 
 ### fn withEnableCalling

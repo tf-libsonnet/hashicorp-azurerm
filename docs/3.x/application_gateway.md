@@ -2123,6 +2123,7 @@ Terraform sub block.
   - `name` (`string`): Set the `name` field on the resulting object.
   - `trusted_client_certificate_names` (`list`): Set the `trusted_client_certificate_names` field on the resulting object. When `null`, the `trusted_client_certificate_names` field will be omitted from the resulting object.
   - `verify_client_cert_issuer_dn` (`bool`): Set the `verify_client_cert_issuer_dn` field on the resulting object. When `null`, the `verify_client_cert_issuer_dn` field will be omitted from the resulting object.
+  - `verify_client_certificate_revocation` (`string`): Set the `verify_client_certificate_revocation` field on the resulting object. When `null`, the `verify_client_certificate_revocation` field will be omitted from the resulting object.
   - `ssl_policy` (`list[obj]`): Set the `ssl_policy` field on the resulting object. When `null`, the `ssl_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.application_gateway.ssl_profile.ssl_policy.new](#fn-ssl_profilessl_policynew) constructor.
 
 **Returns**:

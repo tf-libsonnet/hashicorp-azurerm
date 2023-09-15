@@ -358,6 +358,7 @@ Terraform sub block.
 
 **Args**:
   - `action` (`string`): Set the `action` field on the resulting object.
+  - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object. When `null`, the `name` field will be omitted from the resulting object.
   - `priority` (`number`): Set the `priority` field on the resulting object.
   - `rule_type` (`string`): Set the `rule_type` field on the resulting object.
