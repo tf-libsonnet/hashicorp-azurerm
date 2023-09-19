@@ -1,10 +1,10 @@
 ---
-permalink: /data/api_management/
+permalink: /data/netapp_volume_quota_rule/
 ---
 
-# data.api_management
+# data.netapp_volume_quota_rule
 
-`api_management` represents the `azurerm_api_management` Terraform data source.
+`netapp_volume_quota_rule` represents the `azurerm_netapp_volume_quota_rule` Terraform data source.
 
 
 
@@ -16,10 +16,9 @@ This package contains functions and utilities for setting up the data source usi
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
 * [`fn withName()`](#fn-withname)
-* [`fn withResourceGroupName()`](#fn-withresourcegroupname)
-* [`fn withTags()`](#fn-withtags)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
+* [`fn withVolumeId()`](#fn-withvolumeid)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 
@@ -32,20 +31,20 @@ new()
 ```
 
 
-`azurerm.data.api_management.new` injects a new `data_azurerm_api_management` Terraform `data source`
+`azurerm.data.netapp_volume_quota_rule.new` injects a new `data_azurerm_netapp_volume_quota_rule` Terraform `data source`
 block into the root module document.
 
 Additionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the
 resource. For example, if you added a new instance to the root using:
 
     # arguments omitted for brevity
-    azurerm.data.api_management.new('some_id')
+    azurerm.data.netapp_volume_quota_rule.new('some_id')
 
-You can get the reference to the `id` field of the created `azurerm.data.api_management` using the reference:
+You can get the reference to the `id` field of the created `azurerm.data.netapp_volume_quota_rule` using the reference:
 
-    $._ref.data_azurerm_api_management.some_id.get('id')
+    $._ref.data_azurerm_netapp_volume_quota_rule.some_id.get('id')
 
-This is the same as directly entering `"${ data_azurerm_api_management.some_id.id }"` as the value.
+This is the same as directly entering `"${ data_azurerm_netapp_volume_quota_rule.some_id.id }"` as the value.
 
 NOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,
 or `$` to refer to the root object. Instead, make an explicit outer object using `local`.
@@ -53,9 +52,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `dataSrcLabel` (`string`): The name label of the block.
   - `name` (`string`): Set the `name` field on the resulting data source block.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting data source block.
-  - `tags` (`obj`): Set the `tags` field on the resulting data source block. When `null`, the `tags` field will be omitted from the resulting object.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting data source block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.api_management.timeouts.new](#fn-timeoutsnew) constructor.
+  - `volume_id` (`string`): Set the `volume_id` field on the resulting data source block.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting data source block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.netapp_volume_quota_rule.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new data source into the root Terraform configuration.
@@ -68,10 +66,10 @@ newAttrs()
 ```
 
 
-`azurerm.data.api_management.newAttrs` constructs a new object with attributes and blocks configured for the `api_management`
+`azurerm.data.netapp_volume_quota_rule.newAttrs` constructs a new object with attributes and blocks configured for the `netapp_volume_quota_rule`
 Terraform data source.
 
-Unlike [azurerm.data.api_management.new](#fn-new), this function will not inject the `data source`
+Unlike [azurerm.data.netapp_volume_quota_rule.new](#fn-new), this function will not inject the `data source`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) function to build a complete block.
 
@@ -80,12 +78,11 @@ injecting into a complete block.
 
 **Args**:
   - `name` (`string`): Set the `name` field on the resulting object.
-  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.api_management.timeouts.new](#fn-timeoutsnew) constructor.
+  - `volume_id` (`string`): Set the `volume_id` field on the resulting object.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.netapp_volume_quota_rule.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
-  - An attribute object that can be used with [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) to construct a new `api_management` data source into the root Terraform configuration.
+  - An attribute object that can be used with [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) to construct a new `netapp_volume_quota_rule` data source into the root Terraform configuration.
 
 
 ### fn withName
@@ -102,38 +99,6 @@ Terraform data source block to set or update the name field.
 **Args**:
   - `dataSrcLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `name` field.
-
-
-### fn withResourceGroupName
-
-```ts
-withResourceGroupName()
-```
-
-`azurerm.string.withResourceGroupName` constructs a mixin object that can be merged into the `string`
-Terraform data source block to set or update the resource_group_name field.
-
-
-
-**Args**:
-  - `dataSrcLabel` (`string`): The name label of the block to update.
-  - `value` (`string`): The value to set for the `resource_group_name` field.
-
-
-### fn withTags
-
-```ts
-withTags()
-```
-
-`azurerm.obj.withTags` constructs a mixin object that can be merged into the `obj`
-Terraform data source block to set or update the tags field.
-
-
-
-**Args**:
-  - `dataSrcLabel` (`string`): The name label of the block to update.
-  - `value` (`obj`): The value to set for the `tags` field.
 
 
 ### fn withTimeouts
@@ -172,6 +137,22 @@ function.
   - `value` (`obj`): The value to set for the `timeouts` field.
 
 
+### fn withVolumeId
+
+```ts
+withVolumeId()
+```
+
+`azurerm.string.withVolumeId` constructs a mixin object that can be merged into the `string`
+Terraform data source block to set or update the volume_id field.
+
+
+
+**Args**:
+  - `dataSrcLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `volume_id` field.
+
+
 ## obj timeouts
 
 
@@ -183,7 +164,7 @@ new()
 ```
 
 
-`azurerm.api_management.timeouts.new` constructs a new object with attributes and blocks configured for the `timeouts`
+`azurerm.netapp_volume_quota_rule.timeouts.new` constructs a new object with attributes and blocks configured for the `timeouts`
 Terraform sub block.
 
 

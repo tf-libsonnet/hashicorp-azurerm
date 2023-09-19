@@ -1832,7 +1832,7 @@ Terraform sub block.
   - `path` (`string`): Set the `path` field on the resulting object. When `null`, the `path` field will be omitted from the resulting object.
   - `status_code_range` (`string`): Set the `status_code_range` field on the resulting object.
   - `sub_status` (`number`): Set the `sub_status` field on the resulting object. When `null`, the `sub_status` field will be omitted from the resulting object.
-  - `win32_status` (`number`): Set the `win32_status` field on the resulting object. When `null`, the `win32_status` field will be omitted from the resulting object.
+  - `win32_status_code` (`number`): Set the `win32_status_code` field on the resulting object. When `null`, the `win32_status_code` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `status_code` sub block.

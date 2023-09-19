@@ -29,15 +29,17 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
         transforms: transforms,
       }),
     },
-    '#new':: d.fn(help='\n`azurerm.web_application_firewall_policy.custom_rules.new` constructs a new object with attributes and blocks configured for the `custom_rules`\nTerraform sub block.\n\n\n\n**Args**:\n  - `action` (`string`): Set the `action` field on the resulting object.\n  - `name` (`string`): Set the `name` field on the resulting object. When `null`, the `name` field will be omitted from the resulting object.\n  - `priority` (`number`): Set the `priority` field on the resulting object.\n  - `rule_type` (`string`): Set the `rule_type` field on the resulting object.\n  - `match_conditions` (`list[obj]`): Set the `match_conditions` field on the resulting object. When `null`, the `match_conditions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_application_firewall_policy.custom_rules.match_conditions.new](#fn-custom_rulesmatch_conditionsnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `custom_rules` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`azurerm.web_application_firewall_policy.custom_rules.new` constructs a new object with attributes and blocks configured for the `custom_rules`\nTerraform sub block.\n\n\n\n**Args**:\n  - `action` (`string`): Set the `action` field on the resulting object.\n  - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.\n  - `name` (`string`): Set the `name` field on the resulting object. When `null`, the `name` field will be omitted from the resulting object.\n  - `priority` (`number`): Set the `priority` field on the resulting object.\n  - `rule_type` (`string`): Set the `rule_type` field on the resulting object.\n  - `match_conditions` (`list[obj]`): Set the `match_conditions` field on the resulting object. When `null`, the `match_conditions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_application_firewall_policy.custom_rules.match_conditions.new](#fn-custom_rulesmatch_conditionsnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `custom_rules` sub block.\n', args=[]),
     new(
       action,
       priority,
       rule_type,
+      enabled=null,
       match_conditions=null,
       name=null
     ):: std.prune(a={
       action: action,
+      enabled: enabled,
       match_conditions: match_conditions,
       name: name,
       priority: priority,

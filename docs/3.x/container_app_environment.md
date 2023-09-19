@@ -15,6 +15,7 @@ This package contains functions and utilities for setting up the resource using 
 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
+* [`fn withDaprApplicationInsightsConnectionString()`](#fn-withdaprapplicationinsightsconnectionstring)
 * [`fn withInfrastructureSubnetId()`](#fn-withinfrastructuresubnetid)
 * [`fn withInternalLoadBalancerEnabled()`](#fn-withinternalloadbalancerenabled)
 * [`fn withLocation()`](#fn-withlocation)
@@ -56,6 +57,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
+  - `dapr_application_insights_connection_string` (`string`): Application Insights connection string used by Dapr to export Service to Service communication telemetry. When `null`, the `dapr_application_insights_connection_string` field will be omitted from the resulting object.
   - `infrastructure_subnet_id` (`string`): The existing Subnet to use for the Container Apps Control Plane. **NOTE:** The Subnet must have a `/21` or larger address space. When `null`, the `infrastructure_subnet_id` field will be omitted from the resulting object.
   - `internal_load_balancer_enabled` (`bool`): Should the Container Environment operate in Internal Load Balancing Mode? Defaults to `false`. **Note:** can only be set to `true` if `infrastructure_subnet_id` is specified. When `null`, the `internal_load_balancer_enabled` field will be omitted from the resulting object.
   - `location` (`string`): Set the `location` field on the resulting resource block.
@@ -87,6 +89,7 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
+  - `dapr_application_insights_connection_string` (`string`): Application Insights connection string used by Dapr to export Service to Service communication telemetry. When `null`, the `dapr_application_insights_connection_string` field will be omitted from the resulting object.
   - `infrastructure_subnet_id` (`string`): The existing Subnet to use for the Container Apps Control Plane. **NOTE:** The Subnet must have a `/21` or larger address space. When `null`, the `infrastructure_subnet_id` field will be omitted from the resulting object.
   - `internal_load_balancer_enabled` (`bool`): Should the Container Environment operate in Internal Load Balancing Mode? Defaults to `false`. **Note:** can only be set to `true` if `infrastructure_subnet_id` is specified. When `null`, the `internal_load_balancer_enabled` field will be omitted from the resulting object.
   - `location` (`string`): Set the `location` field on the resulting object.
@@ -98,6 +101,22 @@ injecting into a complete block.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `container_app_environment` resource into the root Terraform configuration.
+
+
+### fn withDaprApplicationInsightsConnectionString
+
+```ts
+withDaprApplicationInsightsConnectionString()
+```
+
+`azurerm.string.withDaprApplicationInsightsConnectionString` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the dapr_application_insights_connection_string field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `dapr_application_insights_connection_string` field.
 
 
 ### fn withInfrastructureSubnetId

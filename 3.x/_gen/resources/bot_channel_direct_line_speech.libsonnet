@@ -2,7 +2,7 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
 {
   '#':: d.pkg(name='bot_channel_direct_line_speech', url='', help='`bot_channel_direct_line_speech` represents the `azurerm_bot_channel_direct_line_speech` Terraform resource.\n\n\n\nThis package contains functions and utilities for setting up the resource using Jsonnet code.\n'),
-  '#new':: d.fn(help="\n`azurerm.bot_channel_direct_line_speech.new` injects a new `azurerm_bot_channel_direct_line_speech` Terraform `resource`\nblock into the root module document.\n\nAdditionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the\nresource. For example, if you added a new instance to the root using:\n\n    # arguments omitted for brevity\n    azurerm.bot_channel_direct_line_speech.new('some_id')\n\nYou can get the reference to the `id` field of the created `azurerm.bot_channel_direct_line_speech` using the reference:\n\n    $._ref.azurerm_bot_channel_direct_line_speech.some_id.get('id')\n\nThis is the same as directly entering `\"${ azurerm_bot_channel_direct_line_speech.some_id.id }\"` as the value.\n\nNOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,\nor `$` to refer to the root object. Instead, make an explicit outer object using `local`.\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block.\n  - `bot_name` (`string`): Set the `bot_name` field on the resulting resource block.\n  - `cognitive_service_access_key` (`string`): Set the `cognitive_service_access_key` field on the resulting resource block.\n  - `cognitive_service_location` (`string`): Set the `cognitive_service_location` field on the resulting resource block.\n  - `custom_speech_model_id` (`string`): Set the `custom_speech_model_id` field on the resulting resource block. When `null`, the `custom_speech_model_id` field will be omitted from the resulting object.\n  - `custom_voice_deployment_id` (`string`): Set the `custom_voice_deployment_id` field on the resulting resource block. When `null`, the `custom_voice_deployment_id` field will be omitted from the resulting object.\n  - `location` (`string`): Set the `location` field on the resulting resource block.\n  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.bot_channel_direct_line_speech.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n- A mixin object that injects the new resource into the root Terraform configuration.\n", args=[]),
+  '#new':: d.fn(help="\n`azurerm.bot_channel_direct_line_speech.new` injects a new `azurerm_bot_channel_direct_line_speech` Terraform `resource`\nblock into the root module document.\n\nAdditionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the\nresource. For example, if you added a new instance to the root using:\n\n    # arguments omitted for brevity\n    azurerm.bot_channel_direct_line_speech.new('some_id')\n\nYou can get the reference to the `id` field of the created `azurerm.bot_channel_direct_line_speech` using the reference:\n\n    $._ref.azurerm_bot_channel_direct_line_speech.some_id.get('id')\n\nThis is the same as directly entering `\"${ azurerm_bot_channel_direct_line_speech.some_id.id }\"` as the value.\n\nNOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,\nor `$` to refer to the root object. Instead, make an explicit outer object using `local`.\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block.\n  - `bot_name` (`string`): Set the `bot_name` field on the resulting resource block.\n  - `cognitive_account_id` (`string`): Set the `cognitive_account_id` field on the resulting resource block. When `null`, the `cognitive_account_id` field will be omitted from the resulting object.\n  - `cognitive_service_access_key` (`string`): Set the `cognitive_service_access_key` field on the resulting resource block.\n  - `cognitive_service_location` (`string`): Set the `cognitive_service_location` field on the resulting resource block.\n  - `custom_speech_model_id` (`string`): Set the `custom_speech_model_id` field on the resulting resource block. When `null`, the `custom_speech_model_id` field will be omitted from the resulting object.\n  - `custom_voice_deployment_id` (`string`): Set the `custom_voice_deployment_id` field on the resulting resource block. When `null`, the `custom_voice_deployment_id` field will be omitted from the resulting object.\n  - `location` (`string`): Set the `location` field on the resulting resource block.\n  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.bot_channel_direct_line_speech.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n- A mixin object that injects the new resource into the root Terraform configuration.\n", args=[]),
   new(
     resourceLabel,
     bot_name,
@@ -10,6 +10,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     cognitive_service_location,
     location,
     resource_group_name,
+    cognitive_account_id=null,
     custom_speech_model_id=null,
     custom_voice_deployment_id=null,
     timeouts=null,
@@ -19,6 +20,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     label=resourceLabel,
     attrs=self.newAttrs(
       bot_name=bot_name,
+      cognitive_account_id=cognitive_account_id,
       cognitive_service_access_key=cognitive_service_access_key,
       cognitive_service_location=cognitive_service_location,
       custom_speech_model_id=custom_speech_model_id,
@@ -29,18 +31,20 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     ),
     _meta=_meta
   ),
-  '#newAttrs':: d.fn(help='\n`azurerm.bot_channel_direct_line_speech.newAttrs` constructs a new object with attributes and blocks configured for the `bot_channel_direct_line_speech`\nTerraform resource.\n\nUnlike [azurerm.bot_channel_direct_line_speech.new](#fn-new), this function will not inject the `resource`\nblock into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the\n[tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.\n\nThis is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to\ninjecting into a complete block.\n\n**Args**:\n  - `bot_name` (`string`): Set the `bot_name` field on the resulting object.\n  - `cognitive_service_access_key` (`string`): Set the `cognitive_service_access_key` field on the resulting object.\n  - `cognitive_service_location` (`string`): Set the `cognitive_service_location` field on the resulting object.\n  - `custom_speech_model_id` (`string`): Set the `custom_speech_model_id` field on the resulting object. When `null`, the `custom_speech_model_id` field will be omitted from the resulting object.\n  - `custom_voice_deployment_id` (`string`): Set the `custom_voice_deployment_id` field on the resulting object. When `null`, the `custom_voice_deployment_id` field will be omitted from the resulting object.\n  - `location` (`string`): Set the `location` field on the resulting object.\n  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.bot_channel_direct_line_speech.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `bot_channel_direct_line_speech` resource into the root Terraform configuration.\n', args=[]),
+  '#newAttrs':: d.fn(help='\n`azurerm.bot_channel_direct_line_speech.newAttrs` constructs a new object with attributes and blocks configured for the `bot_channel_direct_line_speech`\nTerraform resource.\n\nUnlike [azurerm.bot_channel_direct_line_speech.new](#fn-new), this function will not inject the `resource`\nblock into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the\n[tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.\n\nThis is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to\ninjecting into a complete block.\n\n**Args**:\n  - `bot_name` (`string`): Set the `bot_name` field on the resulting object.\n  - `cognitive_account_id` (`string`): Set the `cognitive_account_id` field on the resulting object. When `null`, the `cognitive_account_id` field will be omitted from the resulting object.\n  - `cognitive_service_access_key` (`string`): Set the `cognitive_service_access_key` field on the resulting object.\n  - `cognitive_service_location` (`string`): Set the `cognitive_service_location` field on the resulting object.\n  - `custom_speech_model_id` (`string`): Set the `custom_speech_model_id` field on the resulting object. When `null`, the `custom_speech_model_id` field will be omitted from the resulting object.\n  - `custom_voice_deployment_id` (`string`): Set the `custom_voice_deployment_id` field on the resulting object. When `null`, the `custom_voice_deployment_id` field will be omitted from the resulting object.\n  - `location` (`string`): Set the `location` field on the resulting object.\n  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.bot_channel_direct_line_speech.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `bot_channel_direct_line_speech` resource into the root Terraform configuration.\n', args=[]),
   newAttrs(
     bot_name,
     cognitive_service_access_key,
     cognitive_service_location,
     location,
     resource_group_name,
+    cognitive_account_id=null,
     custom_speech_model_id=null,
     custom_voice_deployment_id=null,
     timeouts=null
   ):: std.prune(a={
     bot_name: bot_name,
+    cognitive_account_id: cognitive_account_id,
     cognitive_service_access_key: cognitive_service_access_key,
     cognitive_service_location: cognitive_service_location,
     custom_speech_model_id: custom_speech_model_id,
@@ -69,6 +73,16 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       azurerm_bot_channel_direct_line_speech+: {
         [resourceLabel]+: {
           bot_name: value,
+        },
+      },
+    },
+  },
+  '#withCognitiveAccountId':: d.fn(help='`azurerm.string.withCognitiveAccountId` constructs a mixin object that can be merged into the `string`\nTerraform resource block to set or update the cognitive_account_id field.\n\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`string`): The value to set for the `cognitive_account_id` field.\n', args=[]),
+  withCognitiveAccountId(resourceLabel, value): {
+    resource+: {
+      azurerm_bot_channel_direct_line_speech+: {
+        [resourceLabel]+: {
+          cognitive_account_id: value,
         },
       },
     },

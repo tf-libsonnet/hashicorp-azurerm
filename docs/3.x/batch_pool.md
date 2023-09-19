@@ -1217,6 +1217,7 @@ Terraform sub block.
 
 **Args**:
   - `auto_upgrade_minor_version` (`bool`): Set the `auto_upgrade_minor_version` field on the resulting object. When `null`, the `auto_upgrade_minor_version` field will be omitted from the resulting object.
+  - `automatic_upgrade_enabled` (`bool`): Set the `automatic_upgrade_enabled` field on the resulting object. When `null`, the `automatic_upgrade_enabled` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
   - `protected_settings` (`string`): Set the `protected_settings` field on the resulting object. When `null`, the `protected_settings` field will be omitted from the resulting object.
   - `provision_after_extensions` (`list`): Set the `provision_after_extensions` field on the resulting object. When `null`, the `provision_after_extensions` field will be omitted from the resulting object.
@@ -1430,10 +1431,11 @@ Terraform sub block.
 
 
 **Args**:
+  - `accelerated_networking_enabled` (`bool`): Set the `accelerated_networking_enabled` field on the resulting object. When `null`, the `accelerated_networking_enabled` field will be omitted from the resulting object.
   - `dynamic_vnet_assignment_scope` (`string`): Set the `dynamic_vnet_assignment_scope` field on the resulting object. When `null`, the `dynamic_vnet_assignment_scope` field will be omitted from the resulting object.
   - `public_address_provisioning_type` (`string`): Set the `public_address_provisioning_type` field on the resulting object. When `null`, the `public_address_provisioning_type` field will be omitted from the resulting object.
   - `public_ips` (`list`): Set the `public_ips` field on the resulting object. When `null`, the `public_ips` field will be omitted from the resulting object.
-  - `subnet_id` (`string`): Set the `subnet_id` field on the resulting object.
+  - `subnet_id` (`string`): Set the `subnet_id` field on the resulting object. When `null`, the `subnet_id` field will be omitted from the resulting object.
   - `endpoint_configuration` (`list[obj]`): Set the `endpoint_configuration` field on the resulting object. When `null`, the `endpoint_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.network_configuration.endpoint_configuration.new](#fn-network_configurationendpoint_configurationnew) constructor.
 
 **Returns**:

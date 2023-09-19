@@ -20,6 +20,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withDeveloperAppInsightsKey()`](#fn-withdeveloperappinsightskey)
 * [`fn withDisplayName()`](#fn-withdisplayname)
 * [`fn withEndpoint()`](#fn-withendpoint)
+* [`fn withLocalAuthenticationEnabled()`](#fn-withlocalauthenticationenabled)
 * [`fn withLocation()`](#fn-withlocation)
 * [`fn withLuisAppIds()`](#fn-withluisappids)
 * [`fn withLuisKey()`](#fn-withluiskey)
@@ -71,6 +72,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `developer_app_insights_key` (`string`): Set the `developer_app_insights_key` field on the resulting resource block. When `null`, the `developer_app_insights_key` field will be omitted from the resulting object.
   - `display_name` (`string`): Set the `display_name` field on the resulting resource block. When `null`, the `display_name` field will be omitted from the resulting object.
   - `endpoint` (`string`): Set the `endpoint` field on the resulting resource block. When `null`, the `endpoint` field will be omitted from the resulting object.
+  - `local_authentication_enabled` (`bool`): Set the `local_authentication_enabled` field on the resulting resource block. When `null`, the `local_authentication_enabled` field will be omitted from the resulting object.
   - `location` (`string`): Set the `location` field on the resulting resource block.
   - `luis_app_ids` (`list`): Set the `luis_app_ids` field on the resulting resource block. When `null`, the `luis_app_ids` field will be omitted from the resulting object.
   - `luis_key` (`string`): Set the `luis_key` field on the resulting resource block. When `null`, the `luis_key` field will be omitted from the resulting object.
@@ -112,6 +114,7 @@ injecting into a complete block.
   - `developer_app_insights_key` (`string`): Set the `developer_app_insights_key` field on the resulting object. When `null`, the `developer_app_insights_key` field will be omitted from the resulting object.
   - `display_name` (`string`): Set the `display_name` field on the resulting object. When `null`, the `display_name` field will be omitted from the resulting object.
   - `endpoint` (`string`): Set the `endpoint` field on the resulting object. When `null`, the `endpoint` field will be omitted from the resulting object.
+  - `local_authentication_enabled` (`bool`): Set the `local_authentication_enabled` field on the resulting object. When `null`, the `local_authentication_enabled` field will be omitted from the resulting object.
   - `location` (`string`): Set the `location` field on the resulting object.
   - `luis_app_ids` (`list`): Set the `luis_app_ids` field on the resulting object. When `null`, the `luis_app_ids` field will be omitted from the resulting object.
   - `luis_key` (`string`): Set the `luis_key` field on the resulting object. When `null`, the `luis_key` field will be omitted from the resulting object.
@@ -208,6 +211,22 @@ Terraform resource block to set or update the endpoint field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `endpoint` field.
+
+
+### fn withLocalAuthenticationEnabled
+
+```ts
+withLocalAuthenticationEnabled()
+```
+
+`azurerm.bool.withLocalAuthenticationEnabled` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the local_authentication_enabled field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `local_authentication_enabled` field.
 
 
 ### fn withLocation

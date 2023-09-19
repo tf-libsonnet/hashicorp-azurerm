@@ -27,6 +27,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withFileUploadMixin()`](#fn-withfileuploadmixin)
 * [`fn withIdentity()`](#fn-withidentity)
 * [`fn withIdentityMixin()`](#fn-withidentitymixin)
+* [`fn withLocalAuthenticationEnabled()`](#fn-withlocalauthenticationenabled)
 * [`fn withLocation()`](#fn-withlocation)
 * [`fn withMinTlsVersion()`](#fn-withmintlsversion)
 * [`fn withName()`](#fn-withname)
@@ -92,6 +93,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `enrichment` (`list`): Set the `enrichment` field on the resulting resource block. When `null`, the `enrichment` field will be omitted from the resulting object.
   - `event_hub_partition_count` (`number`): Set the `event_hub_partition_count` field on the resulting resource block. When `null`, the `event_hub_partition_count` field will be omitted from the resulting object.
   - `event_hub_retention_in_days` (`number`): Set the `event_hub_retention_in_days` field on the resulting resource block. When `null`, the `event_hub_retention_in_days` field will be omitted from the resulting object.
+  - `local_authentication_enabled` (`bool`): Set the `local_authentication_enabled` field on the resulting resource block. When `null`, the `local_authentication_enabled` field will be omitted from the resulting object.
   - `location` (`string`): Set the `location` field on the resulting resource block.
   - `min_tls_version` (`string`): Set the `min_tls_version` field on the resulting resource block. When `null`, the `min_tls_version` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting resource block.
@@ -133,6 +135,7 @@ injecting into a complete block.
   - `enrichment` (`list`): Set the `enrichment` field on the resulting object. When `null`, the `enrichment` field will be omitted from the resulting object.
   - `event_hub_partition_count` (`number`): Set the `event_hub_partition_count` field on the resulting object. When `null`, the `event_hub_partition_count` field will be omitted from the resulting object.
   - `event_hub_retention_in_days` (`number`): Set the `event_hub_retention_in_days` field on the resulting object. When `null`, the `event_hub_retention_in_days` field will be omitted from the resulting object.
+  - `local_authentication_enabled` (`bool`): Set the `local_authentication_enabled` field on the resulting object. When `null`, the `local_authentication_enabled` field will be omitted from the resulting object.
   - `location` (`string`): Set the `location` field on the resulting object.
   - `min_tls_version` (`string`): Set the `min_tls_version` field on the resulting object. When `null`, the `min_tls_version` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
@@ -362,6 +365,22 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `identity` field.
+
+
+### fn withLocalAuthenticationEnabled
+
+```ts
+withLocalAuthenticationEnabled()
+```
+
+`azurerm.bool.withLocalAuthenticationEnabled` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the local_authentication_enabled field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `local_authentication_enabled` field.
 
 
 ### fn withLocation

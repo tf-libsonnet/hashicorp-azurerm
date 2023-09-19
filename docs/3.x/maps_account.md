@@ -15,6 +15,7 @@ This package contains functions and utilities for setting up the resource using 
 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
+* [`fn withLocalAuthenticationEnabled()`](#fn-withlocalauthenticationenabled)
 * [`fn withName()`](#fn-withname)
 * [`fn withResourceGroupName()`](#fn-withresourcegroupname)
 * [`fn withSkuName()`](#fn-withskuname)
@@ -53,6 +54,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
+  - `local_authentication_enabled` (`bool`): Set the `local_authentication_enabled` field on the resulting resource block. When `null`, the `local_authentication_enabled` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting resource block.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
   - `sku_name` (`string`): Set the `sku_name` field on the resulting resource block.
@@ -81,6 +83,7 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
+  - `local_authentication_enabled` (`bool`): Set the `local_authentication_enabled` field on the resulting object. When `null`, the `local_authentication_enabled` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
   - `sku_name` (`string`): Set the `sku_name` field on the resulting object.
@@ -89,6 +92,22 @@ injecting into a complete block.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `maps_account` resource into the root Terraform configuration.
+
+
+### fn withLocalAuthenticationEnabled
+
+```ts
+withLocalAuthenticationEnabled()
+```
+
+`azurerm.bool.withLocalAuthenticationEnabled` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the local_authentication_enabled field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `local_authentication_enabled` field.
 
 
 ### fn withName

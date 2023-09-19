@@ -59,18 +59,20 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     }),
   },
   extensions:: {
-    '#new':: d.fn(help='\n`azurerm.batch_pool.extensions.new` constructs a new object with attributes and blocks configured for the `extensions`\nTerraform sub block.\n\n\n\n**Args**:\n  - `auto_upgrade_minor_version` (`bool`): Set the `auto_upgrade_minor_version` field on the resulting object. When `null`, the `auto_upgrade_minor_version` field will be omitted from the resulting object.\n  - `name` (`string`): Set the `name` field on the resulting object.\n  - `protected_settings` (`string`): Set the `protected_settings` field on the resulting object. When `null`, the `protected_settings` field will be omitted from the resulting object.\n  - `provision_after_extensions` (`list`): Set the `provision_after_extensions` field on the resulting object. When `null`, the `provision_after_extensions` field will be omitted from the resulting object.\n  - `publisher` (`string`): Set the `publisher` field on the resulting object.\n  - `settings_json` (`string`): Set the `settings_json` field on the resulting object. When `null`, the `settings_json` field will be omitted from the resulting object.\n  - `type` (`string`): Set the `type` field on the resulting object.\n  - `type_handler_version` (`string`): Set the `type_handler_version` field on the resulting object. When `null`, the `type_handler_version` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `extensions` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`azurerm.batch_pool.extensions.new` constructs a new object with attributes and blocks configured for the `extensions`\nTerraform sub block.\n\n\n\n**Args**:\n  - `auto_upgrade_minor_version` (`bool`): Set the `auto_upgrade_minor_version` field on the resulting object. When `null`, the `auto_upgrade_minor_version` field will be omitted from the resulting object.\n  - `automatic_upgrade_enabled` (`bool`): Set the `automatic_upgrade_enabled` field on the resulting object. When `null`, the `automatic_upgrade_enabled` field will be omitted from the resulting object.\n  - `name` (`string`): Set the `name` field on the resulting object.\n  - `protected_settings` (`string`): Set the `protected_settings` field on the resulting object. When `null`, the `protected_settings` field will be omitted from the resulting object.\n  - `provision_after_extensions` (`list`): Set the `provision_after_extensions` field on the resulting object. When `null`, the `provision_after_extensions` field will be omitted from the resulting object.\n  - `publisher` (`string`): Set the `publisher` field on the resulting object.\n  - `settings_json` (`string`): Set the `settings_json` field on the resulting object. When `null`, the `settings_json` field will be omitted from the resulting object.\n  - `type` (`string`): Set the `type` field on the resulting object.\n  - `type_handler_version` (`string`): Set the `type_handler_version` field on the resulting object. When `null`, the `type_handler_version` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `extensions` sub block.\n', args=[]),
     new(
       name,
       publisher,
       type,
       auto_upgrade_minor_version=null,
+      automatic_upgrade_enabled=null,
       protected_settings=null,
       provision_after_extensions=null,
       settings_json=null,
       type_handler_version=null
     ):: std.prune(a={
       auto_upgrade_minor_version: auto_upgrade_minor_version,
+      automatic_upgrade_enabled: automatic_upgrade_enabled,
       name: name,
       protected_settings: protected_settings,
       provision_after_extensions: provision_after_extensions,
@@ -213,14 +215,16 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
         protocol: protocol,
       }),
     },
-    '#new':: d.fn(help='\n`azurerm.batch_pool.network_configuration.new` constructs a new object with attributes and blocks configured for the `network_configuration`\nTerraform sub block.\n\n\n\n**Args**:\n  - `dynamic_vnet_assignment_scope` (`string`): Set the `dynamic_vnet_assignment_scope` field on the resulting object. When `null`, the `dynamic_vnet_assignment_scope` field will be omitted from the resulting object.\n  - `public_address_provisioning_type` (`string`): Set the `public_address_provisioning_type` field on the resulting object. When `null`, the `public_address_provisioning_type` field will be omitted from the resulting object.\n  - `public_ips` (`list`): Set the `public_ips` field on the resulting object. When `null`, the `public_ips` field will be omitted from the resulting object.\n  - `subnet_id` (`string`): Set the `subnet_id` field on the resulting object.\n  - `endpoint_configuration` (`list[obj]`): Set the `endpoint_configuration` field on the resulting object. When `null`, the `endpoint_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.network_configuration.endpoint_configuration.new](#fn-network_configurationendpoint_configurationnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `network_configuration` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`azurerm.batch_pool.network_configuration.new` constructs a new object with attributes and blocks configured for the `network_configuration`\nTerraform sub block.\n\n\n\n**Args**:\n  - `accelerated_networking_enabled` (`bool`): Set the `accelerated_networking_enabled` field on the resulting object. When `null`, the `accelerated_networking_enabled` field will be omitted from the resulting object.\n  - `dynamic_vnet_assignment_scope` (`string`): Set the `dynamic_vnet_assignment_scope` field on the resulting object. When `null`, the `dynamic_vnet_assignment_scope` field will be omitted from the resulting object.\n  - `public_address_provisioning_type` (`string`): Set the `public_address_provisioning_type` field on the resulting object. When `null`, the `public_address_provisioning_type` field will be omitted from the resulting object.\n  - `public_ips` (`list`): Set the `public_ips` field on the resulting object. When `null`, the `public_ips` field will be omitted from the resulting object.\n  - `subnet_id` (`string`): Set the `subnet_id` field on the resulting object. When `null`, the `subnet_id` field will be omitted from the resulting object.\n  - `endpoint_configuration` (`list[obj]`): Set the `endpoint_configuration` field on the resulting object. When `null`, the `endpoint_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.batch_pool.network_configuration.endpoint_configuration.new](#fn-network_configurationendpoint_configurationnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `network_configuration` sub block.\n', args=[]),
     new(
-      subnet_id,
+      accelerated_networking_enabled=null,
       dynamic_vnet_assignment_scope=null,
       endpoint_configuration=null,
       public_address_provisioning_type=null,
-      public_ips=null
+      public_ips=null,
+      subnet_id=null
     ):: std.prune(a={
+      accelerated_networking_enabled: accelerated_networking_enabled,
       dynamic_vnet_assignment_scope: dynamic_vnet_assignment_scope,
       endpoint_configuration: endpoint_configuration,
       public_address_provisioning_type: public_address_provisioning_type,

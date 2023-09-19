@@ -16,6 +16,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
 * [`fn withBotName()`](#fn-withbotname)
+* [`fn withCognitiveAccountId()`](#fn-withcognitiveaccountid)
 * [`fn withCognitiveServiceAccessKey()`](#fn-withcognitiveserviceaccesskey)
 * [`fn withCognitiveServiceLocation()`](#fn-withcognitiveservicelocation)
 * [`fn withCustomSpeechModelId()`](#fn-withcustomspeechmodelid)
@@ -57,6 +58,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
   - `bot_name` (`string`): Set the `bot_name` field on the resulting resource block.
+  - `cognitive_account_id` (`string`): Set the `cognitive_account_id` field on the resulting resource block. When `null`, the `cognitive_account_id` field will be omitted from the resulting object.
   - `cognitive_service_access_key` (`string`): Set the `cognitive_service_access_key` field on the resulting resource block.
   - `cognitive_service_location` (`string`): Set the `cognitive_service_location` field on the resulting resource block.
   - `custom_speech_model_id` (`string`): Set the `custom_speech_model_id` field on the resulting resource block. When `null`, the `custom_speech_model_id` field will be omitted from the resulting object.
@@ -88,6 +90,7 @@ injecting into a complete block.
 
 **Args**:
   - `bot_name` (`string`): Set the `bot_name` field on the resulting object.
+  - `cognitive_account_id` (`string`): Set the `cognitive_account_id` field on the resulting object. When `null`, the `cognitive_account_id` field will be omitted from the resulting object.
   - `cognitive_service_access_key` (`string`): Set the `cognitive_service_access_key` field on the resulting object.
   - `cognitive_service_location` (`string`): Set the `cognitive_service_location` field on the resulting object.
   - `custom_speech_model_id` (`string`): Set the `custom_speech_model_id` field on the resulting object. When `null`, the `custom_speech_model_id` field will be omitted from the resulting object.
@@ -114,6 +117,22 @@ Terraform resource block to set or update the bot_name field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `bot_name` field.
+
+
+### fn withCognitiveAccountId
+
+```ts
+withCognitiveAccountId()
+```
+
+`azurerm.string.withCognitiveAccountId` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the cognitive_account_id field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `cognitive_account_id` field.
 
 
 ### fn withCognitiveServiceAccessKey

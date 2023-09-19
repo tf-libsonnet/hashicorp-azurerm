@@ -35,7 +35,9 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withName()`](#fn-withname)
 * [`fn withNetworkAccessPolicy()`](#fn-withnetworkaccesspolicy)
 * [`fn withOnDemandBurstingEnabled()`](#fn-withondemandburstingenabled)
+* [`fn withOptimizedFrequentAttachEnabled()`](#fn-withoptimizedfrequentattachenabled)
 * [`fn withOsType()`](#fn-withostype)
+* [`fn withPerformancePlusEnabled()`](#fn-withperformanceplusenabled)
 * [`fn withPublicNetworkAccessEnabled()`](#fn-withpublicnetworkaccessenabled)
 * [`fn withResourceGroupName()`](#fn-withresourcegroupname)
 * [`fn withSecureVmDiskEncryptionSetId()`](#fn-withsecurevmdiskencryptionsetid)
@@ -107,7 +109,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): Set the `name` field on the resulting resource block.
   - `network_access_policy` (`string`): Set the `network_access_policy` field on the resulting resource block. When `null`, the `network_access_policy` field will be omitted from the resulting object.
   - `on_demand_bursting_enabled` (`bool`): Set the `on_demand_bursting_enabled` field on the resulting resource block. When `null`, the `on_demand_bursting_enabled` field will be omitted from the resulting object.
+  - `optimized_frequent_attach_enabled` (`bool`): Set the `optimized_frequent_attach_enabled` field on the resulting resource block. When `null`, the `optimized_frequent_attach_enabled` field will be omitted from the resulting object.
   - `os_type` (`string`): Set the `os_type` field on the resulting resource block. When `null`, the `os_type` field will be omitted from the resulting object.
+  - `performance_plus_enabled` (`bool`): Set the `performance_plus_enabled` field on the resulting resource block. When `null`, the `performance_plus_enabled` field will be omitted from the resulting object.
   - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting resource block. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
   - `secure_vm_disk_encryption_set_id` (`string`): Set the `secure_vm_disk_encryption_set_id` field on the resulting resource block. When `null`, the `secure_vm_disk_encryption_set_id` field will be omitted from the resulting object.
@@ -164,7 +168,9 @@ injecting into a complete block.
   - `name` (`string`): Set the `name` field on the resulting object.
   - `network_access_policy` (`string`): Set the `network_access_policy` field on the resulting object. When `null`, the `network_access_policy` field will be omitted from the resulting object.
   - `on_demand_bursting_enabled` (`bool`): Set the `on_demand_bursting_enabled` field on the resulting object. When `null`, the `on_demand_bursting_enabled` field will be omitted from the resulting object.
+  - `optimized_frequent_attach_enabled` (`bool`): Set the `optimized_frequent_attach_enabled` field on the resulting object. When `null`, the `optimized_frequent_attach_enabled` field will be omitted from the resulting object.
   - `os_type` (`string`): Set the `os_type` field on the resulting object. When `null`, the `os_type` field will be omitted from the resulting object.
+  - `performance_plus_enabled` (`bool`): Set the `performance_plus_enabled` field on the resulting object. When `null`, the `performance_plus_enabled` field will be omitted from the resulting object.
   - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting object. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
   - `secure_vm_disk_encryption_set_id` (`string`): Set the `secure_vm_disk_encryption_set_id` field on the resulting object. When `null`, the `secure_vm_disk_encryption_set_id` field will be omitted from the resulting object.
@@ -510,6 +516,22 @@ Terraform resource block to set or update the on_demand_bursting_enabled field.
   - `value` (`bool`): The value to set for the `on_demand_bursting_enabled` field.
 
 
+### fn withOptimizedFrequentAttachEnabled
+
+```ts
+withOptimizedFrequentAttachEnabled()
+```
+
+`azurerm.bool.withOptimizedFrequentAttachEnabled` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the optimized_frequent_attach_enabled field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `optimized_frequent_attach_enabled` field.
+
+
 ### fn withOsType
 
 ```ts
@@ -524,6 +546,22 @@ Terraform resource block to set or update the os_type field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `os_type` field.
+
+
+### fn withPerformancePlusEnabled
+
+```ts
+withPerformancePlusEnabled()
+```
+
+`azurerm.bool.withPerformancePlusEnabled` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the performance_plus_enabled field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `performance_plus_enabled` field.
 
 
 ### fn withPublicNetworkAccessEnabled

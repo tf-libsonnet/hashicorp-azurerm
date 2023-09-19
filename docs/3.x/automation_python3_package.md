@@ -1,10 +1,10 @@
 ---
-permalink: /stack_hci_cluster/
+permalink: /automation_python3_package/
 ---
 
-# stack_hci_cluster
+# automation_python3_package
 
-`stack_hci_cluster` represents the `azurerm_stack_hci_cluster` Terraform resource.
+`automation_python3_package` represents the `azurerm_automation_python3_package` Terraform resource.
 
 
 
@@ -15,13 +15,14 @@ This package contains functions and utilities for setting up the resource using 
 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
-* [`fn withAutomanageConfigurationId()`](#fn-withautomanageconfigurationid)
-* [`fn withClientId()`](#fn-withclientid)
-* [`fn withLocation()`](#fn-withlocation)
+* [`fn withAutomationAccountName()`](#fn-withautomationaccountname)
+* [`fn withContentUri()`](#fn-withcontenturi)
+* [`fn withContentVersion()`](#fn-withcontentversion)
+* [`fn withHashAlgorithm()`](#fn-withhashalgorithm)
+* [`fn withHashValue()`](#fn-withhashvalue)
 * [`fn withName()`](#fn-withname)
 * [`fn withResourceGroupName()`](#fn-withresourcegroupname)
 * [`fn withTags()`](#fn-withtags)
-* [`fn withTenantId()`](#fn-withtenantid)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
 * [`obj timeouts`](#obj-timeouts)
@@ -36,34 +37,35 @@ new()
 ```
 
 
-`azurerm.stack_hci_cluster.new` injects a new `azurerm_stack_hci_cluster` Terraform `resource`
+`azurerm.automation_python3_package.new` injects a new `azurerm_automation_python3_package` Terraform `resource`
 block into the root module document.
 
 Additionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the
 resource. For example, if you added a new instance to the root using:
 
     # arguments omitted for brevity
-    azurerm.stack_hci_cluster.new('some_id')
+    azurerm.automation_python3_package.new('some_id')
 
-You can get the reference to the `id` field of the created `azurerm.stack_hci_cluster` using the reference:
+You can get the reference to the `id` field of the created `azurerm.automation_python3_package` using the reference:
 
-    $._ref.azurerm_stack_hci_cluster.some_id.get('id')
+    $._ref.azurerm_automation_python3_package.some_id.get('id')
 
-This is the same as directly entering `"${ azurerm_stack_hci_cluster.some_id.id }"` as the value.
+This is the same as directly entering `"${ azurerm_automation_python3_package.some_id.id }"` as the value.
 
 NOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,
 or `$` to refer to the root object. Instead, make an explicit outer object using `local`.
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `automanage_configuration_id` (`string`): Set the `automanage_configuration_id` field on the resulting resource block. When `null`, the `automanage_configuration_id` field will be omitted from the resulting object.
-  - `client_id` (`string`): Set the `client_id` field on the resulting resource block.
-  - `location` (`string`): Set the `location` field on the resulting resource block.
+  - `automation_account_name` (`string`): Set the `automation_account_name` field on the resulting resource block.
+  - `content_uri` (`string`): Set the `content_uri` field on the resulting resource block.
+  - `content_version` (`string`): Set the `content_version` field on the resulting resource block. When `null`, the `content_version` field will be omitted from the resulting object.
+  - `hash_algorithm` (`string`): Set the `hash_algorithm` field on the resulting resource block. When `null`, the `hash_algorithm` field will be omitted from the resulting object.
+  - `hash_value` (`string`): Set the `hash_value` field on the resulting resource block. When `null`, the `hash_value` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting resource block.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
   - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
-  - `tenant_id` (`string`): Set the `tenant_id` field on the resulting resource block. When `null`, the `tenant_id` field will be omitted from the resulting object.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.stack_hci_cluster.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_python3_package.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -76,10 +78,10 @@ newAttrs()
 ```
 
 
-`azurerm.stack_hci_cluster.newAttrs` constructs a new object with attributes and blocks configured for the `stack_hci_cluster`
+`azurerm.automation_python3_package.newAttrs` constructs a new object with attributes and blocks configured for the `automation_python3_package`
 Terraform resource.
 
-Unlike [azurerm.stack_hci_cluster.new](#fn-new), this function will not inject the `resource`
+Unlike [azurerm.automation_python3_package.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -87,65 +89,98 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `automanage_configuration_id` (`string`): Set the `automanage_configuration_id` field on the resulting object. When `null`, the `automanage_configuration_id` field will be omitted from the resulting object.
-  - `client_id` (`string`): Set the `client_id` field on the resulting object.
-  - `location` (`string`): Set the `location` field on the resulting object.
+  - `automation_account_name` (`string`): Set the `automation_account_name` field on the resulting object.
+  - `content_uri` (`string`): Set the `content_uri` field on the resulting object.
+  - `content_version` (`string`): Set the `content_version` field on the resulting object. When `null`, the `content_version` field will be omitted from the resulting object.
+  - `hash_algorithm` (`string`): Set the `hash_algorithm` field on the resulting object. When `null`, the `hash_algorithm` field will be omitted from the resulting object.
+  - `hash_value` (`string`): Set the `hash_value` field on the resulting object. When `null`, the `hash_value` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
-  - `tenant_id` (`string`): Set the `tenant_id` field on the resulting object. When `null`, the `tenant_id` field will be omitted from the resulting object.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.stack_hci_cluster.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.automation_python3_package.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
-  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `stack_hci_cluster` resource into the root Terraform configuration.
+  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `automation_python3_package` resource into the root Terraform configuration.
 
 
-### fn withAutomanageConfigurationId
+### fn withAutomationAccountName
 
 ```ts
-withAutomanageConfigurationId()
+withAutomationAccountName()
 ```
 
-`azurerm.string.withAutomanageConfigurationId` constructs a mixin object that can be merged into the `string`
-Terraform resource block to set or update the automanage_configuration_id field.
+`azurerm.string.withAutomationAccountName` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the automation_account_name field.
 
 
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
-  - `value` (`string`): The value to set for the `automanage_configuration_id` field.
+  - `value` (`string`): The value to set for the `automation_account_name` field.
 
 
-### fn withClientId
+### fn withContentUri
 
 ```ts
-withClientId()
+withContentUri()
 ```
 
-`azurerm.string.withClientId` constructs a mixin object that can be merged into the `string`
-Terraform resource block to set or update the client_id field.
+`azurerm.string.withContentUri` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the content_uri field.
 
 
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
-  - `value` (`string`): The value to set for the `client_id` field.
+  - `value` (`string`): The value to set for the `content_uri` field.
 
 
-### fn withLocation
+### fn withContentVersion
 
 ```ts
-withLocation()
+withContentVersion()
 ```
 
-`azurerm.string.withLocation` constructs a mixin object that can be merged into the `string`
-Terraform resource block to set or update the location field.
+`azurerm.string.withContentVersion` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the content_version field.
 
 
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
-  - `value` (`string`): The value to set for the `location` field.
+  - `value` (`string`): The value to set for the `content_version` field.
+
+
+### fn withHashAlgorithm
+
+```ts
+withHashAlgorithm()
+```
+
+`azurerm.string.withHashAlgorithm` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the hash_algorithm field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `hash_algorithm` field.
+
+
+### fn withHashValue
+
+```ts
+withHashValue()
+```
+
+`azurerm.string.withHashValue` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the hash_value field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `hash_value` field.
 
 
 ### fn withName
@@ -196,22 +231,6 @@ Terraform resource block to set or update the tags field.
   - `value` (`obj`): The value to set for the `tags` field.
 
 
-### fn withTenantId
-
-```ts
-withTenantId()
-```
-
-`azurerm.string.withTenantId` constructs a mixin object that can be merged into the `string`
-Terraform resource block to set or update the tenant_id field.
-
-
-
-**Args**:
-  - `resourceLabel` (`string`): The name label of the block to update.
-  - `value` (`string`): The value to set for the `tenant_id` field.
-
-
 ### fn withTimeouts
 
 ```ts
@@ -259,7 +278,7 @@ new()
 ```
 
 
-`azurerm.stack_hci_cluster.timeouts.new` constructs a new object with attributes and blocks configured for the `timeouts`
+`azurerm.automation_python3_package.timeouts.new` constructs a new object with attributes and blocks configured for the `timeouts`
 Terraform sub block.
 
 
