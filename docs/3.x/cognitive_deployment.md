@@ -24,6 +24,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withScaleMixin()`](#fn-withscalemixin)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
+* [`fn withVersionUpgradeOption()`](#fn-withversionupgradeoption)
 * [`obj model`](#obj-model)
   * [`fn new()`](#fn-modelnew)
 * [`obj scale`](#obj-scale)
@@ -63,6 +64,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `cognitive_account_id` (`string`): Set the `cognitive_account_id` field on the resulting resource block.
   - `name` (`string`): Set the `name` field on the resulting resource block.
   - `rai_policy_name` (`string`): Set the `rai_policy_name` field on the resulting resource block. When `null`, the `rai_policy_name` field will be omitted from the resulting object.
+  - `version_upgrade_option` (`string`): Set the `version_upgrade_option` field on the resulting resource block. When `null`, the `version_upgrade_option` field will be omitted from the resulting object.
   - `model` (`list[obj]`): Set the `model` field on the resulting resource block. When `null`, the `model` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cognitive_deployment.model.new](#fn-modelnew) constructor.
   - `scale` (`list[obj]`): Set the `scale` field on the resulting resource block. When `null`, the `scale` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cognitive_deployment.scale.new](#fn-scalenew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cognitive_deployment.timeouts.new](#fn-timeoutsnew) constructor.
@@ -92,6 +94,7 @@ injecting into a complete block.
   - `cognitive_account_id` (`string`): Set the `cognitive_account_id` field on the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
   - `rai_policy_name` (`string`): Set the `rai_policy_name` field on the resulting object. When `null`, the `rai_policy_name` field will be omitted from the resulting object.
+  - `version_upgrade_option` (`string`): Set the `version_upgrade_option` field on the resulting object. When `null`, the `version_upgrade_option` field will be omitted from the resulting object.
   - `model` (`list[obj]`): Set the `model` field on the resulting object. When `null`, the `model` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cognitive_deployment.model.new](#fn-modelnew) constructor.
   - `scale` (`list[obj]`): Set the `scale` field on the resulting object. When `null`, the `scale` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cognitive_deployment.scale.new](#fn-scalenew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cognitive_deployment.timeouts.new](#fn-timeoutsnew) constructor.
@@ -258,6 +261,22 @@ function.
   - `value` (`obj`): The value to set for the `timeouts` field.
 
 
+### fn withVersionUpgradeOption
+
+```ts
+withVersionUpgradeOption()
+```
+
+`azurerm.string.withVersionUpgradeOption` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the version_upgrade_option field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `version_upgrade_option` field.
+
+
 ## obj model
 
 
@@ -330,6 +349,7 @@ Terraform sub block.
   - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
   - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
   - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

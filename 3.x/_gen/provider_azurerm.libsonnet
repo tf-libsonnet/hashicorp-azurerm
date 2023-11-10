@@ -265,10 +265,10 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       }),
     },
     virtual_machine_scale_set:: {
-      '#new':: d.fn(help='\n`azurerm.features.virtual_machine_scale_set.new` constructs a new object with attributes and blocks configured for the `virtual_machine_scale_set`\nTerraform sub block.\n\n\n\n**Args**:\n  - `force_delete` (`bool`): Set the `force_delete` field on the resulting object. When `null`, the `force_delete` field will be omitted from the resulting object.\n  - `roll_instances_when_required` (`bool`): Set the `roll_instances_when_required` field on the resulting object.\n  - `scale_to_zero_before_deletion` (`bool`): Set the `scale_to_zero_before_deletion` field on the resulting object. When `null`, the `scale_to_zero_before_deletion` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `virtual_machine_scale_set` sub block.\n', args=[]),
+      '#new':: d.fn(help='\n`azurerm.features.virtual_machine_scale_set.new` constructs a new object with attributes and blocks configured for the `virtual_machine_scale_set`\nTerraform sub block.\n\n\n\n**Args**:\n  - `force_delete` (`bool`): Set the `force_delete` field on the resulting object. When `null`, the `force_delete` field will be omitted from the resulting object.\n  - `roll_instances_when_required` (`bool`): Set the `roll_instances_when_required` field on the resulting object. When `null`, the `roll_instances_when_required` field will be omitted from the resulting object.\n  - `scale_to_zero_before_deletion` (`bool`): Set the `scale_to_zero_before_deletion` field on the resulting object. When `null`, the `scale_to_zero_before_deletion` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `virtual_machine_scale_set` sub block.\n', args=[]),
       new(
-        roll_instances_when_required,
         force_delete=null,
+        roll_instances_when_required=null,
         scale_to_zero_before_deletion=null
       ):: std.prune(a={
         force_delete: force_delete,

@@ -156,13 +156,15 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     zone: zone,
   }),
   storage:: {
-    '#new':: d.fn(help='\n`azurerm.mysql_flexible_server.storage.new` constructs a new object with attributes and blocks configured for the `storage`\nTerraform sub block.\n\n\n\n**Args**:\n  - `auto_grow_enabled` (`bool`): Set the `auto_grow_enabled` field on the resulting object. When `null`, the `auto_grow_enabled` field will be omitted from the resulting object.\n  - `iops` (`number`): Set the `iops` field on the resulting object. When `null`, the `iops` field will be omitted from the resulting object.\n  - `size_gb` (`number`): Set the `size_gb` field on the resulting object. When `null`, the `size_gb` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `storage` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`azurerm.mysql_flexible_server.storage.new` constructs a new object with attributes and blocks configured for the `storage`\nTerraform sub block.\n\n\n\n**Args**:\n  - `auto_grow_enabled` (`bool`): Set the `auto_grow_enabled` field on the resulting object. When `null`, the `auto_grow_enabled` field will be omitted from the resulting object.\n  - `io_scaling_enabled` (`bool`): Set the `io_scaling_enabled` field on the resulting object. When `null`, the `io_scaling_enabled` field will be omitted from the resulting object.\n  - `iops` (`number`): Set the `iops` field on the resulting object. When `null`, the `iops` field will be omitted from the resulting object.\n  - `size_gb` (`number`): Set the `size_gb` field on the resulting object. When `null`, the `size_gb` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `storage` sub block.\n', args=[]),
     new(
       auto_grow_enabled=null,
+      io_scaling_enabled=null,
       iops=null,
       size_gb=null
     ):: std.prune(a={
       auto_grow_enabled: auto_grow_enabled,
+      io_scaling_enabled: io_scaling_enabled,
       iops: iops,
       size_gb: size_gb,
     }),

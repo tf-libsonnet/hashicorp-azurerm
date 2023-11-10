@@ -28,6 +28,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withPublicNetworkAccessEnabled()`](#fn-withpublicnetworkaccessenabled)
 * [`fn withReplicaCount()`](#fn-withreplicacount)
 * [`fn withResourceGroupName()`](#fn-withresourcegroupname)
+* [`fn withSemanticSearchSku()`](#fn-withsemanticsearchsku)
 * [`fn withSku()`](#fn-withsku)
 * [`fn withTags()`](#fn-withtags)
 * [`fn withTimeouts()`](#fn-withtimeouts)
@@ -77,6 +78,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting resource block. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
   - `replica_count` (`number`): Set the `replica_count` field on the resulting resource block. When `null`, the `replica_count` field will be omitted from the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `semantic_search_sku` (`string`): Set the `semantic_search_sku` field on the resulting resource block. When `null`, the `semantic_search_sku` field will be omitted from the resulting object.
   - `sku` (`string`): Set the `sku` field on the resulting resource block.
   - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
   - `identity` (`list[obj]`): Set the `identity` field on the resulting resource block. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.search_service.identity.new](#fn-identitynew) constructor.
@@ -115,6 +117,7 @@ injecting into a complete block.
   - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting object. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
   - `replica_count` (`number`): Set the `replica_count` field on the resulting object. When `null`, the `replica_count` field will be omitted from the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `semantic_search_sku` (`string`): Set the `semantic_search_sku` field on the resulting object. When `null`, the `semantic_search_sku` field will be omitted from the resulting object.
   - `sku` (`string`): Set the `sku` field on the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
   - `identity` (`list[obj]`): Set the `identity` field on the resulting object. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.search_service.identity.new](#fn-identitynew) constructor.
@@ -335,6 +338,22 @@ Terraform resource block to set or update the resource_group_name field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `resource_group_name` field.
+
+
+### fn withSemanticSearchSku
+
+```ts
+withSemanticSearchSku()
+```
+
+`azurerm.string.withSemanticSearchSku` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the semantic_search_sku field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `semantic_search_sku` field.
 
 
 ### fn withSku

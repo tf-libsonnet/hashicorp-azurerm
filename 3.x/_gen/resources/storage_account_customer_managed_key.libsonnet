@@ -2,12 +2,14 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
 {
   '#':: d.pkg(name='storage_account_customer_managed_key', url='', help='`storage_account_customer_managed_key` represents the `azurerm_storage_account_customer_managed_key` Terraform resource.\n\n\n\nThis package contains functions and utilities for setting up the resource using Jsonnet code.\n'),
-  '#new':: d.fn(help="\n`azurerm.storage_account_customer_managed_key.new` injects a new `azurerm_storage_account_customer_managed_key` Terraform `resource`\nblock into the root module document.\n\nAdditionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the\nresource. For example, if you added a new instance to the root using:\n\n    # arguments omitted for brevity\n    azurerm.storage_account_customer_managed_key.new('some_id')\n\nYou can get the reference to the `id` field of the created `azurerm.storage_account_customer_managed_key` using the reference:\n\n    $._ref.azurerm_storage_account_customer_managed_key.some_id.get('id')\n\nThis is the same as directly entering `\"${ azurerm_storage_account_customer_managed_key.some_id.id }\"` as the value.\n\nNOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,\nor `$` to refer to the root object. Instead, make an explicit outer object using `local`.\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block.\n  - `key_name` (`string`): Set the `key_name` field on the resulting resource block.\n  - `key_vault_id` (`string`): Set the `key_vault_id` field on the resulting resource block.\n  - `key_version` (`string`): Set the `key_version` field on the resulting resource block. When `null`, the `key_version` field will be omitted from the resulting object.\n  - `storage_account_id` (`string`): Set the `storage_account_id` field on the resulting resource block.\n  - `user_assigned_identity_id` (`string`): Set the `user_assigned_identity_id` field on the resulting resource block. When `null`, the `user_assigned_identity_id` field will be omitted from the resulting object.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account_customer_managed_key.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n- A mixin object that injects the new resource into the root Terraform configuration.\n", args=[]),
+  '#new':: d.fn(help="\n`azurerm.storage_account_customer_managed_key.new` injects a new `azurerm_storage_account_customer_managed_key` Terraform `resource`\nblock into the root module document.\n\nAdditionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the\nresource. For example, if you added a new instance to the root using:\n\n    # arguments omitted for brevity\n    azurerm.storage_account_customer_managed_key.new('some_id')\n\nYou can get the reference to the `id` field of the created `azurerm.storage_account_customer_managed_key` using the reference:\n\n    $._ref.azurerm_storage_account_customer_managed_key.some_id.get('id')\n\nThis is the same as directly entering `\"${ azurerm_storage_account_customer_managed_key.some_id.id }\"` as the value.\n\nNOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,\nor `$` to refer to the root object. Instead, make an explicit outer object using `local`.\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block.\n  - `federated_identity_client_id` (`string`): Set the `federated_identity_client_id` field on the resulting resource block. When `null`, the `federated_identity_client_id` field will be omitted from the resulting object.\n  - `key_name` (`string`): Set the `key_name` field on the resulting resource block.\n  - `key_vault_id` (`string`): Set the `key_vault_id` field on the resulting resource block. When `null`, the `key_vault_id` field will be omitted from the resulting object.\n  - `key_vault_uri` (`string`): Set the `key_vault_uri` field on the resulting resource block. When `null`, the `key_vault_uri` field will be omitted from the resulting object.\n  - `key_version` (`string`): Set the `key_version` field on the resulting resource block. When `null`, the `key_version` field will be omitted from the resulting object.\n  - `storage_account_id` (`string`): Set the `storage_account_id` field on the resulting resource block.\n  - `user_assigned_identity_id` (`string`): Set the `user_assigned_identity_id` field on the resulting resource block. When `null`, the `user_assigned_identity_id` field will be omitted from the resulting object.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account_customer_managed_key.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n- A mixin object that injects the new resource into the root Terraform configuration.\n", args=[]),
   new(
     resourceLabel,
     key_name,
-    key_vault_id,
     storage_account_id,
+    federated_identity_client_id=null,
+    key_vault_id=null,
+    key_vault_uri=null,
     key_version=null,
     timeouts=null,
     user_assigned_identity_id=null,
@@ -16,8 +18,10 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     type='azurerm_storage_account_customer_managed_key',
     label=resourceLabel,
     attrs=self.newAttrs(
+      federated_identity_client_id=federated_identity_client_id,
       key_name=key_name,
       key_vault_id=key_vault_id,
+      key_vault_uri=key_vault_uri,
       key_version=key_version,
       storage_account_id=storage_account_id,
       timeouts=timeouts,
@@ -25,17 +29,21 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     ),
     _meta=_meta
   ),
-  '#newAttrs':: d.fn(help='\n`azurerm.storage_account_customer_managed_key.newAttrs` constructs a new object with attributes and blocks configured for the `storage_account_customer_managed_key`\nTerraform resource.\n\nUnlike [azurerm.storage_account_customer_managed_key.new](#fn-new), this function will not inject the `resource`\nblock into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the\n[tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.\n\nThis is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to\ninjecting into a complete block.\n\n**Args**:\n  - `key_name` (`string`): Set the `key_name` field on the resulting object.\n  - `key_vault_id` (`string`): Set the `key_vault_id` field on the resulting object.\n  - `key_version` (`string`): Set the `key_version` field on the resulting object. When `null`, the `key_version` field will be omitted from the resulting object.\n  - `storage_account_id` (`string`): Set the `storage_account_id` field on the resulting object.\n  - `user_assigned_identity_id` (`string`): Set the `user_assigned_identity_id` field on the resulting object. When `null`, the `user_assigned_identity_id` field will be omitted from the resulting object.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account_customer_managed_key.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `storage_account_customer_managed_key` resource into the root Terraform configuration.\n', args=[]),
+  '#newAttrs':: d.fn(help='\n`azurerm.storage_account_customer_managed_key.newAttrs` constructs a new object with attributes and blocks configured for the `storage_account_customer_managed_key`\nTerraform resource.\n\nUnlike [azurerm.storage_account_customer_managed_key.new](#fn-new), this function will not inject the `resource`\nblock into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the\n[tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.\n\nThis is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to\ninjecting into a complete block.\n\n**Args**:\n  - `federated_identity_client_id` (`string`): Set the `federated_identity_client_id` field on the resulting object. When `null`, the `federated_identity_client_id` field will be omitted from the resulting object.\n  - `key_name` (`string`): Set the `key_name` field on the resulting object.\n  - `key_vault_id` (`string`): Set the `key_vault_id` field on the resulting object. When `null`, the `key_vault_id` field will be omitted from the resulting object.\n  - `key_vault_uri` (`string`): Set the `key_vault_uri` field on the resulting object. When `null`, the `key_vault_uri` field will be omitted from the resulting object.\n  - `key_version` (`string`): Set the `key_version` field on the resulting object. When `null`, the `key_version` field will be omitted from the resulting object.\n  - `storage_account_id` (`string`): Set the `storage_account_id` field on the resulting object.\n  - `user_assigned_identity_id` (`string`): Set the `user_assigned_identity_id` field on the resulting object. When `null`, the `user_assigned_identity_id` field will be omitted from the resulting object.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.storage_account_customer_managed_key.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `storage_account_customer_managed_key` resource into the root Terraform configuration.\n', args=[]),
   newAttrs(
     key_name,
-    key_vault_id,
     storage_account_id,
+    federated_identity_client_id=null,
+    key_vault_id=null,
+    key_vault_uri=null,
     key_version=null,
     timeouts=null,
     user_assigned_identity_id=null
   ):: std.prune(a={
+    federated_identity_client_id: federated_identity_client_id,
     key_name: key_name,
     key_vault_id: key_vault_id,
+    key_vault_uri: key_vault_uri,
     key_version: key_version,
     storage_account_id: storage_account_id,
     timeouts: timeouts,
@@ -55,6 +63,16 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       update: update,
     }),
   },
+  '#withFederatedIdentityClientId':: d.fn(help='`azurerm.string.withFederatedIdentityClientId` constructs a mixin object that can be merged into the `string`\nTerraform resource block to set or update the federated_identity_client_id field.\n\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`string`): The value to set for the `federated_identity_client_id` field.\n', args=[]),
+  withFederatedIdentityClientId(resourceLabel, value): {
+    resource+: {
+      azurerm_storage_account_customer_managed_key+: {
+        [resourceLabel]+: {
+          federated_identity_client_id: value,
+        },
+      },
+    },
+  },
   '#withKeyName':: d.fn(help='`azurerm.string.withKeyName` constructs a mixin object that can be merged into the `string`\nTerraform resource block to set or update the key_name field.\n\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`string`): The value to set for the `key_name` field.\n', args=[]),
   withKeyName(resourceLabel, value): {
     resource+: {
@@ -71,6 +89,16 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       azurerm_storage_account_customer_managed_key+: {
         [resourceLabel]+: {
           key_vault_id: value,
+        },
+      },
+    },
+  },
+  '#withKeyVaultUri':: d.fn(help='`azurerm.string.withKeyVaultUri` constructs a mixin object that can be merged into the `string`\nTerraform resource block to set or update the key_vault_uri field.\n\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`string`): The value to set for the `key_vault_uri` field.\n', args=[]),
+  withKeyVaultUri(resourceLabel, value): {
+    resource+: {
+      azurerm_storage_account_customer_managed_key+: {
+        [resourceLabel]+: {
+          key_vault_uri: value,
         },
       },
     },

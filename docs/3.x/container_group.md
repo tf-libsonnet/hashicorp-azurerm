@@ -32,6 +32,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withInitContainerMixin()`](#fn-withinitcontainermixin)
 * [`fn withIpAddressType()`](#fn-withipaddresstype)
 * [`fn withKeyVaultKeyId()`](#fn-withkeyvaultkeyid)
+* [`fn withKeyVaultUserAssignedIdentityId()`](#fn-withkeyvaultuserassignedidentityid)
 * [`fn withLocation()`](#fn-withlocation)
 * [`fn withName()`](#fn-withname)
 * [`fn withNetworkProfileId()`](#fn-withnetworkprofileid)
@@ -121,6 +122,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `exposed_port` (`list`): Set the `exposed_port` field on the resulting resource block. When `null`, the `exposed_port` field will be omitted from the resulting object.
   - `ip_address_type` (`string`): Set the `ip_address_type` field on the resulting resource block. When `null`, the `ip_address_type` field will be omitted from the resulting object.
   - `key_vault_key_id` (`string`): Set the `key_vault_key_id` field on the resulting resource block. When `null`, the `key_vault_key_id` field will be omitted from the resulting object.
+  - `key_vault_user_assigned_identity_id` (`string`): Set the `key_vault_user_assigned_identity_id` field on the resulting resource block. When `null`, the `key_vault_user_assigned_identity_id` field will be omitted from the resulting object.
   - `location` (`string`): Set the `location` field on the resulting resource block.
   - `name` (`string`): Set the `name` field on the resulting resource block.
   - `network_profile_id` (`string`): Set the `network_profile_id` field on the resulting resource block. When `null`, the `network_profile_id` field will be omitted from the resulting object.
@@ -166,6 +168,7 @@ injecting into a complete block.
   - `exposed_port` (`list`): Set the `exposed_port` field on the resulting object. When `null`, the `exposed_port` field will be omitted from the resulting object.
   - `ip_address_type` (`string`): Set the `ip_address_type` field on the resulting object. When `null`, the `ip_address_type` field will be omitted from the resulting object.
   - `key_vault_key_id` (`string`): Set the `key_vault_key_id` field on the resulting object. When `null`, the `key_vault_key_id` field will be omitted from the resulting object.
+  - `key_vault_user_assigned_identity_id` (`string`): Set the `key_vault_user_assigned_identity_id` field on the resulting object. When `null`, the `key_vault_user_assigned_identity_id` field will be omitted from the resulting object.
   - `location` (`string`): Set the `location` field on the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
   - `network_profile_id` (`string`): Set the `network_profile_id` field on the resulting object. When `null`, the `network_profile_id` field will be omitted from the resulting object.
@@ -488,6 +491,22 @@ Terraform resource block to set or update the key_vault_key_id field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `key_vault_key_id` field.
+
+
+### fn withKeyVaultUserAssignedIdentityId
+
+```ts
+withKeyVaultUserAssignedIdentityId()
+```
+
+`azurerm.string.withKeyVaultUserAssignedIdentityId` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the key_vault_user_assigned_identity_id field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `key_vault_user_assigned_identity_id` field.
 
 
 ### fn withLocation

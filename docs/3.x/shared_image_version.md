@@ -16,6 +16,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
 * [`fn withBlobUri()`](#fn-withbloburi)
+* [`fn withDeletionOfReplicatedLocationsEnabled()`](#fn-withdeletionofreplicatedlocationsenabled)
 * [`fn withEndOfLifeDate()`](#fn-withendoflifedate)
 * [`fn withExcludeFromLatest()`](#fn-withexcludefromlatest)
 * [`fn withGalleryName()`](#fn-withgalleryname)
@@ -67,6 +68,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
   - `blob_uri` (`string`): Set the `blob_uri` field on the resulting resource block. When `null`, the `blob_uri` field will be omitted from the resulting object.
+  - `deletion_of_replicated_locations_enabled` (`bool`): Set the `deletion_of_replicated_locations_enabled` field on the resulting resource block. When `null`, the `deletion_of_replicated_locations_enabled` field will be omitted from the resulting object.
   - `end_of_life_date` (`string`): Set the `end_of_life_date` field on the resulting resource block. When `null`, the `end_of_life_date` field will be omitted from the resulting object.
   - `exclude_from_latest` (`bool`): Set the `exclude_from_latest` field on the resulting resource block. When `null`, the `exclude_from_latest` field will be omitted from the resulting object.
   - `gallery_name` (`string`): Set the `gallery_name` field on the resulting resource block.
@@ -105,6 +107,7 @@ injecting into a complete block.
 
 **Args**:
   - `blob_uri` (`string`): Set the `blob_uri` field on the resulting object. When `null`, the `blob_uri` field will be omitted from the resulting object.
+  - `deletion_of_replicated_locations_enabled` (`bool`): Set the `deletion_of_replicated_locations_enabled` field on the resulting object. When `null`, the `deletion_of_replicated_locations_enabled` field will be omitted from the resulting object.
   - `end_of_life_date` (`string`): Set the `end_of_life_date` field on the resulting object. When `null`, the `end_of_life_date` field will be omitted from the resulting object.
   - `exclude_from_latest` (`bool`): Set the `exclude_from_latest` field on the resulting object. When `null`, the `exclude_from_latest` field will be omitted from the resulting object.
   - `gallery_name` (`string`): Set the `gallery_name` field on the resulting object.
@@ -138,6 +141,22 @@ Terraform resource block to set or update the blob_uri field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `blob_uri` field.
+
+
+### fn withDeletionOfReplicatedLocationsEnabled
+
+```ts
+withDeletionOfReplicatedLocationsEnabled()
+```
+
+`azurerm.bool.withDeletionOfReplicatedLocationsEnabled` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the deletion_of_replicated_locations_enabled field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `deletion_of_replicated_locations_enabled` field.
 
 
 ### fn withEndOfLifeDate
@@ -423,6 +442,7 @@ Terraform sub block.
 
 **Args**:
   - `disk_encryption_set_id` (`string`): Set the `disk_encryption_set_id` field on the resulting object. When `null`, the `disk_encryption_set_id` field will be omitted from the resulting object.
+  - `exclude_from_latest_enabled` (`bool`): Set the `exclude_from_latest_enabled` field on the resulting object. When `null`, the `exclude_from_latest_enabled` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
   - `regional_replica_count` (`number`): Set the `regional_replica_count` field on the resulting object.
   - `storage_account_type` (`string`): Set the `storage_account_type` field on the resulting object. When `null`, the `storage_account_type` field will be omitted from the resulting object.

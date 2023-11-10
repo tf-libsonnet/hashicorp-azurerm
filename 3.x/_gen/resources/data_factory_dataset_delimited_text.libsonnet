@@ -3,12 +3,18 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
 {
   '#':: d.pkg(name='data_factory_dataset_delimited_text', url='', help='`data_factory_dataset_delimited_text` represents the `azurerm_data_factory_dataset_delimited_text` Terraform resource.\n\n\n\nThis package contains functions and utilities for setting up the resource using Jsonnet code.\n'),
   azure_blob_fs_location:: {
-    '#new':: d.fn(help='\n`azurerm.data_factory_dataset_delimited_text.azure_blob_fs_location.new` constructs a new object with attributes and blocks configured for the `azure_blob_fs_location`\nTerraform sub block.\n\n\n\n**Args**:\n  - `file_system` (`string`): Set the `file_system` field on the resulting object.\n  - `filename` (`string`): Set the `filename` field on the resulting object. When `null`, the `filename` field will be omitted from the resulting object.\n  - `path` (`string`): Set the `path` field on the resulting object. When `null`, the `path` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `azure_blob_fs_location` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`azurerm.data_factory_dataset_delimited_text.azure_blob_fs_location.new` constructs a new object with attributes and blocks configured for the `azure_blob_fs_location`\nTerraform sub block.\n\n\n\n**Args**:\n  - `dynamic_file_system_enabled` (`bool`): Set the `dynamic_file_system_enabled` field on the resulting object. When `null`, the `dynamic_file_system_enabled` field will be omitted from the resulting object.\n  - `dynamic_filename_enabled` (`bool`): Set the `dynamic_filename_enabled` field on the resulting object. When `null`, the `dynamic_filename_enabled` field will be omitted from the resulting object.\n  - `dynamic_path_enabled` (`bool`): Set the `dynamic_path_enabled` field on the resulting object. When `null`, the `dynamic_path_enabled` field will be omitted from the resulting object.\n  - `file_system` (`string`): Set the `file_system` field on the resulting object. When `null`, the `file_system` field will be omitted from the resulting object.\n  - `filename` (`string`): Set the `filename` field on the resulting object. When `null`, the `filename` field will be omitted from the resulting object.\n  - `path` (`string`): Set the `path` field on the resulting object. When `null`, the `path` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `azure_blob_fs_location` sub block.\n', args=[]),
     new(
-      file_system,
+      dynamic_file_system_enabled=null,
+      dynamic_filename_enabled=null,
+      dynamic_path_enabled=null,
+      file_system=null,
       filename=null,
       path=null
     ):: std.prune(a={
+      dynamic_file_system_enabled: dynamic_file_system_enabled,
+      dynamic_filename_enabled: dynamic_filename_enabled,
+      dynamic_path_enabled: dynamic_path_enabled,
       file_system: file_system,
       filename: filename,
       path: path,

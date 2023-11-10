@@ -233,9 +233,12 @@ Terraform sub block.
 
 **Args**:
   - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.
+  - `endpoint_parameters_enabled` (`bool`): Set the `endpoint_parameters_enabled` field on the resulting object. When `null`, the `endpoint_parameters_enabled` field will be omitted from the resulting object.
   - `enhanced_authentication_enabled` (`bool`): Set the `enhanced_authentication_enabled` field on the resulting object. When `null`, the `enhanced_authentication_enabled` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
+  - `storage_enabled` (`bool`): Set the `storage_enabled` field on the resulting object. When `null`, the `storage_enabled` field will be omitted from the resulting object.
   - `trusted_origins` (`list`): Set the `trusted_origins` field on the resulting object. When `null`, the `trusted_origins` field will be omitted from the resulting object.
+  - `user_upload_enabled` (`bool`): Set the `user_upload_enabled` field on the resulting object. When `null`, the `user_upload_enabled` field will be omitted from the resulting object.
   - `v1_allowed` (`bool`): Set the `v1_allowed` field on the resulting object. When `null`, the `v1_allowed` field will be omitted from the resulting object.
   - `v3_allowed` (`bool`): Set the `v3_allowed` field on the resulting object. When `null`, the `v3_allowed` field will be omitted from the resulting object.
 

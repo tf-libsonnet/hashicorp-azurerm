@@ -3,17 +3,19 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
 {
   '#':: d.pkg(name='data_factory', url='', help='`data_factory` represents the `azurerm_data_factory` Terraform resource.\n\n\n\nThis package contains functions and utilities for setting up the resource using Jsonnet code.\n'),
   github_configuration:: {
-    '#new':: d.fn(help='\n`azurerm.data_factory.github_configuration.new` constructs a new object with attributes and blocks configured for the `github_configuration`\nTerraform sub block.\n\n\n\n**Args**:\n  - `account_name` (`string`): Set the `account_name` field on the resulting object.\n  - `branch_name` (`string`): Set the `branch_name` field on the resulting object.\n  - `git_url` (`string`): Set the `git_url` field on the resulting object.\n  - `repository_name` (`string`): Set the `repository_name` field on the resulting object.\n  - `root_folder` (`string`): Set the `root_folder` field on the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `github_configuration` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`azurerm.data_factory.github_configuration.new` constructs a new object with attributes and blocks configured for the `github_configuration`\nTerraform sub block.\n\n\n\n**Args**:\n  - `account_name` (`string`): Set the `account_name` field on the resulting object.\n  - `branch_name` (`string`): Set the `branch_name` field on the resulting object.\n  - `git_url` (`string`): Set the `git_url` field on the resulting object.\n  - `publishing_enabled` (`bool`): Set the `publishing_enabled` field on the resulting object. When `null`, the `publishing_enabled` field will be omitted from the resulting object.\n  - `repository_name` (`string`): Set the `repository_name` field on the resulting object.\n  - `root_folder` (`string`): Set the `root_folder` field on the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `github_configuration` sub block.\n', args=[]),
     new(
       account_name,
       branch_name,
       git_url,
       repository_name,
-      root_folder
+      root_folder,
+      publishing_enabled=null
     ):: std.prune(a={
       account_name: account_name,
       branch_name: branch_name,
       git_url: git_url,
+      publishing_enabled: publishing_enabled,
       repository_name: repository_name,
       root_folder: root_folder,
     }),
@@ -126,18 +128,20 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     }),
   },
   vsts_configuration:: {
-    '#new':: d.fn(help='\n`azurerm.data_factory.vsts_configuration.new` constructs a new object with attributes and blocks configured for the `vsts_configuration`\nTerraform sub block.\n\n\n\n**Args**:\n  - `account_name` (`string`): Set the `account_name` field on the resulting object.\n  - `branch_name` (`string`): Set the `branch_name` field on the resulting object.\n  - `project_name` (`string`): Set the `project_name` field on the resulting object.\n  - `repository_name` (`string`): Set the `repository_name` field on the resulting object.\n  - `root_folder` (`string`): Set the `root_folder` field on the resulting object.\n  - `tenant_id` (`string`): Set the `tenant_id` field on the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `vsts_configuration` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`azurerm.data_factory.vsts_configuration.new` constructs a new object with attributes and blocks configured for the `vsts_configuration`\nTerraform sub block.\n\n\n\n**Args**:\n  - `account_name` (`string`): Set the `account_name` field on the resulting object.\n  - `branch_name` (`string`): Set the `branch_name` field on the resulting object.\n  - `project_name` (`string`): Set the `project_name` field on the resulting object.\n  - `publishing_enabled` (`bool`): Set the `publishing_enabled` field on the resulting object. When `null`, the `publishing_enabled` field will be omitted from the resulting object.\n  - `repository_name` (`string`): Set the `repository_name` field on the resulting object.\n  - `root_folder` (`string`): Set the `root_folder` field on the resulting object.\n  - `tenant_id` (`string`): Set the `tenant_id` field on the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `vsts_configuration` sub block.\n', args=[]),
     new(
       account_name,
       branch_name,
       project_name,
       repository_name,
       root_folder,
-      tenant_id
+      tenant_id,
+      publishing_enabled=null
     ):: std.prune(a={
       account_name: account_name,
       branch_name: branch_name,
       project_name: project_name,
+      publishing_enabled: publishing_enabled,
       repository_name: repository_name,
       root_folder: root_folder,
       tenant_id: tenant_id,

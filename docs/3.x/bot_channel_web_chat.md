@@ -18,9 +18,13 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withBotName()`](#fn-withbotname)
 * [`fn withLocation()`](#fn-withlocation)
 * [`fn withResourceGroupName()`](#fn-withresourcegroupname)
+* [`fn withSite()`](#fn-withsite)
+* [`fn withSiteMixin()`](#fn-withsitemixin)
 * [`fn withSiteNames()`](#fn-withsitenames)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
+* [`obj site`](#obj-site)
+  * [`fn new()`](#fn-sitenew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 
@@ -56,7 +60,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `bot_name` (`string`): Set the `bot_name` field on the resulting resource block.
   - `location` (`string`): Set the `location` field on the resulting resource block.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
-  - `site_names` (`list`): Set the `site_names` field on the resulting resource block.
+  - `site_names` (`list`): Set the `site_names` field on the resulting resource block. When `null`, the `site_names` field will be omitted from the resulting object.
+  - `site` (`list[obj]`): Set the `site` field on the resulting resource block. When `null`, the `site` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.bot_channel_web_chat.site.new](#fn-sitenew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.bot_channel_web_chat.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -84,7 +89,8 @@ injecting into a complete block.
   - `bot_name` (`string`): Set the `bot_name` field on the resulting object.
   - `location` (`string`): Set the `location` field on the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `site_names` (`list`): Set the `site_names` field on the resulting object.
+  - `site_names` (`list`): Set the `site_names` field on the resulting object. When `null`, the `site_names` field will be omitted from the resulting object.
+  - `site` (`list[obj]`): Set the `site` field on the resulting object. When `null`, the `site` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.bot_channel_web_chat.site.new](#fn-sitenew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.bot_channel_web_chat.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -139,6 +145,43 @@ Terraform resource block to set or update the resource_group_name field.
   - `value` (`string`): The value to set for the `resource_group_name` field.
 
 
+### fn withSite
+
+```ts
+withSite()
+```
+
+`azurerm.list[obj].withSite` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the site field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [azurerm.list[obj].withSiteMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `site` field.
+
+
+### fn withSiteMixin
+
+```ts
+withSiteMixin()
+```
+
+`azurerm.list[obj].withSiteMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the site field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.list[obj].withSite](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `site` field.
+
+
 ### fn withSiteNames
 
 ```ts
@@ -189,6 +232,32 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`obj`): The value to set for the `timeouts` field.
+
+
+## obj site
+
+
+
+### fn site.new
+
+```ts
+new()
+```
+
+
+`azurerm.bot_channel_web_chat.site.new` constructs a new object with attributes and blocks configured for the `site`
+Terraform sub block.
+
+
+
+**Args**:
+  - `endpoint_parameters_enabled` (`bool`): Set the `endpoint_parameters_enabled` field on the resulting object. When `null`, the `endpoint_parameters_enabled` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `storage_enabled` (`bool`): Set the `storage_enabled` field on the resulting object. When `null`, the `storage_enabled` field will be omitted from the resulting object.
+  - `user_upload_enabled` (`bool`): Set the `user_upload_enabled` field on the resulting object. When `null`, the `user_upload_enabled` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `site` sub block.
 
 
 ## obj timeouts

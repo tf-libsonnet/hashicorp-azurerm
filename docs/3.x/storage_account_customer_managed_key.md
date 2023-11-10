@@ -15,8 +15,10 @@ This package contains functions and utilities for setting up the resource using 
 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
+* [`fn withFederatedIdentityClientId()`](#fn-withfederatedidentityclientid)
 * [`fn withKeyName()`](#fn-withkeyname)
 * [`fn withKeyVaultId()`](#fn-withkeyvaultid)
+* [`fn withKeyVaultUri()`](#fn-withkeyvaulturi)
 * [`fn withKeyVersion()`](#fn-withkeyversion)
 * [`fn withStorageAccountId()`](#fn-withstorageaccountid)
 * [`fn withTimeouts()`](#fn-withtimeouts)
@@ -54,8 +56,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
+  - `federated_identity_client_id` (`string`): Set the `federated_identity_client_id` field on the resulting resource block. When `null`, the `federated_identity_client_id` field will be omitted from the resulting object.
   - `key_name` (`string`): Set the `key_name` field on the resulting resource block.
-  - `key_vault_id` (`string`): Set the `key_vault_id` field on the resulting resource block.
+  - `key_vault_id` (`string`): Set the `key_vault_id` field on the resulting resource block. When `null`, the `key_vault_id` field will be omitted from the resulting object.
+  - `key_vault_uri` (`string`): Set the `key_vault_uri` field on the resulting resource block. When `null`, the `key_vault_uri` field will be omitted from the resulting object.
   - `key_version` (`string`): Set the `key_version` field on the resulting resource block. When `null`, the `key_version` field will be omitted from the resulting object.
   - `storage_account_id` (`string`): Set the `storage_account_id` field on the resulting resource block.
   - `user_assigned_identity_id` (`string`): Set the `user_assigned_identity_id` field on the resulting resource block. When `null`, the `user_assigned_identity_id` field will be omitted from the resulting object.
@@ -83,8 +87,10 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
+  - `federated_identity_client_id` (`string`): Set the `federated_identity_client_id` field on the resulting object. When `null`, the `federated_identity_client_id` field will be omitted from the resulting object.
   - `key_name` (`string`): Set the `key_name` field on the resulting object.
-  - `key_vault_id` (`string`): Set the `key_vault_id` field on the resulting object.
+  - `key_vault_id` (`string`): Set the `key_vault_id` field on the resulting object. When `null`, the `key_vault_id` field will be omitted from the resulting object.
+  - `key_vault_uri` (`string`): Set the `key_vault_uri` field on the resulting object. When `null`, the `key_vault_uri` field will be omitted from the resulting object.
   - `key_version` (`string`): Set the `key_version` field on the resulting object. When `null`, the `key_version` field will be omitted from the resulting object.
   - `storage_account_id` (`string`): Set the `storage_account_id` field on the resulting object.
   - `user_assigned_identity_id` (`string`): Set the `user_assigned_identity_id` field on the resulting object. When `null`, the `user_assigned_identity_id` field will be omitted from the resulting object.
@@ -92,6 +98,22 @@ injecting into a complete block.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `storage_account_customer_managed_key` resource into the root Terraform configuration.
+
+
+### fn withFederatedIdentityClientId
+
+```ts
+withFederatedIdentityClientId()
+```
+
+`azurerm.string.withFederatedIdentityClientId` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the federated_identity_client_id field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `federated_identity_client_id` field.
 
 
 ### fn withKeyName
@@ -124,6 +146,22 @@ Terraform resource block to set or update the key_vault_id field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `key_vault_id` field.
+
+
+### fn withKeyVaultUri
+
+```ts
+withKeyVaultUri()
+```
+
+`azurerm.string.withKeyVaultUri` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the key_vault_uri field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `key_vault_uri` field.
 
 
 ### fn withKeyVersion

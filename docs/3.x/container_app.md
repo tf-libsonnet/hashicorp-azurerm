@@ -50,6 +50,10 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-secretnew)
 * [`obj template`](#obj-template)
   * [`fn new()`](#fn-templatenew)
+  * [`obj template.azure_queue_scale_rule`](#obj-templateazure_queue_scale_rule)
+    * [`fn new()`](#fn-templateazure_queue_scale_rulenew)
+    * [`obj template.azure_queue_scale_rule.authentication`](#obj-templateazure_queue_scale_ruleauthentication)
+      * [`fn new()`](#fn-templateazure_queue_scale_ruleauthenticationnew)
   * [`obj template.container`](#obj-templatecontainer)
     * [`fn new()`](#fn-templatecontainernew)
     * [`obj template.container.env`](#obj-templatecontainerenv)
@@ -68,6 +72,18 @@ This package contains functions and utilities for setting up the resource using 
         * [`fn new()`](#fn-templatecontainerstartup_probeheadernew)
     * [`obj template.container.volume_mounts`](#obj-templatecontainervolume_mounts)
       * [`fn new()`](#fn-templatecontainervolume_mountsnew)
+  * [`obj template.custom_scale_rule`](#obj-templatecustom_scale_rule)
+    * [`fn new()`](#fn-templatecustom_scale_rulenew)
+    * [`obj template.custom_scale_rule.authentication`](#obj-templatecustom_scale_ruleauthentication)
+      * [`fn new()`](#fn-templatecustom_scale_ruleauthenticationnew)
+  * [`obj template.http_scale_rule`](#obj-templatehttp_scale_rule)
+    * [`fn new()`](#fn-templatehttp_scale_rulenew)
+    * [`obj template.http_scale_rule.authentication`](#obj-templatehttp_scale_ruleauthentication)
+      * [`fn new()`](#fn-templatehttp_scale_ruleauthenticationnew)
+  * [`obj template.tcp_scale_rule`](#obj-templatetcp_scale_rule)
+    * [`fn new()`](#fn-templatetcp_scale_rulenew)
+    * [`obj template.tcp_scale_rule.authentication`](#obj-templatetcp_scale_ruleauthentication)
+      * [`fn new()`](#fn-templatetcp_scale_ruleauthenticationnew)
   * [`obj template.volume`](#obj-templatevolume)
     * [`fn new()`](#fn-templatevolumenew)
 * [`obj timeouts`](#obj-timeouts)
@@ -559,9 +575,10 @@ Terraform sub block.
 
 **Args**:
   - `allow_insecure_connections` (`bool`): Should this ingress allow insecure connections? When `null`, the `allow_insecure_connections` field will be omitted from the resulting object.
+  - `exposed_port` (`number`): The exposed port on the container for the Ingress traffic. When `null`, the `exposed_port` field will be omitted from the resulting object.
   - `external_enabled` (`bool`): Is this an external Ingress. When `null`, the `external_enabled` field will be omitted from the resulting object.
   - `target_port` (`number`): The target port on the container for the Ingress traffic.
-  - `transport` (`string`): The transport method for the Ingress. Possible values include `auto`, `http`, and `http2`. Defaults to `auto` When `null`, the `transport` field will be omitted from the resulting object.
+  - `transport` (`string`): The transport method for the Ingress. Possible values include `auto`, `http`, and `http2`, `tcp`. Defaults to `auto` When `null`, the `transport` field will be omitted from the resulting object.
   - `custom_domain` (`list[obj]`): Set the `custom_domain` field on the resulting object. When `null`, the `custom_domain` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app.ingress.custom_domain.new](#fn-ingresscustom_domainnew) constructor.
   - `traffic_weight` (`list[obj]`): Set the `traffic_weight` field on the resulting object. When `null`, the `traffic_weight` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app.ingress.traffic_weight.new](#fn-ingresstraffic_weightnew) constructor.
 
@@ -690,11 +707,65 @@ Terraform sub block.
   - `max_replicas` (`number`): The maximum number of replicas for this container. When `null`, the `max_replicas` field will be omitted from the resulting object.
   - `min_replicas` (`number`): The minimum number of replicas for this container. When `null`, the `min_replicas` field will be omitted from the resulting object.
   - `revision_suffix` (`string`): The suffix for the revision. This value must be unique for the lifetime of the Resource. If omitted the service will use a hash function to create one. When `null`, the `revision_suffix` field will be omitted from the resulting object.
+  - `azure_queue_scale_rule` (`list[obj]`): Set the `azure_queue_scale_rule` field on the resulting object. When `null`, the `azure_queue_scale_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app.template.azure_queue_scale_rule.new](#fn-templateazure_queue_scale_rulenew) constructor.
   - `container` (`list[obj]`): Set the `container` field on the resulting object. When `null`, the `container` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app.template.container.new](#fn-templatecontainernew) constructor.
+  - `custom_scale_rule` (`list[obj]`): Set the `custom_scale_rule` field on the resulting object. When `null`, the `custom_scale_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app.template.custom_scale_rule.new](#fn-templatecustom_scale_rulenew) constructor.
+  - `http_scale_rule` (`list[obj]`): Set the `http_scale_rule` field on the resulting object. When `null`, the `http_scale_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app.template.http_scale_rule.new](#fn-templatehttp_scale_rulenew) constructor.
+  - `tcp_scale_rule` (`list[obj]`): Set the `tcp_scale_rule` field on the resulting object. When `null`, the `tcp_scale_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app.template.tcp_scale_rule.new](#fn-templatetcp_scale_rulenew) constructor.
   - `volume` (`list[obj]`): Set the `volume` field on the resulting object. When `null`, the `volume` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app.template.volume.new](#fn-templatevolumenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `template` sub block.
+
+
+## obj template.azure_queue_scale_rule
+
+
+
+### fn template.azure_queue_scale_rule.new
+
+```ts
+new()
+```
+
+
+`azurerm.container_app.template.azure_queue_scale_rule.new` constructs a new object with attributes and blocks configured for the `azure_queue_scale_rule`
+Terraform sub block.
+
+
+
+**Args**:
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `queue_length` (`number`): Set the `queue_length` field on the resulting object.
+  - `queue_name` (`string`): Set the `queue_name` field on the resulting object.
+  - `authentication` (`list[obj]`): Set the `authentication` field on the resulting object. When `null`, the `authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app.template.azure_queue_scale_rule.authentication.new](#fn-templatetemplateauthenticationnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `azure_queue_scale_rule` sub block.
+
+
+## obj template.azure_queue_scale_rule.authentication
+
+
+
+### fn template.azure_queue_scale_rule.authentication.new
+
+```ts
+new()
+```
+
+
+`azurerm.container_app.template.azure_queue_scale_rule.authentication.new` constructs a new object with attributes and blocks configured for the `authentication`
+Terraform sub block.
+
+
+
+**Args**:
+  - `secret_name` (`string`): Set the `secret_name` field on the resulting object.
+  - `trigger_parameter` (`string`): Set the `trigger_parameter` field on the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `authentication` sub block.
 
 
 ## obj template.container
@@ -941,6 +1012,154 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `volume_mounts` sub block.
+
+
+## obj template.custom_scale_rule
+
+
+
+### fn template.custom_scale_rule.new
+
+```ts
+new()
+```
+
+
+`azurerm.container_app.template.custom_scale_rule.new` constructs a new object with attributes and blocks configured for the `custom_scale_rule`
+Terraform sub block.
+
+
+
+**Args**:
+  - `custom_rule_type` (`string`): Set the `custom_rule_type` field on the resulting object.
+  - `metadata` (`obj`): Set the `metadata` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `authentication` (`list[obj]`): Set the `authentication` field on the resulting object. When `null`, the `authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app.template.custom_scale_rule.authentication.new](#fn-templatetemplateauthenticationnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `custom_scale_rule` sub block.
+
+
+## obj template.custom_scale_rule.authentication
+
+
+
+### fn template.custom_scale_rule.authentication.new
+
+```ts
+new()
+```
+
+
+`azurerm.container_app.template.custom_scale_rule.authentication.new` constructs a new object with attributes and blocks configured for the `authentication`
+Terraform sub block.
+
+
+
+**Args**:
+  - `secret_name` (`string`): Set the `secret_name` field on the resulting object.
+  - `trigger_parameter` (`string`): Set the `trigger_parameter` field on the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `authentication` sub block.
+
+
+## obj template.http_scale_rule
+
+
+
+### fn template.http_scale_rule.new
+
+```ts
+new()
+```
+
+
+`azurerm.container_app.template.http_scale_rule.new` constructs a new object with attributes and blocks configured for the `http_scale_rule`
+Terraform sub block.
+
+
+
+**Args**:
+  - `concurrent_requests` (`string`): Set the `concurrent_requests` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `authentication` (`list[obj]`): Set the `authentication` field on the resulting object. When `null`, the `authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app.template.http_scale_rule.authentication.new](#fn-templatetemplateauthenticationnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `http_scale_rule` sub block.
+
+
+## obj template.http_scale_rule.authentication
+
+
+
+### fn template.http_scale_rule.authentication.new
+
+```ts
+new()
+```
+
+
+`azurerm.container_app.template.http_scale_rule.authentication.new` constructs a new object with attributes and blocks configured for the `authentication`
+Terraform sub block.
+
+
+
+**Args**:
+  - `secret_name` (`string`): Set the `secret_name` field on the resulting object.
+  - `trigger_parameter` (`string`): Set the `trigger_parameter` field on the resulting object. When `null`, the `trigger_parameter` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `authentication` sub block.
+
+
+## obj template.tcp_scale_rule
+
+
+
+### fn template.tcp_scale_rule.new
+
+```ts
+new()
+```
+
+
+`azurerm.container_app.template.tcp_scale_rule.new` constructs a new object with attributes and blocks configured for the `tcp_scale_rule`
+Terraform sub block.
+
+
+
+**Args**:
+  - `concurrent_requests` (`string`): Set the `concurrent_requests` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `authentication` (`list[obj]`): Set the `authentication` field on the resulting object. When `null`, the `authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app.template.tcp_scale_rule.authentication.new](#fn-templatetemplateauthenticationnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `tcp_scale_rule` sub block.
+
+
+## obj template.tcp_scale_rule.authentication
+
+
+
+### fn template.tcp_scale_rule.authentication.new
+
+```ts
+new()
+```
+
+
+`azurerm.container_app.template.tcp_scale_rule.authentication.new` constructs a new object with attributes and blocks configured for the `authentication`
+Terraform sub block.
+
+
+
+**Args**:
+  - `secret_name` (`string`): Set the `secret_name` field on the resulting object.
+  - `trigger_parameter` (`string`): Set the `trigger_parameter` field on the resulting object. When `null`, the `trigger_parameter` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `authentication` sub block.
 
 
 ## obj template.volume

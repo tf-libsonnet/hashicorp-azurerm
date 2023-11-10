@@ -441,6 +441,7 @@ Terraform sub block.
   - `macsec_cak_keyvault_secret_id` (`string`): Set the `macsec_cak_keyvault_secret_id` field on the resulting object. When `null`, the `macsec_cak_keyvault_secret_id` field will be omitted from the resulting object.
   - `macsec_cipher` (`string`): Set the `macsec_cipher` field on the resulting object. When `null`, the `macsec_cipher` field will be omitted from the resulting object.
   - `macsec_ckn_keyvault_secret_id` (`string`): Set the `macsec_ckn_keyvault_secret_id` field on the resulting object. When `null`, the `macsec_ckn_keyvault_secret_id` field will be omitted from the resulting object.
+  - `macsec_sci_enabled` (`bool`): Set the `macsec_sci_enabled` field on the resulting object. When `null`, the `macsec_sci_enabled` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `link1` sub block.
@@ -467,6 +468,7 @@ Terraform sub block.
   - `macsec_cak_keyvault_secret_id` (`string`): Set the `macsec_cak_keyvault_secret_id` field on the resulting object. When `null`, the `macsec_cak_keyvault_secret_id` field will be omitted from the resulting object.
   - `macsec_cipher` (`string`): Set the `macsec_cipher` field on the resulting object. When `null`, the `macsec_cipher` field will be omitted from the resulting object.
   - `macsec_ckn_keyvault_secret_id` (`string`): Set the `macsec_ckn_keyvault_secret_id` field on the resulting object. When `null`, the `macsec_ckn_keyvault_secret_id` field will be omitted from the resulting object.
+  - `macsec_sci_enabled` (`bool`): Set the `macsec_sci_enabled` field on the resulting object. When `null`, the `macsec_sci_enabled` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `link2` sub block.

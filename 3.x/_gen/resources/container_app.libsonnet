@@ -37,17 +37,19 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
         name: name,
       }),
     },
-    '#new':: d.fn(help='\n`azurerm.container_app.ingress.new` constructs a new object with attributes and blocks configured for the `ingress`\nTerraform sub block.\n\n\n\n**Args**:\n  - `allow_insecure_connections` (`bool`): Should this ingress allow insecure connections? When `null`, the `allow_insecure_connections` field will be omitted from the resulting object.\n  - `external_enabled` (`bool`): Is this an external Ingress. When `null`, the `external_enabled` field will be omitted from the resulting object.\n  - `target_port` (`number`): The target port on the container for the Ingress traffic.\n  - `transport` (`string`): The transport method for the Ingress. Possible values include `auto`, `http`, and `http2`. Defaults to `auto` When `null`, the `transport` field will be omitted from the resulting object.\n  - `custom_domain` (`list[obj]`): Set the `custom_domain` field on the resulting object. When `null`, the `custom_domain` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app.ingress.custom_domain.new](#fn-ingresscustom_domainnew) constructor.\n  - `traffic_weight` (`list[obj]`): Set the `traffic_weight` field on the resulting object. When `null`, the `traffic_weight` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app.ingress.traffic_weight.new](#fn-ingresstraffic_weightnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `ingress` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`azurerm.container_app.ingress.new` constructs a new object with attributes and blocks configured for the `ingress`\nTerraform sub block.\n\n\n\n**Args**:\n  - `allow_insecure_connections` (`bool`): Should this ingress allow insecure connections? When `null`, the `allow_insecure_connections` field will be omitted from the resulting object.\n  - `exposed_port` (`number`): The exposed port on the container for the Ingress traffic. When `null`, the `exposed_port` field will be omitted from the resulting object.\n  - `external_enabled` (`bool`): Is this an external Ingress. When `null`, the `external_enabled` field will be omitted from the resulting object.\n  - `target_port` (`number`): The target port on the container for the Ingress traffic.\n  - `transport` (`string`): The transport method for the Ingress. Possible values include `auto`, `http`, and `http2`, `tcp`. Defaults to `auto` When `null`, the `transport` field will be omitted from the resulting object.\n  - `custom_domain` (`list[obj]`): Set the `custom_domain` field on the resulting object. When `null`, the `custom_domain` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app.ingress.custom_domain.new](#fn-ingresscustom_domainnew) constructor.\n  - `traffic_weight` (`list[obj]`): Set the `traffic_weight` field on the resulting object. When `null`, the `traffic_weight` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app.ingress.traffic_weight.new](#fn-ingresstraffic_weightnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `ingress` sub block.\n', args=[]),
     new(
       target_port,
       allow_insecure_connections=null,
       custom_domain=null,
+      exposed_port=null,
       external_enabled=null,
       traffic_weight=null,
       transport=null
     ):: std.prune(a={
       allow_insecure_connections: allow_insecure_connections,
       custom_domain: custom_domain,
+      exposed_port: exposed_port,
       external_enabled: external_enabled,
       target_port: target_port,
       traffic_weight: traffic_weight,
@@ -156,6 +158,30 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     }),
   },
   template:: {
+    azure_queue_scale_rule:: {
+      authentication:: {
+        '#new':: d.fn(help='\n`azurerm.container_app.template.azure_queue_scale_rule.authentication.new` constructs a new object with attributes and blocks configured for the `authentication`\nTerraform sub block.\n\n\n\n**Args**:\n  - `secret_name` (`string`): Set the `secret_name` field on the resulting object.\n  - `trigger_parameter` (`string`): Set the `trigger_parameter` field on the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `authentication` sub block.\n', args=[]),
+        new(
+          secret_name,
+          trigger_parameter
+        ):: std.prune(a={
+          secret_name: secret_name,
+          trigger_parameter: trigger_parameter,
+        }),
+      },
+      '#new':: d.fn(help='\n`azurerm.container_app.template.azure_queue_scale_rule.new` constructs a new object with attributes and blocks configured for the `azure_queue_scale_rule`\nTerraform sub block.\n\n\n\n**Args**:\n  - `name` (`string`): Set the `name` field on the resulting object.\n  - `queue_length` (`number`): Set the `queue_length` field on the resulting object.\n  - `queue_name` (`string`): Set the `queue_name` field on the resulting object.\n  - `authentication` (`list[obj]`): Set the `authentication` field on the resulting object. When `null`, the `authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app.template.azure_queue_scale_rule.authentication.new](#fn-templatetemplateauthenticationnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `azure_queue_scale_rule` sub block.\n', args=[]),
+      new(
+        name,
+        queue_length,
+        queue_name,
+        authentication=null
+      ):: std.prune(a={
+        authentication: authentication,
+        name: name,
+        queue_length: queue_length,
+        queue_name: queue_name,
+      }),
+    },
     container:: {
       env:: {
         '#new':: d.fn(help='\n`azurerm.container_app.template.container.env.new` constructs a new object with attributes and blocks configured for the `env`\nTerraform sub block.\n\n\n\n**Args**:\n  - `name` (`string`): The name of the environment variable for the container.\n  - `secret_name` (`string`): The name of the secret that contains the value for this environment variable. When `null`, the `secret_name` field will be omitted from the resulting object.\n  - `value` (`string`): The value for this environment variable. **NOTE:** This value is ignored if `secret_name` is used When `null`, the `value` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `env` sub block.\n', args=[]),
@@ -306,20 +332,96 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
         }),
       },
     },
-    '#new':: d.fn(help='\n`azurerm.container_app.template.new` constructs a new object with attributes and blocks configured for the `template`\nTerraform sub block.\n\n\n\n**Args**:\n  - `max_replicas` (`number`): The maximum number of replicas for this container. When `null`, the `max_replicas` field will be omitted from the resulting object.\n  - `min_replicas` (`number`): The minimum number of replicas for this container. When `null`, the `min_replicas` field will be omitted from the resulting object.\n  - `revision_suffix` (`string`): The suffix for the revision. This value must be unique for the lifetime of the Resource. If omitted the service will use a hash function to create one. When `null`, the `revision_suffix` field will be omitted from the resulting object.\n  - `container` (`list[obj]`): Set the `container` field on the resulting object. When `null`, the `container` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app.template.container.new](#fn-templatecontainernew) constructor.\n  - `volume` (`list[obj]`): Set the `volume` field on the resulting object. When `null`, the `volume` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app.template.volume.new](#fn-templatevolumenew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `template` sub block.\n', args=[]),
+    custom_scale_rule:: {
+      authentication:: {
+        '#new':: d.fn(help='\n`azurerm.container_app.template.custom_scale_rule.authentication.new` constructs a new object with attributes and blocks configured for the `authentication`\nTerraform sub block.\n\n\n\n**Args**:\n  - `secret_name` (`string`): Set the `secret_name` field on the resulting object.\n  - `trigger_parameter` (`string`): Set the `trigger_parameter` field on the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `authentication` sub block.\n', args=[]),
+        new(
+          secret_name,
+          trigger_parameter
+        ):: std.prune(a={
+          secret_name: secret_name,
+          trigger_parameter: trigger_parameter,
+        }),
+      },
+      '#new':: d.fn(help='\n`azurerm.container_app.template.custom_scale_rule.new` constructs a new object with attributes and blocks configured for the `custom_scale_rule`\nTerraform sub block.\n\n\n\n**Args**:\n  - `custom_rule_type` (`string`): Set the `custom_rule_type` field on the resulting object.\n  - `metadata` (`obj`): Set the `metadata` field on the resulting object.\n  - `name` (`string`): Set the `name` field on the resulting object.\n  - `authentication` (`list[obj]`): Set the `authentication` field on the resulting object. When `null`, the `authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app.template.custom_scale_rule.authentication.new](#fn-templatetemplateauthenticationnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `custom_scale_rule` sub block.\n', args=[]),
+      new(
+        custom_rule_type,
+        metadata,
+        name,
+        authentication=null
+      ):: std.prune(a={
+        authentication: authentication,
+        custom_rule_type: custom_rule_type,
+        metadata: metadata,
+        name: name,
+      }),
+    },
+    http_scale_rule:: {
+      authentication:: {
+        '#new':: d.fn(help='\n`azurerm.container_app.template.http_scale_rule.authentication.new` constructs a new object with attributes and blocks configured for the `authentication`\nTerraform sub block.\n\n\n\n**Args**:\n  - `secret_name` (`string`): Set the `secret_name` field on the resulting object.\n  - `trigger_parameter` (`string`): Set the `trigger_parameter` field on the resulting object. When `null`, the `trigger_parameter` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `authentication` sub block.\n', args=[]),
+        new(
+          secret_name,
+          trigger_parameter=null
+        ):: std.prune(a={
+          secret_name: secret_name,
+          trigger_parameter: trigger_parameter,
+        }),
+      },
+      '#new':: d.fn(help='\n`azurerm.container_app.template.http_scale_rule.new` constructs a new object with attributes and blocks configured for the `http_scale_rule`\nTerraform sub block.\n\n\n\n**Args**:\n  - `concurrent_requests` (`string`): Set the `concurrent_requests` field on the resulting object.\n  - `name` (`string`): Set the `name` field on the resulting object.\n  - `authentication` (`list[obj]`): Set the `authentication` field on the resulting object. When `null`, the `authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app.template.http_scale_rule.authentication.new](#fn-templatetemplateauthenticationnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `http_scale_rule` sub block.\n', args=[]),
+      new(
+        concurrent_requests,
+        name,
+        authentication=null
+      ):: std.prune(a={
+        authentication: authentication,
+        concurrent_requests: concurrent_requests,
+        name: name,
+      }),
+    },
+    '#new':: d.fn(help='\n`azurerm.container_app.template.new` constructs a new object with attributes and blocks configured for the `template`\nTerraform sub block.\n\n\n\n**Args**:\n  - `max_replicas` (`number`): The maximum number of replicas for this container. When `null`, the `max_replicas` field will be omitted from the resulting object.\n  - `min_replicas` (`number`): The minimum number of replicas for this container. When `null`, the `min_replicas` field will be omitted from the resulting object.\n  - `revision_suffix` (`string`): The suffix for the revision. This value must be unique for the lifetime of the Resource. If omitted the service will use a hash function to create one. When `null`, the `revision_suffix` field will be omitted from the resulting object.\n  - `azure_queue_scale_rule` (`list[obj]`): Set the `azure_queue_scale_rule` field on the resulting object. When `null`, the `azure_queue_scale_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app.template.azure_queue_scale_rule.new](#fn-templateazure_queue_scale_rulenew) constructor.\n  - `container` (`list[obj]`): Set the `container` field on the resulting object. When `null`, the `container` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app.template.container.new](#fn-templatecontainernew) constructor.\n  - `custom_scale_rule` (`list[obj]`): Set the `custom_scale_rule` field on the resulting object. When `null`, the `custom_scale_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app.template.custom_scale_rule.new](#fn-templatecustom_scale_rulenew) constructor.\n  - `http_scale_rule` (`list[obj]`): Set the `http_scale_rule` field on the resulting object. When `null`, the `http_scale_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app.template.http_scale_rule.new](#fn-templatehttp_scale_rulenew) constructor.\n  - `tcp_scale_rule` (`list[obj]`): Set the `tcp_scale_rule` field on the resulting object. When `null`, the `tcp_scale_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app.template.tcp_scale_rule.new](#fn-templatetcp_scale_rulenew) constructor.\n  - `volume` (`list[obj]`): Set the `volume` field on the resulting object. When `null`, the `volume` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app.template.volume.new](#fn-templatevolumenew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `template` sub block.\n', args=[]),
     new(
+      azure_queue_scale_rule=null,
       container=null,
+      custom_scale_rule=null,
+      http_scale_rule=null,
       max_replicas=null,
       min_replicas=null,
       revision_suffix=null,
+      tcp_scale_rule=null,
       volume=null
     ):: std.prune(a={
+      azure_queue_scale_rule: azure_queue_scale_rule,
       container: container,
+      custom_scale_rule: custom_scale_rule,
+      http_scale_rule: http_scale_rule,
       max_replicas: max_replicas,
       min_replicas: min_replicas,
       revision_suffix: revision_suffix,
+      tcp_scale_rule: tcp_scale_rule,
       volume: volume,
     }),
+    tcp_scale_rule:: {
+      authentication:: {
+        '#new':: d.fn(help='\n`azurerm.container_app.template.tcp_scale_rule.authentication.new` constructs a new object with attributes and blocks configured for the `authentication`\nTerraform sub block.\n\n\n\n**Args**:\n  - `secret_name` (`string`): Set the `secret_name` field on the resulting object.\n  - `trigger_parameter` (`string`): Set the `trigger_parameter` field on the resulting object. When `null`, the `trigger_parameter` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `authentication` sub block.\n', args=[]),
+        new(
+          secret_name,
+          trigger_parameter=null
+        ):: std.prune(a={
+          secret_name: secret_name,
+          trigger_parameter: trigger_parameter,
+        }),
+      },
+      '#new':: d.fn(help='\n`azurerm.container_app.template.tcp_scale_rule.new` constructs a new object with attributes and blocks configured for the `tcp_scale_rule`\nTerraform sub block.\n\n\n\n**Args**:\n  - `concurrent_requests` (`string`): Set the `concurrent_requests` field on the resulting object.\n  - `name` (`string`): Set the `name` field on the resulting object.\n  - `authentication` (`list[obj]`): Set the `authentication` field on the resulting object. When `null`, the `authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app.template.tcp_scale_rule.authentication.new](#fn-templatetemplateauthenticationnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `tcp_scale_rule` sub block.\n', args=[]),
+      new(
+        concurrent_requests,
+        name,
+        authentication=null
+      ):: std.prune(a={
+        authentication: authentication,
+        concurrent_requests: concurrent_requests,
+        name: name,
+      }),
+    },
     volume:: {
       '#new':: d.fn(help='\n`azurerm.container_app.template.volume.new` constructs a new object with attributes and blocks configured for the `volume`\nTerraform sub block.\n\n\n\n**Args**:\n  - `name` (`string`): The name of the volume.\n  - `storage_name` (`string`): The name of the `AzureFile` storage. Required when `storage_type` is `AzureFile` When `null`, the `storage_name` field will be omitted from the resulting object.\n  - `storage_type` (`string`): The type of storage volume. Possible values include `AzureFile` and `EmptyDir`. Defaults to `EmptyDir`. When `null`, the `storage_type` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `volume` sub block.\n', args=[]),
       new(

@@ -17,6 +17,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn newAttrs()`](#fn-newattrs)
 * [`fn withAdditionalProperties()`](#fn-withadditionalproperties)
 * [`fn withAnnotations()`](#fn-withannotations)
+* [`fn withAzureBlobFsLocation()`](#fn-withazureblobfslocation)
+* [`fn withAzureBlobFsLocationMixin()`](#fn-withazureblobfslocationmixin)
 * [`fn withAzureBlobStorageLocation()`](#fn-withazureblobstoragelocation)
 * [`fn withAzureBlobStorageLocationMixin()`](#fn-withazureblobstoragelocationmixin)
 * [`fn withCompressionCodec()`](#fn-withcompressioncodec)
@@ -33,6 +35,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withSchemaColumnMixin()`](#fn-withschemacolumnmixin)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
+* [`obj azure_blob_fs_location`](#obj-azure_blob_fs_location)
+  * [`fn new()`](#fn-azure_blob_fs_locationnew)
 * [`obj azure_blob_storage_location`](#obj-azure_blob_storage_location)
   * [`fn new()`](#fn-azure_blob_storage_locationnew)
 * [`obj http_server_location`](#obj-http_server_location)
@@ -81,6 +85,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `linked_service_name` (`string`): Set the `linked_service_name` field on the resulting resource block.
   - `name` (`string`): Set the `name` field on the resulting resource block.
   - `parameters` (`obj`): Set the `parameters` field on the resulting resource block. When `null`, the `parameters` field will be omitted from the resulting object.
+  - `azure_blob_fs_location` (`list[obj]`): Set the `azure_blob_fs_location` field on the resulting resource block. When `null`, the `azure_blob_fs_location` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_parquet.azure_blob_fs_location.new](#fn-azure_blob_fs_locationnew) constructor.
   - `azure_blob_storage_location` (`list[obj]`): Set the `azure_blob_storage_location` field on the resulting resource block. When `null`, the `azure_blob_storage_location` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_parquet.azure_blob_storage_location.new](#fn-azure_blob_storage_locationnew) constructor.
   - `http_server_location` (`list[obj]`): Set the `http_server_location` field on the resulting resource block. When `null`, the `http_server_location` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_parquet.http_server_location.new](#fn-http_server_locationnew) constructor.
   - `schema_column` (`list[obj]`): Set the `schema_column` field on the resulting resource block. When `null`, the `schema_column` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_parquet.schema_column.new](#fn-schema_columnnew) constructor.
@@ -118,6 +123,7 @@ injecting into a complete block.
   - `linked_service_name` (`string`): Set the `linked_service_name` field on the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
   - `parameters` (`obj`): Set the `parameters` field on the resulting object. When `null`, the `parameters` field will be omitted from the resulting object.
+  - `azure_blob_fs_location` (`list[obj]`): Set the `azure_blob_fs_location` field on the resulting object. When `null`, the `azure_blob_fs_location` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_parquet.azure_blob_fs_location.new](#fn-azure_blob_fs_locationnew) constructor.
   - `azure_blob_storage_location` (`list[obj]`): Set the `azure_blob_storage_location` field on the resulting object. When `null`, the `azure_blob_storage_location` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_parquet.azure_blob_storage_location.new](#fn-azure_blob_storage_locationnew) constructor.
   - `http_server_location` (`list[obj]`): Set the `http_server_location` field on the resulting object. When `null`, the `http_server_location` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_parquet.http_server_location.new](#fn-http_server_locationnew) constructor.
   - `schema_column` (`list[obj]`): Set the `schema_column` field on the resulting object. When `null`, the `schema_column` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_factory_dataset_parquet.schema_column.new](#fn-schema_columnnew) constructor.
@@ -157,6 +163,43 @@ Terraform resource block to set or update the annotations field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list`): The value to set for the `annotations` field.
+
+
+### fn withAzureBlobFsLocation
+
+```ts
+withAzureBlobFsLocation()
+```
+
+`azurerm.list[obj].withAzureBlobFsLocation` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the azure_blob_fs_location field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [azurerm.list[obj].withAzureBlobFsLocationMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `azure_blob_fs_location` field.
+
+
+### fn withAzureBlobFsLocationMixin
+
+```ts
+withAzureBlobFsLocationMixin()
+```
+
+`azurerm.list[obj].withAzureBlobFsLocationMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the azure_blob_fs_location field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.list[obj].withAzureBlobFsLocation](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `azure_blob_fs_location` field.
 
 
 ### fn withAzureBlobStorageLocation
@@ -432,6 +475,34 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`obj`): The value to set for the `timeouts` field.
+
+
+## obj azure_blob_fs_location
+
+
+
+### fn azure_blob_fs_location.new
+
+```ts
+new()
+```
+
+
+`azurerm.data_factory_dataset_parquet.azure_blob_fs_location.new` constructs a new object with attributes and blocks configured for the `azure_blob_fs_location`
+Terraform sub block.
+
+
+
+**Args**:
+  - `dynamic_file_system_enabled` (`bool`): Set the `dynamic_file_system_enabled` field on the resulting object. When `null`, the `dynamic_file_system_enabled` field will be omitted from the resulting object.
+  - `dynamic_filename_enabled` (`bool`): Set the `dynamic_filename_enabled` field on the resulting object. When `null`, the `dynamic_filename_enabled` field will be omitted from the resulting object.
+  - `dynamic_path_enabled` (`bool`): Set the `dynamic_path_enabled` field on the resulting object. When `null`, the `dynamic_path_enabled` field will be omitted from the resulting object.
+  - `file_system` (`string`): Set the `file_system` field on the resulting object. When `null`, the `file_system` field will be omitted from the resulting object.
+  - `filename` (`string`): Set the `filename` field on the resulting object. When `null`, the `filename` field will be omitted from the resulting object.
+  - `path` (`string`): Set the `path` field on the resulting object. When `null`, the `path` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `azure_blob_fs_location` sub block.
 
 
 ## obj azure_blob_storage_location

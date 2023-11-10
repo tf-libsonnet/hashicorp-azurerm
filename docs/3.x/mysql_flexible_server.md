@@ -770,6 +770,7 @@ Terraform sub block.
 
 **Args**:
   - `auto_grow_enabled` (`bool`): Set the `auto_grow_enabled` field on the resulting object. When `null`, the `auto_grow_enabled` field will be omitted from the resulting object.
+  - `io_scaling_enabled` (`bool`): Set the `io_scaling_enabled` field on the resulting object. When `null`, the `io_scaling_enabled` field will be omitted from the resulting object.
   - `iops` (`number`): Set the `iops` field on the resulting object. When `null`, the `iops` field will be omitted from the resulting object.
   - `size_gb` (`number`): Set the `size_gb` field on the resulting object. When `null`, the `size_gb` field will be omitted from the resulting object.
 

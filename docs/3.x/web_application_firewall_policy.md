@@ -359,8 +359,11 @@ Terraform sub block.
 **Args**:
   - `action` (`string`): Set the `action` field on the resulting object.
   - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.
+  - `group_rate_limit_by` (`string`): Set the `group_rate_limit_by` field on the resulting object. When `null`, the `group_rate_limit_by` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object. When `null`, the `name` field will be omitted from the resulting object.
   - `priority` (`number`): Set the `priority` field on the resulting object.
+  - `rate_limit_duration` (`string`): Set the `rate_limit_duration` field on the resulting object. When `null`, the `rate_limit_duration` field will be omitted from the resulting object.
+  - `rate_limit_threshold` (`number`): Set the `rate_limit_threshold` field on the resulting object. When `null`, the `rate_limit_threshold` field will be omitted from the resulting object.
   - `rule_type` (`string`): Set the `rule_type` field on the resulting object.
   - `match_conditions` (`list[obj]`): Set the `match_conditions` field on the resulting object. When `null`, the `match_conditions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_application_firewall_policy.custom_rules.match_conditions.new](#fn-custom_rulesmatch_conditionsnew) constructor.
 
@@ -614,6 +617,7 @@ Terraform sub block.
   - `max_request_body_size_in_kb` (`number`): Set the `max_request_body_size_in_kb` field on the resulting object. When `null`, the `max_request_body_size_in_kb` field will be omitted from the resulting object.
   - `mode` (`string`): Set the `mode` field on the resulting object. When `null`, the `mode` field will be omitted from the resulting object.
   - `request_body_check` (`bool`): Set the `request_body_check` field on the resulting object. When `null`, the `request_body_check` field will be omitted from the resulting object.
+  - `request_body_inspect_limit_in_kb` (`number`): Set the `request_body_inspect_limit_in_kb` field on the resulting object. When `null`, the `request_body_inspect_limit_in_kb` field will be omitted from the resulting object.
   - `log_scrubbing` (`list[obj]`): Set the `log_scrubbing` field on the resulting object. When `null`, the `log_scrubbing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_application_firewall_policy.policy_settings.log_scrubbing.new](#fn-policy_settingslog_scrubbingnew) constructor.
 
 **Returns**:

@@ -20,6 +20,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withKeyVaultKeyIds()`](#fn-withkeyvaultkeyids)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
+* [`fn withUserAssignedIdentityId()`](#fn-withuserassignedidentityid)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 
@@ -55,6 +56,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `eventhub_namespace_id` (`string`): Set the `eventhub_namespace_id` field on the resulting resource block.
   - `infrastructure_encryption_enabled` (`bool`): Set the `infrastructure_encryption_enabled` field on the resulting resource block. When `null`, the `infrastructure_encryption_enabled` field will be omitted from the resulting object.
   - `key_vault_key_ids` (`list`): Set the `key_vault_key_ids` field on the resulting resource block.
+  - `user_assigned_identity_id` (`string`): Set the `user_assigned_identity_id` field on the resulting resource block. When `null`, the `user_assigned_identity_id` field will be omitted from the resulting object.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventhub_namespace_customer_managed_key.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -82,6 +84,7 @@ injecting into a complete block.
   - `eventhub_namespace_id` (`string`): Set the `eventhub_namespace_id` field on the resulting object.
   - `infrastructure_encryption_enabled` (`bool`): Set the `infrastructure_encryption_enabled` field on the resulting object. When `null`, the `infrastructure_encryption_enabled` field will be omitted from the resulting object.
   - `key_vault_key_ids` (`list`): Set the `key_vault_key_ids` field on the resulting object.
+  - `user_assigned_identity_id` (`string`): Set the `user_assigned_identity_id` field on the resulting object. When `null`, the `user_assigned_identity_id` field will be omitted from the resulting object.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.eventhub_namespace_customer_managed_key.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -170,6 +173,22 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`obj`): The value to set for the `timeouts` field.
+
+
+### fn withUserAssignedIdentityId
+
+```ts
+withUserAssignedIdentityId()
+```
+
+`azurerm.string.withUserAssignedIdentityId` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the user_assigned_identity_id field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `user_assigned_identity_id` field.
 
 
 ## obj timeouts

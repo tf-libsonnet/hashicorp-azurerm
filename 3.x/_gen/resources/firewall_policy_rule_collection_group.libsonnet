@@ -16,7 +16,17 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       rule: rule,
     }),
     rule:: {
-      '#new':: d.fn(help='\n`azurerm.firewall_policy_rule_collection_group.application_rule_collection.rule.new` constructs a new object with attributes and blocks configured for the `rule`\nTerraform sub block.\n\n\n\n**Args**:\n  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.\n  - `destination_addresses` (`list`): Set the `destination_addresses` field on the resulting object. When `null`, the `destination_addresses` field will be omitted from the resulting object.\n  - `destination_fqdn_tags` (`list`): Set the `destination_fqdn_tags` field on the resulting object. When `null`, the `destination_fqdn_tags` field will be omitted from the resulting object.\n  - `destination_fqdns` (`list`): Set the `destination_fqdns` field on the resulting object. When `null`, the `destination_fqdns` field will be omitted from the resulting object.\n  - `destination_urls` (`list`): Set the `destination_urls` field on the resulting object. When `null`, the `destination_urls` field will be omitted from the resulting object.\n  - `name` (`string`): Set the `name` field on the resulting object.\n  - `source_addresses` (`list`): Set the `source_addresses` field on the resulting object. When `null`, the `source_addresses` field will be omitted from the resulting object.\n  - `source_ip_groups` (`list`): Set the `source_ip_groups` field on the resulting object. When `null`, the `source_ip_groups` field will be omitted from the resulting object.\n  - `terminate_tls` (`bool`): Set the `terminate_tls` field on the resulting object. When `null`, the `terminate_tls` field will be omitted from the resulting object.\n  - `web_categories` (`list`): Set the `web_categories` field on the resulting object. When `null`, the `web_categories` field will be omitted from the resulting object.\n  - `protocols` (`list[obj]`): Set the `protocols` field on the resulting object. When `null`, the `protocols` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy_rule_collection_group.application_rule_collection.rule.protocols.new](#fn-application_rule_collectionapplication_rule_collectionprotocolsnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `rule` sub block.\n', args=[]),
+      http_headers:: {
+        '#new':: d.fn(help='\n`azurerm.firewall_policy_rule_collection_group.application_rule_collection.rule.http_headers.new` constructs a new object with attributes and blocks configured for the `http_headers`\nTerraform sub block.\n\n\n\n**Args**:\n  - `name` (`string`): Set the `name` field on the resulting object.\n  - `value` (`string`): Set the `value` field on the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `http_headers` sub block.\n', args=[]),
+        new(
+          name,
+          value
+        ):: std.prune(a={
+          name: name,
+          value: value,
+        }),
+      },
+      '#new':: d.fn(help='\n`azurerm.firewall_policy_rule_collection_group.application_rule_collection.rule.new` constructs a new object with attributes and blocks configured for the `rule`\nTerraform sub block.\n\n\n\n**Args**:\n  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.\n  - `destination_addresses` (`list`): Set the `destination_addresses` field on the resulting object. When `null`, the `destination_addresses` field will be omitted from the resulting object.\n  - `destination_fqdn_tags` (`list`): Set the `destination_fqdn_tags` field on the resulting object. When `null`, the `destination_fqdn_tags` field will be omitted from the resulting object.\n  - `destination_fqdns` (`list`): Set the `destination_fqdns` field on the resulting object. When `null`, the `destination_fqdns` field will be omitted from the resulting object.\n  - `destination_urls` (`list`): Set the `destination_urls` field on the resulting object. When `null`, the `destination_urls` field will be omitted from the resulting object.\n  - `name` (`string`): Set the `name` field on the resulting object.\n  - `source_addresses` (`list`): Set the `source_addresses` field on the resulting object. When `null`, the `source_addresses` field will be omitted from the resulting object.\n  - `source_ip_groups` (`list`): Set the `source_ip_groups` field on the resulting object. When `null`, the `source_ip_groups` field will be omitted from the resulting object.\n  - `terminate_tls` (`bool`): Set the `terminate_tls` field on the resulting object. When `null`, the `terminate_tls` field will be omitted from the resulting object.\n  - `web_categories` (`list`): Set the `web_categories` field on the resulting object. When `null`, the `web_categories` field will be omitted from the resulting object.\n  - `http_headers` (`list[obj]`): Set the `http_headers` field on the resulting object. When `null`, the `http_headers` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy_rule_collection_group.application_rule_collection.rule.http_headers.new](#fn-application_rule_collectionapplication_rule_collectionhttp_headersnew) constructor.\n  - `protocols` (`list[obj]`): Set the `protocols` field on the resulting object. When `null`, the `protocols` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy_rule_collection_group.application_rule_collection.rule.protocols.new](#fn-application_rule_collectionapplication_rule_collectionprotocolsnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `rule` sub block.\n', args=[]),
       new(
         name,
         description=null,
@@ -24,6 +34,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
         destination_fqdn_tags=null,
         destination_fqdns=null,
         destination_urls=null,
+        http_headers=null,
         protocols=null,
         source_addresses=null,
         source_ip_groups=null,
@@ -35,6 +46,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
         destination_fqdn_tags: destination_fqdn_tags,
         destination_fqdns: destination_fqdns,
         destination_urls: destination_urls,
+        http_headers: http_headers,
         name: name,
         protocols: protocols,
         source_addresses: source_addresses,
@@ -68,11 +80,12 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       rule: rule,
     }),
     rule:: {
-      '#new':: d.fn(help='\n`azurerm.firewall_policy_rule_collection_group.nat_rule_collection.rule.new` constructs a new object with attributes and blocks configured for the `rule`\nTerraform sub block.\n\n\n\n**Args**:\n  - `destination_address` (`string`): Set the `destination_address` field on the resulting object. When `null`, the `destination_address` field will be omitted from the resulting object.\n  - `destination_ports` (`list`): Set the `destination_ports` field on the resulting object. When `null`, the `destination_ports` field will be omitted from the resulting object.\n  - `name` (`string`): Set the `name` field on the resulting object.\n  - `protocols` (`list`): Set the `protocols` field on the resulting object.\n  - `source_addresses` (`list`): Set the `source_addresses` field on the resulting object. When `null`, the `source_addresses` field will be omitted from the resulting object.\n  - `source_ip_groups` (`list`): Set the `source_ip_groups` field on the resulting object. When `null`, the `source_ip_groups` field will be omitted from the resulting object.\n  - `translated_address` (`string`): Set the `translated_address` field on the resulting object. When `null`, the `translated_address` field will be omitted from the resulting object.\n  - `translated_fqdn` (`string`): Set the `translated_fqdn` field on the resulting object. When `null`, the `translated_fqdn` field will be omitted from the resulting object.\n  - `translated_port` (`number`): Set the `translated_port` field on the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `rule` sub block.\n', args=[]),
+      '#new':: d.fn(help='\n`azurerm.firewall_policy_rule_collection_group.nat_rule_collection.rule.new` constructs a new object with attributes and blocks configured for the `rule`\nTerraform sub block.\n\n\n\n**Args**:\n  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.\n  - `destination_address` (`string`): Set the `destination_address` field on the resulting object. When `null`, the `destination_address` field will be omitted from the resulting object.\n  - `destination_ports` (`list`): Set the `destination_ports` field on the resulting object. When `null`, the `destination_ports` field will be omitted from the resulting object.\n  - `name` (`string`): Set the `name` field on the resulting object.\n  - `protocols` (`list`): Set the `protocols` field on the resulting object.\n  - `source_addresses` (`list`): Set the `source_addresses` field on the resulting object. When `null`, the `source_addresses` field will be omitted from the resulting object.\n  - `source_ip_groups` (`list`): Set the `source_ip_groups` field on the resulting object. When `null`, the `source_ip_groups` field will be omitted from the resulting object.\n  - `translated_address` (`string`): Set the `translated_address` field on the resulting object. When `null`, the `translated_address` field will be omitted from the resulting object.\n  - `translated_fqdn` (`string`): Set the `translated_fqdn` field on the resulting object. When `null`, the `translated_fqdn` field will be omitted from the resulting object.\n  - `translated_port` (`number`): Set the `translated_port` field on the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `rule` sub block.\n', args=[]),
       new(
         name,
         protocols,
         translated_port,
+        description=null,
         destination_address=null,
         destination_ports=null,
         source_addresses=null,
@@ -80,6 +93,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
         translated_address=null,
         translated_fqdn=null
       ):: std.prune(a={
+        description: description,
         destination_address: destination_address,
         destination_ports: destination_ports,
         name: name,
@@ -106,17 +120,19 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       rule: rule,
     }),
     rule:: {
-      '#new':: d.fn(help='\n`azurerm.firewall_policy_rule_collection_group.network_rule_collection.rule.new` constructs a new object with attributes and blocks configured for the `rule`\nTerraform sub block.\n\n\n\n**Args**:\n  - `destination_addresses` (`list`): Set the `destination_addresses` field on the resulting object. When `null`, the `destination_addresses` field will be omitted from the resulting object.\n  - `destination_fqdns` (`list`): Set the `destination_fqdns` field on the resulting object. When `null`, the `destination_fqdns` field will be omitted from the resulting object.\n  - `destination_ip_groups` (`list`): Set the `destination_ip_groups` field on the resulting object. When `null`, the `destination_ip_groups` field will be omitted from the resulting object.\n  - `destination_ports` (`list`): Set the `destination_ports` field on the resulting object.\n  - `name` (`string`): Set the `name` field on the resulting object.\n  - `protocols` (`list`): Set the `protocols` field on the resulting object.\n  - `source_addresses` (`list`): Set the `source_addresses` field on the resulting object. When `null`, the `source_addresses` field will be omitted from the resulting object.\n  - `source_ip_groups` (`list`): Set the `source_ip_groups` field on the resulting object. When `null`, the `source_ip_groups` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `rule` sub block.\n', args=[]),
+      '#new':: d.fn(help='\n`azurerm.firewall_policy_rule_collection_group.network_rule_collection.rule.new` constructs a new object with attributes and blocks configured for the `rule`\nTerraform sub block.\n\n\n\n**Args**:\n  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.\n  - `destination_addresses` (`list`): Set the `destination_addresses` field on the resulting object. When `null`, the `destination_addresses` field will be omitted from the resulting object.\n  - `destination_fqdns` (`list`): Set the `destination_fqdns` field on the resulting object. When `null`, the `destination_fqdns` field will be omitted from the resulting object.\n  - `destination_ip_groups` (`list`): Set the `destination_ip_groups` field on the resulting object. When `null`, the `destination_ip_groups` field will be omitted from the resulting object.\n  - `destination_ports` (`list`): Set the `destination_ports` field on the resulting object.\n  - `name` (`string`): Set the `name` field on the resulting object.\n  - `protocols` (`list`): Set the `protocols` field on the resulting object.\n  - `source_addresses` (`list`): Set the `source_addresses` field on the resulting object. When `null`, the `source_addresses` field will be omitted from the resulting object.\n  - `source_ip_groups` (`list`): Set the `source_ip_groups` field on the resulting object. When `null`, the `source_ip_groups` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `rule` sub block.\n', args=[]),
       new(
         destination_ports,
         name,
         protocols,
+        description=null,
         destination_addresses=null,
         destination_fqdns=null,
         destination_ip_groups=null,
         source_addresses=null,
         source_ip_groups=null
       ):: std.prune(a={
+        description: description,
         destination_addresses: destination_addresses,
         destination_fqdns: destination_fqdns,
         destination_ip_groups: destination_ip_groups,

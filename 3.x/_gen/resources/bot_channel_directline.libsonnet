@@ -38,19 +38,25 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     timeouts: timeouts,
   }),
   site:: {
-    '#new':: d.fn(help='\n`azurerm.bot_channel_directline.site.new` constructs a new object with attributes and blocks configured for the `site`\nTerraform sub block.\n\n\n\n**Args**:\n  - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.\n  - `enhanced_authentication_enabled` (`bool`): Set the `enhanced_authentication_enabled` field on the resulting object. When `null`, the `enhanced_authentication_enabled` field will be omitted from the resulting object.\n  - `name` (`string`): Set the `name` field on the resulting object.\n  - `trusted_origins` (`list`): Set the `trusted_origins` field on the resulting object. When `null`, the `trusted_origins` field will be omitted from the resulting object.\n  - `v1_allowed` (`bool`): Set the `v1_allowed` field on the resulting object. When `null`, the `v1_allowed` field will be omitted from the resulting object.\n  - `v3_allowed` (`bool`): Set the `v3_allowed` field on the resulting object. When `null`, the `v3_allowed` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `site` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`azurerm.bot_channel_directline.site.new` constructs a new object with attributes and blocks configured for the `site`\nTerraform sub block.\n\n\n\n**Args**:\n  - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.\n  - `endpoint_parameters_enabled` (`bool`): Set the `endpoint_parameters_enabled` field on the resulting object. When `null`, the `endpoint_parameters_enabled` field will be omitted from the resulting object.\n  - `enhanced_authentication_enabled` (`bool`): Set the `enhanced_authentication_enabled` field on the resulting object. When `null`, the `enhanced_authentication_enabled` field will be omitted from the resulting object.\n  - `name` (`string`): Set the `name` field on the resulting object.\n  - `storage_enabled` (`bool`): Set the `storage_enabled` field on the resulting object. When `null`, the `storage_enabled` field will be omitted from the resulting object.\n  - `trusted_origins` (`list`): Set the `trusted_origins` field on the resulting object. When `null`, the `trusted_origins` field will be omitted from the resulting object.\n  - `user_upload_enabled` (`bool`): Set the `user_upload_enabled` field on the resulting object. When `null`, the `user_upload_enabled` field will be omitted from the resulting object.\n  - `v1_allowed` (`bool`): Set the `v1_allowed` field on the resulting object. When `null`, the `v1_allowed` field will be omitted from the resulting object.\n  - `v3_allowed` (`bool`): Set the `v3_allowed` field on the resulting object. When `null`, the `v3_allowed` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `site` sub block.\n', args=[]),
     new(
       name,
       enabled=null,
+      endpoint_parameters_enabled=null,
       enhanced_authentication_enabled=null,
+      storage_enabled=null,
       trusted_origins=null,
+      user_upload_enabled=null,
       v1_allowed=null,
       v3_allowed=null
     ):: std.prune(a={
       enabled: enabled,
+      endpoint_parameters_enabled: endpoint_parameters_enabled,
       enhanced_authentication_enabled: enhanced_authentication_enabled,
       name: name,
+      storage_enabled: storage_enabled,
       trusted_origins: trusted_origins,
+      user_upload_enabled: user_upload_enabled,
       v1_allowed: v1_allowed,
       v3_allowed: v3_allowed,
     }),
