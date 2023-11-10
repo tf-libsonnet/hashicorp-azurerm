@@ -362,10 +362,10 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       }),
     },
     url_filename_condition:: {
-      '#new':: d.fn(help='\n`azurerm.cdn_frontdoor_rule.conditions.url_filename_condition.new` constructs a new object with attributes and blocks configured for the `url_filename_condition`\nTerraform sub block.\n\n\n\n**Args**:\n  - `match_values` (`list`): Set the `match_values` field on the resulting object.\n  - `negate_condition` (`bool`): Set the `negate_condition` field on the resulting object. When `null`, the `negate_condition` field will be omitted from the resulting object.\n  - `operator` (`string`): Set the `operator` field on the resulting object.\n  - `transforms` (`list`): Set the `transforms` field on the resulting object. When `null`, the `transforms` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `url_filename_condition` sub block.\n', args=[]),
+      '#new':: d.fn(help='\n`azurerm.cdn_frontdoor_rule.conditions.url_filename_condition.new` constructs a new object with attributes and blocks configured for the `url_filename_condition`\nTerraform sub block.\n\n\n\n**Args**:\n  - `match_values` (`list`): Set the `match_values` field on the resulting object. When `null`, the `match_values` field will be omitted from the resulting object.\n  - `negate_condition` (`bool`): Set the `negate_condition` field on the resulting object. When `null`, the `negate_condition` field will be omitted from the resulting object.\n  - `operator` (`string`): Set the `operator` field on the resulting object.\n  - `transforms` (`list`): Set the `transforms` field on the resulting object. When `null`, the `transforms` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `url_filename_condition` sub block.\n', args=[]),
       new(
-        match_values,
         operator,
+        match_values=null,
         negate_condition=null,
         transforms=null
       ):: std.prune(a={

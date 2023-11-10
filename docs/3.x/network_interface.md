@@ -15,6 +15,8 @@ This package contains functions and utilities for setting up the resource using 
 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
+* [`fn withAuxiliaryMode()`](#fn-withauxiliarymode)
+* [`fn withAuxiliarySku()`](#fn-withauxiliarysku)
 * [`fn withDnsServers()`](#fn-withdnsservers)
 * [`fn withEdgeZone()`](#fn-withedgezone)
 * [`fn withEnableAcceleratedNetworking()`](#fn-withenableacceleratednetworking)
@@ -62,6 +64,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
+  - `auxiliary_mode` (`string`): Set the `auxiliary_mode` field on the resulting resource block. When `null`, the `auxiliary_mode` field will be omitted from the resulting object.
+  - `auxiliary_sku` (`string`): Set the `auxiliary_sku` field on the resulting resource block. When `null`, the `auxiliary_sku` field will be omitted from the resulting object.
   - `dns_servers` (`list`): Set the `dns_servers` field on the resulting resource block. When `null`, the `dns_servers` field will be omitted from the resulting object.
   - `edge_zone` (`string`): Set the `edge_zone` field on the resulting resource block. When `null`, the `edge_zone` field will be omitted from the resulting object.
   - `enable_accelerated_networking` (`bool`): Set the `enable_accelerated_networking` field on the resulting resource block. When `null`, the `enable_accelerated_networking` field will be omitted from the resulting object.
@@ -96,6 +100,8 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
+  - `auxiliary_mode` (`string`): Set the `auxiliary_mode` field on the resulting object. When `null`, the `auxiliary_mode` field will be omitted from the resulting object.
+  - `auxiliary_sku` (`string`): Set the `auxiliary_sku` field on the resulting object. When `null`, the `auxiliary_sku` field will be omitted from the resulting object.
   - `dns_servers` (`list`): Set the `dns_servers` field on the resulting object. When `null`, the `dns_servers` field will be omitted from the resulting object.
   - `edge_zone` (`string`): Set the `edge_zone` field on the resulting object. When `null`, the `edge_zone` field will be omitted from the resulting object.
   - `enable_accelerated_networking` (`bool`): Set the `enable_accelerated_networking` field on the resulting object. When `null`, the `enable_accelerated_networking` field will be omitted from the resulting object.
@@ -110,6 +116,38 @@ injecting into a complete block.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `network_interface` resource into the root Terraform configuration.
+
+
+### fn withAuxiliaryMode
+
+```ts
+withAuxiliaryMode()
+```
+
+`azurerm.string.withAuxiliaryMode` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the auxiliary_mode field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `auxiliary_mode` field.
+
+
+### fn withAuxiliarySku
+
+```ts
+withAuxiliarySku()
+```
+
+`azurerm.string.withAuxiliarySku` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the auxiliary_sku field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `auxiliary_sku` field.
 
 
 ### fn withDnsServers

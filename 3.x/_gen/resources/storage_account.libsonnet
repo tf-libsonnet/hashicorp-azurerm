@@ -4,14 +4,14 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   '#':: d.pkg(name='storage_account', url='', help='`storage_account` represents the `azurerm_storage_account` Terraform resource.\n\n\n\nThis package contains functions and utilities for setting up the resource using Jsonnet code.\n'),
   azure_files_authentication:: {
     active_directory:: {
-      '#new':: d.fn(help='\n`azurerm.storage_account.azure_files_authentication.active_directory.new` constructs a new object with attributes and blocks configured for the `active_directory`\nTerraform sub block.\n\n\n\n**Args**:\n  - `domain_guid` (`string`): Set the `domain_guid` field on the resulting object.\n  - `domain_name` (`string`): Set the `domain_name` field on the resulting object.\n  - `domain_sid` (`string`): Set the `domain_sid` field on the resulting object.\n  - `forest_name` (`string`): Set the `forest_name` field on the resulting object.\n  - `netbios_domain_name` (`string`): Set the `netbios_domain_name` field on the resulting object.\n  - `storage_sid` (`string`): Set the `storage_sid` field on the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `active_directory` sub block.\n', args=[]),
+      '#new':: d.fn(help='\n`azurerm.storage_account.azure_files_authentication.active_directory.new` constructs a new object with attributes and blocks configured for the `active_directory`\nTerraform sub block.\n\n\n\n**Args**:\n  - `domain_guid` (`string`): Set the `domain_guid` field on the resulting object.\n  - `domain_name` (`string`): Set the `domain_name` field on the resulting object.\n  - `domain_sid` (`string`): Set the `domain_sid` field on the resulting object. When `null`, the `domain_sid` field will be omitted from the resulting object.\n  - `forest_name` (`string`): Set the `forest_name` field on the resulting object. When `null`, the `forest_name` field will be omitted from the resulting object.\n  - `netbios_domain_name` (`string`): Set the `netbios_domain_name` field on the resulting object. When `null`, the `netbios_domain_name` field will be omitted from the resulting object.\n  - `storage_sid` (`string`): Set the `storage_sid` field on the resulting object. When `null`, the `storage_sid` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `active_directory` sub block.\n', args=[]),
       new(
         domain_guid,
         domain_name,
-        domain_sid,
-        forest_name,
-        netbios_domain_name,
-        storage_sid
+        domain_sid=null,
+        forest_name=null,
+        netbios_domain_name=null,
+        storage_sid=null
       ):: std.prune(a={
         domain_guid: domain_guid,
         domain_name: domain_name,

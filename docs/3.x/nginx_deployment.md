@@ -15,7 +15,9 @@ This package contains functions and utilities for setting up the resource using 
 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
+* [`fn withCapacity()`](#fn-withcapacity)
 * [`fn withDiagnoseSupportEnabled()`](#fn-withdiagnosesupportenabled)
+* [`fn withEmail()`](#fn-withemail)
 * [`fn withFrontendPrivate()`](#fn-withfrontendprivate)
 * [`fn withFrontendPrivateMixin()`](#fn-withfrontendprivatemixin)
 * [`fn withFrontendPublic()`](#fn-withfrontendpublic)
@@ -76,7 +78,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
+  - `capacity` (`number`): Set the `capacity` field on the resulting resource block. When `null`, the `capacity` field will be omitted from the resulting object.
   - `diagnose_support_enabled` (`bool`): Set the `diagnose_support_enabled` field on the resulting resource block. When `null`, the `diagnose_support_enabled` field will be omitted from the resulting object.
+  - `email` (`string`): Set the `email` field on the resulting resource block. When `null`, the `email` field will be omitted from the resulting object.
   - `location` (`string`): Set the `location` field on the resulting resource block.
   - `managed_resource_group` (`string`): Set the `managed_resource_group` field on the resulting resource block. When `null`, the `managed_resource_group` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting resource block.
@@ -112,7 +116,9 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
+  - `capacity` (`number`): Set the `capacity` field on the resulting object. When `null`, the `capacity` field will be omitted from the resulting object.
   - `diagnose_support_enabled` (`bool`): Set the `diagnose_support_enabled` field on the resulting object. When `null`, the `diagnose_support_enabled` field will be omitted from the resulting object.
+  - `email` (`string`): Set the `email` field on the resulting object. When `null`, the `email` field will be omitted from the resulting object.
   - `location` (`string`): Set the `location` field on the resulting object.
   - `managed_resource_group` (`string`): Set the `managed_resource_group` field on the resulting object. When `null`, the `managed_resource_group` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
@@ -130,6 +136,22 @@ injecting into a complete block.
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `nginx_deployment` resource into the root Terraform configuration.
 
 
+### fn withCapacity
+
+```ts
+withCapacity()
+```
+
+`azurerm.number.withCapacity` constructs a mixin object that can be merged into the `number`
+Terraform resource block to set or update the capacity field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`number`): The value to set for the `capacity` field.
+
+
 ### fn withDiagnoseSupportEnabled
 
 ```ts
@@ -144,6 +166,22 @@ Terraform resource block to set or update the diagnose_support_enabled field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`bool`): The value to set for the `diagnose_support_enabled` field.
+
+
+### fn withEmail
+
+```ts
+withEmail()
+```
+
+`azurerm.string.withEmail` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the email field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `email` field.
 
 
 ### fn withFrontendPrivate

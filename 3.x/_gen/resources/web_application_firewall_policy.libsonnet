@@ -29,20 +29,26 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
         transforms: transforms,
       }),
     },
-    '#new':: d.fn(help='\n`azurerm.web_application_firewall_policy.custom_rules.new` constructs a new object with attributes and blocks configured for the `custom_rules`\nTerraform sub block.\n\n\n\n**Args**:\n  - `action` (`string`): Set the `action` field on the resulting object.\n  - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.\n  - `name` (`string`): Set the `name` field on the resulting object. When `null`, the `name` field will be omitted from the resulting object.\n  - `priority` (`number`): Set the `priority` field on the resulting object.\n  - `rule_type` (`string`): Set the `rule_type` field on the resulting object.\n  - `match_conditions` (`list[obj]`): Set the `match_conditions` field on the resulting object. When `null`, the `match_conditions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_application_firewall_policy.custom_rules.match_conditions.new](#fn-custom_rulesmatch_conditionsnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `custom_rules` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`azurerm.web_application_firewall_policy.custom_rules.new` constructs a new object with attributes and blocks configured for the `custom_rules`\nTerraform sub block.\n\n\n\n**Args**:\n  - `action` (`string`): Set the `action` field on the resulting object.\n  - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.\n  - `group_rate_limit_by` (`string`): Set the `group_rate_limit_by` field on the resulting object. When `null`, the `group_rate_limit_by` field will be omitted from the resulting object.\n  - `name` (`string`): Set the `name` field on the resulting object. When `null`, the `name` field will be omitted from the resulting object.\n  - `priority` (`number`): Set the `priority` field on the resulting object.\n  - `rate_limit_duration` (`string`): Set the `rate_limit_duration` field on the resulting object. When `null`, the `rate_limit_duration` field will be omitted from the resulting object.\n  - `rate_limit_threshold` (`number`): Set the `rate_limit_threshold` field on the resulting object. When `null`, the `rate_limit_threshold` field will be omitted from the resulting object.\n  - `rule_type` (`string`): Set the `rule_type` field on the resulting object.\n  - `match_conditions` (`list[obj]`): Set the `match_conditions` field on the resulting object. When `null`, the `match_conditions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_application_firewall_policy.custom_rules.match_conditions.new](#fn-custom_rulesmatch_conditionsnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `custom_rules` sub block.\n', args=[]),
     new(
       action,
       priority,
       rule_type,
       enabled=null,
+      group_rate_limit_by=null,
       match_conditions=null,
-      name=null
+      name=null,
+      rate_limit_duration=null,
+      rate_limit_threshold=null
     ):: std.prune(a={
       action: action,
       enabled: enabled,
+      group_rate_limit_by: group_rate_limit_by,
       match_conditions: match_conditions,
       name: name,
       priority: priority,
+      rate_limit_duration: rate_limit_duration,
+      rate_limit_threshold: rate_limit_threshold,
       rule_type: rule_type,
     }),
   },
@@ -198,14 +204,15 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
         }),
       },
     },
-    '#new':: d.fn(help='\n`azurerm.web_application_firewall_policy.policy_settings.new` constructs a new object with attributes and blocks configured for the `policy_settings`\nTerraform sub block.\n\n\n\n**Args**:\n  - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.\n  - `file_upload_limit_in_mb` (`number`): Set the `file_upload_limit_in_mb` field on the resulting object. When `null`, the `file_upload_limit_in_mb` field will be omitted from the resulting object.\n  - `max_request_body_size_in_kb` (`number`): Set the `max_request_body_size_in_kb` field on the resulting object. When `null`, the `max_request_body_size_in_kb` field will be omitted from the resulting object.\n  - `mode` (`string`): Set the `mode` field on the resulting object. When `null`, the `mode` field will be omitted from the resulting object.\n  - `request_body_check` (`bool`): Set the `request_body_check` field on the resulting object. When `null`, the `request_body_check` field will be omitted from the resulting object.\n  - `log_scrubbing` (`list[obj]`): Set the `log_scrubbing` field on the resulting object. When `null`, the `log_scrubbing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_application_firewall_policy.policy_settings.log_scrubbing.new](#fn-policy_settingslog_scrubbingnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `policy_settings` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`azurerm.web_application_firewall_policy.policy_settings.new` constructs a new object with attributes and blocks configured for the `policy_settings`\nTerraform sub block.\n\n\n\n**Args**:\n  - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.\n  - `file_upload_limit_in_mb` (`number`): Set the `file_upload_limit_in_mb` field on the resulting object. When `null`, the `file_upload_limit_in_mb` field will be omitted from the resulting object.\n  - `max_request_body_size_in_kb` (`number`): Set the `max_request_body_size_in_kb` field on the resulting object. When `null`, the `max_request_body_size_in_kb` field will be omitted from the resulting object.\n  - `mode` (`string`): Set the `mode` field on the resulting object. When `null`, the `mode` field will be omitted from the resulting object.\n  - `request_body_check` (`bool`): Set the `request_body_check` field on the resulting object. When `null`, the `request_body_check` field will be omitted from the resulting object.\n  - `request_body_inspect_limit_in_kb` (`number`): Set the `request_body_inspect_limit_in_kb` field on the resulting object. When `null`, the `request_body_inspect_limit_in_kb` field will be omitted from the resulting object.\n  - `log_scrubbing` (`list[obj]`): Set the `log_scrubbing` field on the resulting object. When `null`, the `log_scrubbing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.web_application_firewall_policy.policy_settings.log_scrubbing.new](#fn-policy_settingslog_scrubbingnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `policy_settings` sub block.\n', args=[]),
     new(
       enabled=null,
       file_upload_limit_in_mb=null,
       log_scrubbing=null,
       max_request_body_size_in_kb=null,
       mode=null,
-      request_body_check=null
+      request_body_check=null,
+      request_body_inspect_limit_in_kb=null
     ):: std.prune(a={
       enabled: enabled,
       file_upload_limit_in_mb: file_upload_limit_in_mb,
@@ -213,6 +220,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       max_request_body_size_in_kb: max_request_body_size_in_kb,
       mode: mode,
       request_body_check: request_body_check,
+      request_body_inspect_limit_in_kb: request_body_inspect_limit_in_kb,
     }),
   },
   timeouts:: {

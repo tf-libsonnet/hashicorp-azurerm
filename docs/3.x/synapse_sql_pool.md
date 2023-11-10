@@ -24,6 +24,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withRestore()`](#fn-withrestore)
 * [`fn withRestoreMixin()`](#fn-withrestoremixin)
 * [`fn withSkuName()`](#fn-withskuname)
+* [`fn withStorageAccountType()`](#fn-withstorageaccounttype)
 * [`fn withSynapseWorkspaceId()`](#fn-withsynapseworkspaceid)
 * [`fn withTags()`](#fn-withtags)
 * [`fn withTimeouts()`](#fn-withtimeouts)
@@ -69,6 +70,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): Set the `name` field on the resulting resource block.
   - `recovery_database_id` (`string`): Set the `recovery_database_id` field on the resulting resource block. When `null`, the `recovery_database_id` field will be omitted from the resulting object.
   - `sku_name` (`string`): Set the `sku_name` field on the resulting resource block.
+  - `storage_account_type` (`string`): Set the `storage_account_type` field on the resulting resource block. When `null`, the `storage_account_type` field will be omitted from the resulting object.
   - `synapse_workspace_id` (`string`): Set the `synapse_workspace_id` field on the resulting resource block.
   - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
   - `restore` (`list[obj]`): Set the `restore` field on the resulting resource block. When `null`, the `restore` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_sql_pool.restore.new](#fn-restorenew) constructor.
@@ -103,6 +105,7 @@ injecting into a complete block.
   - `name` (`string`): Set the `name` field on the resulting object.
   - `recovery_database_id` (`string`): Set the `recovery_database_id` field on the resulting object. When `null`, the `recovery_database_id` field will be omitted from the resulting object.
   - `sku_name` (`string`): Set the `sku_name` field on the resulting object.
+  - `storage_account_type` (`string`): Set the `storage_account_type` field on the resulting object. When `null`, the `storage_account_type` field will be omitted from the resulting object.
   - `synapse_workspace_id` (`string`): Set the `synapse_workspace_id` field on the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
   - `restore` (`list[obj]`): Set the `restore` field on the resulting object. When `null`, the `restore` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.synapse_sql_pool.restore.new](#fn-restorenew) constructor.
@@ -259,6 +262,22 @@ Terraform resource block to set or update the sku_name field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `sku_name` field.
+
+
+### fn withStorageAccountType
+
+```ts
+withStorageAccountType()
+```
+
+`azurerm.string.withStorageAccountType` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the storage_account_type field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `storage_account_type` field.
 
 
 ### fn withSynapseWorkspaceId

@@ -30,6 +30,8 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-application_rule_collectionnew)
   * [`obj application_rule_collection.rule`](#obj-application_rule_collectionrule)
     * [`fn new()`](#fn-application_rule_collectionrulenew)
+    * [`obj application_rule_collection.rule.http_headers`](#obj-application_rule_collectionrulehttp_headers)
+      * [`fn new()`](#fn-application_rule_collectionrulehttp_headersnew)
     * [`obj application_rule_collection.rule.protocols`](#obj-application_rule_collectionruleprotocols)
       * [`fn new()`](#fn-application_rule_collectionruleprotocolsnew)
 * [`obj nat_rule_collection`](#obj-nat_rule_collection)
@@ -362,10 +364,35 @@ Terraform sub block.
   - `source_ip_groups` (`list`): Set the `source_ip_groups` field on the resulting object. When `null`, the `source_ip_groups` field will be omitted from the resulting object.
   - `terminate_tls` (`bool`): Set the `terminate_tls` field on the resulting object. When `null`, the `terminate_tls` field will be omitted from the resulting object.
   - `web_categories` (`list`): Set the `web_categories` field on the resulting object. When `null`, the `web_categories` field will be omitted from the resulting object.
+  - `http_headers` (`list[obj]`): Set the `http_headers` field on the resulting object. When `null`, the `http_headers` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy_rule_collection_group.application_rule_collection.rule.http_headers.new](#fn-application_rule_collectionapplication_rule_collectionhttp_headersnew) constructor.
   - `protocols` (`list[obj]`): Set the `protocols` field on the resulting object. When `null`, the `protocols` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.firewall_policy_rule_collection_group.application_rule_collection.rule.protocols.new](#fn-application_rule_collectionapplication_rule_collectionprotocolsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `rule` sub block.
+
+
+## obj application_rule_collection.rule.http_headers
+
+
+
+### fn application_rule_collection.rule.http_headers.new
+
+```ts
+new()
+```
+
+
+`azurerm.firewall_policy_rule_collection_group.application_rule_collection.rule.http_headers.new` constructs a new object with attributes and blocks configured for the `http_headers`
+Terraform sub block.
+
+
+
+**Args**:
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `value` (`string`): Set the `value` field on the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `http_headers` sub block.
 
 
 ## obj application_rule_collection.rule.protocols
@@ -435,6 +462,7 @@ Terraform sub block.
 
 
 **Args**:
+  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
   - `destination_address` (`string`): Set the `destination_address` field on the resulting object. When `null`, the `destination_address` field will be omitted from the resulting object.
   - `destination_ports` (`list`): Set the `destination_ports` field on the resulting object. When `null`, the `destination_ports` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
@@ -492,6 +520,7 @@ Terraform sub block.
 
 
 **Args**:
+  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
   - `destination_addresses` (`list`): Set the `destination_addresses` field on the resulting object. When `null`, the `destination_addresses` field will be omitted from the resulting object.
   - `destination_fqdns` (`list`): Set the `destination_fqdns` field on the resulting object. When `null`, the `destination_fqdns` field will be omitted from the resulting object.
   - `destination_ip_groups` (`list`): Set the `destination_ip_groups` field on the resulting object. When `null`, the `destination_ip_groups` field will be omitted from the resulting object.

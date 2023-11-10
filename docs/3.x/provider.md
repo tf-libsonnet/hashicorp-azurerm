@@ -465,7 +465,7 @@ Terraform sub block.
 
 **Args**:
   - `force_delete` (`bool`): Set the `force_delete` field on the resulting object. When `null`, the `force_delete` field will be omitted from the resulting object.
-  - `roll_instances_when_required` (`bool`): Set the `roll_instances_when_required` field on the resulting object.
+  - `roll_instances_when_required` (`bool`): Set the `roll_instances_when_required` field on the resulting object. When `null`, the `roll_instances_when_required` field will be omitted from the resulting object.
   - `scale_to_zero_before_deletion` (`bool`): Set the `scale_to_zero_before_deletion` field on the resulting object. When `null`, the `scale_to_zero_before_deletion` field will be omitted from the resulting object.
 
 **Returns**:

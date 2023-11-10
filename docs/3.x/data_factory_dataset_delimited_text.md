@@ -627,7 +627,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `file_system` (`string`): Set the `file_system` field on the resulting object.
+  - `dynamic_file_system_enabled` (`bool`): Set the `dynamic_file_system_enabled` field on the resulting object. When `null`, the `dynamic_file_system_enabled` field will be omitted from the resulting object.
+  - `dynamic_filename_enabled` (`bool`): Set the `dynamic_filename_enabled` field on the resulting object. When `null`, the `dynamic_filename_enabled` field will be omitted from the resulting object.
+  - `dynamic_path_enabled` (`bool`): Set the `dynamic_path_enabled` field on the resulting object. When `null`, the `dynamic_path_enabled` field will be omitted from the resulting object.
+  - `file_system` (`string`): Set the `file_system` field on the resulting object. When `null`, the `file_system` field will be omitted from the resulting object.
   - `filename` (`string`): Set the `filename` field on the resulting object. When `null`, the `filename` field will be omitted from the resulting object.
   - `path` (`string`): Set the `path` field on the resulting object. When `null`, the `path` field will be omitted from the resulting object.
 

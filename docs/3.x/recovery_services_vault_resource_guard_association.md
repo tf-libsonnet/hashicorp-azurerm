@@ -52,7 +52,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `name` (`string`): Set the `name` field on the resulting resource block. When `null`, the `name` field will be omitted from the resulting object.
   - `resource_guard_id` (`string`): Set the `resource_guard_id` field on the resulting resource block.
   - `vault_id` (`string`): Set the `vault_id` field on the resulting resource block.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.recovery_services_vault_resource_guard_association.timeouts.new](#fn-timeoutsnew) constructor.
@@ -79,7 +79,7 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `name` (`string`): Set the `name` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object. When `null`, the `name` field will be omitted from the resulting object.
   - `resource_guard_id` (`string`): Set the `resource_guard_id` field on the resulting object.
   - `vault_id` (`string`): Set the `vault_id` field on the resulting object.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.recovery_services_vault_resource_guard_association.timeouts.new](#fn-timeoutsnew) constructor.

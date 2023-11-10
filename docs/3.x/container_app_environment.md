@@ -25,6 +25,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withTags()`](#fn-withtags)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
+* [`fn withZoneRedundancyEnabled()`](#fn-withzoneredundancyenabled)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 
@@ -65,6 +66,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): The name of the Container Apps Managed Environment.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
   - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `zone_redundancy_enabled` (`bool`): Set the `zone_redundancy_enabled` field on the resulting resource block. When `null`, the `zone_redundancy_enabled` field will be omitted from the resulting object.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app_environment.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -97,6 +99,7 @@ injecting into a complete block.
   - `name` (`string`): The name of the Container Apps Managed Environment.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `zone_redundancy_enabled` (`bool`): Set the `zone_redundancy_enabled` field on the resulting object. When `null`, the `zone_redundancy_enabled` field will be omitted from the resulting object.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app_environment.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -265,6 +268,22 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`obj`): The value to set for the `timeouts` field.
+
+
+### fn withZoneRedundancyEnabled
+
+```ts
+withZoneRedundancyEnabled()
+```
+
+`azurerm.bool.withZoneRedundancyEnabled` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the zone_redundancy_enabled field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `zone_redundancy_enabled` field.
 
 
 ## obj timeouts

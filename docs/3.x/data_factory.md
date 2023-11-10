@@ -478,6 +478,7 @@ Terraform sub block.
   - `account_name` (`string`): Set the `account_name` field on the resulting object.
   - `branch_name` (`string`): Set the `branch_name` field on the resulting object.
   - `git_url` (`string`): Set the `git_url` field on the resulting object.
+  - `publishing_enabled` (`bool`): Set the `publishing_enabled` field on the resulting object. When `null`, the `publishing_enabled` field will be omitted from the resulting object.
   - `repository_name` (`string`): Set the `repository_name` field on the resulting object.
   - `root_folder` (`string`): Set the `root_folder` field on the resulting object.
 
@@ -580,6 +581,7 @@ Terraform sub block.
   - `account_name` (`string`): Set the `account_name` field on the resulting object.
   - `branch_name` (`string`): Set the `branch_name` field on the resulting object.
   - `project_name` (`string`): Set the `project_name` field on the resulting object.
+  - `publishing_enabled` (`bool`): Set the `publishing_enabled` field on the resulting object. When `null`, the `publishing_enabled` field will be omitted from the resulting object.
   - `repository_name` (`string`): Set the `repository_name` field on the resulting object.
   - `root_folder` (`string`): Set the `root_folder` field on the resulting object.
   - `tenant_id` (`string`): Set the `tenant_id` field on the resulting object.

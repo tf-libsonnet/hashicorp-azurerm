@@ -75,7 +75,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `administrator_login_password` (`string`): Set the `administrator_login_password` field on the resulting resource block.
+  - `administrator_login_password` (`string`): Set the `administrator_login_password` field on the resulting resource block. When `null`, the `administrator_login_password` field will be omitted from the resulting object.
   - `citus_version` (`string`): Set the `citus_version` field on the resulting resource block. When `null`, the `citus_version` field will be omitted from the resulting object.
   - `coordinator_public_ip_access_enabled` (`bool`): Set the `coordinator_public_ip_access_enabled` field on the resulting resource block. When `null`, the `coordinator_public_ip_access_enabled` field will be omitted from the resulting object.
   - `coordinator_server_edition` (`string`): Set the `coordinator_server_edition` field on the resulting resource block. When `null`, the `coordinator_server_edition` field will be omitted from the resulting object.
@@ -122,7 +122,7 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `administrator_login_password` (`string`): Set the `administrator_login_password` field on the resulting object.
+  - `administrator_login_password` (`string`): Set the `administrator_login_password` field on the resulting object. When `null`, the `administrator_login_password` field will be omitted from the resulting object.
   - `citus_version` (`string`): Set the `citus_version` field on the resulting object. When `null`, the `citus_version` field will be omitted from the resulting object.
   - `coordinator_public_ip_access_enabled` (`bool`): Set the `coordinator_public_ip_access_enabled` field on the resulting object. When `null`, the `coordinator_public_ip_access_enabled` field will be omitted from the resulting object.
   - `coordinator_server_edition` (`string`): Set the `coordinator_server_edition` field on the resulting object. When `null`, the `coordinator_server_edition` field will be omitted from the resulting object.

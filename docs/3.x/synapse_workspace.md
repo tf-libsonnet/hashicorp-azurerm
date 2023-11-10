@@ -18,6 +18,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withAadAdmin()`](#fn-withaadadmin)
 * [`fn withAzureDevopsRepo()`](#fn-withazuredevopsrepo)
 * [`fn withAzureDevopsRepoMixin()`](#fn-withazuredevopsrepomixin)
+* [`fn withAzureadAuthenticationOnly()`](#fn-withazureadauthenticationonly)
 * [`fn withComputeSubnetId()`](#fn-withcomputesubnetid)
 * [`fn withCustomerManagedKey()`](#fn-withcustomermanagedkey)
 * [`fn withCustomerManagedKeyMixin()`](#fn-withcustomermanagedkeymixin)
@@ -83,6 +84,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
   - `aad_admin` (`list`): Set the `aad_admin` field on the resulting resource block. When `null`, the `aad_admin` field will be omitted from the resulting object.
+  - `azuread_authentication_only` (`bool`): Set the `azuread_authentication_only` field on the resulting resource block. When `null`, the `azuread_authentication_only` field will be omitted from the resulting object.
   - `compute_subnet_id` (`string`): Set the `compute_subnet_id` field on the resulting resource block. When `null`, the `compute_subnet_id` field will be omitted from the resulting object.
   - `data_exfiltration_protection_enabled` (`bool`): Set the `data_exfiltration_protection_enabled` field on the resulting resource block. When `null`, the `data_exfiltration_protection_enabled` field will be omitted from the resulting object.
   - `linking_allowed_for_aad_tenant_ids` (`list`): Set the `linking_allowed_for_aad_tenant_ids` field on the resulting resource block. When `null`, the `linking_allowed_for_aad_tenant_ids` field will be omitted from the resulting object.
@@ -128,6 +130,7 @@ injecting into a complete block.
 
 **Args**:
   - `aad_admin` (`list`): Set the `aad_admin` field on the resulting object. When `null`, the `aad_admin` field will be omitted from the resulting object.
+  - `azuread_authentication_only` (`bool`): Set the `azuread_authentication_only` field on the resulting object. When `null`, the `azuread_authentication_only` field will be omitted from the resulting object.
   - `compute_subnet_id` (`string`): Set the `compute_subnet_id` field on the resulting object. When `null`, the `compute_subnet_id` field will be omitted from the resulting object.
   - `data_exfiltration_protection_enabled` (`bool`): Set the `data_exfiltration_protection_enabled` field on the resulting object. When `null`, the `data_exfiltration_protection_enabled` field will be omitted from the resulting object.
   - `linking_allowed_for_aad_tenant_ids` (`list`): Set the `linking_allowed_for_aad_tenant_ids` field on the resulting object. When `null`, the `linking_allowed_for_aad_tenant_ids` field will be omitted from the resulting object.
@@ -205,6 +208,22 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `azure_devops_repo` field.
+
+
+### fn withAzureadAuthenticationOnly
+
+```ts
+withAzureadAuthenticationOnly()
+```
+
+`azurerm.bool.withAzureadAuthenticationOnly` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the azuread_authentication_only field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `azuread_authentication_only` field.
 
 
 ### fn withComputeSubnetId

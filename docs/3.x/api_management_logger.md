@@ -355,8 +355,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `connection_string` (`string`): Set the `connection_string` field on the resulting object.
+  - `connection_string` (`string`): Set the `connection_string` field on the resulting object. When `null`, the `connection_string` field will be omitted from the resulting object.
+  - `endpoint_uri` (`string`): Set the `endpoint_uri` field on the resulting object. When `null`, the `endpoint_uri` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
+  - `user_assigned_identity_client_id` (`string`): Set the `user_assigned_identity_client_id` field on the resulting object. When `null`, the `user_assigned_identity_client_id` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `eventhub` sub block.

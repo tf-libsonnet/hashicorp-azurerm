@@ -24,6 +24,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withName()`](#fn-withname)
 * [`fn withPublicNetworkAccess()`](#fn-withpublicnetworkaccess)
 * [`fn withPurgeProtectionEnabled()`](#fn-withpurgeprotectionenabled)
+* [`fn withReplica()`](#fn-withreplica)
+* [`fn withReplicaMixin()`](#fn-withreplicamixin)
 * [`fn withResourceGroupName()`](#fn-withresourcegroupname)
 * [`fn withSku()`](#fn-withsku)
 * [`fn withSoftDeleteRetentionDays()`](#fn-withsoftdeleteretentiondays)
@@ -34,6 +36,8 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-encryptionnew)
 * [`obj identity`](#obj-identity)
   * [`fn new()`](#fn-identitynew)
+* [`obj replica`](#obj-replica)
+  * [`fn new()`](#fn-replicanew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 
@@ -77,6 +81,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
   - `encryption` (`list[obj]`): Set the `encryption` field on the resulting resource block. When `null`, the `encryption` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.app_configuration.encryption.new](#fn-encryptionnew) constructor.
   - `identity` (`list[obj]`): Set the `identity` field on the resulting resource block. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.app_configuration.identity.new](#fn-identitynew) constructor.
+  - `replica` (`list[obj]`): Set the `replica` field on the resulting resource block. When `null`, the `replica` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.app_configuration.replica.new](#fn-replicanew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.app_configuration.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -112,6 +117,7 @@ injecting into a complete block.
   - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
   - `encryption` (`list[obj]`): Set the `encryption` field on the resulting object. When `null`, the `encryption` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.app_configuration.encryption.new](#fn-encryptionnew) constructor.
   - `identity` (`list[obj]`): Set the `identity` field on the resulting object. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.app_configuration.identity.new](#fn-identitynew) constructor.
+  - `replica` (`list[obj]`): Set the `replica` field on the resulting object. When `null`, the `replica` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.app_configuration.replica.new](#fn-replicanew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.app_configuration.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -272,6 +278,43 @@ Terraform resource block to set or update the purge_protection_enabled field.
   - `value` (`bool`): The value to set for the `purge_protection_enabled` field.
 
 
+### fn withReplica
+
+```ts
+withReplica()
+```
+
+`azurerm.list[obj].withReplica` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the replica field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [azurerm.list[obj].withReplicaMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `replica` field.
+
+
+### fn withReplicaMixin
+
+```ts
+withReplicaMixin()
+```
+
+`azurerm.list[obj].withReplicaMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the replica field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.list[obj].withReplica](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `replica` field.
+
+
 ### fn withResourceGroupName
 
 ```ts
@@ -418,6 +461,30 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `identity` sub block.
+
+
+## obj replica
+
+
+
+### fn replica.new
+
+```ts
+new()
+```
+
+
+`azurerm.app_configuration.replica.new` constructs a new object with attributes and blocks configured for the `replica`
+Terraform sub block.
+
+
+
+**Args**:
+  - `location` (`string`): Set the `location` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `replica` sub block.
 
 
 ## obj timeouts

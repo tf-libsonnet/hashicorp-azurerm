@@ -18,6 +18,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withAllowResourceOnlyPermissions()`](#fn-withallowresourceonlypermissions)
 * [`fn withCmkForQueryForced()`](#fn-withcmkforqueryforced)
 * [`fn withDailyQuotaGb()`](#fn-withdailyquotagb)
+* [`fn withDataCollectionRuleId()`](#fn-withdatacollectionruleid)
 * [`fn withInternetIngestionEnabled()`](#fn-withinternetingestionenabled)
 * [`fn withInternetQueryEnabled()`](#fn-withinternetqueryenabled)
 * [`fn withLocalAuthenticationDisabled()`](#fn-withlocalauthenticationdisabled)
@@ -65,6 +66,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `allow_resource_only_permissions` (`bool`): Set the `allow_resource_only_permissions` field on the resulting resource block. When `null`, the `allow_resource_only_permissions` field will be omitted from the resulting object.
   - `cmk_for_query_forced` (`bool`): Set the `cmk_for_query_forced` field on the resulting resource block. When `null`, the `cmk_for_query_forced` field will be omitted from the resulting object.
   - `daily_quota_gb` (`number`): Set the `daily_quota_gb` field on the resulting resource block. When `null`, the `daily_quota_gb` field will be omitted from the resulting object.
+  - `data_collection_rule_id` (`string`): Set the `data_collection_rule_id` field on the resulting resource block. When `null`, the `data_collection_rule_id` field will be omitted from the resulting object.
   - `internet_ingestion_enabled` (`bool`): Set the `internet_ingestion_enabled` field on the resulting resource block. When `null`, the `internet_ingestion_enabled` field will be omitted from the resulting object.
   - `internet_query_enabled` (`bool`): Set the `internet_query_enabled` field on the resulting resource block. When `null`, the `internet_query_enabled` field will be omitted from the resulting object.
   - `local_authentication_disabled` (`bool`): Set the `local_authentication_disabled` field on the resulting resource block. When `null`, the `local_authentication_disabled` field will be omitted from the resulting object.
@@ -102,6 +104,7 @@ injecting into a complete block.
   - `allow_resource_only_permissions` (`bool`): Set the `allow_resource_only_permissions` field on the resulting object. When `null`, the `allow_resource_only_permissions` field will be omitted from the resulting object.
   - `cmk_for_query_forced` (`bool`): Set the `cmk_for_query_forced` field on the resulting object. When `null`, the `cmk_for_query_forced` field will be omitted from the resulting object.
   - `daily_quota_gb` (`number`): Set the `daily_quota_gb` field on the resulting object. When `null`, the `daily_quota_gb` field will be omitted from the resulting object.
+  - `data_collection_rule_id` (`string`): Set the `data_collection_rule_id` field on the resulting object. When `null`, the `data_collection_rule_id` field will be omitted from the resulting object.
   - `internet_ingestion_enabled` (`bool`): Set the `internet_ingestion_enabled` field on the resulting object. When `null`, the `internet_ingestion_enabled` field will be omitted from the resulting object.
   - `internet_query_enabled` (`bool`): Set the `internet_query_enabled` field on the resulting object. When `null`, the `internet_query_enabled` field will be omitted from the resulting object.
   - `local_authentication_disabled` (`bool`): Set the `local_authentication_disabled` field on the resulting object. When `null`, the `local_authentication_disabled` field will be omitted from the resulting object.
@@ -164,6 +167,22 @@ Terraform resource block to set or update the daily_quota_gb field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`number`): The value to set for the `daily_quota_gb` field.
+
+
+### fn withDataCollectionRuleId
+
+```ts
+withDataCollectionRuleId()
+```
+
+`azurerm.string.withDataCollectionRuleId` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the data_collection_rule_id field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `data_collection_rule_id` field.
 
 
 ### fn withInternetIngestionEnabled

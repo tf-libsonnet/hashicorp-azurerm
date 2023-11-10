@@ -1156,10 +1156,10 @@ Terraform sub block.
 **Args**:
   - `domain_guid` (`string`): Set the `domain_guid` field on the resulting object.
   - `domain_name` (`string`): Set the `domain_name` field on the resulting object.
-  - `domain_sid` (`string`): Set the `domain_sid` field on the resulting object.
-  - `forest_name` (`string`): Set the `forest_name` field on the resulting object.
-  - `netbios_domain_name` (`string`): Set the `netbios_domain_name` field on the resulting object.
-  - `storage_sid` (`string`): Set the `storage_sid` field on the resulting object.
+  - `domain_sid` (`string`): Set the `domain_sid` field on the resulting object. When `null`, the `domain_sid` field will be omitted from the resulting object.
+  - `forest_name` (`string`): Set the `forest_name` field on the resulting object. When `null`, the `forest_name` field will be omitted from the resulting object.
+  - `netbios_domain_name` (`string`): Set the `netbios_domain_name` field on the resulting object. When `null`, the `netbios_domain_name` field will be omitted from the resulting object.
+  - `storage_sid` (`string`): Set the `storage_sid` field on the resulting object. When `null`, the `storage_sid` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `active_directory` sub block.
