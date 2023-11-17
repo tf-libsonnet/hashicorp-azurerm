@@ -31,6 +31,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withContentShareForceDisabled()`](#fn-withcontentshareforcedisabled)
 * [`fn withDailyMemoryTimeQuota()`](#fn-withdailymemorytimequota)
 * [`fn withEnabled()`](#fn-withenabled)
+* [`fn withFtpPublishBasicAuthenticationEnabled()`](#fn-withftppublishbasicauthenticationenabled)
 * [`fn withFunctionAppId()`](#fn-withfunctionappid)
 * [`fn withFunctionsExtensionVersion()`](#fn-withfunctionsextensionversion)
 * [`fn withHttpsOnly()`](#fn-withhttpsonly)
@@ -52,6 +53,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
 * [`fn withVirtualNetworkSubnetId()`](#fn-withvirtualnetworksubnetid)
+* [`fn withWebdeployPublishBasicAuthenticationEnabled()`](#fn-withwebdeploypublishbasicauthenticationenabled)
 * [`obj auth_settings`](#obj-auth_settings)
   * [`fn new()`](#fn-auth_settingsnew)
   * [`obj auth_settings.active_directory`](#obj-auth_settingsactive_directory)
@@ -152,6 +154,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `content_share_force_disabled` (`bool`): Force disable the content share settings. When `null`, the `content_share_force_disabled` field will be omitted from the resulting object.
   - `daily_memory_time_quota` (`number`): The amount of memory in gigabyte-seconds that your application is allowed to consume per day. Setting this value only affects function apps in Consumption Plans. When `null`, the `daily_memory_time_quota` field will be omitted from the resulting object.
   - `enabled` (`bool`): Is the Linux Function App Slot enabled. When `null`, the `enabled` field will be omitted from the resulting object.
+  - `ftp_publish_basic_authentication_enabled` (`bool`): Set the `ftp_publish_basic_authentication_enabled` field on the resulting resource block. When `null`, the `ftp_publish_basic_authentication_enabled` field will be omitted from the resulting object.
   - `function_app_id` (`string`): The ID of the Linux Function App this Slot is a member of.
   - `functions_extension_version` (`string`): The runtime version associated with the Function App Slot. When `null`, the `functions_extension_version` field will be omitted from the resulting object.
   - `https_only` (`bool`): Can the Function App Slot only be accessed via HTTPS? When `null`, the `https_only` field will be omitted from the resulting object.
@@ -165,6 +168,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `storage_uses_managed_identity` (`bool`): Should the Function App Slot use its Managed Identity to access storage? When `null`, the `storage_uses_managed_identity` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
   - `virtual_network_subnet_id` (`string`): Set the `virtual_network_subnet_id` field on the resulting resource block. When `null`, the `virtual_network_subnet_id` field will be omitted from the resulting object.
+  - `webdeploy_publish_basic_authentication_enabled` (`bool`): Set the `webdeploy_publish_basic_authentication_enabled` field on the resulting resource block. When `null`, the `webdeploy_publish_basic_authentication_enabled` field will be omitted from the resulting object.
   - `auth_settings` (`list[obj]`): Set the `auth_settings` field on the resulting resource block. When `null`, the `auth_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.auth_settings.new](#fn-auth_settingsnew) constructor.
   - `auth_settings_v2` (`list[obj]`): Set the `auth_settings_v2` field on the resulting resource block. When `null`, the `auth_settings_v2` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.auth_settings_v2.new](#fn-auth_settings_v2new) constructor.
   - `backup` (`list[obj]`): Set the `backup` field on the resulting resource block. When `null`, the `backup` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.backup.new](#fn-backupnew) constructor.
@@ -204,6 +208,7 @@ injecting into a complete block.
   - `content_share_force_disabled` (`bool`): Force disable the content share settings. When `null`, the `content_share_force_disabled` field will be omitted from the resulting object.
   - `daily_memory_time_quota` (`number`): The amount of memory in gigabyte-seconds that your application is allowed to consume per day. Setting this value only affects function apps in Consumption Plans. When `null`, the `daily_memory_time_quota` field will be omitted from the resulting object.
   - `enabled` (`bool`): Is the Linux Function App Slot enabled. When `null`, the `enabled` field will be omitted from the resulting object.
+  - `ftp_publish_basic_authentication_enabled` (`bool`): Set the `ftp_publish_basic_authentication_enabled` field on the resulting object. When `null`, the `ftp_publish_basic_authentication_enabled` field will be omitted from the resulting object.
   - `function_app_id` (`string`): The ID of the Linux Function App this Slot is a member of.
   - `functions_extension_version` (`string`): The runtime version associated with the Function App Slot. When `null`, the `functions_extension_version` field will be omitted from the resulting object.
   - `https_only` (`bool`): Can the Function App Slot only be accessed via HTTPS? When `null`, the `https_only` field will be omitted from the resulting object.
@@ -217,6 +222,7 @@ injecting into a complete block.
   - `storage_uses_managed_identity` (`bool`): Should the Function App Slot use its Managed Identity to access storage? When `null`, the `storage_uses_managed_identity` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
   - `virtual_network_subnet_id` (`string`): Set the `virtual_network_subnet_id` field on the resulting object. When `null`, the `virtual_network_subnet_id` field will be omitted from the resulting object.
+  - `webdeploy_publish_basic_authentication_enabled` (`bool`): Set the `webdeploy_publish_basic_authentication_enabled` field on the resulting object. When `null`, the `webdeploy_publish_basic_authentication_enabled` field will be omitted from the resulting object.
   - `auth_settings` (`list[obj]`): Set the `auth_settings` field on the resulting object. When `null`, the `auth_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.auth_settings.new](#fn-auth_settingsnew) constructor.
   - `auth_settings_v2` (`list[obj]`): Set the `auth_settings_v2` field on the resulting object. When `null`, the `auth_settings_v2` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.auth_settings_v2.new](#fn-auth_settings_v2new) constructor.
   - `backup` (`list[obj]`): Set the `backup` field on the resulting object. When `null`, the `backup` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.linux_function_app_slot.backup.new](#fn-backupnew) constructor.
@@ -504,6 +510,22 @@ Terraform resource block to set or update the enabled field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`bool`): The value to set for the `enabled` field.
+
+
+### fn withFtpPublishBasicAuthenticationEnabled
+
+```ts
+withFtpPublishBasicAuthenticationEnabled()
+```
+
+`azurerm.bool.withFtpPublishBasicAuthenticationEnabled` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the ftp_publish_basic_authentication_enabled field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `ftp_publish_basic_authentication_enabled` field.
 
 
 ### fn withFunctionAppId
@@ -859,6 +881,22 @@ Terraform resource block to set or update the virtual_network_subnet_id field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `virtual_network_subnet_id` field.
+
+
+### fn withWebdeployPublishBasicAuthenticationEnabled
+
+```ts
+withWebdeployPublishBasicAuthenticationEnabled()
+```
+
+`azurerm.bool.withWebdeployPublishBasicAuthenticationEnabled` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the webdeploy_publish_basic_authentication_enabled field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `webdeploy_publish_basic_authentication_enabled` field.
 
 
 ## obj auth_settings

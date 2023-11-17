@@ -29,6 +29,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withConnectionString()`](#fn-withconnectionstring)
 * [`fn withConnectionStringMixin()`](#fn-withconnectionstringmixin)
 * [`fn withEnabled()`](#fn-withenabled)
+* [`fn withFtpPublishBasicAuthenticationEnabled()`](#fn-withftppublishbasicauthenticationenabled)
 * [`fn withHttpsOnly()`](#fn-withhttpsonly)
 * [`fn withIdentity()`](#fn-withidentity)
 * [`fn withIdentityMixin()`](#fn-withidentitymixin)
@@ -50,6 +51,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
 * [`fn withVirtualNetworkSubnetId()`](#fn-withvirtualnetworksubnetid)
+* [`fn withWebdeployPublishBasicAuthenticationEnabled()`](#fn-withwebdeploypublishbasicauthenticationenabled)
 * [`fn withZipDeployFile()`](#fn-withzipdeployfile)
 * [`obj auth_settings`](#obj-auth_settings)
   * [`fn new()`](#fn-auth_settingsnew)
@@ -177,6 +179,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `client_certificate_exclusion_paths` (`string`): Paths to exclude when using client certificates, separated by ; When `null`, the `client_certificate_exclusion_paths` field will be omitted from the resulting object.
   - `client_certificate_mode` (`string`): Set the `client_certificate_mode` field on the resulting resource block. When `null`, the `client_certificate_mode` field will be omitted from the resulting object.
   - `enabled` (`bool`): Set the `enabled` field on the resulting resource block. When `null`, the `enabled` field will be omitted from the resulting object.
+  - `ftp_publish_basic_authentication_enabled` (`bool`): Set the `ftp_publish_basic_authentication_enabled` field on the resulting resource block. When `null`, the `ftp_publish_basic_authentication_enabled` field will be omitted from the resulting object.
   - `https_only` (`bool`): Set the `https_only` field on the resulting resource block. When `null`, the `https_only` field will be omitted from the resulting object.
   - `key_vault_reference_identity_id` (`string`): Set the `key_vault_reference_identity_id` field on the resulting resource block. When `null`, the `key_vault_reference_identity_id` field will be omitted from the resulting object.
   - `location` (`string`): Set the `location` field on the resulting resource block.
@@ -186,6 +189,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `service_plan_id` (`string`): Set the `service_plan_id` field on the resulting resource block.
   - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
   - `virtual_network_subnet_id` (`string`): Set the `virtual_network_subnet_id` field on the resulting resource block. When `null`, the `virtual_network_subnet_id` field will be omitted from the resulting object.
+  - `webdeploy_publish_basic_authentication_enabled` (`bool`): Set the `webdeploy_publish_basic_authentication_enabled` field on the resulting resource block. When `null`, the `webdeploy_publish_basic_authentication_enabled` field will be omitted from the resulting object.
   - `zip_deploy_file` (`string`): The local path and filename of the Zip packaged application to deploy to this Windows Web App. **Note:** Using this value requires either `WEBSITE_RUN_FROM_PACKAGE=1` or `SCM_DO_BUILD_DURING_DEPLOYMENT=true` to be set on the App in `app_settings`. When `null`, the `zip_deploy_file` field will be omitted from the resulting object.
   - `auth_settings` (`list[obj]`): Set the `auth_settings` field on the resulting resource block. When `null`, the `auth_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.windows_web_app.auth_settings.new](#fn-auth_settingsnew) constructor.
   - `auth_settings_v2` (`list[obj]`): Set the `auth_settings_v2` field on the resulting resource block. When `null`, the `auth_settings_v2` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.windows_web_app.auth_settings_v2.new](#fn-auth_settings_v2new) constructor.
@@ -226,6 +230,7 @@ injecting into a complete block.
   - `client_certificate_exclusion_paths` (`string`): Paths to exclude when using client certificates, separated by ; When `null`, the `client_certificate_exclusion_paths` field will be omitted from the resulting object.
   - `client_certificate_mode` (`string`): Set the `client_certificate_mode` field on the resulting object. When `null`, the `client_certificate_mode` field will be omitted from the resulting object.
   - `enabled` (`bool`): Set the `enabled` field on the resulting object. When `null`, the `enabled` field will be omitted from the resulting object.
+  - `ftp_publish_basic_authentication_enabled` (`bool`): Set the `ftp_publish_basic_authentication_enabled` field on the resulting object. When `null`, the `ftp_publish_basic_authentication_enabled` field will be omitted from the resulting object.
   - `https_only` (`bool`): Set the `https_only` field on the resulting object. When `null`, the `https_only` field will be omitted from the resulting object.
   - `key_vault_reference_identity_id` (`string`): Set the `key_vault_reference_identity_id` field on the resulting object. When `null`, the `key_vault_reference_identity_id` field will be omitted from the resulting object.
   - `location` (`string`): Set the `location` field on the resulting object.
@@ -235,6 +240,7 @@ injecting into a complete block.
   - `service_plan_id` (`string`): Set the `service_plan_id` field on the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
   - `virtual_network_subnet_id` (`string`): Set the `virtual_network_subnet_id` field on the resulting object. When `null`, the `virtual_network_subnet_id` field will be omitted from the resulting object.
+  - `webdeploy_publish_basic_authentication_enabled` (`bool`): Set the `webdeploy_publish_basic_authentication_enabled` field on the resulting object. When `null`, the `webdeploy_publish_basic_authentication_enabled` field will be omitted from the resulting object.
   - `zip_deploy_file` (`string`): The local path and filename of the Zip packaged application to deploy to this Windows Web App. **Note:** Using this value requires either `WEBSITE_RUN_FROM_PACKAGE=1` or `SCM_DO_BUILD_DURING_DEPLOYMENT=true` to be set on the App in `app_settings`. When `null`, the `zip_deploy_file` field will be omitted from the resulting object.
   - `auth_settings` (`list[obj]`): Set the `auth_settings` field on the resulting object. When `null`, the `auth_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.windows_web_app.auth_settings.new](#fn-auth_settingsnew) constructor.
   - `auth_settings_v2` (`list[obj]`): Set the `auth_settings_v2` field on the resulting object. When `null`, the `auth_settings_v2` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.windows_web_app.auth_settings_v2.new](#fn-auth_settings_v2new) constructor.
@@ -493,6 +499,22 @@ Terraform resource block to set or update the enabled field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`bool`): The value to set for the `enabled` field.
+
+
+### fn withFtpPublishBasicAuthenticationEnabled
+
+```ts
+withFtpPublishBasicAuthenticationEnabled()
+```
+
+`azurerm.bool.withFtpPublishBasicAuthenticationEnabled` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the ftp_publish_basic_authentication_enabled field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `ftp_publish_basic_authentication_enabled` field.
 
 
 ### fn withHttpsOnly
@@ -858,6 +880,22 @@ Terraform resource block to set or update the virtual_network_subnet_id field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `virtual_network_subnet_id` field.
+
+
+### fn withWebdeployPublishBasicAuthenticationEnabled
+
+```ts
+withWebdeployPublishBasicAuthenticationEnabled()
+```
+
+`azurerm.bool.withWebdeployPublishBasicAuthenticationEnabled` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the webdeploy_publish_basic_authentication_enabled field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `webdeploy_publish_basic_authentication_enabled` field.
 
 
 ### fn withZipDeployFile
