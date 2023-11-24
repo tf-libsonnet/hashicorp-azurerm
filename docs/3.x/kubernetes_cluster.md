@@ -1991,6 +1991,7 @@ Terraform sub block.
   - `enable_host_encryption` (`bool`): Set the `enable_host_encryption` field on the resulting object. When `null`, the `enable_host_encryption` field will be omitted from the resulting object.
   - `enable_node_public_ip` (`bool`): Set the `enable_node_public_ip` field on the resulting object. When `null`, the `enable_node_public_ip` field will be omitted from the resulting object.
   - `fips_enabled` (`bool`): Set the `fips_enabled` field on the resulting object. When `null`, the `fips_enabled` field will be omitted from the resulting object.
+  - `gpu_instance` (`string`): Set the `gpu_instance` field on the resulting object. When `null`, the `gpu_instance` field will be omitted from the resulting object.
   - `host_group_id` (`string`): Set the `host_group_id` field on the resulting object. When `null`, the `host_group_id` field will be omitted from the resulting object.
   - `kubelet_disk_type` (`string`): Set the `kubelet_disk_type` field on the resulting object. When `null`, the `kubelet_disk_type` field will be omitted from the resulting object.
   - `max_count` (`number`): Set the `max_count` field on the resulting object. When `null`, the `max_count` field will be omitted from the resulting object.

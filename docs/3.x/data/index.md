@@ -196,6 +196,7 @@ permalink: /data/
 * [monitor_log_profile](monitor_log_profile.md)
 * [monitor_scheduled_query_rules_alert](monitor_scheduled_query_rules_alert.md)
 * [monitor_scheduled_query_rules_log](monitor_scheduled_query_rules_log.md)
+* [monitor_workspace](monitor_workspace.md)
 * [mssql_database](mssql_database.md)
 * [mssql_elasticpool](mssql_elasticpool.md)
 * [mssql_managed_instance](mssql_managed_instance.md)

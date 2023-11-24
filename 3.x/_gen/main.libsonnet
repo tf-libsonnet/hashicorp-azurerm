@@ -89,6 +89,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   application_insights_workbook_template: (import 'resources/application_insights_workbook_template.libsonnet'),
   application_load_balancer: (import 'resources/application_load_balancer.libsonnet'),
   application_load_balancer_frontend: (import 'resources/application_load_balancer_frontend.libsonnet'),
+  application_load_balancer_subnet_association: (import 'resources/application_load_balancer_subnet_association.libsonnet'),
   application_security_group: (import 'resources/application_security_group.libsonnet'),
   arc_kubernetes_cluster: (import 'resources/arc_kubernetes_cluster.libsonnet'),
   arc_kubernetes_cluster_extension: (import 'resources/arc_kubernetes_cluster_extension.libsonnet'),

@@ -22,6 +22,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withEnableNodePublicIp()`](#fn-withenablenodepublicip)
 * [`fn withEvictionPolicy()`](#fn-withevictionpolicy)
 * [`fn withFipsEnabled()`](#fn-withfipsenabled)
+* [`fn withGpuInstance()`](#fn-withgpuinstance)
 * [`fn withHostGroupId()`](#fn-withhostgroupid)
 * [`fn withKubeletConfig()`](#fn-withkubeletconfig)
 * [`fn withKubeletConfigMixin()`](#fn-withkubeletconfigmixin)
@@ -115,6 +116,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `enable_node_public_ip` (`bool`): Set the `enable_node_public_ip` field on the resulting resource block. When `null`, the `enable_node_public_ip` field will be omitted from the resulting object.
   - `eviction_policy` (`string`): Set the `eviction_policy` field on the resulting resource block. When `null`, the `eviction_policy` field will be omitted from the resulting object.
   - `fips_enabled` (`bool`): Set the `fips_enabled` field on the resulting resource block. When `null`, the `fips_enabled` field will be omitted from the resulting object.
+  - `gpu_instance` (`string`): Set the `gpu_instance` field on the resulting resource block. When `null`, the `gpu_instance` field will be omitted from the resulting object.
   - `host_group_id` (`string`): Set the `host_group_id` field on the resulting resource block. When `null`, the `host_group_id` field will be omitted from the resulting object.
   - `kubelet_disk_type` (`string`): Set the `kubelet_disk_type` field on the resulting resource block. When `null`, the `kubelet_disk_type` field will be omitted from the resulting object.
   - `kubernetes_cluster_id` (`string`): Set the `kubernetes_cluster_id` field on the resulting resource block.
@@ -181,6 +183,7 @@ injecting into a complete block.
   - `enable_node_public_ip` (`bool`): Set the `enable_node_public_ip` field on the resulting object. When `null`, the `enable_node_public_ip` field will be omitted from the resulting object.
   - `eviction_policy` (`string`): Set the `eviction_policy` field on the resulting object. When `null`, the `eviction_policy` field will be omitted from the resulting object.
   - `fips_enabled` (`bool`): Set the `fips_enabled` field on the resulting object. When `null`, the `fips_enabled` field will be omitted from the resulting object.
+  - `gpu_instance` (`string`): Set the `gpu_instance` field on the resulting object. When `null`, the `gpu_instance` field will be omitted from the resulting object.
   - `host_group_id` (`string`): Set the `host_group_id` field on the resulting object. When `null`, the `host_group_id` field will be omitted from the resulting object.
   - `kubelet_disk_type` (`string`): Set the `kubelet_disk_type` field on the resulting object. When `null`, the `kubelet_disk_type` field will be omitted from the resulting object.
   - `kubernetes_cluster_id` (`string`): Set the `kubernetes_cluster_id` field on the resulting object.
@@ -332,6 +335,22 @@ Terraform resource block to set or update the fips_enabled field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`bool`): The value to set for the `fips_enabled` field.
+
+
+### fn withGpuInstance
+
+```ts
+withGpuInstance()
+```
+
+`azurerm.string.withGpuInstance` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the gpu_instance field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `gpu_instance` field.
 
 
 ### fn withHostGroupId

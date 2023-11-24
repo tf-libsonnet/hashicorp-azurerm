@@ -14,16 +14,18 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       update: update,
     }),
   },
-  '#new':: d.fn(help="\n`azurerm.gallery_application_version.new` injects a new `azurerm_gallery_application_version` Terraform `resource`\nblock into the root module document.\n\nAdditionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the\nresource. For example, if you added a new instance to the root using:\n\n    # arguments omitted for brevity\n    azurerm.gallery_application_version.new('some_id')\n\nYou can get the reference to the `id` field of the created `azurerm.gallery_application_version` using the reference:\n\n    $._ref.azurerm_gallery_application_version.some_id.get('id')\n\nThis is the same as directly entering `\"${ azurerm_gallery_application_version.some_id.id }\"` as the value.\n\nNOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,\nor `$` to refer to the root object. Instead, make an explicit outer object using `local`.\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block.\n  - `enable_health_check` (`bool`): Set the `enable_health_check` field on the resulting resource block. When `null`, the `enable_health_check` field will be omitted from the resulting object.\n  - `end_of_life_date` (`string`): Set the `end_of_life_date` field on the resulting resource block. When `null`, the `end_of_life_date` field will be omitted from the resulting object.\n  - `exclude_from_latest` (`bool`): Set the `exclude_from_latest` field on the resulting resource block. When `null`, the `exclude_from_latest` field will be omitted from the resulting object.\n  - `gallery_application_id` (`string`): Set the `gallery_application_id` field on the resulting resource block.\n  - `location` (`string`): Set the `location` field on the resulting resource block.\n  - `name` (`string`): Set the `name` field on the resulting resource block.\n  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.\n  - `manage_action` (`list[obj]`): Set the `manage_action` field on the resulting resource block. When `null`, the `manage_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.gallery_application_version.manage_action.new](#fn-manage_actionnew) constructor.\n  - `source` (`list[obj]`): Set the `source` field on the resulting resource block. When `null`, the `source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.gallery_application_version.source.new](#fn-sourcenew) constructor.\n  - `target_region` (`list[obj]`): Set the `target_region` field on the resulting resource block. When `null`, the `target_region` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.gallery_application_version.target_region.new](#fn-target_regionnew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.gallery_application_version.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n- A mixin object that injects the new resource into the root Terraform configuration.\n", args=[]),
+  '#new':: d.fn(help="\n`azurerm.gallery_application_version.new` injects a new `azurerm_gallery_application_version` Terraform `resource`\nblock into the root module document.\n\nAdditionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the\nresource. For example, if you added a new instance to the root using:\n\n    # arguments omitted for brevity\n    azurerm.gallery_application_version.new('some_id')\n\nYou can get the reference to the `id` field of the created `azurerm.gallery_application_version` using the reference:\n\n    $._ref.azurerm_gallery_application_version.some_id.get('id')\n\nThis is the same as directly entering `\"${ azurerm_gallery_application_version.some_id.id }\"` as the value.\n\nNOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,\nor `$` to refer to the root object. Instead, make an explicit outer object using `local`.\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block.\n  - `config_file` (`string`): Set the `config_file` field on the resulting resource block. When `null`, the `config_file` field will be omitted from the resulting object.\n  - `enable_health_check` (`bool`): Set the `enable_health_check` field on the resulting resource block. When `null`, the `enable_health_check` field will be omitted from the resulting object.\n  - `end_of_life_date` (`string`): Set the `end_of_life_date` field on the resulting resource block. When `null`, the `end_of_life_date` field will be omitted from the resulting object.\n  - `exclude_from_latest` (`bool`): Set the `exclude_from_latest` field on the resulting resource block. When `null`, the `exclude_from_latest` field will be omitted from the resulting object.\n  - `gallery_application_id` (`string`): Set the `gallery_application_id` field on the resulting resource block.\n  - `location` (`string`): Set the `location` field on the resulting resource block.\n  - `name` (`string`): Set the `name` field on the resulting resource block.\n  - `package_file` (`string`): Set the `package_file` field on the resulting resource block. When `null`, the `package_file` field will be omitted from the resulting object.\n  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.\n  - `manage_action` (`list[obj]`): Set the `manage_action` field on the resulting resource block. When `null`, the `manage_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.gallery_application_version.manage_action.new](#fn-manage_actionnew) constructor.\n  - `source` (`list[obj]`): Set the `source` field on the resulting resource block. When `null`, the `source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.gallery_application_version.source.new](#fn-sourcenew) constructor.\n  - `target_region` (`list[obj]`): Set the `target_region` field on the resulting resource block. When `null`, the `target_region` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.gallery_application_version.target_region.new](#fn-target_regionnew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.gallery_application_version.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n- A mixin object that injects the new resource into the root Terraform configuration.\n", args=[]),
   new(
     resourceLabel,
     gallery_application_id,
     location,
     name,
+    config_file=null,
     enable_health_check=null,
     end_of_life_date=null,
     exclude_from_latest=null,
     manage_action=null,
+    package_file=null,
     source=null,
     tags=null,
     target_region=null,
@@ -33,6 +35,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     type='azurerm_gallery_application_version',
     label=resourceLabel,
     attrs=self.newAttrs(
+      config_file=config_file,
       enable_health_check=enable_health_check,
       end_of_life_date=end_of_life_date,
       exclude_from_latest=exclude_from_latest,
@@ -40,6 +43,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       location=location,
       manage_action=manage_action,
       name=name,
+      package_file=package_file,
       source=source,
       tags=tags,
       target_region=target_region,
@@ -47,20 +51,23 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     ),
     _meta=_meta
   ),
-  '#newAttrs':: d.fn(help='\n`azurerm.gallery_application_version.newAttrs` constructs a new object with attributes and blocks configured for the `gallery_application_version`\nTerraform resource.\n\nUnlike [azurerm.gallery_application_version.new](#fn-new), this function will not inject the `resource`\nblock into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the\n[tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.\n\nThis is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to\ninjecting into a complete block.\n\n**Args**:\n  - `enable_health_check` (`bool`): Set the `enable_health_check` field on the resulting object. When `null`, the `enable_health_check` field will be omitted from the resulting object.\n  - `end_of_life_date` (`string`): Set the `end_of_life_date` field on the resulting object. When `null`, the `end_of_life_date` field will be omitted from the resulting object.\n  - `exclude_from_latest` (`bool`): Set the `exclude_from_latest` field on the resulting object. When `null`, the `exclude_from_latest` field will be omitted from the resulting object.\n  - `gallery_application_id` (`string`): Set the `gallery_application_id` field on the resulting object.\n  - `location` (`string`): Set the `location` field on the resulting object.\n  - `name` (`string`): Set the `name` field on the resulting object.\n  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.\n  - `manage_action` (`list[obj]`): Set the `manage_action` field on the resulting object. When `null`, the `manage_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.gallery_application_version.manage_action.new](#fn-manage_actionnew) constructor.\n  - `source` (`list[obj]`): Set the `source` field on the resulting object. When `null`, the `source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.gallery_application_version.source.new](#fn-sourcenew) constructor.\n  - `target_region` (`list[obj]`): Set the `target_region` field on the resulting object. When `null`, the `target_region` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.gallery_application_version.target_region.new](#fn-target_regionnew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.gallery_application_version.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `gallery_application_version` resource into the root Terraform configuration.\n', args=[]),
+  '#newAttrs':: d.fn(help='\n`azurerm.gallery_application_version.newAttrs` constructs a new object with attributes and blocks configured for the `gallery_application_version`\nTerraform resource.\n\nUnlike [azurerm.gallery_application_version.new](#fn-new), this function will not inject the `resource`\nblock into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the\n[tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.\n\nThis is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to\ninjecting into a complete block.\n\n**Args**:\n  - `config_file` (`string`): Set the `config_file` field on the resulting object. When `null`, the `config_file` field will be omitted from the resulting object.\n  - `enable_health_check` (`bool`): Set the `enable_health_check` field on the resulting object. When `null`, the `enable_health_check` field will be omitted from the resulting object.\n  - `end_of_life_date` (`string`): Set the `end_of_life_date` field on the resulting object. When `null`, the `end_of_life_date` field will be omitted from the resulting object.\n  - `exclude_from_latest` (`bool`): Set the `exclude_from_latest` field on the resulting object. When `null`, the `exclude_from_latest` field will be omitted from the resulting object.\n  - `gallery_application_id` (`string`): Set the `gallery_application_id` field on the resulting object.\n  - `location` (`string`): Set the `location` field on the resulting object.\n  - `name` (`string`): Set the `name` field on the resulting object.\n  - `package_file` (`string`): Set the `package_file` field on the resulting object. When `null`, the `package_file` field will be omitted from the resulting object.\n  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.\n  - `manage_action` (`list[obj]`): Set the `manage_action` field on the resulting object. When `null`, the `manage_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.gallery_application_version.manage_action.new](#fn-manage_actionnew) constructor.\n  - `source` (`list[obj]`): Set the `source` field on the resulting object. When `null`, the `source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.gallery_application_version.source.new](#fn-sourcenew) constructor.\n  - `target_region` (`list[obj]`): Set the `target_region` field on the resulting object. When `null`, the `target_region` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.gallery_application_version.target_region.new](#fn-target_regionnew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.gallery_application_version.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `gallery_application_version` resource into the root Terraform configuration.\n', args=[]),
   newAttrs(
     gallery_application_id,
     location,
     name,
+    config_file=null,
     enable_health_check=null,
     end_of_life_date=null,
     exclude_from_latest=null,
     manage_action=null,
+    package_file=null,
     source=null,
     tags=null,
     target_region=null,
     timeouts=null
   ):: std.prune(a={
+    config_file: config_file,
     enable_health_check: enable_health_check,
     end_of_life_date: end_of_life_date,
     exclude_from_latest: exclude_from_latest,
@@ -68,6 +75,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     location: location,
     manage_action: manage_action,
     name: name,
+    package_file: package_file,
     source: source,
     tags: tags,
     target_region: target_region,
@@ -84,12 +92,14 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     }),
   },
   target_region:: {
-    '#new':: d.fn(help='\n`azurerm.gallery_application_version.target_region.new` constructs a new object with attributes and blocks configured for the `target_region`\nTerraform sub block.\n\n\n\n**Args**:\n  - `name` (`string`): Set the `name` field on the resulting object.\n  - `regional_replica_count` (`number`): Set the `regional_replica_count` field on the resulting object.\n  - `storage_account_type` (`string`): Set the `storage_account_type` field on the resulting object. When `null`, the `storage_account_type` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `target_region` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`azurerm.gallery_application_version.target_region.new` constructs a new object with attributes and blocks configured for the `target_region`\nTerraform sub block.\n\n\n\n**Args**:\n  - `exclude_from_latest` (`bool`): Set the `exclude_from_latest` field on the resulting object. When `null`, the `exclude_from_latest` field will be omitted from the resulting object.\n  - `name` (`string`): Set the `name` field on the resulting object.\n  - `regional_replica_count` (`number`): Set the `regional_replica_count` field on the resulting object.\n  - `storage_account_type` (`string`): Set the `storage_account_type` field on the resulting object. When `null`, the `storage_account_type` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `target_region` sub block.\n', args=[]),
     new(
       name,
       regional_replica_count,
+      exclude_from_latest=null,
       storage_account_type=null
     ):: std.prune(a={
+      exclude_from_latest: exclude_from_latest,
       name: name,
       regional_replica_count: regional_replica_count,
       storage_account_type: storage_account_type,
@@ -108,6 +118,16 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       read: read,
       update: update,
     }),
+  },
+  '#withConfigFile':: d.fn(help='`azurerm.string.withConfigFile` constructs a mixin object that can be merged into the `string`\nTerraform resource block to set or update the config_file field.\n\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`string`): The value to set for the `config_file` field.\n', args=[]),
+  withConfigFile(resourceLabel, value): {
+    resource+: {
+      azurerm_gallery_application_version+: {
+        [resourceLabel]+: {
+          config_file: value,
+        },
+      },
+    },
   },
   '#withEnableHealthCheck':: d.fn(help='`azurerm.bool.withEnableHealthCheck` constructs a mixin object that can be merged into the `bool`\nTerraform resource block to set or update the enable_health_check field.\n\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`bool`): The value to set for the `enable_health_check` field.\n', args=[]),
   withEnableHealthCheck(resourceLabel, value): {
@@ -185,6 +205,16 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       azurerm_gallery_application_version+: {
         [resourceLabel]+: {
           name: value,
+        },
+      },
+    },
+  },
+  '#withPackageFile':: d.fn(help='`azurerm.string.withPackageFile` constructs a mixin object that can be merged into the `string`\nTerraform resource block to set or update the package_file field.\n\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`string`): The value to set for the `package_file` field.\n', args=[]),
+  withPackageFile(resourceLabel, value): {
+    resource+: {
+      azurerm_gallery_application_version+: {
+        [resourceLabel]+: {
+          package_file: value,
         },
       },
     },

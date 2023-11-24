@@ -98,6 +98,7 @@ project.
 * [application_insights_workbook_template](application_insights_workbook_template.md)
 * [application_load_balancer](application_load_balancer.md)
 * [application_load_balancer_frontend](application_load_balancer_frontend.md)
+* [application_load_balancer_subnet_association](application_load_balancer_subnet_association.md)
 * [application_security_group](application_security_group.md)
 * [arc_kubernetes_cluster](arc_kubernetes_cluster.md)
 * [arc_kubernetes_cluster_extension](arc_kubernetes_cluster_extension.md)

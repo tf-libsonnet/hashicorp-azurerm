@@ -191,6 +191,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   monitor_log_profile: (import 'monitor_log_profile.libsonnet'),
   monitor_scheduled_query_rules_alert: (import 'monitor_scheduled_query_rules_alert.libsonnet'),
   monitor_scheduled_query_rules_log: (import 'monitor_scheduled_query_rules_log.libsonnet'),
+  monitor_workspace: (import 'monitor_workspace.libsonnet'),
   mssql_database: (import 'mssql_database.libsonnet'),
   mssql_elasticpool: (import 'mssql_elasticpool.libsonnet'),
   mssql_managed_instance: (import 'mssql_managed_instance.libsonnet'),

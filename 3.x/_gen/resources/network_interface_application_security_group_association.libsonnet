@@ -26,17 +26,15 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     timeouts: timeouts,
   }),
   timeouts:: {
-    '#new':: d.fn(help='\n`azurerm.network_interface_application_security_group_association.timeouts.new` constructs a new object with attributes and blocks configured for the `timeouts`\nTerraform sub block.\n\n\n\n**Args**:\n  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.\n  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.\n  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.\n  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `timeouts` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`azurerm.network_interface_application_security_group_association.timeouts.new` constructs a new object with attributes and blocks configured for the `timeouts`\nTerraform sub block.\n\n\n\n**Args**:\n  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.\n  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.\n  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `timeouts` sub block.\n', args=[]),
     new(
       create=null,
       delete=null,
-      read=null,
-      update=null
+      read=null
     ):: std.prune(a={
       create: create,
       delete: delete,
       read: read,
-      update: update,
     }),
   },
   '#withApplicationSecurityGroupId':: d.fn(help='`azurerm.string.withApplicationSecurityGroupId` constructs a mixin object that can be merged into the `string`\nTerraform resource block to set or update the application_security_group_id field.\n\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`string`): The value to set for the `application_security_group_id` field.\n', args=[]),

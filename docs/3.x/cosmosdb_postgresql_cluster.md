@@ -79,8 +79,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `citus_version` (`string`): Set the `citus_version` field on the resulting resource block. When `null`, the `citus_version` field will be omitted from the resulting object.
   - `coordinator_public_ip_access_enabled` (`bool`): Set the `coordinator_public_ip_access_enabled` field on the resulting resource block. When `null`, the `coordinator_public_ip_access_enabled` field will be omitted from the resulting object.
   - `coordinator_server_edition` (`string`): Set the `coordinator_server_edition` field on the resulting resource block. When `null`, the `coordinator_server_edition` field will be omitted from the resulting object.
-  - `coordinator_storage_quota_in_mb` (`number`): Set the `coordinator_storage_quota_in_mb` field on the resulting resource block.
-  - `coordinator_vcore_count` (`number`): Set the `coordinator_vcore_count` field on the resulting resource block.
+  - `coordinator_storage_quota_in_mb` (`number`): Set the `coordinator_storage_quota_in_mb` field on the resulting resource block. When `null`, the `coordinator_storage_quota_in_mb` field will be omitted from the resulting object.
+  - `coordinator_vcore_count` (`number`): Set the `coordinator_vcore_count` field on the resulting resource block. When `null`, the `coordinator_vcore_count` field will be omitted from the resulting object.
   - `ha_enabled` (`bool`): Set the `ha_enabled` field on the resulting resource block. When `null`, the `ha_enabled` field will be omitted from the resulting object.
   - `location` (`string`): Set the `location` field on the resulting resource block.
   - `name` (`string`): Set the `name` field on the resulting resource block.
@@ -126,8 +126,8 @@ injecting into a complete block.
   - `citus_version` (`string`): Set the `citus_version` field on the resulting object. When `null`, the `citus_version` field will be omitted from the resulting object.
   - `coordinator_public_ip_access_enabled` (`bool`): Set the `coordinator_public_ip_access_enabled` field on the resulting object. When `null`, the `coordinator_public_ip_access_enabled` field will be omitted from the resulting object.
   - `coordinator_server_edition` (`string`): Set the `coordinator_server_edition` field on the resulting object. When `null`, the `coordinator_server_edition` field will be omitted from the resulting object.
-  - `coordinator_storage_quota_in_mb` (`number`): Set the `coordinator_storage_quota_in_mb` field on the resulting object.
-  - `coordinator_vcore_count` (`number`): Set the `coordinator_vcore_count` field on the resulting object.
+  - `coordinator_storage_quota_in_mb` (`number`): Set the `coordinator_storage_quota_in_mb` field on the resulting object. When `null`, the `coordinator_storage_quota_in_mb` field will be omitted from the resulting object.
+  - `coordinator_vcore_count` (`number`): Set the `coordinator_vcore_count` field on the resulting object. When `null`, the `coordinator_vcore_count` field will be omitted from the resulting object.
   - `ha_enabled` (`bool`): Set the `ha_enabled` field on the resulting object. When `null`, the `ha_enabled` field will be omitted from the resulting object.
   - `location` (`string`): Set the `location` field on the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
