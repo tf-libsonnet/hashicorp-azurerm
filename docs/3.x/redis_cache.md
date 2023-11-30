@@ -652,6 +652,7 @@ Terraform sub block.
 
 
 **Args**:
+  - `active_directory_authentication_enabled` (`bool`): Set the `active_directory_authentication_enabled` field on the resulting object. When `null`, the `active_directory_authentication_enabled` field will be omitted from the resulting object.
   - `aof_backup_enabled` (`bool`): Set the `aof_backup_enabled` field on the resulting object. When `null`, the `aof_backup_enabled` field will be omitted from the resulting object.
   - `aof_storage_connection_string_0` (`string`): Set the `aof_storage_connection_string_0` field on the resulting object. When `null`, the `aof_storage_connection_string_0` field will be omitted from the resulting object.
   - `aof_storage_connection_string_1` (`string`): Set the `aof_storage_connection_string_1` field on the resulting object. When `null`, the `aof_storage_connection_string_1` field will be omitted from the resulting object.

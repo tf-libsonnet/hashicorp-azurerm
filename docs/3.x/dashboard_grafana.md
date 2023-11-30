@@ -20,6 +20,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withAzureMonitorWorkspaceIntegrations()`](#fn-withazuremonitorworkspaceintegrations)
 * [`fn withAzureMonitorWorkspaceIntegrationsMixin()`](#fn-withazuremonitorworkspaceintegrationsmixin)
 * [`fn withDeterministicOutboundIpEnabled()`](#fn-withdeterministicoutboundipenabled)
+* [`fn withGrafanaMajorVersion()`](#fn-withgrafanamajorversion)
 * [`fn withIdentity()`](#fn-withidentity)
 * [`fn withIdentityMixin()`](#fn-withidentitymixin)
 * [`fn withLocation()`](#fn-withlocation)
@@ -70,6 +71,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `api_key_enabled` (`bool`): Set the `api_key_enabled` field on the resulting resource block. When `null`, the `api_key_enabled` field will be omitted from the resulting object.
   - `auto_generated_domain_name_label_scope` (`string`): Set the `auto_generated_domain_name_label_scope` field on the resulting resource block. When `null`, the `auto_generated_domain_name_label_scope` field will be omitted from the resulting object.
   - `deterministic_outbound_ip_enabled` (`bool`): Set the `deterministic_outbound_ip_enabled` field on the resulting resource block. When `null`, the `deterministic_outbound_ip_enabled` field will be omitted from the resulting object.
+  - `grafana_major_version` (`string`): Set the `grafana_major_version` field on the resulting resource block. When `null`, the `grafana_major_version` field will be omitted from the resulting object.
   - `location` (`string`): Set the `location` field on the resulting resource block.
   - `name` (`string`): Set the `name` field on the resulting resource block.
   - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting resource block. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
@@ -106,6 +108,7 @@ injecting into a complete block.
   - `api_key_enabled` (`bool`): Set the `api_key_enabled` field on the resulting object. When `null`, the `api_key_enabled` field will be omitted from the resulting object.
   - `auto_generated_domain_name_label_scope` (`string`): Set the `auto_generated_domain_name_label_scope` field on the resulting object. When `null`, the `auto_generated_domain_name_label_scope` field will be omitted from the resulting object.
   - `deterministic_outbound_ip_enabled` (`bool`): Set the `deterministic_outbound_ip_enabled` field on the resulting object. When `null`, the `deterministic_outbound_ip_enabled` field will be omitted from the resulting object.
+  - `grafana_major_version` (`string`): Set the `grafana_major_version` field on the resulting object. When `null`, the `grafana_major_version` field will be omitted from the resulting object.
   - `location` (`string`): Set the `location` field on the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
   - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting object. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
@@ -204,6 +207,22 @@ Terraform resource block to set or update the deterministic_outbound_ip_enabled 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`bool`): The value to set for the `deterministic_outbound_ip_enabled` field.
+
+
+### fn withGrafanaMajorVersion
+
+```ts
+withGrafanaMajorVersion()
+```
+
+`azurerm.string.withGrafanaMajorVersion` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the grafana_major_version field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `grafana_major_version` field.
 
 
 ### fn withIdentity

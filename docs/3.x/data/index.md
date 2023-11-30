@@ -294,6 +294,7 @@ permalink: /data/
 * [sql_managed_instance](sql_managed_instance.md)
 * [sql_server](sql_server.md)
 * [ssh_public_key](ssh_public_key.md)
+* [stack_hci_cluster](stack_hci_cluster.md)
 * [storage_account](storage_account.md)
 * [storage_account_blob_container_sas](storage_account_blob_container_sas.md)
 * [storage_account_sas](storage_account_sas.md)

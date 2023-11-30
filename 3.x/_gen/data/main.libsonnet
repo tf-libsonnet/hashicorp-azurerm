@@ -289,6 +289,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   sql_managed_instance: (import 'sql_managed_instance.libsonnet'),
   sql_server: (import 'sql_server.libsonnet'),
   ssh_public_key: (import 'ssh_public_key.libsonnet'),
+  stack_hci_cluster: (import 'stack_hci_cluster.libsonnet'),
   storage_account: (import 'storage_account.libsonnet'),
   storage_account_blob_container_sas: (import 'storage_account_blob_container_sas.libsonnet'),
   storage_account_sas: (import 'storage_account_sas.libsonnet'),
