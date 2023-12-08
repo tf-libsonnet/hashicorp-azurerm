@@ -20,6 +20,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withCreateMode()`](#fn-withcreatemode)
 * [`fn withCreationSourceDatabaseId()`](#fn-withcreationsourcedatabaseid)
 * [`fn withElasticPoolId()`](#fn-withelasticpoolid)
+* [`fn withEnclaveType()`](#fn-withenclavetype)
 * [`fn withGeoBackupEnabled()`](#fn-withgeobackupenabled)
 * [`fn withImport()`](#fn-withimport)
 * [`fn withImportMixin()`](#fn-withimportmixin)
@@ -94,6 +95,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `create_mode` (`string`): Set the `create_mode` field on the resulting resource block. When `null`, the `create_mode` field will be omitted from the resulting object.
   - `creation_source_database_id` (`string`): Set the `creation_source_database_id` field on the resulting resource block. When `null`, the `creation_source_database_id` field will be omitted from the resulting object.
   - `elastic_pool_id` (`string`): Set the `elastic_pool_id` field on the resulting resource block. When `null`, the `elastic_pool_id` field will be omitted from the resulting object.
+  - `enclave_type` (`string`): Set the `enclave_type` field on the resulting resource block. When `null`, the `enclave_type` field will be omitted from the resulting object.
   - `geo_backup_enabled` (`bool`): Set the `geo_backup_enabled` field on the resulting resource block. When `null`, the `geo_backup_enabled` field will be omitted from the resulting object.
   - `ledger_enabled` (`bool`): Set the `ledger_enabled` field on the resulting resource block. When `null`, the `ledger_enabled` field will be omitted from the resulting object.
   - `license_type` (`string`): Set the `license_type` field on the resulting resource block. When `null`, the `license_type` field will be omitted from the resulting object.
@@ -146,6 +148,7 @@ injecting into a complete block.
   - `create_mode` (`string`): Set the `create_mode` field on the resulting object. When `null`, the `create_mode` field will be omitted from the resulting object.
   - `creation_source_database_id` (`string`): Set the `creation_source_database_id` field on the resulting object. When `null`, the `creation_source_database_id` field will be omitted from the resulting object.
   - `elastic_pool_id` (`string`): Set the `elastic_pool_id` field on the resulting object. When `null`, the `elastic_pool_id` field will be omitted from the resulting object.
+  - `enclave_type` (`string`): Set the `enclave_type` field on the resulting object. When `null`, the `enclave_type` field will be omitted from the resulting object.
   - `geo_backup_enabled` (`bool`): Set the `geo_backup_enabled` field on the resulting object. When `null`, the `geo_backup_enabled` field will be omitted from the resulting object.
   - `ledger_enabled` (`bool`): Set the `ledger_enabled` field on the resulting object. When `null`, the `ledger_enabled` field will be omitted from the resulting object.
   - `license_type` (`string`): Set the `license_type` field on the resulting object. When `null`, the `license_type` field will be omitted from the resulting object.
@@ -253,6 +256,22 @@ Terraform resource block to set or update the elastic_pool_id field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `elastic_pool_id` field.
+
+
+### fn withEnclaveType
+
+```ts
+withEnclaveType()
+```
+
+`azurerm.string.withEnclaveType` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the enclave_type field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `enclave_type` field.
 
 
 ### fn withGeoBackupEnabled

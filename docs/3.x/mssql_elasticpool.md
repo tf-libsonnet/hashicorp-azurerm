@@ -15,6 +15,7 @@ This package contains functions and utilities for setting up the resource using 
 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
+* [`fn withEnclaveType()`](#fn-withenclavetype)
 * [`fn withLicenseType()`](#fn-withlicensetype)
 * [`fn withLocation()`](#fn-withlocation)
 * [`fn withMaintenanceConfigurationName()`](#fn-withmaintenanceconfigurationname)
@@ -67,6 +68,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
+  - `enclave_type` (`string`): Set the `enclave_type` field on the resulting resource block. When `null`, the `enclave_type` field will be omitted from the resulting object.
   - `license_type` (`string`): Set the `license_type` field on the resulting resource block. When `null`, the `license_type` field will be omitted from the resulting object.
   - `location` (`string`): Set the `location` field on the resulting resource block.
   - `maintenance_configuration_name` (`string`): Set the `maintenance_configuration_name` field on the resulting resource block. When `null`, the `maintenance_configuration_name` field will be omitted from the resulting object.
@@ -103,6 +105,7 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
+  - `enclave_type` (`string`): Set the `enclave_type` field on the resulting object. When `null`, the `enclave_type` field will be omitted from the resulting object.
   - `license_type` (`string`): Set the `license_type` field on the resulting object. When `null`, the `license_type` field will be omitted from the resulting object.
   - `location` (`string`): Set the `location` field on the resulting object.
   - `maintenance_configuration_name` (`string`): Set the `maintenance_configuration_name` field on the resulting object. When `null`, the `maintenance_configuration_name` field will be omitted from the resulting object.
@@ -119,6 +122,22 @@ injecting into a complete block.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `mssql_elasticpool` resource into the root Terraform configuration.
+
+
+### fn withEnclaveType
+
+```ts
+withEnclaveType()
+```
+
+`azurerm.string.withEnclaveType` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the enclave_type field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `enclave_type` field.
 
 
 ### fn withLicenseType

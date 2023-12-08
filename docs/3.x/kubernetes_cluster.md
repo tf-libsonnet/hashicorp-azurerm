@@ -89,6 +89,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withSkuTier()`](#fn-withskutier)
 * [`fn withStorageProfile()`](#fn-withstorageprofile)
 * [`fn withStorageProfileMixin()`](#fn-withstorageprofilemixin)
+* [`fn withSupportPlan()`](#fn-withsupportplan)
 * [`fn withTags()`](#fn-withtags)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
@@ -237,6 +238,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `role_based_access_control_enabled` (`bool`): Set the `role_based_access_control_enabled` field on the resulting resource block. When `null`, the `role_based_access_control_enabled` field will be omitted from the resulting object.
   - `run_command_enabled` (`bool`): Set the `run_command_enabled` field on the resulting resource block. When `null`, the `run_command_enabled` field will be omitted from the resulting object.
   - `sku_tier` (`string`): Set the `sku_tier` field on the resulting resource block. When `null`, the `sku_tier` field will be omitted from the resulting object.
+  - `support_plan` (`string`): Set the `support_plan` field on the resulting resource block. When `null`, the `support_plan` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
   - `workload_identity_enabled` (`bool`): Set the `workload_identity_enabled` field on the resulting resource block. When `null`, the `workload_identity_enabled` field will be omitted from the resulting object.
   - `aci_connector_linux` (`list[obj]`): Set the `aci_connector_linux` field on the resulting resource block. When `null`, the `aci_connector_linux` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.aci_connector_linux.new](#fn-aci_connector_linuxnew) constructor.
@@ -317,6 +319,7 @@ injecting into a complete block.
   - `role_based_access_control_enabled` (`bool`): Set the `role_based_access_control_enabled` field on the resulting object. When `null`, the `role_based_access_control_enabled` field will be omitted from the resulting object.
   - `run_command_enabled` (`bool`): Set the `run_command_enabled` field on the resulting object. When `null`, the `run_command_enabled` field will be omitted from the resulting object.
   - `sku_tier` (`string`): Set the `sku_tier` field on the resulting object. When `null`, the `sku_tier` field will be omitted from the resulting object.
+  - `support_plan` (`string`): Set the `support_plan` field on the resulting object. When `null`, the `support_plan` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
   - `workload_identity_enabled` (`bool`): Set the `workload_identity_enabled` field on the resulting object. When `null`, the `workload_identity_enabled` field will be omitted from the resulting object.
   - `aci_connector_linux` (`list[obj]`): Set the `aci_connector_linux` field on the resulting object. When `null`, the `aci_connector_linux` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.aci_connector_linux.new](#fn-aci_connector_linuxnew) constructor.
@@ -1648,6 +1651,22 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `storage_profile` field.
+
+
+### fn withSupportPlan
+
+```ts
+withSupportPlan()
+```
+
+`azurerm.string.withSupportPlan` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the support_plan field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `support_plan` field.
 
 
 ### fn withTags
