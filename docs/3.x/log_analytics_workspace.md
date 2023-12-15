@@ -21,6 +21,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withDataCollectionRuleId()`](#fn-withdatacollectionruleid)
 * [`fn withIdentity()`](#fn-withidentity)
 * [`fn withIdentityMixin()`](#fn-withidentitymixin)
+* [`fn withImmediateDataPurgeOn30DaysEnabled()`](#fn-withimmediatedatapurgeon30daysenabled)
 * [`fn withInternetIngestionEnabled()`](#fn-withinternetingestionenabled)
 * [`fn withInternetQueryEnabled()`](#fn-withinternetqueryenabled)
 * [`fn withLocalAuthenticationDisabled()`](#fn-withlocalauthenticationdisabled)
@@ -71,6 +72,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `cmk_for_query_forced` (`bool`): Set the `cmk_for_query_forced` field on the resulting resource block. When `null`, the `cmk_for_query_forced` field will be omitted from the resulting object.
   - `daily_quota_gb` (`number`): Set the `daily_quota_gb` field on the resulting resource block. When `null`, the `daily_quota_gb` field will be omitted from the resulting object.
   - `data_collection_rule_id` (`string`): Set the `data_collection_rule_id` field on the resulting resource block. When `null`, the `data_collection_rule_id` field will be omitted from the resulting object.
+  - `immediate_data_purge_on_30_days_enabled` (`bool`): Set the `immediate_data_purge_on_30_days_enabled` field on the resulting resource block. When `null`, the `immediate_data_purge_on_30_days_enabled` field will be omitted from the resulting object.
   - `internet_ingestion_enabled` (`bool`): Set the `internet_ingestion_enabled` field on the resulting resource block. When `null`, the `internet_ingestion_enabled` field will be omitted from the resulting object.
   - `internet_query_enabled` (`bool`): Set the `internet_query_enabled` field on the resulting resource block. When `null`, the `internet_query_enabled` field will be omitted from the resulting object.
   - `local_authentication_disabled` (`bool`): Set the `local_authentication_disabled` field on the resulting resource block. When `null`, the `local_authentication_disabled` field will be omitted from the resulting object.
@@ -110,6 +112,7 @@ injecting into a complete block.
   - `cmk_for_query_forced` (`bool`): Set the `cmk_for_query_forced` field on the resulting object. When `null`, the `cmk_for_query_forced` field will be omitted from the resulting object.
   - `daily_quota_gb` (`number`): Set the `daily_quota_gb` field on the resulting object. When `null`, the `daily_quota_gb` field will be omitted from the resulting object.
   - `data_collection_rule_id` (`string`): Set the `data_collection_rule_id` field on the resulting object. When `null`, the `data_collection_rule_id` field will be omitted from the resulting object.
+  - `immediate_data_purge_on_30_days_enabled` (`bool`): Set the `immediate_data_purge_on_30_days_enabled` field on the resulting object. When `null`, the `immediate_data_purge_on_30_days_enabled` field will be omitted from the resulting object.
   - `internet_ingestion_enabled` (`bool`): Set the `internet_ingestion_enabled` field on the resulting object. When `null`, the `internet_ingestion_enabled` field will be omitted from the resulting object.
   - `internet_query_enabled` (`bool`): Set the `internet_query_enabled` field on the resulting object. When `null`, the `internet_query_enabled` field will be omitted from the resulting object.
   - `local_authentication_disabled` (`bool`): Set the `local_authentication_disabled` field on the resulting object. When `null`, the `local_authentication_disabled` field will be omitted from the resulting object.
@@ -226,6 +229,22 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `identity` field.
+
+
+### fn withImmediateDataPurgeOn30DaysEnabled
+
+```ts
+withImmediateDataPurgeOn30DaysEnabled()
+```
+
+`azurerm.bool.withImmediateDataPurgeOn30DaysEnabled` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the immediate_data_purge_on_30_days_enabled field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `immediate_data_purge_on_30_days_enabled` field.
 
 
 ### fn withInternetIngestionEnabled

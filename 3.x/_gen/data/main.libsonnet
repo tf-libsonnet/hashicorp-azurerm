@@ -160,6 +160,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   linux_function_app: (import 'linux_function_app.libsonnet'),
   linux_web_app: (import 'linux_web_app.libsonnet'),
   local_network_gateway: (import 'local_network_gateway.libsonnet'),
+  location: (import 'location.libsonnet'),
   log_analytics_workspace: (import 'log_analytics_workspace.libsonnet'),
   logic_app_integration_account: (import 'logic_app_integration_account.libsonnet'),
   logic_app_standard: (import 'logic_app_standard.libsonnet'),

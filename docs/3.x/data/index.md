@@ -165,6 +165,7 @@ permalink: /data/
 * [linux_function_app](linux_function_app.md)
 * [linux_web_app](linux_web_app.md)
 * [local_network_gateway](local_network_gateway.md)
+* [location](location.md)
 * [log_analytics_workspace](log_analytics_workspace.md)
 * [logic_app_integration_account](logic_app_integration_account.md)
 * [logic_app_standard](logic_app_standard.md)

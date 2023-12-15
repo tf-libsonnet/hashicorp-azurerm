@@ -24,6 +24,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
 * [`fn withUsageModel()`](#fn-withusagemodel)
+* [`fn withVerificationTimerInSeconds()`](#fn-withverificationtimerinseconds)
+* [`fn withWriteBackTimerInSeconds()`](#fn-withwritebacktimerinseconds)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 
@@ -63,6 +65,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
   - `storage_container_id` (`string`): Set the `storage_container_id` field on the resulting resource block.
   - `usage_model` (`string`): Set the `usage_model` field on the resulting resource block.
+  - `verification_timer_in_seconds` (`number`): Set the `verification_timer_in_seconds` field on the resulting resource block. When `null`, the `verification_timer_in_seconds` field will be omitted from the resulting object.
+  - `write_back_timer_in_seconds` (`number`): Set the `write_back_timer_in_seconds` field on the resulting resource block. When `null`, the `write_back_timer_in_seconds` field will be omitted from the resulting object.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache_blob_nfs_target.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -94,6 +98,8 @@ injecting into a complete block.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
   - `storage_container_id` (`string`): Set the `storage_container_id` field on the resulting object.
   - `usage_model` (`string`): Set the `usage_model` field on the resulting object.
+  - `verification_timer_in_seconds` (`number`): Set the `verification_timer_in_seconds` field on the resulting object. When `null`, the `verification_timer_in_seconds` field will be omitted from the resulting object.
+  - `write_back_timer_in_seconds` (`number`): Set the `write_back_timer_in_seconds` field on the resulting object. When `null`, the `write_back_timer_in_seconds` field will be omitted from the resulting object.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.hpc_cache_blob_nfs_target.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -246,6 +252,38 @@ Terraform resource block to set or update the usage_model field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `usage_model` field.
+
+
+### fn withVerificationTimerInSeconds
+
+```ts
+withVerificationTimerInSeconds()
+```
+
+`azurerm.number.withVerificationTimerInSeconds` constructs a mixin object that can be merged into the `number`
+Terraform resource block to set or update the verification_timer_in_seconds field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`number`): The value to set for the `verification_timer_in_seconds` field.
+
+
+### fn withWriteBackTimerInSeconds
+
+```ts
+withWriteBackTimerInSeconds()
+```
+
+`azurerm.number.withWriteBackTimerInSeconds` constructs a mixin object that can be merged into the `number`
+Terraform resource block to set or update the write_back_timer_in_seconds field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`number`): The value to set for the `write_back_timer_in_seconds` field.
 
 
 ## obj timeouts

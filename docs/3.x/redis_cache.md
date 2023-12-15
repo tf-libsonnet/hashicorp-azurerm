@@ -666,6 +666,7 @@ Terraform sub block.
   - `rdb_backup_frequency` (`number`): Set the `rdb_backup_frequency` field on the resulting object. When `null`, the `rdb_backup_frequency` field will be omitted from the resulting object.
   - `rdb_backup_max_snapshot_count` (`number`): Set the `rdb_backup_max_snapshot_count` field on the resulting object. When `null`, the `rdb_backup_max_snapshot_count` field will be omitted from the resulting object.
   - `rdb_storage_connection_string` (`string`): Set the `rdb_storage_connection_string` field on the resulting object. When `null`, the `rdb_storage_connection_string` field will be omitted from the resulting object.
+  - `storage_account_subscription_id` (`string`): Set the `storage_account_subscription_id` field on the resulting object. When `null`, the `storage_account_subscription_id` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `redis_configuration` sub block.

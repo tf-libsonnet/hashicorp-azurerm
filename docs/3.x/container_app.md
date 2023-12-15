@@ -34,6 +34,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withTemplateMixin()`](#fn-withtemplatemixin)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
+* [`fn withWorkloadProfileName()`](#fn-withworkloadprofilename)
 * [`obj dapr`](#obj-dapr)
   * [`fn new()`](#fn-daprnew)
 * [`obj identity`](#obj-identity)
@@ -80,6 +81,12 @@ This package contains functions and utilities for setting up the resource using 
     * [`fn new()`](#fn-templatehttp_scale_rulenew)
     * [`obj template.http_scale_rule.authentication`](#obj-templatehttp_scale_ruleauthentication)
       * [`fn new()`](#fn-templatehttp_scale_ruleauthenticationnew)
+  * [`obj template.init_container`](#obj-templateinit_container)
+    * [`fn new()`](#fn-templateinit_containernew)
+    * [`obj template.init_container.env`](#obj-templateinit_containerenv)
+      * [`fn new()`](#fn-templateinit_containerenvnew)
+    * [`obj template.init_container.volume_mounts`](#obj-templateinit_containervolume_mounts)
+      * [`fn new()`](#fn-templateinit_containervolume_mountsnew)
   * [`obj template.tcp_scale_rule`](#obj-templatetcp_scale_rule)
     * [`fn new()`](#fn-templatetcp_scale_rulenew)
     * [`obj template.tcp_scale_rule.authentication`](#obj-templatetcp_scale_ruleauthentication)
@@ -123,6 +130,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
   - `revision_mode` (`string`): Set the `revision_mode` field on the resulting resource block.
   - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
+  - `workload_profile_name` (`string`): Set the `workload_profile_name` field on the resulting resource block. When `null`, the `workload_profile_name` field will be omitted from the resulting object.
   - `dapr` (`list[obj]`): Set the `dapr` field on the resulting resource block. When `null`, the `dapr` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app.dapr.new](#fn-daprnew) constructor.
   - `identity` (`list[obj]`): Set the `identity` field on the resulting resource block. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app.identity.new](#fn-identitynew) constructor.
   - `ingress` (`list[obj]`): Set the `ingress` field on the resulting resource block. When `null`, the `ingress` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app.ingress.new](#fn-ingressnew) constructor.
@@ -158,6 +166,7 @@ injecting into a complete block.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
   - `revision_mode` (`string`): Set the `revision_mode` field on the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
+  - `workload_profile_name` (`string`): Set the `workload_profile_name` field on the resulting object. When `null`, the `workload_profile_name` field will be omitted from the resulting object.
   - `dapr` (`list[obj]`): Set the `dapr` field on the resulting object. When `null`, the `dapr` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app.dapr.new](#fn-daprnew) constructor.
   - `identity` (`list[obj]`): Set the `identity` field on the resulting object. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app.identity.new](#fn-identitynew) constructor.
   - `ingress` (`list[obj]`): Set the `ingress` field on the resulting object. When `null`, the `ingress` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app.ingress.new](#fn-ingressnew) constructor.
@@ -508,6 +517,22 @@ function.
   - `value` (`obj`): The value to set for the `timeouts` field.
 
 
+### fn withWorkloadProfileName
+
+```ts
+withWorkloadProfileName()
+```
+
+`azurerm.string.withWorkloadProfileName` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the workload_profile_name field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `workload_profile_name` field.
+
+
 ## obj dapr
 
 
@@ -711,6 +736,7 @@ Terraform sub block.
   - `container` (`list[obj]`): Set the `container` field on the resulting object. When `null`, the `container` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app.template.container.new](#fn-templatecontainernew) constructor.
   - `custom_scale_rule` (`list[obj]`): Set the `custom_scale_rule` field on the resulting object. When `null`, the `custom_scale_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app.template.custom_scale_rule.new](#fn-templatecustom_scale_rulenew) constructor.
   - `http_scale_rule` (`list[obj]`): Set the `http_scale_rule` field on the resulting object. When `null`, the `http_scale_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app.template.http_scale_rule.new](#fn-templatehttp_scale_rulenew) constructor.
+  - `init_container` (`list[obj]`): Set the `init_container` field on the resulting object. When `null`, the `init_container` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app.template.init_container.new](#fn-templateinit_containernew) constructor.
   - `tcp_scale_rule` (`list[obj]`): Set the `tcp_scale_rule` field on the resulting object. When `null`, the `tcp_scale_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app.template.tcp_scale_rule.new](#fn-templatetcp_scale_rulenew) constructor.
   - `volume` (`list[obj]`): Set the `volume` field on the resulting object. When `null`, the `volume` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app.template.volume.new](#fn-templatevolumenew) constructor.
 
@@ -1111,6 +1137,85 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `authentication` sub block.
+
+
+## obj template.init_container
+
+
+
+### fn template.init_container.new
+
+```ts
+new()
+```
+
+
+`azurerm.container_app.template.init_container.new` constructs a new object with attributes and blocks configured for the `init_container`
+Terraform sub block.
+
+
+
+**Args**:
+  - `args` (`list`): A list of args to pass to the container. When `null`, the `args` field will be omitted from the resulting object.
+  - `command` (`list`): A command to pass to the container to override the default. This is provided as a list of command line elements without spaces. When `null`, the `command` field will be omitted from the resulting object.
+  - `cpu` (`number`): The amount of vCPU to allocate to the container. Possible values include `0.25`, `0.5`, `0.75`, `1.0`, `1.25`, `1.5`, `1.75`, and `2.0`. **NOTE:** `cpu` and `memory` must be specified in `0.25&#39;/&#39;0.5Gi` combination increments. e.g. `1.0` / `2.0` or `0.5` / `1.0` When `null`, the `cpu` field will be omitted from the resulting object.
+  - `image` (`string`): The image to use to create the container.
+  - `memory` (`string`): The amount of memory to allocate to the container. Possible values include `0.5Gi`, `1.0Gi`, `1.5Gi`, `2.0Gi`, `2.5Gi`, `3.0Gi`, `3.5Gi`, and `4.0Gi`. **NOTE:** `cpu` and `memory` must be specified in `0.25&#39;/&#39;0.5Gi` combination increments. e.g. `1.25` / `2.5Gi` or `0.75` / `1.5Gi` When `null`, the `memory` field will be omitted from the resulting object.
+  - `name` (`string`): The name of the container.
+  - `env` (`list[obj]`): Set the `env` field on the resulting object. When `null`, the `env` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app.template.init_container.env.new](#fn-templatetemplateenvnew) constructor.
+  - `volume_mounts` (`list[obj]`): Set the `volume_mounts` field on the resulting object. When `null`, the `volume_mounts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app.template.init_container.volume_mounts.new](#fn-templatetemplatevolume_mountsnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `init_container` sub block.
+
+
+## obj template.init_container.env
+
+
+
+### fn template.init_container.env.new
+
+```ts
+new()
+```
+
+
+`azurerm.container_app.template.init_container.env.new` constructs a new object with attributes and blocks configured for the `env`
+Terraform sub block.
+
+
+
+**Args**:
+  - `name` (`string`): The name of the environment variable for the container.
+  - `secret_name` (`string`): The name of the secret that contains the value for this environment variable. When `null`, the `secret_name` field will be omitted from the resulting object.
+  - `value` (`string`): The value for this environment variable. **NOTE:** This value is ignored if `secret_name` is used When `null`, the `value` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `env` sub block.
+
+
+## obj template.init_container.volume_mounts
+
+
+
+### fn template.init_container.volume_mounts.new
+
+```ts
+new()
+```
+
+
+`azurerm.container_app.template.init_container.volume_mounts.new` constructs a new object with attributes and blocks configured for the `volume_mounts`
+Terraform sub block.
+
+
+
+**Args**:
+  - `name` (`string`): The name of the Volume to be mounted in the container.
+  - `path` (`string`): The path in the container at which to mount this volume.
+
+**Returns**:
+  - An attribute object that represents the `volume_mounts` sub block.
 
 
 ## obj template.tcp_scale_rule
