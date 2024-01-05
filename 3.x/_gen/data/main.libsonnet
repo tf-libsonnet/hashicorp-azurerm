@@ -72,6 +72,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   cosmosdb_restorable_database_accounts: (import 'cosmosdb_restorable_database_accounts.libsonnet'),
   cosmosdb_sql_database: (import 'cosmosdb_sql_database.libsonnet'),
   cosmosdb_sql_role_definition: (import 'cosmosdb_sql_role_definition.libsonnet'),
+  dashboard_grafana: (import 'dashboard_grafana.libsonnet'),
   data_factory: (import 'data_factory.libsonnet'),
   data_protection_backup_vault: (import 'data_protection_backup_vault.libsonnet'),
   data_share: (import 'data_share.libsonnet'),

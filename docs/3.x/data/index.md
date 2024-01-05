@@ -77,6 +77,7 @@ permalink: /data/
 * [cosmosdb_restorable_database_accounts](cosmosdb_restorable_database_accounts.md)
 * [cosmosdb_sql_database](cosmosdb_sql_database.md)
 * [cosmosdb_sql_role_definition](cosmosdb_sql_role_definition.md)
+* [dashboard_grafana](dashboard_grafana.md)
 * [data_factory](data_factory.md)
 * [data_protection_backup_vault](data_protection_backup_vault.md)
 * [data_share](data_share.md)

@@ -20,6 +20,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withName()`](#fn-withname)
 * [`fn withRetentionRule()`](#fn-withretentionrule)
 * [`fn withRetentionRuleMixin()`](#fn-withretentionrulemixin)
+* [`fn withTimeZone()`](#fn-withtimezone)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
 * [`fn withVaultId()`](#fn-withvaultid)
@@ -62,6 +63,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `backup_repeating_time_intervals` (`list`): Set the `backup_repeating_time_intervals` field on the resulting resource block.
   - `default_retention_duration` (`string`): Set the `default_retention_duration` field on the resulting resource block.
   - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `time_zone` (`string`): Set the `time_zone` field on the resulting resource block. When `null`, the `time_zone` field will be omitted from the resulting object.
   - `vault_id` (`string`): Set the `vault_id` field on the resulting resource block.
   - `retention_rule` (`list[obj]`): Set the `retention_rule` field on the resulting resource block. When `null`, the `retention_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_protection_backup_policy_disk.retention_rule.new](#fn-retention_rulenew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_protection_backup_policy_disk.timeouts.new](#fn-timeoutsnew) constructor.
@@ -91,6 +93,7 @@ injecting into a complete block.
   - `backup_repeating_time_intervals` (`list`): Set the `backup_repeating_time_intervals` field on the resulting object.
   - `default_retention_duration` (`string`): Set the `default_retention_duration` field on the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
+  - `time_zone` (`string`): Set the `time_zone` field on the resulting object. When `null`, the `time_zone` field will be omitted from the resulting object.
   - `vault_id` (`string`): Set the `vault_id` field on the resulting object.
   - `retention_rule` (`list[obj]`): Set the `retention_rule` field on the resulting object. When `null`, the `retention_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_protection_backup_policy_disk.retention_rule.new](#fn-retention_rulenew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data_protection_backup_policy_disk.timeouts.new](#fn-timeoutsnew) constructor.
@@ -182,6 +185,22 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `retention_rule` field.
+
+
+### fn withTimeZone
+
+```ts
+withTimeZone()
+```
+
+`azurerm.string.withTimeZone` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the time_zone field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `time_zone` field.
 
 
 ### fn withTimeouts
