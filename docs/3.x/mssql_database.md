@@ -22,6 +22,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withElasticPoolId()`](#fn-withelasticpoolid)
 * [`fn withEnclaveType()`](#fn-withenclavetype)
 * [`fn withGeoBackupEnabled()`](#fn-withgeobackupenabled)
+* [`fn withIdentity()`](#fn-withidentity)
+* [`fn withIdentityMixin()`](#fn-withidentitymixin)
 * [`fn withImport()`](#fn-withimport)
 * [`fn withImportMixin()`](#fn-withimportmixin)
 * [`fn withLedgerEnabled()`](#fn-withledgerenabled)
@@ -49,7 +51,11 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
 * [`fn withTransparentDataEncryptionEnabled()`](#fn-withtransparentdataencryptionenabled)
+* [`fn withTransparentDataEncryptionKeyAutomaticRotationEnabled()`](#fn-withtransparentdataencryptionkeyautomaticrotationenabled)
+* [`fn withTransparentDataEncryptionKeyVaultKeyId()`](#fn-withtransparentdataencryptionkeyvaultkeyid)
 * [`fn withZoneRedundant()`](#fn-withzoneredundant)
+* [`obj identity`](#obj-identity)
+  * [`fn new()`](#fn-identitynew)
 * [`obj import`](#obj-import)
   * [`fn new()`](#fn-importnew)
 * [`obj long_term_retention_policy`](#obj-long_term_retention_policy)
@@ -114,7 +120,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `storage_account_type` (`string`): Set the `storage_account_type` field on the resulting resource block. When `null`, the `storage_account_type` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
   - `transparent_data_encryption_enabled` (`bool`): Set the `transparent_data_encryption_enabled` field on the resulting resource block. When `null`, the `transparent_data_encryption_enabled` field will be omitted from the resulting object.
+  - `transparent_data_encryption_key_automatic_rotation_enabled` (`bool`): Set the `transparent_data_encryption_key_automatic_rotation_enabled` field on the resulting resource block. When `null`, the `transparent_data_encryption_key_automatic_rotation_enabled` field will be omitted from the resulting object.
+  - `transparent_data_encryption_key_vault_key_id` (`string`): Set the `transparent_data_encryption_key_vault_key_id` field on the resulting resource block. When `null`, the `transparent_data_encryption_key_vault_key_id` field will be omitted from the resulting object.
   - `zone_redundant` (`bool`): Set the `zone_redundant` field on the resulting resource block. When `null`, the `zone_redundant` field will be omitted from the resulting object.
+  - `identity` (`list[obj]`): Set the `identity` field on the resulting resource block. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_database.identity.new](#fn-identitynew) constructor.
   - `import_` (`list[obj]`): Set the `import_` field on the resulting resource block. When `null`, the `import_` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_database.import_.new](#fn-import_new) constructor.
   - `long_term_retention_policy` (`list[obj]`): Set the `long_term_retention_policy` field on the resulting resource block. When `null`, the `long_term_retention_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_database.long_term_retention_policy.new](#fn-long_term_retention_policynew) constructor.
   - `short_term_retention_policy` (`list[obj]`): Set the `short_term_retention_policy` field on the resulting resource block. When `null`, the `short_term_retention_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_database.short_term_retention_policy.new](#fn-short_term_retention_policynew) constructor.
@@ -167,7 +176,10 @@ injecting into a complete block.
   - `storage_account_type` (`string`): Set the `storage_account_type` field on the resulting object. When `null`, the `storage_account_type` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
   - `transparent_data_encryption_enabled` (`bool`): Set the `transparent_data_encryption_enabled` field on the resulting object. When `null`, the `transparent_data_encryption_enabled` field will be omitted from the resulting object.
+  - `transparent_data_encryption_key_automatic_rotation_enabled` (`bool`): Set the `transparent_data_encryption_key_automatic_rotation_enabled` field on the resulting object. When `null`, the `transparent_data_encryption_key_automatic_rotation_enabled` field will be omitted from the resulting object.
+  - `transparent_data_encryption_key_vault_key_id` (`string`): Set the `transparent_data_encryption_key_vault_key_id` field on the resulting object. When `null`, the `transparent_data_encryption_key_vault_key_id` field will be omitted from the resulting object.
   - `zone_redundant` (`bool`): Set the `zone_redundant` field on the resulting object. When `null`, the `zone_redundant` field will be omitted from the resulting object.
+  - `identity` (`list[obj]`): Set the `identity` field on the resulting object. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_database.identity.new](#fn-identitynew) constructor.
   - `import_` (`list[obj]`): Set the `import_` field on the resulting object. When `null`, the `import_` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_database.import_.new](#fn-import_new) constructor.
   - `long_term_retention_policy` (`list[obj]`): Set the `long_term_retention_policy` field on the resulting object. When `null`, the `long_term_retention_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_database.long_term_retention_policy.new](#fn-long_term_retention_policynew) constructor.
   - `short_term_retention_policy` (`list[obj]`): Set the `short_term_retention_policy` field on the resulting object. When `null`, the `short_term_retention_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_database.short_term_retention_policy.new](#fn-short_term_retention_policynew) constructor.
@@ -288,6 +300,43 @@ Terraform resource block to set or update the geo_backup_enabled field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`bool`): The value to set for the `geo_backup_enabled` field.
+
+
+### fn withIdentity
+
+```ts
+withIdentity()
+```
+
+`azurerm.list[obj].withIdentity` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the identity field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [azurerm.list[obj].withIdentityMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `identity` field.
+
+
+### fn withIdentityMixin
+
+```ts
+withIdentityMixin()
+```
+
+`azurerm.list[obj].withIdentityMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the identity field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.list[obj].withIdentity](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `identity` field.
 
 
 ### fn withImport
@@ -746,6 +795,38 @@ Terraform resource block to set or update the transparent_data_encryption_enable
   - `value` (`bool`): The value to set for the `transparent_data_encryption_enabled` field.
 
 
+### fn withTransparentDataEncryptionKeyAutomaticRotationEnabled
+
+```ts
+withTransparentDataEncryptionKeyAutomaticRotationEnabled()
+```
+
+`azurerm.bool.withTransparentDataEncryptionKeyAutomaticRotationEnabled` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the transparent_data_encryption_key_automatic_rotation_enabled field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `transparent_data_encryption_key_automatic_rotation_enabled` field.
+
+
+### fn withTransparentDataEncryptionKeyVaultKeyId
+
+```ts
+withTransparentDataEncryptionKeyVaultKeyId()
+```
+
+`azurerm.string.withTransparentDataEncryptionKeyVaultKeyId` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the transparent_data_encryption_key_vault_key_id field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `transparent_data_encryption_key_vault_key_id` field.
+
+
 ### fn withZoneRedundant
 
 ```ts
@@ -760,6 +841,30 @@ Terraform resource block to set or update the zone_redundant field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`bool`): The value to set for the `zone_redundant` field.
+
+
+## obj identity
+
+
+
+### fn identity.new
+
+```ts
+new()
+```
+
+
+`azurerm.mssql_database.identity.new` constructs a new object with attributes and blocks configured for the `identity`
+Terraform sub block.
+
+
+
+**Args**:
+  - `identity_ids` (`list`): Set the `identity_ids` field on the resulting object.
+  - `type` (`string`): Set the `type` field on the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `identity` sub block.
 
 
 ## obj import

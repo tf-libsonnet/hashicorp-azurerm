@@ -43,6 +43,8 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-ingressnew)
   * [`obj ingress.custom_domain`](#obj-ingresscustom_domain)
     * [`fn new()`](#fn-ingresscustom_domainnew)
+  * [`obj ingress.ip_security_restriction`](#obj-ingressip_security_restriction)
+    * [`fn new()`](#fn-ingressip_security_restrictionnew)
   * [`obj ingress.traffic_weight`](#obj-ingresstraffic_weight)
     * [`fn new()`](#fn-ingresstraffic_weightnew)
 * [`obj registry`](#obj-registry)
@@ -605,6 +607,7 @@ Terraform sub block.
   - `target_port` (`number`): The target port on the container for the Ingress traffic.
   - `transport` (`string`): The transport method for the Ingress. Possible values include `auto`, `http`, and `http2`, `tcp`. Defaults to `auto` When `null`, the `transport` field will be omitted from the resulting object.
   - `custom_domain` (`list[obj]`): Set the `custom_domain` field on the resulting object. When `null`, the `custom_domain` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app.ingress.custom_domain.new](#fn-ingresscustom_domainnew) constructor.
+  - `ip_security_restriction` (`list[obj]`): Set the `ip_security_restriction` field on the resulting object. When `null`, the `ip_security_restriction` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app.ingress.ip_security_restriction.new](#fn-ingressip_security_restrictionnew) constructor.
   - `traffic_weight` (`list[obj]`): Set the `traffic_weight` field on the resulting object. When `null`, the `traffic_weight` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app.ingress.traffic_weight.new](#fn-ingresstraffic_weightnew) constructor.
 
 **Returns**:
@@ -634,6 +637,32 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `custom_domain` sub block.
+
+
+## obj ingress.ip_security_restriction
+
+
+
+### fn ingress.ip_security_restriction.new
+
+```ts
+new()
+```
+
+
+`azurerm.container_app.ingress.ip_security_restriction.new` constructs a new object with attributes and blocks configured for the `ip_security_restriction`
+Terraform sub block.
+
+
+
+**Args**:
+  - `action` (`string`): The action. Allow or Deny.
+  - `description` (`string`): Describe the IP restriction rule that is being sent to the container-app. When `null`, the `description` field will be omitted from the resulting object.
+  - `ip_address_range` (`string`): CIDR notation to match incoming IP address.
+  - `name` (`string`): Name for the IP restriction rule.
+
+**Returns**:
+  - An attribute object that represents the `ip_security_restriction` sub block.
 
 
 ## obj ingress.traffic_weight

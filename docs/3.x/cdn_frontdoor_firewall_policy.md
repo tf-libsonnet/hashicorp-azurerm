@@ -25,6 +25,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withMode()`](#fn-withmode)
 * [`fn withName()`](#fn-withname)
 * [`fn withRedirectUrl()`](#fn-withredirecturl)
+* [`fn withRequestBodyCheckEnabled()`](#fn-withrequestbodycheckenabled)
 * [`fn withResourceGroupName()`](#fn-withresourcegroupname)
 * [`fn withSkuName()`](#fn-withskuname)
 * [`fn withTags()`](#fn-withtags)
@@ -84,6 +85,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `mode` (`string`): Set the `mode` field on the resulting resource block.
   - `name` (`string`): Set the `name` field on the resulting resource block.
   - `redirect_url` (`string`): Set the `redirect_url` field on the resulting resource block. When `null`, the `redirect_url` field will be omitted from the resulting object.
+  - `request_body_check_enabled` (`bool`): Set the `request_body_check_enabled` field on the resulting resource block. When `null`, the `request_body_check_enabled` field will be omitted from the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
   - `sku_name` (`string`): Set the `sku_name` field on the resulting resource block.
   - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
@@ -119,6 +121,7 @@ injecting into a complete block.
   - `mode` (`string`): Set the `mode` field on the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
   - `redirect_url` (`string`): Set the `redirect_url` field on the resulting object. When `null`, the `redirect_url` field will be omitted from the resulting object.
+  - `request_body_check_enabled` (`bool`): Set the `request_body_check_enabled` field on the resulting object. When `null`, the `request_body_check_enabled` field will be omitted from the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
   - `sku_name` (`string`): Set the `sku_name` field on the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
@@ -298,6 +301,22 @@ Terraform resource block to set or update the redirect_url field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `redirect_url` field.
+
+
+### fn withRequestBodyCheckEnabled
+
+```ts
+withRequestBodyCheckEnabled()
+```
+
+`azurerm.bool.withRequestBodyCheckEnabled` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the request_body_check_enabled field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `request_body_check_enabled` field.
 
 
 ### fn withResourceGroupName

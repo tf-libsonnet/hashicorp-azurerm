@@ -216,6 +216,7 @@ permalink: /data/
 * [netapp_volume_quota_rule](netapp_volume_quota_rule.md)
 * [network_ddos_protection_plan](network_ddos_protection_plan.md)
 * [network_interface](network_interface.md)
+* [network_manager](network_manager.md)
 * [network_manager_network_group](network_manager_network_group.md)
 * [network_security_group](network_security_group.md)
 * [network_service_tags](network_service_tags.md)

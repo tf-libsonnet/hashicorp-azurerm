@@ -783,6 +783,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   security_center_contact: (import 'resources/security_center_contact.libsonnet'),
   security_center_server_vulnerability_assessment: (import 'resources/security_center_server_vulnerability_assessment.libsonnet'),
   security_center_server_vulnerability_assessment_virtual_machine: (import 'resources/security_center_server_vulnerability_assessment_virtual_machine.libsonnet'),
+  security_center_server_vulnerability_assessments_setting: (import 'resources/security_center_server_vulnerability_assessments_setting.libsonnet'),
   security_center_setting: (import 'resources/security_center_setting.libsonnet'),
   security_center_storage_defender: (import 'resources/security_center_storage_defender.libsonnet'),
   security_center_subscription_pricing: (import 'resources/security_center_subscription_pricing.libsonnet'),

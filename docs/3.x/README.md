@@ -794,6 +794,7 @@ project.
 * [security_center_contact](security_center_contact.md)
 * [security_center_server_vulnerability_assessment](security_center_server_vulnerability_assessment.md)
 * [security_center_server_vulnerability_assessment_virtual_machine](security_center_server_vulnerability_assessment_virtual_machine.md)
+* [security_center_server_vulnerability_assessments_setting](security_center_server_vulnerability_assessments_setting.md)
 * [security_center_setting](security_center_setting.md)
 * [security_center_storage_defender](security_center_storage_defender.md)
 * [security_center_subscription_pricing](security_center_subscription_pricing.md)

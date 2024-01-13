@@ -21,6 +21,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withDescription()`](#fn-withdescription)
 * [`fn withName()`](#fn-withname)
 * [`fn withPrincipalId()`](#fn-withprincipalid)
+* [`fn withPrincipalType()`](#fn-withprincipaltype)
 * [`fn withRoleDefinitionId()`](#fn-withroledefinitionid)
 * [`fn withRoleDefinitionName()`](#fn-withroledefinitionname)
 * [`fn withScope()`](#fn-withscope)
@@ -65,6 +66,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `description` (`string`): Set the `description` field on the resulting resource block. When `null`, the `description` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting resource block. When `null`, the `name` field will be omitted from the resulting object.
   - `principal_id` (`string`): Set the `principal_id` field on the resulting resource block.
+  - `principal_type` (`string`): Set the `principal_type` field on the resulting resource block. When `null`, the `principal_type` field will be omitted from the resulting object.
   - `role_definition_id` (`string`): Set the `role_definition_id` field on the resulting resource block. When `null`, the `role_definition_id` field will be omitted from the resulting object.
   - `role_definition_name` (`string`): Set the `role_definition_name` field on the resulting resource block. When `null`, the `role_definition_name` field will be omitted from the resulting object.
   - `scope` (`string`): Set the `scope` field on the resulting resource block.
@@ -99,6 +101,7 @@ injecting into a complete block.
   - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object. When `null`, the `name` field will be omitted from the resulting object.
   - `principal_id` (`string`): Set the `principal_id` field on the resulting object.
+  - `principal_type` (`string`): Set the `principal_type` field on the resulting object. When `null`, the `principal_type` field will be omitted from the resulting object.
   - `role_definition_id` (`string`): Set the `role_definition_id` field on the resulting object. When `null`, the `role_definition_id` field will be omitted from the resulting object.
   - `role_definition_name` (`string`): Set the `role_definition_name` field on the resulting object. When `null`, the `role_definition_name` field will be omitted from the resulting object.
   - `scope` (`string`): Set the `scope` field on the resulting object.
@@ -203,6 +206,22 @@ Terraform resource block to set or update the principal_id field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `principal_id` field.
+
+
+### fn withPrincipalType
+
+```ts
+withPrincipalType()
+```
+
+`azurerm.string.withPrincipalType` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the principal_type field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `principal_type` field.
 
 
 ### fn withRoleDefinitionId

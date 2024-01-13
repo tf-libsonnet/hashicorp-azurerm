@@ -37,13 +37,28 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
         name: name,
       }),
     },
-    '#new':: d.fn(help='\n`azurerm.container_app.ingress.new` constructs a new object with attributes and blocks configured for the `ingress`\nTerraform sub block.\n\n\n\n**Args**:\n  - `allow_insecure_connections` (`bool`): Should this ingress allow insecure connections? When `null`, the `allow_insecure_connections` field will be omitted from the resulting object.\n  - `exposed_port` (`number`): The exposed port on the container for the Ingress traffic. When `null`, the `exposed_port` field will be omitted from the resulting object.\n  - `external_enabled` (`bool`): Is this an external Ingress. When `null`, the `external_enabled` field will be omitted from the resulting object.\n  - `target_port` (`number`): The target port on the container for the Ingress traffic.\n  - `transport` (`string`): The transport method for the Ingress. Possible values include `auto`, `http`, and `http2`, `tcp`. Defaults to `auto` When `null`, the `transport` field will be omitted from the resulting object.\n  - `custom_domain` (`list[obj]`): Set the `custom_domain` field on the resulting object. When `null`, the `custom_domain` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app.ingress.custom_domain.new](#fn-ingresscustom_domainnew) constructor.\n  - `traffic_weight` (`list[obj]`): Set the `traffic_weight` field on the resulting object. When `null`, the `traffic_weight` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app.ingress.traffic_weight.new](#fn-ingresstraffic_weightnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `ingress` sub block.\n', args=[]),
+    ip_security_restriction:: {
+      '#new':: d.fn(help='\n`azurerm.container_app.ingress.ip_security_restriction.new` constructs a new object with attributes and blocks configured for the `ip_security_restriction`\nTerraform sub block.\n\n\n\n**Args**:\n  - `action` (`string`): The action. Allow or Deny.\n  - `description` (`string`): Describe the IP restriction rule that is being sent to the container-app. When `null`, the `description` field will be omitted from the resulting object.\n  - `ip_address_range` (`string`): CIDR notation to match incoming IP address.\n  - `name` (`string`): Name for the IP restriction rule.\n\n**Returns**:\n  - An attribute object that represents the `ip_security_restriction` sub block.\n', args=[]),
+      new(
+        action,
+        ip_address_range,
+        name,
+        description=null
+      ):: std.prune(a={
+        action: action,
+        description: description,
+        ip_address_range: ip_address_range,
+        name: name,
+      }),
+    },
+    '#new':: d.fn(help='\n`azurerm.container_app.ingress.new` constructs a new object with attributes and blocks configured for the `ingress`\nTerraform sub block.\n\n\n\n**Args**:\n  - `allow_insecure_connections` (`bool`): Should this ingress allow insecure connections? When `null`, the `allow_insecure_connections` field will be omitted from the resulting object.\n  - `exposed_port` (`number`): The exposed port on the container for the Ingress traffic. When `null`, the `exposed_port` field will be omitted from the resulting object.\n  - `external_enabled` (`bool`): Is this an external Ingress. When `null`, the `external_enabled` field will be omitted from the resulting object.\n  - `target_port` (`number`): The target port on the container for the Ingress traffic.\n  - `transport` (`string`): The transport method for the Ingress. Possible values include `auto`, `http`, and `http2`, `tcp`. Defaults to `auto` When `null`, the `transport` field will be omitted from the resulting object.\n  - `custom_domain` (`list[obj]`): Set the `custom_domain` field on the resulting object. When `null`, the `custom_domain` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app.ingress.custom_domain.new](#fn-ingresscustom_domainnew) constructor.\n  - `ip_security_restriction` (`list[obj]`): Set the `ip_security_restriction` field on the resulting object. When `null`, the `ip_security_restriction` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app.ingress.ip_security_restriction.new](#fn-ingressip_security_restrictionnew) constructor.\n  - `traffic_weight` (`list[obj]`): Set the `traffic_weight` field on the resulting object. When `null`, the `traffic_weight` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app.ingress.traffic_weight.new](#fn-ingresstraffic_weightnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `ingress` sub block.\n', args=[]),
     new(
       target_port,
       allow_insecure_connections=null,
       custom_domain=null,
       exposed_port=null,
       external_enabled=null,
+      ip_security_restriction=null,
       traffic_weight=null,
       transport=null
     ):: std.prune(a={
@@ -51,6 +66,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       custom_domain: custom_domain,
       exposed_port: exposed_port,
       external_enabled: external_enabled,
+      ip_security_restriction: ip_security_restriction,
       target_port: target_port,
       traffic_weight: traffic_weight,
       transport: transport,
