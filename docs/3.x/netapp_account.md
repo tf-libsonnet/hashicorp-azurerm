@@ -17,6 +17,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn newAttrs()`](#fn-newattrs)
 * [`fn withActiveDirectory()`](#fn-withactivedirectory)
 * [`fn withActiveDirectoryMixin()`](#fn-withactivedirectorymixin)
+* [`fn withIdentity()`](#fn-withidentity)
+* [`fn withIdentityMixin()`](#fn-withidentitymixin)
 * [`fn withLocation()`](#fn-withlocation)
 * [`fn withName()`](#fn-withname)
 * [`fn withResourceGroupName()`](#fn-withresourcegroupname)
@@ -25,6 +27,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
 * [`obj active_directory`](#obj-active_directory)
   * [`fn new()`](#fn-active_directorynew)
+* [`obj identity`](#obj-identity)
+  * [`fn new()`](#fn-identitynew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 
@@ -62,6 +66,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
   - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
   - `active_directory` (`list[obj]`): Set the `active_directory` field on the resulting resource block. When `null`, the `active_directory` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.netapp_account.active_directory.new](#fn-active_directorynew) constructor.
+  - `identity` (`list[obj]`): Set the `identity` field on the resulting resource block. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.netapp_account.identity.new](#fn-identitynew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.netapp_account.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -91,6 +96,7 @@ injecting into a complete block.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
   - `active_directory` (`list[obj]`): Set the `active_directory` field on the resulting object. When `null`, the `active_directory` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.netapp_account.active_directory.new](#fn-active_directorynew) constructor.
+  - `identity` (`list[obj]`): Set the `identity` field on the resulting object. When `null`, the `identity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.netapp_account.identity.new](#fn-identitynew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.netapp_account.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -132,6 +138,43 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `active_directory` field.
+
+
+### fn withIdentity
+
+```ts
+withIdentity()
+```
+
+`azurerm.list[obj].withIdentity` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the identity field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [azurerm.list[obj].withIdentityMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `identity` field.
+
+
+### fn withIdentityMixin
+
+```ts
+withIdentityMixin()
+```
+
+`azurerm.list[obj].withIdentityMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the identity field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.list[obj].withIdentity](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `identity` field.
 
 
 ### fn withLocation
@@ -260,6 +303,30 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `active_directory` sub block.
+
+
+## obj identity
+
+
+
+### fn identity.new
+
+```ts
+new()
+```
+
+
+`azurerm.netapp_account.identity.new` constructs a new object with attributes and blocks configured for the `identity`
+Terraform sub block.
+
+
+
+**Args**:
+  - `identity_ids` (`list`): Set the `identity_ids` field on the resulting object. When `null`, the `identity_ids` field will be omitted from the resulting object.
+  - `type` (`string`): Set the `type` field on the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `identity` sub block.
 
 
 ## obj timeouts

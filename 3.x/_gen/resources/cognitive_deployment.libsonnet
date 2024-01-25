@@ -3,11 +3,11 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
 {
   '#':: d.pkg(name='cognitive_deployment', url='', help='`cognitive_deployment` represents the `azurerm_cognitive_deployment` Terraform resource.\n\n\n\nThis package contains functions and utilities for setting up the resource using Jsonnet code.\n'),
   model:: {
-    '#new':: d.fn(help='\n`azurerm.cognitive_deployment.model.new` constructs a new object with attributes and blocks configured for the `model`\nTerraform sub block.\n\n\n\n**Args**:\n  - `format` (`string`): Set the `format` field on the resulting object.\n  - `name` (`string`): Set the `name` field on the resulting object.\n  - `version` (`string`): Set the `version` field on the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `model` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`azurerm.cognitive_deployment.model.new` constructs a new object with attributes and blocks configured for the `model`\nTerraform sub block.\n\n\n\n**Args**:\n  - `format` (`string`): Set the `format` field on the resulting object.\n  - `name` (`string`): Set the `name` field on the resulting object.\n  - `version` (`string`): Set the `version` field on the resulting object. When `null`, the `version` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `model` sub block.\n', args=[]),
     new(
       format,
       name,
-      version
+      version=null
     ):: std.prune(a={
       format: format,
       name: name,

@@ -19,11 +19,15 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withLongTermRetentionPolicyMixin()`](#fn-withlongtermretentionpolicymixin)
 * [`fn withManagedInstanceId()`](#fn-withmanagedinstanceid)
 * [`fn withName()`](#fn-withname)
+* [`fn withPointInTimeRestore()`](#fn-withpointintimerestore)
+* [`fn withPointInTimeRestoreMixin()`](#fn-withpointintimerestoremixin)
 * [`fn withShortTermRetentionDays()`](#fn-withshorttermretentiondays)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
 * [`obj long_term_retention_policy`](#obj-long_term_retention_policy)
   * [`fn new()`](#fn-long_term_retention_policynew)
+* [`obj point_in_time_restore`](#obj-point_in_time_restore)
+  * [`fn new()`](#fn-point_in_time_restorenew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 
@@ -60,6 +64,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): Set the `name` field on the resulting resource block.
   - `short_term_retention_days` (`number`): Set the `short_term_retention_days` field on the resulting resource block. When `null`, the `short_term_retention_days` field will be omitted from the resulting object.
   - `long_term_retention_policy` (`list[obj]`): Set the `long_term_retention_policy` field on the resulting resource block. When `null`, the `long_term_retention_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_managed_database.long_term_retention_policy.new](#fn-long_term_retention_policynew) constructor.
+  - `point_in_time_restore` (`list[obj]`): Set the `point_in_time_restore` field on the resulting resource block. When `null`, the `point_in_time_restore` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_managed_database.point_in_time_restore.new](#fn-point_in_time_restorenew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_managed_database.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -88,6 +93,7 @@ injecting into a complete block.
   - `name` (`string`): Set the `name` field on the resulting object.
   - `short_term_retention_days` (`number`): Set the `short_term_retention_days` field on the resulting object. When `null`, the `short_term_retention_days` field will be omitted from the resulting object.
   - `long_term_retention_policy` (`list[obj]`): Set the `long_term_retention_policy` field on the resulting object. When `null`, the `long_term_retention_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_managed_database.long_term_retention_policy.new](#fn-long_term_retention_policynew) constructor.
+  - `point_in_time_restore` (`list[obj]`): Set the `point_in_time_restore` field on the resulting object. When `null`, the `point_in_time_restore` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_managed_database.point_in_time_restore.new](#fn-point_in_time_restorenew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.mssql_managed_database.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -161,6 +167,43 @@ Terraform resource block to set or update the name field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `name` field.
+
+
+### fn withPointInTimeRestore
+
+```ts
+withPointInTimeRestore()
+```
+
+`azurerm.list[obj].withPointInTimeRestore` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the point_in_time_restore field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [azurerm.list[obj].withPointInTimeRestoreMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `point_in_time_restore` field.
+
+
+### fn withPointInTimeRestoreMixin
+
+```ts
+withPointInTimeRestoreMixin()
+```
+
+`azurerm.list[obj].withPointInTimeRestoreMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the point_in_time_restore field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.list[obj].withPointInTimeRestore](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `point_in_time_restore` field.
 
 
 ### fn withShortTermRetentionDays
@@ -239,6 +282,30 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `long_term_retention_policy` sub block.
+
+
+## obj point_in_time_restore
+
+
+
+### fn point_in_time_restore.new
+
+```ts
+new()
+```
+
+
+`azurerm.mssql_managed_database.point_in_time_restore.new` constructs a new object with attributes and blocks configured for the `point_in_time_restore`
+Terraform sub block.
+
+
+
+**Args**:
+  - `restore_point_in_time` (`string`): Set the `restore_point_in_time` field on the resulting object.
+  - `source_database_id` (`string`): Set the `source_database_id` field on the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `point_in_time_restore` sub block.
 
 
 ## obj timeouts

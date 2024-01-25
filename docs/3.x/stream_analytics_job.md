@@ -29,6 +29,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withName()`](#fn-withname)
 * [`fn withOutputErrorPolicy()`](#fn-withoutputerrorpolicy)
 * [`fn withResourceGroupName()`](#fn-withresourcegroupname)
+* [`fn withSkuName()`](#fn-withskuname)
 * [`fn withStreamAnalyticsClusterId()`](#fn-withstreamanalyticsclusterid)
 * [`fn withStreamingUnits()`](#fn-withstreamingunits)
 * [`fn withTags()`](#fn-withtags)
@@ -82,6 +83,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): Set the `name` field on the resulting resource block.
   - `output_error_policy` (`string`): Set the `output_error_policy` field on the resulting resource block. When `null`, the `output_error_policy` field will be omitted from the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
+  - `sku_name` (`string`): Set the `sku_name` field on the resulting resource block. When `null`, the `sku_name` field will be omitted from the resulting object.
   - `stream_analytics_cluster_id` (`string`): Set the `stream_analytics_cluster_id` field on the resulting resource block. When `null`, the `stream_analytics_cluster_id` field will be omitted from the resulting object.
   - `streaming_units` (`number`): Set the `streaming_units` field on the resulting resource block. When `null`, the `streaming_units` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
@@ -123,6 +125,7 @@ injecting into a complete block.
   - `name` (`string`): Set the `name` field on the resulting object.
   - `output_error_policy` (`string`): Set the `output_error_policy` field on the resulting object. When `null`, the `output_error_policy` field will be omitted from the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
+  - `sku_name` (`string`): Set the `sku_name` field on the resulting object. When `null`, the `sku_name` field will be omitted from the resulting object.
   - `stream_analytics_cluster_id` (`string`): Set the `stream_analytics_cluster_id` field on the resulting object. When `null`, the `stream_analytics_cluster_id` field will be omitted from the resulting object.
   - `streaming_units` (`number`): Set the `streaming_units` field on the resulting object. When `null`, the `streaming_units` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
@@ -368,6 +371,22 @@ Terraform resource block to set or update the resource_group_name field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `resource_group_name` field.
+
+
+### fn withSkuName
+
+```ts
+withSkuName()
+```
+
+`azurerm.string.withSkuName` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the sku_name field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `sku_name` field.
 
 
 ### fn withStreamAnalyticsClusterId

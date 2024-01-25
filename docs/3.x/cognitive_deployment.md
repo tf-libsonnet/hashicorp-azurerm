@@ -296,7 +296,7 @@ Terraform sub block.
 **Args**:
   - `format` (`string`): Set the `format` field on the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
-  - `version` (`string`): Set the `version` field on the resulting object.
+  - `version` (`string`): Set the `version` field on the resulting object. When `null`, the `version` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `model` sub block.

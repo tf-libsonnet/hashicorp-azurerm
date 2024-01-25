@@ -22,8 +22,10 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withDataProtectionReplicationMixin()`](#fn-withdataprotectionreplicationmixin)
 * [`fn withDataProtectionSnapshotPolicy()`](#fn-withdataprotectionsnapshotpolicy)
 * [`fn withDataProtectionSnapshotPolicyMixin()`](#fn-withdataprotectionsnapshotpolicymixin)
+* [`fn withEncryptionKeySource()`](#fn-withencryptionkeysource)
 * [`fn withExportPolicyRule()`](#fn-withexportpolicyrule)
 * [`fn withExportPolicyRuleMixin()`](#fn-withexportpolicyrulemixin)
+* [`fn withKeyVaultPrivateEndpointId()`](#fn-withkeyvaultprivateendpointid)
 * [`fn withLocation()`](#fn-withlocation)
 * [`fn withName()`](#fn-withname)
 * [`fn withNetworkFeatures()`](#fn-withnetworkfeatures)
@@ -82,6 +84,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `account_name` (`string`): Set the `account_name` field on the resulting resource block.
   - `azure_vmware_data_store_enabled` (`bool`): Set the `azure_vmware_data_store_enabled` field on the resulting resource block. When `null`, the `azure_vmware_data_store_enabled` field will be omitted from the resulting object.
   - `create_from_snapshot_resource_id` (`string`): Set the `create_from_snapshot_resource_id` field on the resulting resource block. When `null`, the `create_from_snapshot_resource_id` field will be omitted from the resulting object.
+  - `encryption_key_source` (`string`): Set the `encryption_key_source` field on the resulting resource block. When `null`, the `encryption_key_source` field will be omitted from the resulting object.
+  - `key_vault_private_endpoint_id` (`string`): Set the `key_vault_private_endpoint_id` field on the resulting resource block. When `null`, the `key_vault_private_endpoint_id` field will be omitted from the resulting object.
   - `location` (`string`): Set the `location` field on the resulting resource block.
   - `name` (`string`): Set the `name` field on the resulting resource block.
   - `network_features` (`string`): Set the `network_features` field on the resulting resource block. When `null`, the `network_features` field will be omitted from the resulting object.
@@ -127,6 +131,8 @@ injecting into a complete block.
   - `account_name` (`string`): Set the `account_name` field on the resulting object.
   - `azure_vmware_data_store_enabled` (`bool`): Set the `azure_vmware_data_store_enabled` field on the resulting object. When `null`, the `azure_vmware_data_store_enabled` field will be omitted from the resulting object.
   - `create_from_snapshot_resource_id` (`string`): Set the `create_from_snapshot_resource_id` field on the resulting object. When `null`, the `create_from_snapshot_resource_id` field will be omitted from the resulting object.
+  - `encryption_key_source` (`string`): Set the `encryption_key_source` field on the resulting object. When `null`, the `encryption_key_source` field will be omitted from the resulting object.
+  - `key_vault_private_endpoint_id` (`string`): Set the `key_vault_private_endpoint_id` field on the resulting object. When `null`, the `key_vault_private_endpoint_id` field will be omitted from the resulting object.
   - `location` (`string`): Set the `location` field on the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
   - `network_features` (`string`): Set the `network_features` field on the resulting object. When `null`, the `network_features` field will be omitted from the resulting object.
@@ -273,6 +279,22 @@ function.
   - `value` (`list[obj]`): The value to set for the `data_protection_snapshot_policy` field.
 
 
+### fn withEncryptionKeySource
+
+```ts
+withEncryptionKeySource()
+```
+
+`azurerm.string.withEncryptionKeySource` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the encryption_key_source field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `encryption_key_source` field.
+
+
 ### fn withExportPolicyRule
 
 ```ts
@@ -308,6 +330,22 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `export_policy_rule` field.
+
+
+### fn withKeyVaultPrivateEndpointId
+
+```ts
+withKeyVaultPrivateEndpointId()
+```
+
+`azurerm.string.withKeyVaultPrivateEndpointId` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the key_vault_private_endpoint_id field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `key_vault_private_endpoint_id` field.
 
 
 ### fn withLocation
