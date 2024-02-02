@@ -49,6 +49,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withNetworkAclBypassForAzureServices()`](#fn-withnetworkaclbypassforazureservices)
 * [`fn withNetworkAclBypassIds()`](#fn-withnetworkaclbypassids)
 * [`fn withOfferType()`](#fn-withoffertype)
+* [`fn withPartitionMergeEnabled()`](#fn-withpartitionmergeenabled)
 * [`fn withPublicNetworkAccessEnabled()`](#fn-withpublicnetworkaccessenabled)
 * [`fn withResourceGroupName()`](#fn-withresourcegroupname)
 * [`fn withRestore()`](#fn-withrestore)
@@ -78,6 +79,8 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-restorenew)
   * [`obj restore.database`](#obj-restoredatabase)
     * [`fn new()`](#fn-restoredatabasenew)
+  * [`obj restore.gremlin_database`](#obj-restoregremlin_database)
+    * [`fn new()`](#fn-restoregremlin_databasenew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 * [`obj virtual_network_rule`](#obj-virtual_network_rule)
@@ -130,6 +133,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `network_acl_bypass_for_azure_services` (`bool`): Set the `network_acl_bypass_for_azure_services` field on the resulting resource block. When `null`, the `network_acl_bypass_for_azure_services` field will be omitted from the resulting object.
   - `network_acl_bypass_ids` (`list`): Set the `network_acl_bypass_ids` field on the resulting resource block. When `null`, the `network_acl_bypass_ids` field will be omitted from the resulting object.
   - `offer_type` (`string`): Set the `offer_type` field on the resulting resource block.
+  - `partition_merge_enabled` (`bool`): Set the `partition_merge_enabled` field on the resulting resource block. When `null`, the `partition_merge_enabled` field will be omitted from the resulting object.
   - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting resource block. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
   - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
@@ -185,6 +189,7 @@ injecting into a complete block.
   - `network_acl_bypass_for_azure_services` (`bool`): Set the `network_acl_bypass_for_azure_services` field on the resulting object. When `null`, the `network_acl_bypass_for_azure_services` field will be omitted from the resulting object.
   - `network_acl_bypass_ids` (`list`): Set the `network_acl_bypass_ids` field on the resulting object. When `null`, the `network_acl_bypass_ids` field will be omitted from the resulting object.
   - `offer_type` (`string`): Set the `offer_type` field on the resulting object.
+  - `partition_merge_enabled` (`bool`): Set the `partition_merge_enabled` field on the resulting object. When `null`, the `partition_merge_enabled` field will be omitted from the resulting object.
   - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting object. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
@@ -788,6 +793,22 @@ Terraform resource block to set or update the offer_type field.
   - `value` (`string`): The value to set for the `offer_type` field.
 
 
+### fn withPartitionMergeEnabled
+
+```ts
+withPartitionMergeEnabled()
+```
+
+`azurerm.bool.withPartitionMergeEnabled` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the partition_merge_enabled field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `partition_merge_enabled` field.
+
+
 ### fn withPublicNetworkAccessEnabled
 
 ```ts
@@ -1161,7 +1182,9 @@ Terraform sub block.
 **Args**:
   - `restore_timestamp_in_utc` (`string`): Set the `restore_timestamp_in_utc` field on the resulting object.
   - `source_cosmosdb_account_id` (`string`): Set the `source_cosmosdb_account_id` field on the resulting object.
+  - `tables_to_restore` (`list`): Set the `tables_to_restore` field on the resulting object. When `null`, the `tables_to_restore` field will be omitted from the resulting object.
   - `database` (`list[obj]`): Set the `database` field on the resulting object. When `null`, the `database` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_account.restore.database.new](#fn-restoredatabasenew) constructor.
+  - `gremlin_database` (`list[obj]`): Set the `gremlin_database` field on the resulting object. When `null`, the `gremlin_database` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.cosmosdb_account.restore.gremlin_database.new](#fn-restoregremlin_databasenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `restore` sub block.
@@ -1189,6 +1212,30 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `database` sub block.
+
+
+## obj restore.gremlin_database
+
+
+
+### fn restore.gremlin_database.new
+
+```ts
+new()
+```
+
+
+`azurerm.cosmosdb_account.restore.gremlin_database.new` constructs a new object with attributes and blocks configured for the `gremlin_database`
+Terraform sub block.
+
+
+
+**Args**:
+  - `graph_names` (`list`): Set the `graph_names` field on the resulting object. When `null`, the `graph_names` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `gremlin_database` sub block.
 
 
 ## obj timeouts

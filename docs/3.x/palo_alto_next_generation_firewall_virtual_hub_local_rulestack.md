@@ -442,6 +442,7 @@ Terraform sub block.
   - `egress_nat_ip_address_ids` (`list`): Set the `egress_nat_ip_address_ids` field on the resulting object. When `null`, the `egress_nat_ip_address_ids` field will be omitted from the resulting object.
   - `network_virtual_appliance_id` (`string`): Set the `network_virtual_appliance_id` field on the resulting object.
   - `public_ip_address_ids` (`list`): Set the `public_ip_address_ids` field on the resulting object.
+  - `trusted_address_ranges` (`list`): Set the `trusted_address_ranges` field on the resulting object. When `null`, the `trusted_address_ranges` field will be omitted from the resulting object.
   - `virtual_hub_id` (`string`): Set the `virtual_hub_id` field on the resulting object.
 
 **Returns**:

@@ -278,10 +278,26 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       zones: zones,
     }),
     node_network_profile:: {
-      '#new':: d.fn(help='\n`azurerm.kubernetes_cluster.default_node_pool.node_network_profile.new` constructs a new object with attributes and blocks configured for the `node_network_profile`\nTerraform sub block.\n\n\n\n**Args**:\n  - `node_public_ip_tags` (`obj`): Set the `node_public_ip_tags` field on the resulting object. When `null`, the `node_public_ip_tags` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `node_network_profile` sub block.\n', args=[]),
+      allowed_host_ports:: {
+        '#new':: d.fn(help='\n`azurerm.kubernetes_cluster.default_node_pool.node_network_profile.allowed_host_ports.new` constructs a new object with attributes and blocks configured for the `allowed_host_ports`\nTerraform sub block.\n\n\n\n**Args**:\n  - `port_end` (`number`): Set the `port_end` field on the resulting object. When `null`, the `port_end` field will be omitted from the resulting object.\n  - `port_start` (`number`): Set the `port_start` field on the resulting object. When `null`, the `port_start` field will be omitted from the resulting object.\n  - `protocol` (`string`): Set the `protocol` field on the resulting object. When `null`, the `protocol` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `allowed_host_ports` sub block.\n', args=[]),
+        new(
+          port_end=null,
+          port_start=null,
+          protocol=null
+        ):: std.prune(a={
+          port_end: port_end,
+          port_start: port_start,
+          protocol: protocol,
+        }),
+      },
+      '#new':: d.fn(help='\n`azurerm.kubernetes_cluster.default_node_pool.node_network_profile.new` constructs a new object with attributes and blocks configured for the `node_network_profile`\nTerraform sub block.\n\n\n\n**Args**:\n  - `application_security_group_ids` (`list`): Set the `application_security_group_ids` field on the resulting object. When `null`, the `application_security_group_ids` field will be omitted from the resulting object.\n  - `node_public_ip_tags` (`obj`): Set the `node_public_ip_tags` field on the resulting object. When `null`, the `node_public_ip_tags` field will be omitted from the resulting object.\n  - `allowed_host_ports` (`list[obj]`): Set the `allowed_host_ports` field on the resulting object. When `null`, the `allowed_host_ports` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.default_node_pool.node_network_profile.allowed_host_ports.new](#fn-default_node_pooldefault_node_poolallowed_host_portsnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `node_network_profile` sub block.\n', args=[]),
       new(
+        allowed_host_ports=null,
+        application_security_group_ids=null,
         node_public_ip_tags=null
       ):: std.prune(a={
+        allowed_host_ports: allowed_host_ports,
+        application_security_group_ids: application_security_group_ids,
         node_public_ip_tags: node_public_ip_tags,
       }),
     },

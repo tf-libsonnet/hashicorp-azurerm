@@ -33,13 +33,15 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     }),
   },
   long_term_retention_policy:: {
-    '#new':: d.fn(help='\n`azurerm.mssql_database.long_term_retention_policy.new` constructs a new object with attributes and blocks configured for the `long_term_retention_policy`\nTerraform sub block.\n\n\n\n**Args**:\n  - `monthly_retention` (`string`): Set the `monthly_retention` field on the resulting object. When `null`, the `monthly_retention` field will be omitted from the resulting object.\n  - `week_of_year` (`number`): Set the `week_of_year` field on the resulting object. When `null`, the `week_of_year` field will be omitted from the resulting object.\n  - `weekly_retention` (`string`): Set the `weekly_retention` field on the resulting object. When `null`, the `weekly_retention` field will be omitted from the resulting object.\n  - `yearly_retention` (`string`): Set the `yearly_retention` field on the resulting object. When `null`, the `yearly_retention` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `long_term_retention_policy` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`azurerm.mssql_database.long_term_retention_policy.new` constructs a new object with attributes and blocks configured for the `long_term_retention_policy`\nTerraform sub block.\n\n\n\n**Args**:\n  - `immutable_backups_enabled` (`bool`): Set the `immutable_backups_enabled` field on the resulting object. When `null`, the `immutable_backups_enabled` field will be omitted from the resulting object.\n  - `monthly_retention` (`string`): Set the `monthly_retention` field on the resulting object. When `null`, the `monthly_retention` field will be omitted from the resulting object.\n  - `week_of_year` (`number`): Set the `week_of_year` field on the resulting object. When `null`, the `week_of_year` field will be omitted from the resulting object.\n  - `weekly_retention` (`string`): Set the `weekly_retention` field on the resulting object. When `null`, the `weekly_retention` field will be omitted from the resulting object.\n  - `yearly_retention` (`string`): Set the `yearly_retention` field on the resulting object. When `null`, the `yearly_retention` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `long_term_retention_policy` sub block.\n', args=[]),
     new(
+      immutable_backups_enabled=null,
       monthly_retention=null,
       week_of_year=null,
       weekly_retention=null,
       yearly_retention=null
     ):: std.prune(a={
+      immutable_backups_enabled: immutable_backups_enabled,
       monthly_retention: monthly_retention,
       week_of_year: week_of_year,
       weekly_retention: weekly_retention,

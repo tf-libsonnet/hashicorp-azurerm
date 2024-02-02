@@ -25,6 +25,10 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withEnvironmentVariables()`](#fn-withenvironmentvariables)
 * [`fn withHttpsOnly()`](#fn-withhttpsonly)
 * [`fn withInstanceCount()`](#fn-withinstancecount)
+* [`fn withLocalResponseCachePerInstance()`](#fn-withlocalresponsecacheperinstance)
+* [`fn withLocalResponseCachePerInstanceMixin()`](#fn-withlocalresponsecacheperinstancemixin)
+* [`fn withLocalResponseCachePerRoute()`](#fn-withlocalresponsecacheperroute)
+* [`fn withLocalResponseCachePerRouteMixin()`](#fn-withlocalresponsecacheperroutemixin)
 * [`fn withName()`](#fn-withname)
 * [`fn withPublicNetworkAccessEnabled()`](#fn-withpublicnetworkaccessenabled)
 * [`fn withQuota()`](#fn-withquota)
@@ -41,6 +45,10 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-client_authorizationnew)
 * [`obj cors`](#obj-cors)
   * [`fn new()`](#fn-corsnew)
+* [`obj local_response_cache_per_instance`](#obj-local_response_cache_per_instance)
+  * [`fn new()`](#fn-local_response_cache_per_instancenew)
+* [`obj local_response_cache_per_route`](#obj-local_response_cache_per_route)
+  * [`fn new()`](#fn-local_response_cache_per_routenew)
 * [`obj quota`](#obj-quota)
   * [`fn new()`](#fn-quotanew)
 * [`obj sso`](#obj-sso)
@@ -88,6 +96,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `api_metadata` (`list[obj]`): Set the `api_metadata` field on the resulting resource block. When `null`, the `api_metadata` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway.api_metadata.new](#fn-api_metadatanew) constructor.
   - `client_authorization` (`list[obj]`): Set the `client_authorization` field on the resulting resource block. When `null`, the `client_authorization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway.client_authorization.new](#fn-client_authorizationnew) constructor.
   - `cors` (`list[obj]`): Set the `cors` field on the resulting resource block. When `null`, the `cors` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway.cors.new](#fn-corsnew) constructor.
+  - `local_response_cache_per_instance` (`list[obj]`): Set the `local_response_cache_per_instance` field on the resulting resource block. When `null`, the `local_response_cache_per_instance` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway.local_response_cache_per_instance.new](#fn-local_response_cache_per_instancenew) constructor.
+  - `local_response_cache_per_route` (`list[obj]`): Set the `local_response_cache_per_route` field on the resulting resource block. When `null`, the `local_response_cache_per_route` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway.local_response_cache_per_route.new](#fn-local_response_cache_per_routenew) constructor.
   - `quota` (`list[obj]`): Set the `quota` field on the resulting resource block. When `null`, the `quota` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway.quota.new](#fn-quotanew) constructor.
   - `sso` (`list[obj]`): Set the `sso` field on the resulting resource block. When `null`, the `sso` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway.sso.new](#fn-ssonew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway.timeouts.new](#fn-timeoutsnew) constructor.
@@ -125,6 +135,8 @@ injecting into a complete block.
   - `api_metadata` (`list[obj]`): Set the `api_metadata` field on the resulting object. When `null`, the `api_metadata` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway.api_metadata.new](#fn-api_metadatanew) constructor.
   - `client_authorization` (`list[obj]`): Set the `client_authorization` field on the resulting object. When `null`, the `client_authorization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway.client_authorization.new](#fn-client_authorizationnew) constructor.
   - `cors` (`list[obj]`): Set the `cors` field on the resulting object. When `null`, the `cors` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway.cors.new](#fn-corsnew) constructor.
+  - `local_response_cache_per_instance` (`list[obj]`): Set the `local_response_cache_per_instance` field on the resulting object. When `null`, the `local_response_cache_per_instance` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway.local_response_cache_per_instance.new](#fn-local_response_cache_per_instancenew) constructor.
+  - `local_response_cache_per_route` (`list[obj]`): Set the `local_response_cache_per_route` field on the resulting object. When `null`, the `local_response_cache_per_route` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway.local_response_cache_per_route.new](#fn-local_response_cache_per_routenew) constructor.
   - `quota` (`list[obj]`): Set the `quota` field on the resulting object. When `null`, the `quota` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway.quota.new](#fn-quotanew) constructor.
   - `sso` (`list[obj]`): Set the `sso` field on the resulting object. When `null`, the `sso` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway.sso.new](#fn-ssonew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_gateway.timeouts.new](#fn-timeoutsnew) constructor.
@@ -306,6 +318,80 @@ Terraform resource block to set or update the instance_count field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`number`): The value to set for the `instance_count` field.
+
+
+### fn withLocalResponseCachePerInstance
+
+```ts
+withLocalResponseCachePerInstance()
+```
+
+`azurerm.list[obj].withLocalResponseCachePerInstance` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the local_response_cache_per_instance field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [azurerm.list[obj].withLocalResponseCachePerInstanceMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `local_response_cache_per_instance` field.
+
+
+### fn withLocalResponseCachePerInstanceMixin
+
+```ts
+withLocalResponseCachePerInstanceMixin()
+```
+
+`azurerm.list[obj].withLocalResponseCachePerInstanceMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the local_response_cache_per_instance field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.list[obj].withLocalResponseCachePerInstance](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `local_response_cache_per_instance` field.
+
+
+### fn withLocalResponseCachePerRoute
+
+```ts
+withLocalResponseCachePerRoute()
+```
+
+`azurerm.list[obj].withLocalResponseCachePerRoute` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the local_response_cache_per_route field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [azurerm.list[obj].withLocalResponseCachePerRouteMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `local_response_cache_per_route` field.
+
+
+### fn withLocalResponseCachePerRouteMixin
+
+```ts
+withLocalResponseCachePerRouteMixin()
+```
+
+`azurerm.list[obj].withLocalResponseCachePerRouteMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the local_response_cache_per_route field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.list[obj].withLocalResponseCachePerRoute](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `local_response_cache_per_route` field.
 
 
 ### fn withName
@@ -560,6 +646,54 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `cors` sub block.
+
+
+## obj local_response_cache_per_instance
+
+
+
+### fn local_response_cache_per_instance.new
+
+```ts
+new()
+```
+
+
+`azurerm.spring_cloud_gateway.local_response_cache_per_instance.new` constructs a new object with attributes and blocks configured for the `local_response_cache_per_instance`
+Terraform sub block.
+
+
+
+**Args**:
+  - `size` (`string`): Set the `size` field on the resulting object. When `null`, the `size` field will be omitted from the resulting object.
+  - `time_to_live` (`string`): Set the `time_to_live` field on the resulting object. When `null`, the `time_to_live` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `local_response_cache_per_instance` sub block.
+
+
+## obj local_response_cache_per_route
+
+
+
+### fn local_response_cache_per_route.new
+
+```ts
+new()
+```
+
+
+`azurerm.spring_cloud_gateway.local_response_cache_per_route.new` constructs a new object with attributes and blocks configured for the `local_response_cache_per_route`
+Terraform sub block.
+
+
+
+**Args**:
+  - `size` (`string`): Set the `size` field on the resulting object. When `null`, the `size` field will be omitted from the resulting object.
+  - `time_to_live` (`string`): Set the `time_to_live` field on the resulting object. When `null`, the `time_to_live` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `local_response_cache_per_route` sub block.
 
 
 ## obj quota

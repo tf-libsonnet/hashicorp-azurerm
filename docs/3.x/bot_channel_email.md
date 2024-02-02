@@ -19,6 +19,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withEmailAddress()`](#fn-withemailaddress)
 * [`fn withEmailPassword()`](#fn-withemailpassword)
 * [`fn withLocation()`](#fn-withlocation)
+* [`fn withMagicCode()`](#fn-withmagiccode)
 * [`fn withResourceGroupName()`](#fn-withresourcegroupname)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
@@ -56,8 +57,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resourceLabel` (`string`): The name label of the block.
   - `bot_name` (`string`): Set the `bot_name` field on the resulting resource block.
   - `email_address` (`string`): Set the `email_address` field on the resulting resource block.
-  - `email_password` (`string`): Set the `email_password` field on the resulting resource block.
+  - `email_password` (`string`): Set the `email_password` field on the resulting resource block. When `null`, the `email_password` field will be omitted from the resulting object.
   - `location` (`string`): Set the `location` field on the resulting resource block.
+  - `magic_code` (`string`): Set the `magic_code` field on the resulting resource block. When `null`, the `magic_code` field will be omitted from the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.bot_channel_email.timeouts.new](#fn-timeoutsnew) constructor.
 
@@ -85,8 +87,9 @@ injecting into a complete block.
 **Args**:
   - `bot_name` (`string`): Set the `bot_name` field on the resulting object.
   - `email_address` (`string`): Set the `email_address` field on the resulting object.
-  - `email_password` (`string`): Set the `email_password` field on the resulting object.
+  - `email_password` (`string`): Set the `email_password` field on the resulting object. When `null`, the `email_password` field will be omitted from the resulting object.
   - `location` (`string`): Set the `location` field on the resulting object.
+  - `magic_code` (`string`): Set the `magic_code` field on the resulting object. When `null`, the `magic_code` field will be omitted from the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.bot_channel_email.timeouts.new](#fn-timeoutsnew) constructor.
 
@@ -156,6 +159,22 @@ Terraform resource block to set or update the location field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `location` field.
+
+
+### fn withMagicCode
+
+```ts
+withMagicCode()
+```
+
+`azurerm.string.withMagicCode` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the magic_code field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `magic_code` field.
 
 
 ### fn withResourceGroupName

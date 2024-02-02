@@ -47,14 +47,16 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     }),
   },
   network_profile:: {
-    '#new':: d.fn(help='\n`azurerm.palo_alto_next_generation_firewall_virtual_network_local_rulestack.network_profile.new` constructs a new object with attributes and blocks configured for the `network_profile`\nTerraform sub block.\n\n\n\n**Args**:\n  - `egress_nat_ip_address_ids` (`list`): Set the `egress_nat_ip_address_ids` field on the resulting object. When `null`, the `egress_nat_ip_address_ids` field will be omitted from the resulting object.\n  - `public_ip_address_ids` (`list`): Set the `public_ip_address_ids` field on the resulting object.\n  - `vnet_configuration` (`list[obj]`): Set the `vnet_configuration` field on the resulting object. When `null`, the `vnet_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.palo_alto_next_generation_firewall_virtual_network_local_rulestack.network_profile.vnet_configuration.new](#fn-network_profilevnet_configurationnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `network_profile` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`azurerm.palo_alto_next_generation_firewall_virtual_network_local_rulestack.network_profile.new` constructs a new object with attributes and blocks configured for the `network_profile`\nTerraform sub block.\n\n\n\n**Args**:\n  - `egress_nat_ip_address_ids` (`list`): Set the `egress_nat_ip_address_ids` field on the resulting object. When `null`, the `egress_nat_ip_address_ids` field will be omitted from the resulting object.\n  - `public_ip_address_ids` (`list`): Set the `public_ip_address_ids` field on the resulting object.\n  - `trusted_address_ranges` (`list`): Set the `trusted_address_ranges` field on the resulting object. When `null`, the `trusted_address_ranges` field will be omitted from the resulting object.\n  - `vnet_configuration` (`list[obj]`): Set the `vnet_configuration` field on the resulting object. When `null`, the `vnet_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.palo_alto_next_generation_firewall_virtual_network_local_rulestack.network_profile.vnet_configuration.new](#fn-network_profilevnet_configurationnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `network_profile` sub block.\n', args=[]),
     new(
       public_ip_address_ids,
       egress_nat_ip_address_ids=null,
+      trusted_address_ranges=null,
       vnet_configuration=null
     ):: std.prune(a={
       egress_nat_ip_address_ids: egress_nat_ip_address_ids,
       public_ip_address_ids: public_ip_address_ids,
+      trusted_address_ranges: trusted_address_ranges,
       vnet_configuration: vnet_configuration,
     }),
     vnet_configuration:: {

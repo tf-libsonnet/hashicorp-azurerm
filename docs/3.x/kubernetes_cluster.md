@@ -120,6 +120,8 @@ This package contains functions and utilities for setting up the resource using 
       * [`fn new()`](#fn-default_node_poollinux_os_configsysctl_confignew)
   * [`obj default_node_pool.node_network_profile`](#obj-default_node_poolnode_network_profile)
     * [`fn new()`](#fn-default_node_poolnode_network_profilenew)
+    * [`obj default_node_pool.node_network_profile.allowed_host_ports`](#obj-default_node_poolnode_network_profileallowed_host_ports)
+      * [`fn new()`](#fn-default_node_poolnode_network_profileallowed_host_portsnew)
   * [`obj default_node_pool.upgrade_settings`](#obj-default_node_poolupgrade_settings)
     * [`fn new()`](#fn-default_node_poolupgrade_settingsnew)
 * [`obj http_proxy_config`](#obj-http_proxy_config)
@@ -2174,10 +2176,37 @@ Terraform sub block.
 
 
 **Args**:
+  - `application_security_group_ids` (`list`): Set the `application_security_group_ids` field on the resulting object. When `null`, the `application_security_group_ids` field will be omitted from the resulting object.
   - `node_public_ip_tags` (`obj`): Set the `node_public_ip_tags` field on the resulting object. When `null`, the `node_public_ip_tags` field will be omitted from the resulting object.
+  - `allowed_host_ports` (`list[obj]`): Set the `allowed_host_ports` field on the resulting object. When `null`, the `allowed_host_ports` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.default_node_pool.node_network_profile.allowed_host_ports.new](#fn-default_node_pooldefault_node_poolallowed_host_portsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `node_network_profile` sub block.
+
+
+## obj default_node_pool.node_network_profile.allowed_host_ports
+
+
+
+### fn default_node_pool.node_network_profile.allowed_host_ports.new
+
+```ts
+new()
+```
+
+
+`azurerm.kubernetes_cluster.default_node_pool.node_network_profile.allowed_host_ports.new` constructs a new object with attributes and blocks configured for the `allowed_host_ports`
+Terraform sub block.
+
+
+
+**Args**:
+  - `port_end` (`number`): Set the `port_end` field on the resulting object. When `null`, the `port_end` field will be omitted from the resulting object.
+  - `port_start` (`number`): Set the `port_start` field on the resulting object. When `null`, the `port_start` field will be omitted from the resulting object.
+  - `protocol` (`string`): Set the `protocol` field on the resulting object. When `null`, the `protocol` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `allowed_host_ports` sub block.
 
 
 ## obj default_node_pool.upgrade_settings

@@ -913,6 +913,7 @@ Terraform sub block.
 
 
 **Args**:
+  - `immutable_backups_enabled` (`bool`): Set the `immutable_backups_enabled` field on the resulting object. When `null`, the `immutable_backups_enabled` field will be omitted from the resulting object.
   - `monthly_retention` (`string`): Set the `monthly_retention` field on the resulting object. When `null`, the `monthly_retention` field will be omitted from the resulting object.
   - `week_of_year` (`number`): Set the `week_of_year` field on the resulting object. When `null`, the `week_of_year` field will be omitted from the resulting object.
   - `weekly_retention` (`string`): Set the `weekly_retention` field on the resulting object. When `null`, the `weekly_retention` field will be omitted from the resulting object.

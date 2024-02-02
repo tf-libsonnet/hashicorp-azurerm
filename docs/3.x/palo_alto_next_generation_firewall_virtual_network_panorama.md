@@ -462,6 +462,7 @@ Terraform sub block.
 **Args**:
   - `egress_nat_ip_address_ids` (`list`): Set the `egress_nat_ip_address_ids` field on the resulting object. When `null`, the `egress_nat_ip_address_ids` field will be omitted from the resulting object.
   - `public_ip_address_ids` (`list`): Set the `public_ip_address_ids` field on the resulting object.
+  - `trusted_address_ranges` (`list`): Set the `trusted_address_ranges` field on the resulting object. When `null`, the `trusted_address_ranges` field will be omitted from the resulting object.
   - `vnet_configuration` (`list[obj]`): Set the `vnet_configuration` field on the resulting object. When `null`, the `vnet_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.palo_alto_next_generation_firewall_virtual_network_panorama.network_profile.vnet_configuration.new](#fn-network_profilevnet_configurationnew) constructor.
 
 **Returns**:
