@@ -25,9 +25,13 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withTags()`](#fn-withtags)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
+* [`fn withWorkloadProfile()`](#fn-withworkloadprofile)
+* [`fn withWorkloadProfileMixin()`](#fn-withworkloadprofilemixin)
 * [`fn withZoneRedundancyEnabled()`](#fn-withzoneredundancyenabled)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
+* [`obj workload_profile`](#obj-workload_profile)
+  * [`fn new()`](#fn-workload_profilenew)
 
 ## Fields
 
@@ -68,6 +72,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
   - `zone_redundancy_enabled` (`bool`): Set the `zone_redundancy_enabled` field on the resulting resource block. When `null`, the `zone_redundancy_enabled` field will be omitted from the resulting object.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app_environment.timeouts.new](#fn-timeoutsnew) constructor.
+  - `workload_profile` (`list[obj]`): Set the `workload_profile` field on the resulting resource block. When `null`, the `workload_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app_environment.workload_profile.new](#fn-workload_profilenew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -101,6 +106,7 @@ injecting into a complete block.
   - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
   - `zone_redundancy_enabled` (`bool`): Set the `zone_redundancy_enabled` field on the resulting object. When `null`, the `zone_redundancy_enabled` field will be omitted from the resulting object.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app_environment.timeouts.new](#fn-timeoutsnew) constructor.
+  - `workload_profile` (`list[obj]`): Set the `workload_profile` field on the resulting object. When `null`, the `workload_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app_environment.workload_profile.new](#fn-workload_profilenew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `container_app_environment` resource into the root Terraform configuration.
@@ -270,6 +276,43 @@ function.
   - `value` (`obj`): The value to set for the `timeouts` field.
 
 
+### fn withWorkloadProfile
+
+```ts
+withWorkloadProfile()
+```
+
+`azurerm.list[obj].withWorkloadProfile` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the workload_profile field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [azurerm.list[obj].withWorkloadProfileMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `workload_profile` field.
+
+
+### fn withWorkloadProfileMixin
+
+```ts
+withWorkloadProfileMixin()
+```
+
+`azurerm.list[obj].withWorkloadProfileMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the workload_profile field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [azurerm.list[obj].withWorkloadProfile](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `workload_profile` field.
+
+
 ### fn withZoneRedundancyEnabled
 
 ```ts
@@ -310,3 +353,29 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.
+
+
+## obj workload_profile
+
+
+
+### fn workload_profile.new
+
+```ts
+new()
+```
+
+
+`azurerm.container_app_environment.workload_profile.new` constructs a new object with attributes and blocks configured for the `workload_profile`
+Terraform sub block.
+
+
+
+**Args**:
+  - `maximum_count` (`number`): Set the `maximum_count` field on the resulting object.
+  - `minimum_count` (`number`): Set the `minimum_count` field on the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
+  - `workload_profile_type` (`string`): Set the `workload_profile_type` field on the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `workload_profile` sub block.

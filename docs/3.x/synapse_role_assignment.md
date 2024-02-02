@@ -16,6 +16,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
 * [`fn withPrincipalId()`](#fn-withprincipalid)
+* [`fn withPrincipalType()`](#fn-withprincipaltype)
 * [`fn withRoleName()`](#fn-withrolename)
 * [`fn withSynapseSparkPoolId()`](#fn-withsynapsesparkpoolid)
 * [`fn withSynapseWorkspaceId()`](#fn-withsynapseworkspaceid)
@@ -54,6 +55,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
   - `principal_id` (`string`): Set the `principal_id` field on the resulting resource block.
+  - `principal_type` (`string`): Set the `principal_type` field on the resulting resource block. When `null`, the `principal_type` field will be omitted from the resulting object.
   - `role_name` (`string`): Set the `role_name` field on the resulting resource block.
   - `synapse_spark_pool_id` (`string`): Set the `synapse_spark_pool_id` field on the resulting resource block. When `null`, the `synapse_spark_pool_id` field will be omitted from the resulting object.
   - `synapse_workspace_id` (`string`): Set the `synapse_workspace_id` field on the resulting resource block. When `null`, the `synapse_workspace_id` field will be omitted from the resulting object.
@@ -82,6 +84,7 @@ injecting into a complete block.
 
 **Args**:
   - `principal_id` (`string`): Set the `principal_id` field on the resulting object.
+  - `principal_type` (`string`): Set the `principal_type` field on the resulting object. When `null`, the `principal_type` field will be omitted from the resulting object.
   - `role_name` (`string`): Set the `role_name` field on the resulting object.
   - `synapse_spark_pool_id` (`string`): Set the `synapse_spark_pool_id` field on the resulting object. When `null`, the `synapse_spark_pool_id` field will be omitted from the resulting object.
   - `synapse_workspace_id` (`string`): Set the `synapse_workspace_id` field on the resulting object. When `null`, the `synapse_workspace_id` field will be omitted from the resulting object.
@@ -105,6 +108,22 @@ Terraform resource block to set or update the principal_id field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `principal_id` field.
+
+
+### fn withPrincipalType
+
+```ts
+withPrincipalType()
+```
+
+`azurerm.string.withPrincipalType` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the principal_type field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `principal_type` field.
 
 
 ### fn withRoleName

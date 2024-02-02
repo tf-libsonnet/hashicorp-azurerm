@@ -24,6 +24,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withDefaultBuildServiceMixin()`](#fn-withdefaultbuildservicemixin)
 * [`fn withLocation()`](#fn-withlocation)
 * [`fn withLogStreamPublicEndpointEnabled()`](#fn-withlogstreampublicendpointenabled)
+* [`fn withManagedEnvironmentId()`](#fn-withmanagedenvironmentid)
 * [`fn withMarketplace()`](#fn-withmarketplace)
 * [`fn withMarketplaceMixin()`](#fn-withmarketplacemixin)
 * [`fn withName()`](#fn-withname)
@@ -32,6 +33,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withResourceGroupName()`](#fn-withresourcegroupname)
 * [`fn withServiceRegistryEnabled()`](#fn-withserviceregistryenabled)
 * [`fn withSkuName()`](#fn-withskuname)
+* [`fn withSkuTier()`](#fn-withskutier)
 * [`fn withTags()`](#fn-withtags)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
@@ -95,10 +97,12 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `build_agent_pool_size` (`string`): Set the `build_agent_pool_size` field on the resulting resource block. When `null`, the `build_agent_pool_size` field will be omitted from the resulting object.
   - `location` (`string`): Set the `location` field on the resulting resource block.
   - `log_stream_public_endpoint_enabled` (`bool`): Set the `log_stream_public_endpoint_enabled` field on the resulting resource block. When `null`, the `log_stream_public_endpoint_enabled` field will be omitted from the resulting object.
+  - `managed_environment_id` (`string`): Set the `managed_environment_id` field on the resulting resource block. When `null`, the `managed_environment_id` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting resource block.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
   - `service_registry_enabled` (`bool`): Set the `service_registry_enabled` field on the resulting resource block. When `null`, the `service_registry_enabled` field will be omitted from the resulting object.
   - `sku_name` (`string`): Set the `sku_name` field on the resulting resource block. When `null`, the `sku_name` field will be omitted from the resulting object.
+  - `sku_tier` (`string`): Set the `sku_tier` field on the resulting resource block. When `null`, the `sku_tier` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
   - `zone_redundant` (`bool`): Set the `zone_redundant` field on the resulting resource block. When `null`, the `zone_redundant` field will be omitted from the resulting object.
   - `config_server_git_setting` (`list[obj]`): Set the `config_server_git_setting` field on the resulting resource block. When `null`, the `config_server_git_setting` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.config_server_git_setting.new](#fn-config_server_git_settingnew) constructor.
@@ -134,10 +138,12 @@ injecting into a complete block.
   - `build_agent_pool_size` (`string`): Set the `build_agent_pool_size` field on the resulting object. When `null`, the `build_agent_pool_size` field will be omitted from the resulting object.
   - `location` (`string`): Set the `location` field on the resulting object.
   - `log_stream_public_endpoint_enabled` (`bool`): Set the `log_stream_public_endpoint_enabled` field on the resulting object. When `null`, the `log_stream_public_endpoint_enabled` field will be omitted from the resulting object.
+  - `managed_environment_id` (`string`): Set the `managed_environment_id` field on the resulting object. When `null`, the `managed_environment_id` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
   - `service_registry_enabled` (`bool`): Set the `service_registry_enabled` field on the resulting object. When `null`, the `service_registry_enabled` field will be omitted from the resulting object.
   - `sku_name` (`string`): Set the `sku_name` field on the resulting object. When `null`, the `sku_name` field will be omitted from the resulting object.
+  - `sku_tier` (`string`): Set the `sku_tier` field on the resulting object. When `null`, the `sku_tier` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
   - `zone_redundant` (`bool`): Set the `zone_redundant` field on the resulting object. When `null`, the `zone_redundant` field will be omitted from the resulting object.
   - `config_server_git_setting` (`list[obj]`): Set the `config_server_git_setting` field on the resulting object. When `null`, the `config_server_git_setting` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_service.config_server_git_setting.new](#fn-config_server_git_settingnew) constructor.
@@ -311,6 +317,22 @@ Terraform resource block to set or update the log_stream_public_endpoint_enabled
   - `value` (`bool`): The value to set for the `log_stream_public_endpoint_enabled` field.
 
 
+### fn withManagedEnvironmentId
+
+```ts
+withManagedEnvironmentId()
+```
+
+`azurerm.string.withManagedEnvironmentId` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the managed_environment_id field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `managed_environment_id` field.
+
+
 ### fn withMarketplace
 
 ```ts
@@ -447,6 +469,22 @@ Terraform resource block to set or update the sku_name field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `sku_name` field.
+
+
+### fn withSkuTier
+
+```ts
+withSkuTier()
+```
+
+`azurerm.string.withSkuTier` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the sku_tier field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `sku_tier` field.
 
 
 ### fn withTags

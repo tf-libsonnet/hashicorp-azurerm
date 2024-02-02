@@ -2,7 +2,7 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
 {
   '#':: d.pkg(name='container_app_environment', url='', help='`container_app_environment` represents the `azurerm_container_app_environment` Terraform resource.\n\n\n\nThis package contains functions and utilities for setting up the resource using Jsonnet code.\n'),
-  '#new':: d.fn(help="\n`azurerm.container_app_environment.new` injects a new `azurerm_container_app_environment` Terraform `resource`\nblock into the root module document.\n\nAdditionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the\nresource. For example, if you added a new instance to the root using:\n\n    # arguments omitted for brevity\n    azurerm.container_app_environment.new('some_id')\n\nYou can get the reference to the `id` field of the created `azurerm.container_app_environment` using the reference:\n\n    $._ref.azurerm_container_app_environment.some_id.get('id')\n\nThis is the same as directly entering `\"${ azurerm_container_app_environment.some_id.id }\"` as the value.\n\nNOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,\nor `$` to refer to the root object. Instead, make an explicit outer object using `local`.\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block.\n  - `dapr_application_insights_connection_string` (`string`): Application Insights connection string used by Dapr to export Service to Service communication telemetry. When `null`, the `dapr_application_insights_connection_string` field will be omitted from the resulting object.\n  - `infrastructure_subnet_id` (`string`): The existing Subnet to use for the Container Apps Control Plane. **NOTE:** The Subnet must have a `/21` or larger address space. When `null`, the `infrastructure_subnet_id` field will be omitted from the resulting object.\n  - `internal_load_balancer_enabled` (`bool`): Should the Container Environment operate in Internal Load Balancing Mode? Defaults to `false`. **Note:** can only be set to `true` if `infrastructure_subnet_id` is specified. When `null`, the `internal_load_balancer_enabled` field will be omitted from the resulting object.\n  - `location` (`string`): Set the `location` field on the resulting resource block.\n  - `log_analytics_workspace_id` (`string`): The ID for the Log Analytics Workspace to link this Container Apps Managed Environment to. When `null`, the `log_analytics_workspace_id` field will be omitted from the resulting object.\n  - `name` (`string`): The name of the Container Apps Managed Environment.\n  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.\n  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.\n  - `zone_redundancy_enabled` (`bool`): Set the `zone_redundancy_enabled` field on the resulting resource block. When `null`, the `zone_redundancy_enabled` field will be omitted from the resulting object.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app_environment.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n- A mixin object that injects the new resource into the root Terraform configuration.\n", args=[]),
+  '#new':: d.fn(help="\n`azurerm.container_app_environment.new` injects a new `azurerm_container_app_environment` Terraform `resource`\nblock into the root module document.\n\nAdditionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the\nresource. For example, if you added a new instance to the root using:\n\n    # arguments omitted for brevity\n    azurerm.container_app_environment.new('some_id')\n\nYou can get the reference to the `id` field of the created `azurerm.container_app_environment` using the reference:\n\n    $._ref.azurerm_container_app_environment.some_id.get('id')\n\nThis is the same as directly entering `\"${ azurerm_container_app_environment.some_id.id }\"` as the value.\n\nNOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,\nor `$` to refer to the root object. Instead, make an explicit outer object using `local`.\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block.\n  - `dapr_application_insights_connection_string` (`string`): Application Insights connection string used by Dapr to export Service to Service communication telemetry. When `null`, the `dapr_application_insights_connection_string` field will be omitted from the resulting object.\n  - `infrastructure_subnet_id` (`string`): The existing Subnet to use for the Container Apps Control Plane. **NOTE:** The Subnet must have a `/21` or larger address space. When `null`, the `infrastructure_subnet_id` field will be omitted from the resulting object.\n  - `internal_load_balancer_enabled` (`bool`): Should the Container Environment operate in Internal Load Balancing Mode? Defaults to `false`. **Note:** can only be set to `true` if `infrastructure_subnet_id` is specified. When `null`, the `internal_load_balancer_enabled` field will be omitted from the resulting object.\n  - `location` (`string`): Set the `location` field on the resulting resource block.\n  - `log_analytics_workspace_id` (`string`): The ID for the Log Analytics Workspace to link this Container Apps Managed Environment to. When `null`, the `log_analytics_workspace_id` field will be omitted from the resulting object.\n  - `name` (`string`): The name of the Container Apps Managed Environment.\n  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.\n  - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.\n  - `zone_redundancy_enabled` (`bool`): Set the `zone_redundancy_enabled` field on the resulting resource block. When `null`, the `zone_redundancy_enabled` field will be omitted from the resulting object.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app_environment.timeouts.new](#fn-timeoutsnew) constructor.\n  - `workload_profile` (`list[obj]`): Set the `workload_profile` field on the resulting resource block. When `null`, the `workload_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app_environment.workload_profile.new](#fn-workload_profilenew) constructor.\n\n**Returns**:\n- A mixin object that injects the new resource into the root Terraform configuration.\n", args=[]),
   new(
     resourceLabel,
     location,
@@ -14,6 +14,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     log_analytics_workspace_id=null,
     tags=null,
     timeouts=null,
+    workload_profile=null,
     zone_redundancy_enabled=null,
     _meta={}
   ):: tf.withResource(
@@ -29,11 +30,12 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       resource_group_name=resource_group_name,
       tags=tags,
       timeouts=timeouts,
+      workload_profile=workload_profile,
       zone_redundancy_enabled=zone_redundancy_enabled
     ),
     _meta=_meta
   ),
-  '#newAttrs':: d.fn(help='\n`azurerm.container_app_environment.newAttrs` constructs a new object with attributes and blocks configured for the `container_app_environment`\nTerraform resource.\n\nUnlike [azurerm.container_app_environment.new](#fn-new), this function will not inject the `resource`\nblock into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the\n[tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.\n\nThis is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to\ninjecting into a complete block.\n\n**Args**:\n  - `dapr_application_insights_connection_string` (`string`): Application Insights connection string used by Dapr to export Service to Service communication telemetry. When `null`, the `dapr_application_insights_connection_string` field will be omitted from the resulting object.\n  - `infrastructure_subnet_id` (`string`): The existing Subnet to use for the Container Apps Control Plane. **NOTE:** The Subnet must have a `/21` or larger address space. When `null`, the `infrastructure_subnet_id` field will be omitted from the resulting object.\n  - `internal_load_balancer_enabled` (`bool`): Should the Container Environment operate in Internal Load Balancing Mode? Defaults to `false`. **Note:** can only be set to `true` if `infrastructure_subnet_id` is specified. When `null`, the `internal_load_balancer_enabled` field will be omitted from the resulting object.\n  - `location` (`string`): Set the `location` field on the resulting object.\n  - `log_analytics_workspace_id` (`string`): The ID for the Log Analytics Workspace to link this Container Apps Managed Environment to. When `null`, the `log_analytics_workspace_id` field will be omitted from the resulting object.\n  - `name` (`string`): The name of the Container Apps Managed Environment.\n  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.\n  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.\n  - `zone_redundancy_enabled` (`bool`): Set the `zone_redundancy_enabled` field on the resulting object. When `null`, the `zone_redundancy_enabled` field will be omitted from the resulting object.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app_environment.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `container_app_environment` resource into the root Terraform configuration.\n', args=[]),
+  '#newAttrs':: d.fn(help='\n`azurerm.container_app_environment.newAttrs` constructs a new object with attributes and blocks configured for the `container_app_environment`\nTerraform resource.\n\nUnlike [azurerm.container_app_environment.new](#fn-new), this function will not inject the `resource`\nblock into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the\n[tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.\n\nThis is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to\ninjecting into a complete block.\n\n**Args**:\n  - `dapr_application_insights_connection_string` (`string`): Application Insights connection string used by Dapr to export Service to Service communication telemetry. When `null`, the `dapr_application_insights_connection_string` field will be omitted from the resulting object.\n  - `infrastructure_subnet_id` (`string`): The existing Subnet to use for the Container Apps Control Plane. **NOTE:** The Subnet must have a `/21` or larger address space. When `null`, the `infrastructure_subnet_id` field will be omitted from the resulting object.\n  - `internal_load_balancer_enabled` (`bool`): Should the Container Environment operate in Internal Load Balancing Mode? Defaults to `false`. **Note:** can only be set to `true` if `infrastructure_subnet_id` is specified. When `null`, the `internal_load_balancer_enabled` field will be omitted from the resulting object.\n  - `location` (`string`): Set the `location` field on the resulting object.\n  - `log_analytics_workspace_id` (`string`): The ID for the Log Analytics Workspace to link this Container Apps Managed Environment to. When `null`, the `log_analytics_workspace_id` field will be omitted from the resulting object.\n  - `name` (`string`): The name of the Container Apps Managed Environment.\n  - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.\n  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.\n  - `zone_redundancy_enabled` (`bool`): Set the `zone_redundancy_enabled` field on the resulting object. When `null`, the `zone_redundancy_enabled` field will be omitted from the resulting object.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app_environment.timeouts.new](#fn-timeoutsnew) constructor.\n  - `workload_profile` (`list[obj]`): Set the `workload_profile` field on the resulting object. When `null`, the `workload_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.container_app_environment.workload_profile.new](#fn-workload_profilenew) constructor.\n\n**Returns**:\n  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `container_app_environment` resource into the root Terraform configuration.\n', args=[]),
   newAttrs(
     location,
     name,
@@ -44,6 +46,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     log_analytics_workspace_id=null,
     tags=null,
     timeouts=null,
+    workload_profile=null,
     zone_redundancy_enabled=null
   ):: std.prune(a={
     dapr_application_insights_connection_string: dapr_application_insights_connection_string,
@@ -55,6 +58,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     resource_group_name: resource_group_name,
     tags: tags,
     timeouts: timeouts,
+    workload_profile: workload_profile,
     zone_redundancy_enabled: zone_redundancy_enabled,
   }),
   timeouts:: {
@@ -171,6 +175,26 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       },
     },
   },
+  '#withWorkloadProfile':: d.fn(help='`azurerm.list[obj].withWorkloadProfile` constructs a mixin object that can be merged into the `list[obj]`\nTerraform resource block to set or update the workload_profile field.\n\nThis function will replace the array with the passed in `value`. If you wish to instead append the\npassed in value to the existing array, use the [azurerm.list[obj].withWorkloadProfileMixin](TODO) function.\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`list[obj]`): The value to set for the `workload_profile` field.\n', args=[]),
+  withWorkloadProfile(resourceLabel, value): {
+    resource+: {
+      azurerm_container_app_environment+: {
+        [resourceLabel]+: {
+          workload_profile: value,
+        },
+      },
+    },
+  },
+  '#withWorkloadProfileMixin':: d.fn(help='`azurerm.list[obj].withWorkloadProfileMixin` constructs a mixin object that can be merged into the `list[obj]`\nTerraform resource block to set or update the workload_profile field.\n\nThis function will append the passed in array or object to the existing array. If you wish\nto instead replace the array with the passed in `value`, use the [azurerm.list[obj].withWorkloadProfile](TODO)\nfunction.\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`list[obj]`): The value to set for the `workload_profile` field.\n', args=[]),
+  withWorkloadProfileMixin(resourceLabel, value): {
+    resource+: {
+      azurerm_container_app_environment+: {
+        [resourceLabel]+: {
+          workload_profile+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
   '#withZoneRedundancyEnabled':: d.fn(help='`azurerm.bool.withZoneRedundancyEnabled` constructs a mixin object that can be merged into the `bool`\nTerraform resource block to set or update the zone_redundancy_enabled field.\n\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`bool`): The value to set for the `zone_redundancy_enabled` field.\n', args=[]),
   withZoneRedundancyEnabled(resourceLabel, value): {
     resource+: {
@@ -180,5 +204,19 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
         },
       },
     },
+  },
+  workload_profile:: {
+    '#new':: d.fn(help='\n`azurerm.container_app_environment.workload_profile.new` constructs a new object with attributes and blocks configured for the `workload_profile`\nTerraform sub block.\n\n\n\n**Args**:\n  - `maximum_count` (`number`): Set the `maximum_count` field on the resulting object.\n  - `minimum_count` (`number`): Set the `minimum_count` field on the resulting object.\n  - `name` (`string`): Set the `name` field on the resulting object.\n  - `workload_profile_type` (`string`): Set the `workload_profile_type` field on the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `workload_profile` sub block.\n', args=[]),
+    new(
+      maximum_count,
+      minimum_count,
+      name,
+      workload_profile_type
+    ):: std.prune(a={
+      maximum_count: maximum_count,
+      minimum_count: minimum_count,
+      name: name,
+      workload_profile_type: workload_profile_type,
+    }),
   },
 }

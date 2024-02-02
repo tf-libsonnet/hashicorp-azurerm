@@ -81,6 +81,7 @@ the `src` and/or `version` parameters are set.
   - `storage_use_azuread` (`bool`): Should the AzureRM Provider use AzureAD to access the Storage Data Plane API&#39;s? When `null`, the `storage_use_azuread` field will be omitted from the resulting object.
   - `subscription_id` (`string`): The Subscription ID which should be used. When `null`, the `subscription_id` field will be omitted from the resulting object.
   - `tenant_id` (`string`): The Tenant ID which should be used. When `null`, the `tenant_id` field will be omitted from the resulting object.
+  - `use_aks_workload_identity` (`bool`): Allow Azure AKS Workload Identity to be used for Authentication. When `null`, the `use_aks_workload_identity` field will be omitted from the resulting object.
   - `use_cli` (`bool`): Allow Azure CLI to be used for Authentication. When `null`, the `use_cli` field will be omitted from the resulting object.
   - `use_msi` (`bool`): Allow Managed Service Identity to be used for Authentication. When `null`, the `use_msi` field will be omitted from the resulting object.
   - `use_oidc` (`bool`): Allow OpenID Connect to be used for authentication When `null`, the `use_oidc` field will be omitted from the resulting object.
@@ -138,6 +139,7 @@ injecting into a complete block.
   - `storage_use_azuread` (`bool`): Should the AzureRM Provider use AzureAD to access the Storage Data Plane API&#39;s? When `null`, the `storage_use_azuread` field will be omitted from the resulting object.
   - `subscription_id` (`string`): The Subscription ID which should be used. When `null`, the `subscription_id` field will be omitted from the resulting object.
   - `tenant_id` (`string`): The Tenant ID which should be used. When `null`, the `tenant_id` field will be omitted from the resulting object.
+  - `use_aks_workload_identity` (`bool`): Allow Azure AKS Workload Identity to be used for Authentication. When `null`, the `use_aks_workload_identity` field will be omitted from the resulting object.
   - `use_cli` (`bool`): Allow Azure CLI to be used for Authentication. When `null`, the `use_cli` field will be omitted from the resulting object.
   - `use_msi` (`bool`): Allow Managed Service Identity to be used for Authentication. When `null`, the `use_msi` field will be omitted from the resulting object.
   - `use_oidc` (`bool`): Allow OpenID Connect to be used for authentication When `null`, the `use_oidc` field will be omitted from the resulting object.

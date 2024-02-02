@@ -16,6 +16,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
 * [`fn withAddonJson()`](#fn-withaddonjson)
+* [`fn withApplicationPerformanceMonitoringIds()`](#fn-withapplicationperformancemonitoringids)
 * [`fn withArguments()`](#fn-witharguments)
 * [`fn withCommands()`](#fn-withcommands)
 * [`fn withEnvironmentVariables()`](#fn-withenvironmentvariables)
@@ -64,6 +65,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
   - `addon_json` (`string`): Set the `addon_json` field on the resulting resource block. When `null`, the `addon_json` field will be omitted from the resulting object.
+  - `application_performance_monitoring_ids` (`list`): Set the `application_performance_monitoring_ids` field on the resulting resource block. When `null`, the `application_performance_monitoring_ids` field will be omitted from the resulting object.
   - `arguments` (`list`): Set the `arguments` field on the resulting resource block. When `null`, the `arguments` field will be omitted from the resulting object.
   - `commands` (`list`): Set the `commands` field on the resulting resource block. When `null`, the `commands` field will be omitted from the resulting object.
   - `environment_variables` (`obj`): Set the `environment_variables` field on the resulting resource block. When `null`, the `environment_variables` field will be omitted from the resulting object.
@@ -99,6 +101,7 @@ injecting into a complete block.
 
 **Args**:
   - `addon_json` (`string`): Set the `addon_json` field on the resulting object. When `null`, the `addon_json` field will be omitted from the resulting object.
+  - `application_performance_monitoring_ids` (`list`): Set the `application_performance_monitoring_ids` field on the resulting object. When `null`, the `application_performance_monitoring_ids` field will be omitted from the resulting object.
   - `arguments` (`list`): Set the `arguments` field on the resulting object. When `null`, the `arguments` field will be omitted from the resulting object.
   - `commands` (`list`): Set the `commands` field on the resulting object. When `null`, the `commands` field will be omitted from the resulting object.
   - `environment_variables` (`obj`): Set the `environment_variables` field on the resulting object. When `null`, the `environment_variables` field will be omitted from the resulting object.
@@ -129,6 +132,22 @@ Terraform resource block to set or update the addon_json field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `addon_json` field.
+
+
+### fn withApplicationPerformanceMonitoringIds
+
+```ts
+withApplicationPerformanceMonitoringIds()
+```
+
+`azurerm.list.withApplicationPerformanceMonitoringIds` constructs a mixin object that can be merged into the `list`
+Terraform resource block to set or update the application_performance_monitoring_ids field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list`): The value to set for the `application_performance_monitoring_ids` field.
 
 
 ### fn withArguments

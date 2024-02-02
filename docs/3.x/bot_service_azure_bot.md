@@ -30,6 +30,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withMicrosoftAppTenantId()`](#fn-withmicrosoftapptenantid)
 * [`fn withMicrosoftAppType()`](#fn-withmicrosoftapptype)
 * [`fn withName()`](#fn-withname)
+* [`fn withPublicNetworkAccessEnabled()`](#fn-withpublicnetworkaccessenabled)
 * [`fn withResourceGroupName()`](#fn-withresourcegroupname)
 * [`fn withSku()`](#fn-withsku)
 * [`fn withStreamingEndpointEnabled()`](#fn-withstreamingendpointenabled)
@@ -83,6 +84,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `microsoft_app_tenant_id` (`string`): Set the `microsoft_app_tenant_id` field on the resulting resource block. When `null`, the `microsoft_app_tenant_id` field will be omitted from the resulting object.
   - `microsoft_app_type` (`string`): Set the `microsoft_app_type` field on the resulting resource block. When `null`, the `microsoft_app_type` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting resource block. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
   - `sku` (`string`): Set the `sku` field on the resulting resource block.
   - `streaming_endpoint_enabled` (`bool`): Set the `streaming_endpoint_enabled` field on the resulting resource block. When `null`, the `streaming_endpoint_enabled` field will be omitted from the resulting object.
@@ -126,6 +128,7 @@ injecting into a complete block.
   - `microsoft_app_tenant_id` (`string`): Set the `microsoft_app_tenant_id` field on the resulting object. When `null`, the `microsoft_app_tenant_id` field will be omitted from the resulting object.
   - `microsoft_app_type` (`string`): Set the `microsoft_app_type` field on the resulting object. When `null`, the `microsoft_app_type` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
+  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting object. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
   - `sku` (`string`): Set the `sku` field on the resulting object.
   - `streaming_endpoint_enabled` (`bool`): Set the `streaming_endpoint_enabled` field on the resulting object. When `null`, the `streaming_endpoint_enabled` field will be omitted from the resulting object.
@@ -374,6 +377,22 @@ Terraform resource block to set or update the name field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `name` field.
+
+
+### fn withPublicNetworkAccessEnabled
+
+```ts
+withPublicNetworkAccessEnabled()
+```
+
+`azurerm.bool.withPublicNetworkAccessEnabled` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the public_network_access_enabled field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `public_network_access_enabled` field.
 
 
 ### fn withResourceGroupName

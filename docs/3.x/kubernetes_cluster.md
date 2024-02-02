@@ -89,6 +89,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withSkuTier()`](#fn-withskutier)
 * [`fn withStorageProfile()`](#fn-withstorageprofile)
 * [`fn withStorageProfileMixin()`](#fn-withstorageprofilemixin)
+* [`fn withSupportPlan()`](#fn-withsupportplan)
 * [`fn withTags()`](#fn-withtags)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
@@ -119,6 +120,8 @@ This package contains functions and utilities for setting up the resource using 
       * [`fn new()`](#fn-default_node_poollinux_os_configsysctl_confignew)
   * [`obj default_node_pool.node_network_profile`](#obj-default_node_poolnode_network_profile)
     * [`fn new()`](#fn-default_node_poolnode_network_profilenew)
+    * [`obj default_node_pool.node_network_profile.allowed_host_ports`](#obj-default_node_poolnode_network_profileallowed_host_ports)
+      * [`fn new()`](#fn-default_node_poolnode_network_profileallowed_host_portsnew)
   * [`obj default_node_pool.upgrade_settings`](#obj-default_node_poolupgrade_settings)
     * [`fn new()`](#fn-default_node_poolupgrade_settingsnew)
 * [`obj http_proxy_config`](#obj-http_proxy_config)
@@ -237,6 +240,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `role_based_access_control_enabled` (`bool`): Set the `role_based_access_control_enabled` field on the resulting resource block. When `null`, the `role_based_access_control_enabled` field will be omitted from the resulting object.
   - `run_command_enabled` (`bool`): Set the `run_command_enabled` field on the resulting resource block. When `null`, the `run_command_enabled` field will be omitted from the resulting object.
   - `sku_tier` (`string`): Set the `sku_tier` field on the resulting resource block. When `null`, the `sku_tier` field will be omitted from the resulting object.
+  - `support_plan` (`string`): Set the `support_plan` field on the resulting resource block. When `null`, the `support_plan` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
   - `workload_identity_enabled` (`bool`): Set the `workload_identity_enabled` field on the resulting resource block. When `null`, the `workload_identity_enabled` field will be omitted from the resulting object.
   - `aci_connector_linux` (`list[obj]`): Set the `aci_connector_linux` field on the resulting resource block. When `null`, the `aci_connector_linux` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.aci_connector_linux.new](#fn-aci_connector_linuxnew) constructor.
@@ -317,6 +321,7 @@ injecting into a complete block.
   - `role_based_access_control_enabled` (`bool`): Set the `role_based_access_control_enabled` field on the resulting object. When `null`, the `role_based_access_control_enabled` field will be omitted from the resulting object.
   - `run_command_enabled` (`bool`): Set the `run_command_enabled` field on the resulting object. When `null`, the `run_command_enabled` field will be omitted from the resulting object.
   - `sku_tier` (`string`): Set the `sku_tier` field on the resulting object. When `null`, the `sku_tier` field will be omitted from the resulting object.
+  - `support_plan` (`string`): Set the `support_plan` field on the resulting object. When `null`, the `support_plan` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
   - `workload_identity_enabled` (`bool`): Set the `workload_identity_enabled` field on the resulting object. When `null`, the `workload_identity_enabled` field will be omitted from the resulting object.
   - `aci_connector_linux` (`list[obj]`): Set the `aci_connector_linux` field on the resulting object. When `null`, the `aci_connector_linux` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.aci_connector_linux.new](#fn-aci_connector_linuxnew) constructor.
@@ -1650,6 +1655,22 @@ function.
   - `value` (`list[obj]`): The value to set for the `storage_profile` field.
 
 
+### fn withSupportPlan
+
+```ts
+withSupportPlan()
+```
+
+`azurerm.string.withSupportPlan` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the support_plan field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `support_plan` field.
+
+
 ### fn withTags
 
 ```ts
@@ -1991,6 +2012,7 @@ Terraform sub block.
   - `enable_host_encryption` (`bool`): Set the `enable_host_encryption` field on the resulting object. When `null`, the `enable_host_encryption` field will be omitted from the resulting object.
   - `enable_node_public_ip` (`bool`): Set the `enable_node_public_ip` field on the resulting object. When `null`, the `enable_node_public_ip` field will be omitted from the resulting object.
   - `fips_enabled` (`bool`): Set the `fips_enabled` field on the resulting object. When `null`, the `fips_enabled` field will be omitted from the resulting object.
+  - `gpu_instance` (`string`): Set the `gpu_instance` field on the resulting object. When `null`, the `gpu_instance` field will be omitted from the resulting object.
   - `host_group_id` (`string`): Set the `host_group_id` field on the resulting object. When `null`, the `host_group_id` field will be omitted from the resulting object.
   - `kubelet_disk_type` (`string`): Set the `kubelet_disk_type` field on the resulting object. When `null`, the `kubelet_disk_type` field will be omitted from the resulting object.
   - `max_count` (`number`): Set the `max_count` field on the resulting object. When `null`, the `max_count` field will be omitted from the resulting object.
@@ -2154,10 +2176,37 @@ Terraform sub block.
 
 
 **Args**:
+  - `application_security_group_ids` (`list`): Set the `application_security_group_ids` field on the resulting object. When `null`, the `application_security_group_ids` field will be omitted from the resulting object.
   - `node_public_ip_tags` (`obj`): Set the `node_public_ip_tags` field on the resulting object. When `null`, the `node_public_ip_tags` field will be omitted from the resulting object.
+  - `allowed_host_ports` (`list[obj]`): Set the `allowed_host_ports` field on the resulting object. When `null`, the `allowed_host_ports` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster.default_node_pool.node_network_profile.allowed_host_ports.new](#fn-default_node_pooldefault_node_poolallowed_host_portsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `node_network_profile` sub block.
+
+
+## obj default_node_pool.node_network_profile.allowed_host_ports
+
+
+
+### fn default_node_pool.node_network_profile.allowed_host_ports.new
+
+```ts
+new()
+```
+
+
+`azurerm.kubernetes_cluster.default_node_pool.node_network_profile.allowed_host_ports.new` constructs a new object with attributes and blocks configured for the `allowed_host_ports`
+Terraform sub block.
+
+
+
+**Args**:
+  - `port_end` (`number`): Set the `port_end` field on the resulting object. When `null`, the `port_end` field will be omitted from the resulting object.
+  - `port_start` (`number`): Set the `port_start` field on the resulting object. When `null`, the `port_start` field will be omitted from the resulting object.
+  - `protocol` (`string`): Set the `protocol` field on the resulting object. When `null`, the `protocol` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `allowed_host_ports` sub block.
 
 
 ## obj default_node_pool.upgrade_settings

@@ -37,6 +37,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withName()`](#fn-withname)
 * [`fn withNetworkProfileId()`](#fn-withnetworkprofileid)
 * [`fn withOsType()`](#fn-withostype)
+* [`fn withPriority()`](#fn-withpriority)
 * [`fn withResourceGroupName()`](#fn-withresourcegroupname)
 * [`fn withRestartPolicy()`](#fn-withrestartpolicy)
 * [`fn withSku()`](#fn-withsku)
@@ -127,6 +128,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): Set the `name` field on the resulting resource block.
   - `network_profile_id` (`string`): Set the `network_profile_id` field on the resulting resource block. When `null`, the `network_profile_id` field will be omitted from the resulting object.
   - `os_type` (`string`): Set the `os_type` field on the resulting resource block.
+  - `priority` (`string`): Set the `priority` field on the resulting resource block. When `null`, the `priority` field will be omitted from the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting resource block.
   - `restart_policy` (`string`): Set the `restart_policy` field on the resulting resource block. When `null`, the `restart_policy` field will be omitted from the resulting object.
   - `sku` (`string`): Set the `sku` field on the resulting resource block. When `null`, the `sku` field will be omitted from the resulting object.
@@ -173,6 +175,7 @@ injecting into a complete block.
   - `name` (`string`): Set the `name` field on the resulting object.
   - `network_profile_id` (`string`): Set the `network_profile_id` field on the resulting object. When `null`, the `network_profile_id` field will be omitted from the resulting object.
   - `os_type` (`string`): Set the `os_type` field on the resulting object.
+  - `priority` (`string`): Set the `priority` field on the resulting object. When `null`, the `priority` field will be omitted from the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
   - `restart_policy` (`string`): Set the `restart_policy` field on the resulting object. When `null`, the `restart_policy` field will be omitted from the resulting object.
   - `sku` (`string`): Set the `sku` field on the resulting object. When `null`, the `sku` field will be omitted from the resulting object.
@@ -571,6 +574,22 @@ Terraform resource block to set or update the os_type field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `os_type` field.
+
+
+### fn withPriority
+
+```ts
+withPriority()
+```
+
+`azurerm.string.withPriority` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the priority field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `priority` field.
 
 
 ### fn withResourceGroupName

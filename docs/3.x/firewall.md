@@ -15,6 +15,7 @@ This package contains functions and utilities for setting up the resource using 
 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
+* [`fn withDnsProxyEnabled()`](#fn-withdnsproxyenabled)
 * [`fn withDnsServers()`](#fn-withdnsservers)
 * [`fn withFirewallPolicyId()`](#fn-withfirewallpolicyid)
 * [`fn withIpConfiguration()`](#fn-withipconfiguration)
@@ -72,6 +73,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
+  - `dns_proxy_enabled` (`bool`): Set the `dns_proxy_enabled` field on the resulting resource block. When `null`, the `dns_proxy_enabled` field will be omitted from the resulting object.
   - `dns_servers` (`list`): Set the `dns_servers` field on the resulting resource block. When `null`, the `dns_servers` field will be omitted from the resulting object.
   - `firewall_policy_id` (`string`): Set the `firewall_policy_id` field on the resulting resource block. When `null`, the `firewall_policy_id` field will be omitted from the resulting object.
   - `location` (`string`): Set the `location` field on the resulting resource block.
@@ -110,6 +112,7 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
+  - `dns_proxy_enabled` (`bool`): Set the `dns_proxy_enabled` field on the resulting object. When `null`, the `dns_proxy_enabled` field will be omitted from the resulting object.
   - `dns_servers` (`list`): Set the `dns_servers` field on the resulting object. When `null`, the `dns_servers` field will be omitted from the resulting object.
   - `firewall_policy_id` (`string`): Set the `firewall_policy_id` field on the resulting object. When `null`, the `firewall_policy_id` field will be omitted from the resulting object.
   - `location` (`string`): Set the `location` field on the resulting object.
@@ -128,6 +131,22 @@ injecting into a complete block.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `firewall` resource into the root Terraform configuration.
+
+
+### fn withDnsProxyEnabled
+
+```ts
+withDnsProxyEnabled()
+```
+
+`azurerm.bool.withDnsProxyEnabled` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the dns_proxy_enabled field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `dns_proxy_enabled` field.
 
 
 ### fn withDnsServers

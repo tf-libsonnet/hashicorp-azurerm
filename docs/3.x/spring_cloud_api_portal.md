@@ -15,6 +15,7 @@ This package contains functions and utilities for setting up the resource using 
 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
+* [`fn withApiTryOutEnabled()`](#fn-withapitryoutenabled)
 * [`fn withGatewayIds()`](#fn-withgatewayids)
 * [`fn withHttpsOnlyEnabled()`](#fn-withhttpsonlyenabled)
 * [`fn withInstanceCount()`](#fn-withinstancecount)
@@ -59,6 +60,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
+  - `api_try_out_enabled` (`bool`): Set the `api_try_out_enabled` field on the resulting resource block. When `null`, the `api_try_out_enabled` field will be omitted from the resulting object.
   - `gateway_ids` (`list`): Set the `gateway_ids` field on the resulting resource block. When `null`, the `gateway_ids` field will be omitted from the resulting object.
   - `https_only_enabled` (`bool`): Set the `https_only_enabled` field on the resulting resource block. When `null`, the `https_only_enabled` field will be omitted from the resulting object.
   - `instance_count` (`number`): Set the `instance_count` field on the resulting resource block. When `null`, the `instance_count` field will be omitted from the resulting object.
@@ -90,6 +92,7 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
+  - `api_try_out_enabled` (`bool`): Set the `api_try_out_enabled` field on the resulting object. When `null`, the `api_try_out_enabled` field will be omitted from the resulting object.
   - `gateway_ids` (`list`): Set the `gateway_ids` field on the resulting object. When `null`, the `gateway_ids` field will be omitted from the resulting object.
   - `https_only_enabled` (`bool`): Set the `https_only_enabled` field on the resulting object. When `null`, the `https_only_enabled` field will be omitted from the resulting object.
   - `instance_count` (`number`): Set the `instance_count` field on the resulting object. When `null`, the `instance_count` field will be omitted from the resulting object.
@@ -101,6 +104,22 @@ injecting into a complete block.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `spring_cloud_api_portal` resource into the root Terraform configuration.
+
+
+### fn withApiTryOutEnabled
+
+```ts
+withApiTryOutEnabled()
+```
+
+`azurerm.bool.withApiTryOutEnabled` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the api_try_out_enabled field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `api_try_out_enabled` field.
 
 
 ### fn withGatewayIds

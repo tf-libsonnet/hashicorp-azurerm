@@ -17,7 +17,6 @@ This package contains functions and utilities for setting up the data source usi
 * [`fn newAttrs()`](#fn-newattrs)
 * [`fn withName()`](#fn-withname)
 * [`fn withResourceGroupName()`](#fn-withresourcegroupname)
-* [`fn withTags()`](#fn-withtags)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
 * [`obj timeouts`](#obj-timeouts)
@@ -54,7 +53,6 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `dataSrcLabel` (`string`): The name label of the block.
   - `name` (`string`): Set the `name` field on the resulting data source block.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting data source block.
-  - `tags` (`obj`): Set the `tags` field on the resulting data source block. When `null`, the `tags` field will be omitted from the resulting object.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting data source block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.network_ddos_protection_plan.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -81,7 +79,6 @@ injecting into a complete block.
 **Args**:
   - `name` (`string`): Set the `name` field on the resulting object.
   - `resource_group_name` (`string`): Set the `resource_group_name` field on the resulting object.
-  - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.data.network_ddos_protection_plan.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -118,22 +115,6 @@ Terraform data source block to set or update the resource_group_name field.
 **Args**:
   - `dataSrcLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `resource_group_name` field.
-
-
-### fn withTags
-
-```ts
-withTags()
-```
-
-`azurerm.obj.withTags` constructs a mixin object that can be merged into the `obj`
-Terraform data source block to set or update the tags field.
-
-
-
-**Args**:
-  - `dataSrcLabel` (`string`): The name label of the block to update.
-  - `value` (`obj`): The value to set for the `tags` field.
 
 
 ### fn withTimeouts

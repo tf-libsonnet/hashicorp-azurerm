@@ -652,6 +652,7 @@ Terraform sub block.
 
 
 **Args**:
+  - `active_directory_authentication_enabled` (`bool`): Set the `active_directory_authentication_enabled` field on the resulting object. When `null`, the `active_directory_authentication_enabled` field will be omitted from the resulting object.
   - `aof_backup_enabled` (`bool`): Set the `aof_backup_enabled` field on the resulting object. When `null`, the `aof_backup_enabled` field will be omitted from the resulting object.
   - `aof_storage_connection_string_0` (`string`): Set the `aof_storage_connection_string_0` field on the resulting object. When `null`, the `aof_storage_connection_string_0` field will be omitted from the resulting object.
   - `aof_storage_connection_string_1` (`string`): Set the `aof_storage_connection_string_1` field on the resulting object. When `null`, the `aof_storage_connection_string_1` field will be omitted from the resulting object.
@@ -665,6 +666,7 @@ Terraform sub block.
   - `rdb_backup_frequency` (`number`): Set the `rdb_backup_frequency` field on the resulting object. When `null`, the `rdb_backup_frequency` field will be omitted from the resulting object.
   - `rdb_backup_max_snapshot_count` (`number`): Set the `rdb_backup_max_snapshot_count` field on the resulting object. When `null`, the `rdb_backup_max_snapshot_count` field will be omitted from the resulting object.
   - `rdb_storage_connection_string` (`string`): Set the `rdb_storage_connection_string` field on the resulting object. When `null`, the `rdb_storage_connection_string` field will be omitted from the resulting object.
+  - `storage_account_subscription_id` (`string`): Set the `storage_account_subscription_id` field on the resulting object. When `null`, the `storage_account_subscription_id` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `redis_configuration` sub block.

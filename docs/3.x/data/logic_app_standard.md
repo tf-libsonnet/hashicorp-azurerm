@@ -245,6 +245,7 @@ Terraform sub block.
   - `linux_fx_version` (`string`): Set the `linux_fx_version` field on the resulting object. When `null`, the `linux_fx_version` field will be omitted from the resulting object.
   - `min_tls_version` (`string`): Set the `min_tls_version` field on the resulting object. When `null`, the `min_tls_version` field will be omitted from the resulting object.
   - `pre_warmed_instance_count` (`number`): Set the `pre_warmed_instance_count` field on the resulting object. When `null`, the `pre_warmed_instance_count` field will be omitted from the resulting object.
+  - `public_network_access_enabled` (`bool`): Set the `public_network_access_enabled` field on the resulting object. When `null`, the `public_network_access_enabled` field will be omitted from the resulting object.
   - `runtime_scale_monitoring_enabled` (`bool`): Set the `runtime_scale_monitoring_enabled` field on the resulting object. When `null`, the `runtime_scale_monitoring_enabled` field will be omitted from the resulting object.
   - `scm_ip_restriction` (`list`): Set the `scm_ip_restriction` field on the resulting object. When `null`, the `scm_ip_restriction` field will be omitted from the resulting object.
   - `scm_min_tls_version` (`string`): Set the `scm_min_tls_version` field on the resulting object. When `null`, the `scm_min_tls_version` field will be omitted from the resulting object.

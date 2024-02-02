@@ -15,6 +15,7 @@ This package contains functions and utilities for setting up the resource using 
 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
+* [`fn withConfigFile()`](#fn-withconfigfile)
 * [`fn withEnableHealthCheck()`](#fn-withenablehealthcheck)
 * [`fn withEndOfLifeDate()`](#fn-withendoflifedate)
 * [`fn withExcludeFromLatest()`](#fn-withexcludefromlatest)
@@ -23,6 +24,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withManageAction()`](#fn-withmanageaction)
 * [`fn withManageActionMixin()`](#fn-withmanageactionmixin)
 * [`fn withName()`](#fn-withname)
+* [`fn withPackageFile()`](#fn-withpackagefile)
 * [`fn withSource()`](#fn-withsource)
 * [`fn withSourceMixin()`](#fn-withsourcemixin)
 * [`fn withTags()`](#fn-withtags)
@@ -68,12 +70,14 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
+  - `config_file` (`string`): Set the `config_file` field on the resulting resource block. When `null`, the `config_file` field will be omitted from the resulting object.
   - `enable_health_check` (`bool`): Set the `enable_health_check` field on the resulting resource block. When `null`, the `enable_health_check` field will be omitted from the resulting object.
   - `end_of_life_date` (`string`): Set the `end_of_life_date` field on the resulting resource block. When `null`, the `end_of_life_date` field will be omitted from the resulting object.
   - `exclude_from_latest` (`bool`): Set the `exclude_from_latest` field on the resulting resource block. When `null`, the `exclude_from_latest` field will be omitted from the resulting object.
   - `gallery_application_id` (`string`): Set the `gallery_application_id` field on the resulting resource block.
   - `location` (`string`): Set the `location` field on the resulting resource block.
   - `name` (`string`): Set the `name` field on the resulting resource block.
+  - `package_file` (`string`): Set the `package_file` field on the resulting resource block. When `null`, the `package_file` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
   - `manage_action` (`list[obj]`): Set the `manage_action` field on the resulting resource block. When `null`, the `manage_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.gallery_application_version.manage_action.new](#fn-manage_actionnew) constructor.
   - `source` (`list[obj]`): Set the `source` field on the resulting resource block. When `null`, the `source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.gallery_application_version.source.new](#fn-sourcenew) constructor.
@@ -102,12 +106,14 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
+  - `config_file` (`string`): Set the `config_file` field on the resulting object. When `null`, the `config_file` field will be omitted from the resulting object.
   - `enable_health_check` (`bool`): Set the `enable_health_check` field on the resulting object. When `null`, the `enable_health_check` field will be omitted from the resulting object.
   - `end_of_life_date` (`string`): Set the `end_of_life_date` field on the resulting object. When `null`, the `end_of_life_date` field will be omitted from the resulting object.
   - `exclude_from_latest` (`bool`): Set the `exclude_from_latest` field on the resulting object. When `null`, the `exclude_from_latest` field will be omitted from the resulting object.
   - `gallery_application_id` (`string`): Set the `gallery_application_id` field on the resulting object.
   - `location` (`string`): Set the `location` field on the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
+  - `package_file` (`string`): Set the `package_file` field on the resulting object. When `null`, the `package_file` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
   - `manage_action` (`list[obj]`): Set the `manage_action` field on the resulting object. When `null`, the `manage_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.gallery_application_version.manage_action.new](#fn-manage_actionnew) constructor.
   - `source` (`list[obj]`): Set the `source` field on the resulting object. When `null`, the `source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.gallery_application_version.source.new](#fn-sourcenew) constructor.
@@ -116,6 +122,22 @@ injecting into a complete block.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `gallery_application_version` resource into the root Terraform configuration.
+
+
+### fn withConfigFile
+
+```ts
+withConfigFile()
+```
+
+`azurerm.string.withConfigFile` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the config_file field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `config_file` field.
 
 
 ### fn withEnableHealthCheck
@@ -249,6 +271,22 @@ Terraform resource block to set or update the name field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `name` field.
+
+
+### fn withPackageFile
+
+```ts
+withPackageFile()
+```
+
+`azurerm.string.withPackageFile` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the package_file field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `package_file` field.
 
 
 ### fn withSource
@@ -443,6 +481,7 @@ Terraform sub block.
 
 
 **Args**:
+  - `exclude_from_latest` (`bool`): Set the `exclude_from_latest` field on the resulting object. When `null`, the `exclude_from_latest` field will be omitted from the resulting object.
   - `name` (`string`): Set the `name` field on the resulting object.
   - `regional_replica_count` (`number`): Set the `regional_replica_count` field on the resulting object.
   - `storage_account_type` (`string`): Set the `storage_account_type` field on the resulting object. When `null`, the `storage_account_type` field will be omitted from the resulting object.

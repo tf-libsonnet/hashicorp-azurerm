@@ -16,6 +16,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
 * [`fn withAcceleratorTags()`](#fn-withacceleratortags)
+* [`fn withAcceleratorType()`](#fn-withacceleratortype)
 * [`fn withDescription()`](#fn-withdescription)
 * [`fn withDisplayName()`](#fn-withdisplayname)
 * [`fn withGitRepository()`](#fn-withgitrepository)
@@ -64,6 +65,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
   - `accelerator_tags` (`list`): Set the `accelerator_tags` field on the resulting resource block. When `null`, the `accelerator_tags` field will be omitted from the resulting object.
+  - `accelerator_type` (`string`): Set the `accelerator_type` field on the resulting resource block. When `null`, the `accelerator_type` field will be omitted from the resulting object.
   - `description` (`string`): Set the `description` field on the resulting resource block. When `null`, the `description` field will be omitted from the resulting object.
   - `display_name` (`string`): Set the `display_name` field on the resulting resource block. When `null`, the `display_name` field will be omitted from the resulting object.
   - `icon_url` (`string`): Set the `icon_url` field on the resulting resource block. When `null`, the `icon_url` field will be omitted from the resulting object.
@@ -95,6 +97,7 @@ injecting into a complete block.
 
 **Args**:
   - `accelerator_tags` (`list`): Set the `accelerator_tags` field on the resulting object. When `null`, the `accelerator_tags` field will be omitted from the resulting object.
+  - `accelerator_type` (`string`): Set the `accelerator_type` field on the resulting object. When `null`, the `accelerator_type` field will be omitted from the resulting object.
   - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
   - `display_name` (`string`): Set the `display_name` field on the resulting object. When `null`, the `display_name` field will be omitted from the resulting object.
   - `icon_url` (`string`): Set the `icon_url` field on the resulting object. When `null`, the `icon_url` field will be omitted from the resulting object.
@@ -121,6 +124,22 @@ Terraform resource block to set or update the accelerator_tags field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list`): The value to set for the `accelerator_tags` field.
+
+
+### fn withAcceleratorType
+
+```ts
+withAcceleratorType()
+```
+
+`azurerm.string.withAcceleratorType` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the accelerator_type field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `accelerator_type` field.
 
 
 ### fn withDescription
@@ -298,6 +317,7 @@ Terraform sub block.
   - `commit` (`string`): Set the `commit` field on the resulting object. When `null`, the `commit` field will be omitted from the resulting object.
   - `git_tag` (`string`): Set the `git_tag` field on the resulting object. When `null`, the `git_tag` field will be omitted from the resulting object.
   - `interval_in_seconds` (`number`): Set the `interval_in_seconds` field on the resulting object. When `null`, the `interval_in_seconds` field will be omitted from the resulting object.
+  - `path` (`string`): Set the `path` field on the resulting object. When `null`, the `path` field will be omitted from the resulting object.
   - `url` (`string`): Set the `url` field on the resulting object.
   - `basic_auth` (`list[obj]`): Set the `basic_auth` field on the resulting object. When `null`, the `basic_auth` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_customized_accelerator.git_repository.basic_auth.new](#fn-git_repositorybasic_authnew) constructor.
   - `ssh_auth` (`list[obj]`): Set the `ssh_auth` field on the resulting object. When `null`, the `ssh_auth` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.spring_cloud_customized_accelerator.git_repository.ssh_auth.new](#fn-git_repositoryssh_authnew) constructor.

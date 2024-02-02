@@ -44,6 +44,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
 * [`fn withTrustedLaunchEnabled()`](#fn-withtrustedlaunchenabled)
+* [`fn withTrustedLaunchSupported()`](#fn-withtrustedlaunchsupported)
 * [`obj identifier`](#obj-identifier)
   * [`fn new()`](#fn-identifiernew)
 * [`obj purchase_plan`](#obj-purchase_plan)
@@ -103,6 +104,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `specialized` (`bool`): Set the `specialized` field on the resulting resource block. When `null`, the `specialized` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting resource block. When `null`, the `tags` field will be omitted from the resulting object.
   - `trusted_launch_enabled` (`bool`): Set the `trusted_launch_enabled` field on the resulting resource block. When `null`, the `trusted_launch_enabled` field will be omitted from the resulting object.
+  - `trusted_launch_supported` (`bool`): Set the `trusted_launch_supported` field on the resulting resource block. When `null`, the `trusted_launch_supported` field will be omitted from the resulting object.
   - `identifier` (`list[obj]`): Set the `identifier` field on the resulting resource block. When `null`, the `identifier` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.shared_image.identifier.new](#fn-identifiernew) constructor.
   - `purchase_plan` (`list[obj]`): Set the `purchase_plan` field on the resulting resource block. When `null`, the `purchase_plan` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.shared_image.purchase_plan.new](#fn-purchase_plannew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.shared_image.timeouts.new](#fn-timeoutsnew) constructor.
@@ -152,6 +154,7 @@ injecting into a complete block.
   - `specialized` (`bool`): Set the `specialized` field on the resulting object. When `null`, the `specialized` field will be omitted from the resulting object.
   - `tags` (`obj`): Set the `tags` field on the resulting object. When `null`, the `tags` field will be omitted from the resulting object.
   - `trusted_launch_enabled` (`bool`): Set the `trusted_launch_enabled` field on the resulting object. When `null`, the `trusted_launch_enabled` field will be omitted from the resulting object.
+  - `trusted_launch_supported` (`bool`): Set the `trusted_launch_supported` field on the resulting object. When `null`, the `trusted_launch_supported` field will be omitted from the resulting object.
   - `identifier` (`list[obj]`): Set the `identifier` field on the resulting object. When `null`, the `identifier` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.shared_image.identifier.new](#fn-identifiernew) constructor.
   - `purchase_plan` (`list[obj]`): Set the `purchase_plan` field on the resulting object. When `null`, the `purchase_plan` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.shared_image.purchase_plan.new](#fn-purchase_plannew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.shared_image.timeouts.new](#fn-timeoutsnew) constructor.
@@ -636,6 +639,22 @@ Terraform resource block to set or update the trusted_launch_enabled field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`bool`): The value to set for the `trusted_launch_enabled` field.
+
+
+### fn withTrustedLaunchSupported
+
+```ts
+withTrustedLaunchSupported()
+```
+
+`azurerm.bool.withTrustedLaunchSupported` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the trusted_launch_supported field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `trusted_launch_supported` field.
 
 
 ## obj identifier

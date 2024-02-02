@@ -47,16 +47,18 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     }),
   },
   network_profile:: {
-    '#new':: d.fn(help='\n`azurerm.palo_alto_next_generation_firewall_virtual_hub_panorama.network_profile.new` constructs a new object with attributes and blocks configured for the `network_profile`\nTerraform sub block.\n\n\n\n**Args**:\n  - `egress_nat_ip_address_ids` (`list`): Set the `egress_nat_ip_address_ids` field on the resulting object. When `null`, the `egress_nat_ip_address_ids` field will be omitted from the resulting object.\n  - `network_virtual_appliance_id` (`string`): Set the `network_virtual_appliance_id` field on the resulting object.\n  - `public_ip_address_ids` (`list`): Set the `public_ip_address_ids` field on the resulting object.\n  - `virtual_hub_id` (`string`): Set the `virtual_hub_id` field on the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `network_profile` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`azurerm.palo_alto_next_generation_firewall_virtual_hub_panorama.network_profile.new` constructs a new object with attributes and blocks configured for the `network_profile`\nTerraform sub block.\n\n\n\n**Args**:\n  - `egress_nat_ip_address_ids` (`list`): Set the `egress_nat_ip_address_ids` field on the resulting object. When `null`, the `egress_nat_ip_address_ids` field will be omitted from the resulting object.\n  - `network_virtual_appliance_id` (`string`): Set the `network_virtual_appliance_id` field on the resulting object.\n  - `public_ip_address_ids` (`list`): Set the `public_ip_address_ids` field on the resulting object.\n  - `trusted_address_ranges` (`list`): Set the `trusted_address_ranges` field on the resulting object. When `null`, the `trusted_address_ranges` field will be omitted from the resulting object.\n  - `virtual_hub_id` (`string`): Set the `virtual_hub_id` field on the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `network_profile` sub block.\n', args=[]),
     new(
       network_virtual_appliance_id,
       public_ip_address_ids,
       virtual_hub_id,
-      egress_nat_ip_address_ids=null
+      egress_nat_ip_address_ids=null,
+      trusted_address_ranges=null
     ):: std.prune(a={
       egress_nat_ip_address_ids: egress_nat_ip_address_ids,
       network_virtual_appliance_id: network_virtual_appliance_id,
       public_ip_address_ids: public_ip_address_ids,
+      trusted_address_ranges: trusted_address_ranges,
       virtual_hub_id: virtual_hub_id,
     }),
   },

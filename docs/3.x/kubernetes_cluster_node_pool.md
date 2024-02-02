@@ -22,6 +22,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withEnableNodePublicIp()`](#fn-withenablenodepublicip)
 * [`fn withEvictionPolicy()`](#fn-withevictionpolicy)
 * [`fn withFipsEnabled()`](#fn-withfipsenabled)
+* [`fn withGpuInstance()`](#fn-withgpuinstance)
 * [`fn withHostGroupId()`](#fn-withhostgroupid)
 * [`fn withKubeletConfig()`](#fn-withkubeletconfig)
 * [`fn withKubeletConfigMixin()`](#fn-withkubeletconfigmixin)
@@ -72,6 +73,8 @@ This package contains functions and utilities for setting up the resource using 
     * [`fn new()`](#fn-linux_os_configsysctl_confignew)
 * [`obj node_network_profile`](#obj-node_network_profile)
   * [`fn new()`](#fn-node_network_profilenew)
+  * [`obj node_network_profile.allowed_host_ports`](#obj-node_network_profileallowed_host_ports)
+    * [`fn new()`](#fn-node_network_profileallowed_host_portsnew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 * [`obj upgrade_settings`](#obj-upgrade_settings)
@@ -115,6 +118,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `enable_node_public_ip` (`bool`): Set the `enable_node_public_ip` field on the resulting resource block. When `null`, the `enable_node_public_ip` field will be omitted from the resulting object.
   - `eviction_policy` (`string`): Set the `eviction_policy` field on the resulting resource block. When `null`, the `eviction_policy` field will be omitted from the resulting object.
   - `fips_enabled` (`bool`): Set the `fips_enabled` field on the resulting resource block. When `null`, the `fips_enabled` field will be omitted from the resulting object.
+  - `gpu_instance` (`string`): Set the `gpu_instance` field on the resulting resource block. When `null`, the `gpu_instance` field will be omitted from the resulting object.
   - `host_group_id` (`string`): Set the `host_group_id` field on the resulting resource block. When `null`, the `host_group_id` field will be omitted from the resulting object.
   - `kubelet_disk_type` (`string`): Set the `kubelet_disk_type` field on the resulting resource block. When `null`, the `kubelet_disk_type` field will be omitted from the resulting object.
   - `kubernetes_cluster_id` (`string`): Set the `kubernetes_cluster_id` field on the resulting resource block.
@@ -181,6 +185,7 @@ injecting into a complete block.
   - `enable_node_public_ip` (`bool`): Set the `enable_node_public_ip` field on the resulting object. When `null`, the `enable_node_public_ip` field will be omitted from the resulting object.
   - `eviction_policy` (`string`): Set the `eviction_policy` field on the resulting object. When `null`, the `eviction_policy` field will be omitted from the resulting object.
   - `fips_enabled` (`bool`): Set the `fips_enabled` field on the resulting object. When `null`, the `fips_enabled` field will be omitted from the resulting object.
+  - `gpu_instance` (`string`): Set the `gpu_instance` field on the resulting object. When `null`, the `gpu_instance` field will be omitted from the resulting object.
   - `host_group_id` (`string`): Set the `host_group_id` field on the resulting object. When `null`, the `host_group_id` field will be omitted from the resulting object.
   - `kubelet_disk_type` (`string`): Set the `kubelet_disk_type` field on the resulting object. When `null`, the `kubelet_disk_type` field will be omitted from the resulting object.
   - `kubernetes_cluster_id` (`string`): Set the `kubernetes_cluster_id` field on the resulting object.
@@ -332,6 +337,22 @@ Terraform resource block to set or update the fips_enabled field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`bool`): The value to set for the `fips_enabled` field.
+
+
+### fn withGpuInstance
+
+```ts
+withGpuInstance()
+```
+
+`azurerm.string.withGpuInstance` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the gpu_instance field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `gpu_instance` field.
 
 
 ### fn withHostGroupId
@@ -1161,10 +1182,37 @@ Terraform sub block.
 
 
 **Args**:
+  - `application_security_group_ids` (`list`): Set the `application_security_group_ids` field on the resulting object. When `null`, the `application_security_group_ids` field will be omitted from the resulting object.
   - `node_public_ip_tags` (`obj`): Set the `node_public_ip_tags` field on the resulting object. When `null`, the `node_public_ip_tags` field will be omitted from the resulting object.
+  - `allowed_host_ports` (`list[obj]`): Set the `allowed_host_ports` field on the resulting object. When `null`, the `allowed_host_ports` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [azurerm.kubernetes_cluster_node_pool.node_network_profile.allowed_host_ports.new](#fn-node_network_profileallowed_host_portsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `node_network_profile` sub block.
+
+
+## obj node_network_profile.allowed_host_ports
+
+
+
+### fn node_network_profile.allowed_host_ports.new
+
+```ts
+new()
+```
+
+
+`azurerm.kubernetes_cluster_node_pool.node_network_profile.allowed_host_ports.new` constructs a new object with attributes and blocks configured for the `allowed_host_ports`
+Terraform sub block.
+
+
+
+**Args**:
+  - `port_end` (`number`): Set the `port_end` field on the resulting object. When `null`, the `port_end` field will be omitted from the resulting object.
+  - `port_start` (`number`): Set the `port_start` field on the resulting object. When `null`, the `port_start` field will be omitted from the resulting object.
+  - `protocol` (`string`): Set the `protocol` field on the resulting object. When `null`, the `protocol` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `allowed_host_ports` sub block.
 
 
 ## obj timeouts
